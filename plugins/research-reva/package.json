@@ -1,0 +1,40 @@
+{
+  "name": "reva-research-reva",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "TRACK Scholar Plugin: Drives capstone projects, academic manuscript writing, grant proposals, and publication tracking.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "reva-scholar",
+        "description": "Ask REVA Scholar agent for literature mapping, manuscript review, and grant checks.",
+        "preResolutionPrompts": [
+          "rules/RESEARCH_ETHICS.md",
+          "rules/SCHOLARLY_WRITING_STANDARD.md",
+          "rules/GRANT_PROPOSAL_STANDARD.md"
+        ],
+        "slashCommands": [
+          {
+            "name": "grant",
+            "description": "Analyze research draft or topic against active funding brief compliance.",
+            "template": "workflows/grant-check.md"
+          },
+          {
+            "name": "manuscript-check",
+            "description": "Audit research draft for literature integration, hypothesis clarity, structural integrity, and plagiarism risks.",
+            "template": "workflows/manuscript-check.md"
+          },
+          {
+            "name": "proposal-check",
+            "description": "Audit grant proposal draft for template compliance, novelty strength, budget rationale, and thematic alignment.",
+            "template": "workflows/proposal-check.md"
+          }
+        ]
+      }
+    ]
+  }
+}

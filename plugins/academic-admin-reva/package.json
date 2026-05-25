@@ -1,0 +1,26 @@
+{
+  "name": "reva-academic-admin-reva",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "TRACK Administrator Plugin: Powers orchestrations, curriculum revisions, syllabus publications, attainment evaluations, and regulatory compliance audits.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "reva-admin",
+        "description": "Ask REVA Admin agent for attainment tracking, program guidelines compliance, and BOS proposal setups.",
+        "preResolutionPrompts": ["rules/REGULATORY_COMPLIANCE.md"],
+        "slashCommands": [
+          {
+            "name": "attainment",
+            "description": "Verify program CO-PO attainment levels and compile accreditation metrics.",
+            "template": "workflows/attainment-check.md"
+          }
+        ]
+      }
+    ]
+  }
+}

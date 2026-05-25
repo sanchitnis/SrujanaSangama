@@ -1,0 +1,22 @@
+{
+  "id": "reva.teaching-learning-reva",
+  "name": "REVA Teaching & Learning Agent Pack",
+  "version": "1.0.0",
+  "description": "TRACK Educator Plugin: Coordinates syllabus design, session planning, content generation, and course integrity audits.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": [
+      "rules/ACADEMIC_INTEGRITY.md",
+      "rules/COURSE_DESIGN_STANDARD.md",
+      "rules/ASSESSMENT_QUALITY_STANDARD.md"
+    ],
+    "workflows": [
+      "workflows/session-check.md",
+      "workflows/course-check.md",
+      "workflows/assessment-check.md"
+    ]
+  },
+  "mcpConfig": "./mcp.json"
+}

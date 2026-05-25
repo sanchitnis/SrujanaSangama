@@ -1,0 +1,22 @@
+{
+  "id": "reva.research-reva",
+  "name": "REVA Research & Scholarship Agent Pack",
+  "version": "1.0.0",
+  "description": "TRACK Scholar Plugin: Drives capstone projects, academic manuscript writing, grant proposals, and publication tracking.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": [
+      "rules/RESEARCH_ETHICS.md",
+      "rules/SCHOLARLY_WRITING_STANDARD.md",
+      "rules/GRANT_PROPOSAL_STANDARD.md"
+    ],
+    "workflows": [
+      "workflows/grant-check.md",
+      "workflows/manuscript-check.md",
+      "workflows/proposal-check.md"
+    ]
+  },
+  "mcpConfig": "./mcp.json"
+}

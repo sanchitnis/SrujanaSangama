@@ -1,0 +1,41 @@
+{
+  "name": "srujanasangama",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "id": "reva.teaching-learning-reva",
+      "name": "REVA Teaching & Learning Agent Pack",
+      "version": "1.0.0",
+      "path": "plugins/teaching-learning-reva",
+      "description": "TRACK Educator Plugin: Coordinates syllabus design, session planning, content generation, and course integrity audits."
+    },
+    {
+      "id": "reva.research-reva",
+      "name": "REVA Research & Scholarship Agent Pack",
+      "version": "1.0.0",
+      "path": "plugins/research-reva",
+      "description": "TRACK Scholar Plugin: Drives capstone projects, academic manuscript writing, grant proposals, and publication tracking."
+    },
+    {
+      "id": "reva.academic-admin-reva",
+      "name": "REVA Academic Administration Agent Pack",
+      "version": "1.0.0",
+      "path": "plugins/academic-admin-reva",
+      "description": "TRACK Administrator Plugin: Powers orchestrations, curriculum revisions, syllabus publications, attainment evaluations, and regulatory compliance audits."
+    },
+    {
+      "id": "reva.consulting-product-reva",
+      "name": "REVA Consulting & Product Development Agent Pack",
+      "version": "1.0.0",
+      "path": "plugins/consulting-product-reva",
+      "description": "TRACK Consultant/Innovator Plugin: Manages experiential learning, industry connect MOUs, consulting engagement briefs, and patent IP claim drafts."
+    },
+    {
+      "id": "reva.kaizen-wellbeing-reva",
+      "name": "REVA Kaizen & Wellbeing Agent Pack",
+      "version": "1.0.0",
+      "path": "plugins/kaizen-wellbeing-reva",
+      "description": "TRACK Self-Improver Plugin: Powering self-reflection coaching, habit and commitment trackers, FDP integrations, GPS planning, and wellbeing navigations."
+    }
+  ]
+}

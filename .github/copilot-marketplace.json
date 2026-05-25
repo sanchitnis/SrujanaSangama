@@ -1,0 +1,31 @@
+{
+  "organization": "REVA-University-Internal",
+  "visibility": "private",
+  "agents": [
+    {
+      "id": "reva-teaching-learning-reva",
+      "repository": "https://github.com/reva-university/SrujanaSangama",
+      "allowedTeams": ["faculty", "students-cse"]
+    },
+    {
+      "id": "reva-research-reva",
+      "repository": "https://github.com/reva-university/SrujanaSangama",
+      "allowedTeams": ["faculty", "students-postgrad"]
+    },
+    {
+      "id": "reva-academic-admin-reva",
+      "repository": "https://github.com/reva-university/SrujanaSangama",
+      "allowedTeams": ["faculty", "admin-staff"]
+    },
+    {
+      "id": "reva-consulting-product-reva",
+      "repository": "https://github.com/reva-university/SrujanaSangama",
+      "allowedTeams": ["faculty", "students-cse", "incubatees"]
+    },
+    {
+      "id": "reva-kaizen-wellbeing-reva",
+      "repository": "https://github.com/reva-university/SrujanaSangama",
+      "allowedTeams": ["faculty", "admin-staff", "students-all"]
+    }
+  ]
+}

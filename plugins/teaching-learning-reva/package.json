@@ -1,0 +1,40 @@
+{
+  "name": "reva-teaching-learning-reva",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "TRACK Educator Plugin: Coordinates syllabus design, session planning, content generation, and course integrity audits.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "reva-educator",
+        "description": "Ask REVA Educator agent for syllabus design, active learning templates, and course audits.",
+        "preResolutionPrompts": [
+          "rules/ACADEMIC_INTEGRITY.md",
+          "rules/COURSE_DESIGN_STANDARD.md",
+          "rules/ASSESSMENT_QUALITY_STANDARD.md"
+        ],
+        "slashCommands": [
+          {
+            "name": "audit",
+            "description": "Run academic integrity and AI-triviality audits on course assessments.",
+            "template": "workflows/session-check.md"
+          },
+          {
+            "name": "course-check",
+            "description": "Audit course syllabus drafts for NBA-OBE alignment and Bloom's HOTS dominance.",
+            "template": "workflows/course-check.md"
+          },
+          {
+            "name": "assessment-check",
+            "description": "Audit course assessments for Bloom's levels, enjoyability, and AI-triviality bypass.",
+            "template": "workflows/assessment-check.md"
+          }
+        ]
+      }
+    ]
+  }
+}

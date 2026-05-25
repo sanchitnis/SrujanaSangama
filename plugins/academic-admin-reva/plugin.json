@@ -1,0 +1,14 @@
+{
+  "id": "reva.academic-admin-reva",
+  "name": "REVA Academic Administration Agent Pack",
+  "version": "1.0.0",
+  "description": "TRACK Administrator Plugin: Powers orchestrations, curriculum revisions, syllabus publications, attainment evaluations, and regulatory compliance audits.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": ["rules/REGULATORY_COMPLIANCE.md"],
+    "workflows": ["workflows/attainment-check.md"]
+  },
+  "mcpConfig": "./mcp.json"
+}

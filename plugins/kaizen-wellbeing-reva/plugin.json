@@ -1,0 +1,14 @@
+{
+  "id": "reva.kaizen-wellbeing-reva",
+  "name": "REVA Kaizen & Wellbeing Agent Pack",
+  "version": "1.0.0",
+  "description": "TRACK Self-Improver Plugin: Powering self-reflection coaching, habit and commitment trackers, FDP integrations, GPS planning, and wellbeing navigations.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": ["rules/PERSONAL_REFLECTION_RULES.md"],
+    "workflows": ["workflows/gps-plan.md"]
+  },
+  "mcpConfig": "./mcp.json"
+}

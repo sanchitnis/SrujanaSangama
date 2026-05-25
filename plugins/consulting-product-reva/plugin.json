@@ -1,0 +1,14 @@
+{
+  "id": "reva.consulting-product-reva",
+  "name": "REVA Consulting & Product Development Agent Pack",
+  "version": "1.0.0",
+  "description": "TRACK Consultant/Innovator Plugin: Manages experiential learning, industry connect MOUs, consulting engagement briefs, and patent IP claim drafts.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": ["rules/PRODUCT_IP_GUIDELINES.md"],
+    "workflows": ["workflows/patent-draft.md"]
+  },
+  "mcpConfig": "./mcp.json"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "reva-kaizen-wellbeing-reva",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "TRACK Self-Improver Plugin: Powering self-reflection coaching, habit and commitment trackers, FDP integrations, GPS planning, and wellbeing navigations.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "reva-kaizen",
+        "description": "Ask REVA Kaizen agent for daily/weekly GPS planning, self-reflections, and professional development reviews.",
+        "preResolutionPrompts": ["rules/PERSONAL_REFLECTION_RULES.md"],
+        "slashCommands": [
+          {
+            "name": "gps",
+            "description": "Structure daily or weekly Goal-Plan-Systems (GPS) in alignment with Sankalpa commitments.",
+            "template": "workflows/gps-plan.md"
+          }
+        ]
+      }
+    ]
+  }
+}

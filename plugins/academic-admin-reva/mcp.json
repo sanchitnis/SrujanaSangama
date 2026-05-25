@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "reva-admin-service": {
+      "command": "node",
+      "args": ["dist/mcp-server.js"],
+      "env": {
+        "REVA_API_ENDPOINT": "https://reva.edu.in/api/admin"
+      }
+    }
+  }
+}
