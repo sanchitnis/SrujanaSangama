@@ -36,6 +36,15 @@
       "version": "1.0.0",
       "path": "plugins/kaizen-wellbeing-reva",
       "description": "TRACK Self-Improver Plugin: Powering self-reflection coaching, habit and commitment trackers, FDP integrations, GPS planning, and wellbeing navigations."
+    },
+    {
+      "id": "reva.law-student-reva",
+      "name": "REVA Law Student Study Companion",
+      "version": "1.0.0",
+      "path": "plugins/law-student-reva",
+      "description": "Socratic drilling, case briefing, IRAC grading, AIBE prep (first-class), moot court simulation, and exam forecasting for REVA Law School students (BA LLB, BBA LLB, LLM, PhD). Learning mode only — never writes the answer for you. Standalone plugin — install independently without other REVA plugins.",
+      "standalone": true,
+      "tags": ["law", "legal-education", "AIBE", "moot-court", "IRAC", "student"]
     }
   ]
 }

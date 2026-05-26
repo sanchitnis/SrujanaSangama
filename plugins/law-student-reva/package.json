@@ -1,0 +1,81 @@
+{
+  "name": "reva-law-student-reva",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "Socratic drilling, case briefing, IRAC grading, AIBE prep, moot court training, and exam forecasting for REVA Law School students. Learning mode only — never writes the answer for you.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot", "Education"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "reva-law-student",
+        "description": "Your REVA Law School study companion. Socratic drilling, AIBE prep, moot court simulation, IRAC grading, and exam forecasting — learning mode only.",
+        "preResolutionPrompts": ["rules/LAW_STUDENT_GUARDRAILS.md"],
+        "slashCommands": [
+          {
+            "name": "cold-start-interview",
+            "description": "Set up your law student profile — programme, subjects, AIBE date, learning style.",
+            "template": "workflows/cold-start-interview.md"
+          },
+          {
+            "name": "socratic-drill",
+            "description": "Socratic drilling on a legal topic or case — it asks, you answer.",
+            "template": "workflows/socratic-drill.md"
+          },
+          {
+            "name": "case-brief",
+            "description": "Case briefing scaffold in IRAC / FILAC / Indian narrative format.",
+            "template": "workflows/case-brief.md"
+          },
+          {
+            "name": "outline-builder",
+            "description": "Build a subject outline scaffold — never auto-populated, always Socratic.",
+            "template": "workflows/outline-builder.md"
+          },
+          {
+            "name": "aibe-prep",
+            "description": "AIBE preparation — MCQ generation, timed sessions, past-paper analysis.",
+            "template": "workflows/aibe-prep.md"
+          },
+          {
+            "name": "flashcards",
+            "description": "Generate and drill Leitner-style flashcards for any law subject.",
+            "template": "workflows/flashcards.md"
+          },
+          {
+            "name": "study-plan",
+            "description": "Build or update an adaptive study plan for semester exams or AIBE.",
+            "template": "workflows/study-plan.md"
+          },
+          {
+            "name": "session",
+            "description": "Focused N-question session on a subject. Updates your study plan.",
+            "template": "workflows/session.md"
+          },
+          {
+            "name": "irac-practice",
+            "description": "Submit your IRAC/FILAC answer for grading. Never rewritten for you.",
+            "template": "workflows/irac-practice.md"
+          },
+          {
+            "name": "moot-court-trainer",
+            "description": "Moot court simulation — bench, opposing counsel, memorial review, precedent drill.",
+            "template": "workflows/moot-court-trainer.md"
+          },
+          {
+            "name": "legal-writing",
+            "description": "Structural feedback on pleadings, petitions, memos. Strict no-rewrite.",
+            "template": "workflows/legal-writing.md"
+          },
+          {
+            "name": "exam-forecast",
+            "description": "Forecast upcoming exam questions from past REVA papers.",
+            "template": "workflows/exam-forecast.md"
+          }
+        ]
+      }
+    ]
+  }
+}
