@@ -41,7 +41,7 @@ SrujanaBuddy is a 24×7 AI coaching companion for REVA students, supporting them
 
 It is not a chatbot. It is a **multi-agent plugin** — a set of coordinated AI agents, each specialised, working together through a shared filesystem of plain Markdown files, contributed to the SrujanaSangama marketplace.
 
-> 📸 **[INSERT MEME: "It's not a chatbot. It's a whole team of AIs in a folder." — tiny folder labeled 'SKILL.md' with a superhero cape]**
+![It's not a chatbot. It's a whole team of AIs in a folder.](assets/Fleet%20of%20agents%20skillmd.png)
 
 ---
 
@@ -84,7 +84,6 @@ Show how the system detects Tier 2 wellbeing signal → routes to `inner-mastery
 
 Open `profiles/`. Show how `arjun-gps-map.md` builds across sessions — local, private, never cloud-uploaded.
 
-> 📸 **[INSERT MEME: "AI that remembers your goals but not your embarrassing search history" — student looking relieved]**
 
 ---
 
@@ -94,7 +93,7 @@ Open `profiles/`. Show how `arjun-gps-map.md` builds across sessions — local, 
 
 SrujanaBuddy is not a replacement for the faculty-student relationship. It is the **first-response layer** — available at 2am before an exam — so when students do reach you, it's for conversations that truly need a human.
 
-> 📸 **[INSERT MEME: "You at 2am vs. SrujanaBuddy at 2am" — exhausted professor vs. cheerful AI]**
+![You at 2am vs. SrujanaBuddy at 2am](assets/Faculty%20SrujanaBuddy%202am.png)
 
 ---
 
@@ -121,7 +120,7 @@ graph LR
     style E fill:#51cf66,color:#fff
 ```
 
-> 📸 **[INSERT MEME: "GPS navigation vs. building a mental map of the city. Your brain on AI shortcuts."]**
+
 
 ---
 
@@ -182,7 +181,7 @@ sequenceDiagram
 
 **🔴 Competency Offloading** — Using AI for tasks that *should* build your expertise. Writing your course outline imperfectly grows your pedagogical muscle. Having AI write it for you does not.
 
-> 📸 **[INSERT MEME: "Four horsemen of AI failure: Slop, Hallucination, Bias, Brain Rot" — dramatic apocalyptic art with labels]**
+![Four horsemen of AI failure: Slop, Hallucination, Bias, Brain Rot](assets/four%20horsemen.png)
 
 ---
 
