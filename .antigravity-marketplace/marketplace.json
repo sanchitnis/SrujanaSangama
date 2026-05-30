@@ -10,11 +10,13 @@
       "description": "TRACK Educator Plugin: Coordinates syllabus design, session planning, content generation, and course integrity audits."
     },
     {
-      "id": "reva.research-reva",
-      "name": "REVA Research & Scholarship Agent Pack",
-      "version": "1.0.0",
+      "id": "reva.srujana-shodha",
+      "name": "SrujanaShodha — Faculty Research Advisor",
+      "version": "2.0.0",
       "path": "plugins/research-reva",
-      "description": "TRACK Scholar Plugin: Drives capstone projects, academic manuscript writing, grant proposals, and publication tracking."
+      "description": "SrujanaShodha (ಸೃಜನ ಶೋಧ — Creative Discovery) is REVA University's personal research advisory AI. Drives faculty research careers through competency profiling (Zone A/B/C), opportunity identification, interdisciplinary collaboration design, funding navigation (30+ schemes: DST/DBT/UGC/SERB/CSR/International), full research lifecycle coaching, work product review (Strength→Gap→Next Move), journal targeting, SDG impact auditing, and personal brand building. AcademicianClaw-style orchestrated agents with persistent memory. Skill architecture adapted from google-deepmind/science-skills (Apache 2.0). Standalone — install independently without other REVA plugins.",
+      "standalone": true,
+      "tags": ["faculty", "research", "funding", "SDG", "journal", "brand", "collaboration", "lifecycle", "SERB", "NIRF", "NAAC"]
     },
     {
       "id": "reva.academic-admin-reva",
@@ -45,6 +47,25 @@
       "description": "Socratic drilling, case briefing, IRAC grading, AIBE prep (first-class), moot court simulation, and exam forecasting for REVA Law School students (BA LLB, BBA LLB, LLM, PhD). Learning mode only — never writes the answer for you. Standalone plugin — install independently without other REVA plugins.",
       "standalone": true,
       "tags": ["law", "legal-education", "AIBE", "moot-court", "IRAC", "student"]
+    },
+    {
+      "id": "reva.academician-claw",
+      "name": "AcademicianClaw — Faculty Personal Intelligence",
+      "version": "2.0.0",
+      "path": "plugins/academician-claw",
+      "description": "OpenClaw v2 personal agentic system for faculty: orchestrated specialists for writing, research, task management, reflection, habit tracking, learning coaching, and academic leadership. Each faculty member maintains their own local memory/ (gitignored). Standalone — install independently.",
+      "standalone": true,
+      "tags": ["faculty", "personal", "productivity", "memory", "openclaw", "kaizen"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "reva.course-buddy-builder",
+      "name": "Course Buddy Builder",
+      "version": "1.0.0",
+      "path": "skills/course-buddy-builder",
+      "description": "Faculty tool: generates an Obsidian wiki, Jupyter workbook, and Socratic tutor skill.md from a filled course descriptor. Supports Build, Refresh, and Audit modes. Free-tier compatible (NotebookLM optional). Internal use only — never student-facing.",
+      "tags": ["faculty", "internal", "course-design", "teaching-learning", "course-buddy"]
     }
   ]
 }

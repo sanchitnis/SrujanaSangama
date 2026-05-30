@@ -1,0 +1,156 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "REVA_BTech_CSIT_First_Year_Master_Schema",
+    "type": "object",
+    "required": ["program_details", "curriculum_structure"],
+    "properties": {
+        "program_details": {
+            "type": "object",
+            "required": ["program_overview", "program_educational_objectives", "program_outcomes", "knowledge_and_attitude_profile", "program_specific_outcomes"],
+            "properties": {
+                "program_overview": { "type": "string" },
+                "program_educational_objectives": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "description"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "description": { "type": "string" }
+                        }
+                    }
+                },
+                "program_outcomes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "title", "description", "mapped_wk"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "title": { "type": "string" },
+                            "description": { "type": "string" },
+                            "mapped_wk": { "type": "array", "items": { "type": "string" } }
+                        }
+                    }
+                },
+                "knowledge_and_attitude_profile": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "description"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "description": { "type": "string" }
+                        }
+                    }
+                },
+                "program_specific_outcomes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "description"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "description": { "type": "string" }
+                        }
+                    }
+                }
+            }
+        },
+        "curriculum_structure": {
+            "type": "object",
+            "required": ["semester_1", "semester_2"],
+            "properties": {
+                "semester_1": { "$ref": "#/definitions/semester_node" },
+                "semester_2": { "$ref": "#/definitions/semester_node" }
+            }
+        }
+    },
+    "definitions": {
+        "semester_node": {
+            "type": "object",
+            "required": ["courses", "summary"],
+            "properties": {
+                "courses": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/course_node" }
+                },
+                "summary": {
+                    "type": "object",
+                    "required": ["total_credits", "total_cumulative_credits", "total_contact_hours", "total_marks"],
+                    "properties": {
+                        "total_credits": { "type": "integer" },
+                        "total_cumulative_credits": { "type": "integer" },
+                        "total_contact_hours": { "type": "integer" },
+                        "total_marks": { "type": "integer" }
+                    }
+                }
+            }
+        },
+        "course_node": {
+            "type": "object",
+            "required": ["s_no", "course_code", "title", "category", "credit_pattern", "total_credits", "contact_hours_per_week", "marks", "course_category_aicte"],
+            "properties": {
+                "s_no": { "type": "integer" },
+                "course_code": { "type": "string" },
+                "title": { "type": "string" },
+                "category": { "type": "string" },
+                "credit_pattern": {
+                    "type": "object",
+                    "required": ["L", "T", "P"],
+                    "properties": {
+                        "L": { "type": "integer" },
+                        "T": { "type": "integer" },
+                        "P": { "type": "integer" }
+                    }
+                },
+                "total_credits": { "type": "integer" },
+                "contact_hours_per_week": { "type": "integer" },
+                "marks": {
+                    "type": "object",
+                    "required": ["CIE", "SEE", "total"],
+                    "properties": {
+                        "CIE": { "type": "integer" },
+                        "SEE": { "type": "integer" },
+                        "total": { "type": "integer" }
+                    }
+                },
+                "course_category_aicte": { "type": "string" },
+                "syllabus": {
+                    "type": "object",
+                    "properties": {
+                        "course_overview": { "type": "string" },
+                        "course_objectives": { "type": "array", "items": { "type": "string" } },
+                        "course_outcomes": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": { "type": "string" },
+                                    "statement": { "type": "string" }
+                                }
+                            }
+                        },
+                        "bloom_levels": { "type": "object" },
+                        "theory_units": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "unit_title": { "type": "string" },
+                                    "contents": { "type": "string" }
+                                }
+                            }
+                        },
+                        "practice_sessions": { "type": "array", "items": { "type": "string" } },
+                        "case_studies_or_projects": { "type": "array", "items": { "type": "string" } },
+                        "challenge_experiments": { "type": "array", "items": { "type": "string" } },
+                        "self_learning_components": { "type": "array", "items": { "type": "string" } },
+                        "textbooks": { "type": "array", "items": { "type": "string" } },
+                        "references": { "type": "array", "items": { "type": "string" } }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "reva.academician-claw",
+  "name": "AcademicianClaw — Faculty Personal Intelligence",
+  "version": "2.0.0",
+  "description": "OpenClaw v2 personal agentic system for faculty: orchestrated specialist agents for writing, research, task management, reflection, habit tracking, learning coaching, and academic leadership. Prompt-native — no LLM API calls in scripts. Each faculty member maintains their own local memory/ directory (gitignored).",
+  "permissions": [
+    "filesystem:read",
+    "filesystem:write"
+  ],
+  "entry": {
+    "rules": [
+      "rules/ORCHESTRATOR.md",
+      "rules/PERSONA_ENGINE.md",
+      "rules/PERMISSION_GUARDIAN.md"
+    ],
+    "workflows": [
+      "workflows/weekly-review.md",
+      "workflows/project-kickoff.md",
+      "workflows/deep-research.md",
+      "workflows/skill-generator.md",
+      "workflows/session-closer.md"
+    ]
+  },
+  "mcpConfig": "./mcp.json"
+}

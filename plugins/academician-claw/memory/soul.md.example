@@ -1,0 +1,53 @@
+---
+# soul.md — Core Identity File
+# Copy this to soul.md and fill it in. Run scripts/init.py for guided setup.
+# This file is GITIGNORED — it lives only on your local machine.
+# ---
+
+name: "[Your full name]"
+preferred_name: "[What you want the system to call you]"
+role: "[e.g., Professor, Associate Professor, HOD, Dean]"
+department: "[Department name]"
+institution: "REVA University"
+location: "Bengaluru, India"
+
+# How you like to work
+work_style: |
+  [Describe your work style: e.g., prefer concise bullet responses, 
+  like to think out loud before deciding, work in focused 2-hour blocks]
+
+communication_preferences: |
+  [e.g., direct, no fluff; or conversational and exploratory]
+
+# Your current professional focus areas (update each semester)
+current_focus:
+  - "[e.g., Developing the ACP course for Sem 2]"
+  - "[e.g., Submitting a paper to ICSE 2026]"
+  - "[e.g., Preparing for NBA audit]"
+
+# Domains of expertise
+expertise:
+  - "[e.g., Advanced C Programming]"
+  - "[e.g., Data Structures and Algorithms]"
+
+# Values and principles that guide your work
+values:
+  - "[e.g., Student-first pedagogy]"
+  - "[e.g., Evidence-based curriculum design]"
+
+# People and relationships in your work context
+key_people:
+  - name: "[Name]"
+    role: "[e.g., HOD, colleague, student, collaborator]"
+    notes: "[anything important about this relationship]"
+
+# Your active courses this semester
+courses:
+  - code: "[e.g., B25CI0201]"
+    name: "[e.g., Advanced C Programming with Generative AI]"
+    students: 0
+    semester: 2
+
+# Anything else the system should always remember about you
+always_remember: |
+  [Free text — add facts, preferences, constraints that matter for every session]

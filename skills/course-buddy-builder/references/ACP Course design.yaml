@@ -1,0 +1,285 @@
+institution_details:
+  university: REVA UNIVERSITY
+  school: SCHOOL OF COMPUTER SCIENCE AND ENGINEERING
+
+sections:
+  1_executive_summary_and_rationale:
+    summary: >
+      The integration of theory and laboratory components into the Advanced C Programming with Generative
+      AI course is a strategic necessity to evolve with modern pedagogical and industry standards.
+      Since the foundational theory of C programming was comprehensively covered in the Introduction to C
+      Programming (ICP) course during the first semester, this integrated model shifts the focus from passive
+      lecturing to active, application-based mastery.
+    key_implementation_mandates:
+      - "Integrated Credits: 1-1-1 (Lecture-Tutorial-Practice) for a total of 3 credits."
+      - "Core Philosophy: Labs serve as the primary assessment engine, replacing traditional written exams with continuous, program-execution-based evaluation."
+      - "Theory Assessment: No written Internal Assessments (IA) and Semester End Examination (SEE) will be conducted for the theory component of the course."
+      - "Moodle Integration: All course assessments will be conducted exclusively using the Moodle platform with autograded functionality."
+      - "Pedagogical Shift: This integrated model shifts the focus from traditional lecturing to activity-based instruction facilitated via differentiated learning levels."
+    benefits_of_integration:
+      synchronized_learning: >
+        Students immediately apply advanced concepts like pointers and dynamic memory management in a
+        controlled practice environment, reinforcing learning through immediate feedback.
+      differentiated_learning_pathways: >
+        Integration allows for a tiered pedagogical approach (Levels 1, 2, and 3), enabling students
+        to progress through the curriculum at a pace that matches their proficiency, with mastery training.
+      streamlined_assessment: >
+        Under this integrated model, labs serve as the primary assessment engine. Continuous assessment
+        of program execution ensures that students are evaluated on their ability to solve real-world
+        problems rather than their ability to memorize syntax for a written exam.
+      operational_efficiency: >
+        This model streamlines the curriculum by removing redundant IA exams and replacing them with a
+        continuous, activity-based pedagogy that tracks student progress in real-time.
+      ai_enhanced_workflow: >
+        The inclusion of Generative AI reflects modern industry standards, allowing students to use AI
+        for enhancing the coding experience through the principles of scaffolding while focusing on
+        high-level logic (critical thinking) and problem-solving.
+
+  2_course_general_information:
+    course_title: "Advanced C Programming with Generative AI"
+    course_type: "HC"
+    course_code: "B25CI0201"
+    credits: 3
+    semester: "II Semester"
+    ltp_breakdown:
+      lecture: { credits: 1, contact_hours: 1, work_load: 1 }
+      tutorial: { credits: 1, contact_hours: 2, work_load: 2 }
+      practice: { credits: 1, contact_hours: 2, work_load: 2 }
+      total: { credits: 3, contact_hours: 5, work_load: 5 }
+    total_number_of_classes_per_semester:
+      theory: 28
+      practical: 42
+    assessment_weightage:
+      cie: "50%"
+      see: "50%"
+
+  3_course_overview: >
+    This integrated course is designed to transition students from basic syntax to advanced application
+    development using Advanced C Programming and modern AI-assisted tools. The curriculum emphasizes
+    modular programming and Test-Driven Development, moving beyond simple logic to focus on memory
+    efficiency through pointers and dynamic memory allocation. Students will engage in an activity-based
+    pedagogy organized into three levels of increasing complexity, culminating in a mini-project where they
+    leverage Generative AI to design functional applications through iterative prompt engineering. By
+    blending core systems-level programming with contemporary AI productivity tools, students will develop
+    the technical rigor and modern workflow required for complex software development.
+
+  4_course_objectives:
+    - "Implement Modular and Testable Code: Master the creation of modular, reusable code structures using both call-by-value and call-by-reference functions, while adhering to the principles of clean coding and Test-Driven Development."
+    - "Manage Complex Data: Develop expertise in organizing and processing complex data by applying modular programming techniques to Arrays of Structures and complex data collections."
+    - "Memory Management: Gain a practical understanding of pointers and dynamic memory allocation, allowing for the creation of efficient, flexible, and memory-aware C applications."
+    - "Handling Text and Processing Files: Understanding text-based data processing through user-defined string logic and file handling systems for persistent data storage."
+    - "Integrate AI-Assisted Development: Foster proficiency in using Generative AI as a collaborative tool to assist in code analysis, iterative design, and the construction of modular mini-projects through effective prompt engineering."
+    - "Achieve Progressive Mastery: Progress through a tiered learning structure (Level 1 to Level 3) designed to transition students from foundational execution to mastery-level programming through intensive practice and continuous assessment."
+
+  5_course_outcomes:
+    CO1:
+      statement: "Develop modular and reusable code using functions (call by value and call by reference), arrays and structures using illustrative programs and test-driven development."
+      pos: "1-5, 9, 11"
+      psos: "1-3"
+      blooms_level: "Apply (L3)"
+    CO2:
+      statement: "Apply modular programming to manage complex data collections using Arrays of Structures through illustrative programs and test-driven development."
+      pos: "1-3, 5"
+      psos: "1-3"
+      blooms_level: "Analyze (L4)"
+    CO3:
+      statement: "Develop modular and reusable code using pointers and dynamic memory allocation using illustrative programs and test-driven development."
+      pos: "1-3"
+      psos: "1-3"
+      blooms_level: "Apply (L3)"
+    CO4:
+      statement: "Develop modular and reusable code utilizing Strings by implementing user-defined logic for processing text-based data through illustrative programs and test-driven development."
+      pos: "1-3"
+      psos: 2
+      blooms_level: "Apply (L3)"
+    CO5:
+      statement: "Develop a modular application for file handling in C using illustrative programs and test-driven development."
+      pos: "1-3, 5, 9"
+      psos: "1-3"
+      blooms_level: "Understand (L2)"
+    CO6:
+      statement: "Leverage generative AI to design and build a mini-project application, utilizing iterative prompt engineering and code analysis."
+      pos: "1-5, 9, 11"
+      psos: "1-3"
+      blooms_level: "Create (L6)"
+
+  7_course_articulation_matrix:
+    scale: "1-Low, 2-Medium, 3-High"
+    mappings:
+      - { co: "CO1", po1: 2, po2: 2, po3: 2, pso2: 2 }
+      - { co: "CO2", po1: 2, po2: 2, po3: 2, pso2: 2 }
+      - { co: "CO3", po1: 3, po2: 3, po3: 3, pso1: 1 }
+      - { co: "CO4", po1: 2, po2: 2, po3: 3, pso1: 2, pso2: 2 }
+      - { co: "CO5", po1: 3, po2: 3, po3: 3, pso2: 2, pso3: 2 }
+      - { co: "CO6", po1: 1, po2: 1, po3: 1, po5: 3, pso1: 2, pso2: 2, pso3: 3 }
+
+  8_course_content_theory:
+    - "1. C Fundamentals: Quick review of basic C programming concepts (arrays, structures, array of structures and functions). Function prototypes, definition, and scope (local vs. global). Parameter Passing Mechanisms: Call by value and call by reference through modular programming approach. Error handling."
+    - "2. Array of Structures: Passing arrays to functions as parameters, operators to access structure members, passing structures to functions as parameters, operators to access structure members, passing array of structures to functions as parameters."
+    - "3. Pointers: Understanding pointers and Dynamic Memory Management, using malloc, calloc, realloc, and free, pointers and arrays, handling dangling pointers and preventing memory leaks, self-referential structures, singly linked lists as an application of pointers."
+    - "4. Text Processing: Reading and manipulating strings using user-defined functions and pointers."
+    - "5. File handling: File handling functions for various operations: Opening a File: fopen(), Reading from a File: fread(), fgets(), Writing to a File: fwrite(), fprintf(), Closing a File: fclose(), Error Checking: feof(), ferror(), Different modes of operations in these (r,w,a, binary)."
+    - "6. Mini-Project using AI tools and Prompt Engineering utilizing above discussed concepts."
+
+  learning_resources:
+    text_books:
+      - "B.W. Kernighan & D.M. Ritchie, 'C Programming Language', 2nd Edition, PRENTICE HALL SOFTWARE SERIES, 2005."
+      - "Herbert Schildt, 'C: The Complete Reference', 4th edition, TATA McGraw Hill, 2000."
+      - "B.S. Anami, S.A. Angadi and S. S. Manvi, 'Computer Concepts and C Programming: A Holistic Approach', second edition, PHI, 2008."
+      - "Yashavant Kanetkar, 'Let us C', BPB, 19th edition, 2022"
+    reference_books:
+      - "Balaguruswamy, 'Programming in ANSI C', 4th edition, TATA MCGRAW Hill, 2008."
+      - "Jon Bentley, 'Programming Pearls', 2nd edition, PEARSON, 2002."
+    journals_magazines:
+      - "https://ieeexplore.ieee.org/xpl/Recentissue.jsp?punumber=6294 (IEEE Journal/Magazine on IT Professional)"
+      - "https://ieeexplore.ieee.org/document/1267572 (IEEE Computing in Science and Engineering)"
+    swayam_nptel_moocs:
+      - "https://onlinecourses.nptel.ac.in/noc20_cs06/preview (Problem Solving through Programming in C)"
+      - "https://www.edx.org/course/c-programming-getting-started (C Programming Getting started)"
+      - "https://www.coursera.org/specializations/c-programming (Introduction to C programming)"
+
+  9_pedagogy:
+    structure:
+      level_1_foundational: "10 Programs focusing on core execution."
+      level_2_intermediate: "10 Programs."
+      level_3_mastery: "10 Programs."
+    operational_flow:
+      instruction: "Faculty complete 2 programs weekly in the regular classroom post 1st week of commencement of the course. All levels to be completed by the faculty in the regular classroom."
+      progression: "A class test is conducted after Level 1 to transition students to Level 2 (non-credit diagnostic)."
+      support:
+        slow_learners: "Slow-learners (students who are unable to complete level 1 in first 6 weeks) receive online scaffolding for Level 1 by Dr. Ramaprasad H C."
+        advanced_learners: "Advanced learners attend daily online mastery training from Dr. Srinivasan for Levels 2 and 3."
+        general_note: "Level 2 and level 3 would be conducted as-is in regular classroom by faculty post the first 6 weeks for all learners."
+
+  10_assessment_and_evaluation_rubrics:
+    overview: "Traditional IA1 and IA2 exams are removed in favor of Continuous Internal Evaluation."
+    continuous_internal_evaluation_cie:
+      total_marks: 50
+      breakdown:
+        theory_mcqs: "10 Marks (CIE1) + 10 Marks (CIE2) = 20 Marks"
+        lab_programs: "15 Marks (CIE1) + 10 Marks (CIE2) = 25 Marks"
+        mini_project: "Based on level of complexity (L1 to L3) = 5 Marks"
+      assessment_protocol:
+        practical_evaluation: "Students are required to execute the two programs mastered during the previous week in the subsequent lab session for formal evaluation on the Moodle platform."
+        integrated_theory_testing: "For each program executed, a set of 10 Multiple Choice Questions (MCQs) is dynamically generated from a pool of standardized questions to assess underlying conceptual knowledge on the Moodle platform."
+        component_mapping:
+          theory_component: "Performance in the MCQ sets constitutes the marks for the Theory component of the CIE."
+          lab_component: "Program execution and logic implementation constitute the marks for the Practical/Lab component of the CIE."
+        scaling:
+          theory:
+            cie1: { assessments: 5, mcqs_per_assessment: 10, raw_marks: 50, scaled_marks: 10 }
+            cie2: { assessments: 5, mcqs_per_assessment: 10, raw_marks: 50, scaled_marks: 10 }
+            total: 20
+          lab:
+            cie1: { programs: 5, marks_per_program: 3, total_marks: 15 }
+            cie2: { programs: 5, marks_per_program: 2, total_marks: 10 }
+            total: 25
+          mini_project:
+            level_1_plus_mini_project: "3/5"
+            level_2_plus_mini_project: "4/5"
+            level_3_plus_mini_project: "5/5"
+        delivery_note: >
+          The course utilizes a continuous, activity-based evaluation model facilitated exclusively through the
+          Moodle platform, which eliminates traditional IA exams in favor of weekly proficiency tracking.
+          Consequently, no traditional manual evaluation sheets or physical lab records will be utilized for the
+          lab component of this course.
+    semester_end_examination_see:
+      total_marks: 50
+      theory_component:
+        marks: 25
+        mcqs: 25
+        duration: "60 minutes"
+        platform: "Theory SEE will be conducted for the entire cohort simultaneously using Moodle and is autograded."
+      lab_component:
+        marks: 25
+        programs: 5
+        marks_per_program: 5
+        duration: "3 hours"
+        format: "Each student will be required to execute a total of five programs, assigned through a randomized selection process on the Moodle platform."
+        program_distribution: "To ensure comprehensive evaluation across proficiency levels, the assessment will consist of three randomized programs from Level 1 (Foundational), one randomized program from Level 2 (Intermediate), and one randomized program from Level 3 (Mastery)."
+
+  11_minimum_proficiency_requirement:
+    aggregate_passing_mark: "A student must achieve a cumulative minimum of 40 marks out of 100 across all components (CIE + SEE)."
+    see_threshold: "Out of the 40 Aggregate Passing Marks, a minimum of 20 marks must be scored specifically within the SEE components (Theory SEE + Lab SEE)."
+    see_component_minimums:
+      theory_see: "Minimum 10 marks out of 25."
+      lab_see: "Successful execution of a minimum of 2 programs."
+
+  12_level_1_programs:
+    - no: 1
+      co: 1
+      details: "Write a modular C program to read n float values from the user, store them in an array and find the maximum value and its index. (array, passing arrays to functions, for loop, if statement)"
+      prototypes:
+        - "void input(int n, float arr[n]);"
+        - "int find_max_index(int n, float arr[n]);"
+        - "void output(float arr[], int max_index);"
+    - no: 2
+      co: 1
+      details: "Write a C program to compare areas of three rectangles and find the largest using functions and structure. (else-if ladder)"
+      structures:
+        - "typedef struct { char name[50]; float length; float width; float area; } Rectangle;"
+      prototypes:
+        - "Rectangle input();"
+        - "float calculate_area(Rectangle rect);"
+        - "void compare_areas(Rectangle r1, Rectangle r2, Rectangle r3);"
+    - no: 3
+      co: 2
+      details: "Write a C program using array of structures and functions to: Accept the number of rectangles. i. For each rectangle, accept its length and width. ii. Calculate and display the area of each rectangle. iii. iv. Determine and display the rectangle with the largest area. (array of structures, for loop, if statement)"
+      structures:
+        - "typedef struct { float length; float width; float area; } Rectangle;"
+      prototypes:
+        - "void input(int n, Rectangle rects[n]);"
+        - "void calculate_area(int n, Rectangle rects[n]);"
+        - "int findLargestArea(int n, Rectangle rects[n]);"
+        - "void output(int largestIndex, Rectangle rects []);"
+    - no: 4
+      co: 2
+      details: "Write a modular C program to create a structure Flight with flight_number, destination, and available_seats. Create an array of 4 flights. Write a program that takes a destination name from the user and checks if a flight is available to that location, displaying the flight number if found."
+      prototypes:
+        - "void readFlights(int n, Flight_t f[]);"
+        - "void searchByDestination(int n, Flight_t f[], char searchDest[]);"
+    - no: 5
+      co: 3
+      details: "Write a program to swap two integer arrays."
+      prototypes:
+        - "void read_array(int n, int arr[]);"
+        - "void print_array(int n, int arr[]);"
+        - "void swap_array(int n, int a[n], int b[n]);"
+    - no: 6
+      co: 3
+      details: "Develop a modular C program to manage an integer array using dynamic memory allocation. You must implement specific functions to allocate, initialize, display, and safely deallocate memory. This task ensures proficiency in preventing memory leaks and managing dangling pointers."
+      prototypes:
+        - "int* create_array(int n);"
+        - "void initialize_array(int *arr, int n);"
+        - "void print_array(int *arr, int n);"
+        - "void delete_array(int **arr);"
+    - no: 7
+      co: 4
+      details: "Write a C program to compare two strings using user-defined functions. The program should return: 0 if both strings are equal, 1 if the first string is lexicographically greater, -1 if the second string is lexicographically greater."
+      prototypes:
+        - "void inputStrings(char str1[], char str2[]);"
+        - "int compareStrings(char str1[], char str2[]);"
+        - "void output(int result);"
+    - no: 8
+      co: 4
+      details: "Write a C program to concatenate two strings using user-defined functions. The program should accept two strings from the user and pass them to a function that performs the concatenation. (strings, while/do while)"
+      prototypes:
+        - "void input(char *str);"
+        - "void concatenate_strings(char *str1, char *str2);"
+        - "void display(char *str);"
+    - no: 9
+      co: 5
+      details: "Write a modular C program to perform the following tasks using file handling functions: i. Read the details of n students from the user and store them in an array of structures. ii. Write the array of structures to a text (ASCII) file using fprintf(). iii. Read the data back from the ASCII file into a second array using fscanf() and display it. iv. Display the array of structures."
+      prototypes:
+        - "void inputStudents(Student students[], int n);"
+        - "void writeToTextFile(Student students[], int n, const char *filename);"
+        - "int readFromTextFile(Student students[], const char *filename);"
+        - "void printStudents(Student students[], int n);"
+    - no: 10
+      co: 5
+      details: "Write a modular C program to perform the following tasks using file handling functions: i. Read the details of n students from the user and store them in an array of structures. ii. Write the array of structures to a binary file using fwrite(). iii. Read the binary file into a second array of structures using fread(). iv. Display the array of structures."
+      prototypes:
+        - "void inputStudents(Student students[], int n);"
+        - "void writeToBinaryFile(Student students[], int n, const char *filename);"
+        - "int readFromBinaryFile(Student students[], const char *filename);"
+        - "void printStudents(Student students[], int n);"

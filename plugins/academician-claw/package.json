@@ -1,0 +1,50 @@
+{
+  "name": "reva-academician-claw",
+  "version": "2.0.0",
+  "publisher": "reva-university",
+  "description": "AcademicianClaw — OpenClaw v2 personal agentic intelligence for REVA faculty. Specialist agents for writing, research, task management, reflection, habits, learning coaching, and academic leadership.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "claw",
+        "description": "Your personal OpenClaw faculty agent — routes to the right specialist automatically. Knows your context, tasks, habits, and ongoing projects.",
+        "preResolutionPrompts": [
+          "rules/ORCHESTRATOR.md",
+          "rules/PERSONA_ENGINE.md",
+          "rules/PERMISSION_GUARDIAN.md"
+        ],
+        "slashCommands": [
+          {
+            "name": "weekly-review",
+            "description": "Run a full end-of-week reflection: accomplishments, task/habit review, next-week priorities.",
+            "template": "workflows/weekly-review.md"
+          },
+          {
+            "name": "project-kickoff",
+            "description": "Start a new project — define scope, decompose into tasks, capture in memory.",
+            "template": "workflows/project-kickoff.md"
+          },
+          {
+            "name": "deep-research",
+            "description": "Multi-angle systematic research with a structured brief output.",
+            "template": "workflows/deep-research.md"
+          },
+          {
+            "name": "session-close",
+            "description": "Close the current session — generate a SESSION_SUMMARY block for update_memory.py.",
+            "template": "workflows/session-closer.md"
+          },
+          {
+            "name": "new-skill",
+            "description": "Create a new specialist agent skill.md — describe what you need and the Skill Generator builds it.",
+            "template": "workflows/skill-generator.md"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "TRACK Educator Plugin: Coordinates syllabus design, session planning, content generation, and course integrity audits.",
   "permissions": [
-    "filesystem:read"
+    "filesystem:read",
+    "filesystem:write"
   ],
   "entry": {
     "rules": [
@@ -16,6 +17,9 @@
       "workflows/session-check.md",
       "workflows/course-check.md",
       "workflows/assessment-check.md"
+    ],
+    "skills": [
+      "../../skills/course-buddy-builder/SKILL.md"
     ]
   },
   "mcpConfig": "./mcp.json"

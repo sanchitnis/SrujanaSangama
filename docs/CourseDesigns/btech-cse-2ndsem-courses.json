@@ -1,0 +1,195 @@
+{
+    "program_details": {
+        "program_overview": "Computer Science and Information Technology (CS & IT) encompasses a variety of topics that relates to computation and applications of computing like, development of algorithms, analysis of algorithms, programming languages, software design, computer hardware, e-commerce, business information technology, Data Analytics, Machine Learning, Block Chain Technology, Augmented Virtual Reality, Mobile Application Development, IoT, Wireless Sensor network, Web Technology. Computer Science and Information Technology (CS & IT) has roots in Electrical Engineering, Mathematics, and Linguistics. In the past Computer Science and information science were taught as part of mathematics or engineering departments and in the last 3 decades they are emerged as separate engineering fields. In the present information era (Knowledge era), the Computer Science and information technology program will see an exponential growth as the future machines work on artificial intelligence. The School of Computing and Information Technology at REVA UNIVERSITY offers B. Tech., Computer Science and Information Technology, an undergraduate program to create motivated, innovative, creative and thinking graduates to fill ICT positions across sectors who can conceptualize, design, analyze, and develop ICT applications to meet the modern day requirements. The curriculum is outcome based and it comprises required theoretical concepts and practical skills in the domain. By undergoing this program, students develop critical, innovative, creative thinking and problem solving abilities for a smooth transition from academic to real-life work environment[cite: 181, 182, 183, 184, 185, 200, 203, 204].",
+        "program_educational_objectives": [
+            { "id": "PEO-1", "description": "Pursue higher education in the core or allied areas of Computer Science and Information Technology[cite: 209]." },
+            { "id": "PEO-2", "description": "Have technical career in the core or allied areas of Computer Science and Information Technology or start entrepreneurial activity for the growth of the economy[cite: 210]." },
+            { "id": "PEO-3", "description": "Continue to learn and to adapt to ever changing technologies in the core or allied areas of Computer Science and Information Technology[cite: 211]." }
+        ],
+        "program_outcomes": [
+            { "id": "PO-1", "title": "Engineering knowledge", "description": "Apply knowledge of mathematics, natural science, computing, engineering fundamentals and an engineering specialization as specified in WK1 to WK4 respectively to develop to the solution of complex engineering problems[cite: 213].", "mapped_wk": ["WK1", "WK2", "WK3", "WK4"] },
+            { "id": "PO-2", "title": "Problem analysis", "description": "Identify, formulate, review research literature and analyze complex engineering problems reaching substantiated conclusions with consideration for sustainable development[cite: 214].", "mapped_wk": ["WK1", "WK2", "WK3", "WK4", "WK5"] },
+            { "id": "PO-3", "title": "Design/development of solutions", "description": "Design creative solutions for complex engineering problems and design/develop systems/components/processes to meet identified needs with consideration for the public health and safety, whole-life cost, net zero carbon, culture, society and environment as required[cite: 216].", "mapped_wk": ["WK5"] },
+            { "id": "PO-4", "title": "Conduct investigations of complex problems", "description": "Conduct investigations of complex engineering problems using research-based knowledge including design of experiments, modelling, analysis & interpretation of data to provide valid conclusions[cite: 218].", "mapped_wk": ["WK8"] },
+            { "id": "PO-5", "title": "Engineering tool usage", "description": "Create, select and apply appropriate techniques, resources and modern engineering & IT tools, including prediction and modelling recognizing their limitations to solve complex engineering problems[cite: 220].", "mapped_wk": ["WK2", "WK6"] },
+            { "id": "PO-6", "title": "The engineer and The world", "description": "Analyze and evaluate societal and environmental aspects while solving complex engineering problems for its impact on sustainability with reference to economy, health, safety, legal framework, culture and environment[cite: 222].", "mapped_wk": ["WK1", "WK5", "WK7"] },
+            { "id": "PO-7", "title": "Ethics", "description": "Apply ethical principles and commit to professional ethics, human values, diversity and inclusion; adhere to national & international laws[cite: 224, 225].", "mapped_wk": ["WK9"] },
+            { "id": "PO-8", "title": "Individual and Collaborative Team work", "description": "Function effectively as an individual, and as a member or leader in diverse/multi-disciplinary teams[cite: 226].", "mapped_wk": [] },
+            { "id": "PO-9", "title": "Communication", "description": "Communicate effectively and inclusively within the engineering community and society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations considering cultural, language, and learning differences[cite: 228].", "mapped_wk": [] },
+            { "id": "PO-10", "title": "Project Management and Finance", "description": "Apply knowledge and understanding of engineering management principles and economic decision-making and apply these to one's own work, as a member and leader in a team, and to manage projects and in multidisciplinary environments[cite: 229].", "mapped_wk": [] },
+            { "id": "PO-11", "title": "Life-Long Learning", "description": "Recognize the need for and have the preparation and ability for i) independent and life-long learning ii) adaptability to new and emerging technologies and iii) critical thinking in the broadest context of technological change[cite: 230].", "mapped_wk": ["WK8"] }
+        ],
+        "knowledge_and_attitude_profile": [
+            { "id": "WK1", "description": "A systematic, theory-based understanding of the natural sciences applicable to the discipline and awareness of relevant social sciences[cite: 233]." },
+            { "id": "WK2", "description": "Conceptually based mathematics, numerical analysis, data analysis, statistics and formal aspects of computer and information science to support detailed analysis and modelling applicable to the discipline[cite: 234]." },
+            { "id": "WK3", "description": "A systematic, theory-based formulation of engineering fundamentals required in the engineering discipline[cite: 235]." },
+            { "id": "WK4", "description": "Engineering specialist knowledge that provides theoretical frameworks and bodies of knowledge for the accepted practice areas in the engineering discipline; much is at the forefront of the discipline[cite: 236, 237]." },
+            { "id": "WK5", "description": "Knowledge, including efficient resource use, environmental impacts, whole-life cost, reuse of resources, net zero carbon, and similar concepts, that supports engineering design and operations in a practice area[cite: 238]." },
+            { "id": "WK6", "description": "Knowledge of engineering practice (technology) in the practice areas in the engineering discipline[cite: 239]." },
+            { "id": "WK7", "description": "Knowledge of the role of engineering in society and identified issues in engineering practice in the discipline, such as the professional responsibility of an engineer to public safety and sustainable development[cite: 240]." },
+            { "id": "WK8", "description": "Engagement with selected knowledge in the current research literature of the discipline, awareness of the power of critical thinking and creative approaches to evaluate emerging issues[cite: 241]." },
+            { "id": "WK9", "description": "Ethics, inclusive behavior and conduct. Knowledge of professional ethics, responsibilities, and norms of engineering practice. Awareness of the need for diversity by reason of ethnicity, gender, age, physical ability etc. with mutual understanding and respect, and of inclusive attitudes[cite: 242, 243]." }
+        ],
+        "program_specific_outcomes": [
+            { "id": "PSO-1", "description": "Apply the knowledge of mathematics, Computer Science and Information Technology to solve complex problems in CS and IT[cite: 245]." },
+            { "id": "PSO-2", "description": "Analyze, design, develop solutions and conduct investigations in the domains of database, networks and security, system software and system administration[cite: 246]." },
+            { "id": "PSO-3", "description": "Apply appropriate techniques, use modern programming languages, tools, and packages for quality software development of CSIT[cite: 247]." }
+        ]
+    },
+    "curriculum_structure": {
+        "semester_1": {
+            "courses": [
+                {
+                    "s_no": 1,
+                    "course_code": "B24AS0103",
+                    "title": "Multivariable Calculus and Linear Algebra",
+                    "category": "FC",
+                    "credit_pattern": { "L": 3, "T": 0, "P": 0 },
+                    "total_credits": 3,
+                    "contact_hours_per_week": 3,
+                    "marks": { "CIE": 50, "SEE": 50, "total": 100 },
+                    "course_category_aicte": "BSC",
+                    "syllabus": {
+                        "course_overview": "This course introduces fundamental concepts of Vector Calculus, Differential Calculus, and Linear Algebra, which form the foundation for higher studies in mathematics, computer science, and engineering[cite: 579].",
+                        "course_objectives": [
+                            "The fundamental concepts of vector calculus, series expansions, and L'Hospital's rule[cite: 587].",
+                            "The concepts of consistency and LU decomposition for solving linear systems[cite: 588]."
+                        ],
+                        "theory_units": [
+                            { "unit_title": "Vector Calculus", "contents": "Velocity, Acceleration, Tangent and normal vectors, Gradient, Divergence, Curl, Solenoidal and Irrotational vectors, Scalar potential, Vector identities[cite: 604]." },
+                            { "unit_title": "Differential Calculus", "contents": "nth derivatives of standard function, Leibnitz theorem, Taylors series and McLaurin's series expansion for a function of one variable, Indeterminate forms solved using L-Hospital's rule, and Gradient descent method[cite: 605]." },
+                            { "unit_title": "Linear Algebra-1", "contents": "Echelon form, Normal form of a matrix, Rank of Matrix, Consistency of the system of homogeneous and non-homogeneous linear equations, Gauss elimination to solve system of equations, and LU decomposition method[cite: 606]." },
+                            { "unit_title": "Linear Algebra-2", "contents": "Linear transformation, Eigen values and Eigen Vectors up to 3*3 matrices, Diagonalization for 2*2 matrices, Rayleigh power method to determine largest Eigen value and corresponding Eigen vector[cite: 607]." }
+                        ],
+                        "self_learning_components": [
+                            "Vector spaces, Curvilinear co-ordinates: Cylindrical and spherical co-ordinates[cite: 627]."
+                        ],
+                        "textbooks": [
+                            "Theodore Shifrin, 'Multi-Variable Calculus and Linear Algebra with Applications', Wiley, 1st edition, Volume 2, 2018[cite: 609].",
+                            "B.S. Grewal, 'Higher Engineering Mathematics', Khanna Publishers, 43nd edition, 2015[cite: 610]."
+                        ]
+                    }
+                },
+                {
+                    "s_no": 2,
+                    "course_code": "B24AS0106",
+                    "title": "Physics for Computer Science",
+                    "category": "FC",
+                    "credit_pattern": { "L": 3, "T": 0, "P": 0 },
+                    "total_credits": 3,
+                    "contact_hours_per_week": 3,
+                    "marks": { "CIE": 50, "SEE": 50, "total": 100 },
+                    "course_category_aicte": "BSC",
+                    "syllabus": {
+                        "course_overview": "This course introduces the basic concepts of Physics and its applications in Computer Science Engineering courses by emphasizing concepts like Construction and working of Lasers and optical Fibers in point-to-point communication[cite: 630].",
+                        "theory_units": [
+                            { "unit_title": "Lasers & Dielectrics", "contents": "Laser characteristics, Interaction of radiation with matter, Einstein's coefficients, population inversion; semiconductor laser. Polarization mechanisms in dielectrics, Piezoelectric, pyroelectric and ferroelectric properties[cite: 654, 655, 656, 657]." },
+                            { "unit_title": "Optical Fibers", "contents": "Construction and light propagation, Acceptance angle, Numerical Aperture (NA) expression, Modes, Attenuation, Optical source (LED) and detector (Photodiode) in communication blocks[cite: 658, 659]." },
+                            { "unit_title": "Quantum Mechanics & Computing", "contents": "De-Broglie hypothesis, Phase/group velocity. Schrödinger independent wave equation, Eigenvalues, Particle in 1D infinite potential well. Qubits representation, quantum logic gates, cryptography introduction[cite: 660, 661, 663, 664, 665, 667, 668]." }
+                        ],
+                        "self_learning_components": [
+                            "Holograms using LASERS; Ultrasonics; and Statistical Physics for Computing[cite: 672]."
+                        ]
+                    }
+                },
+                {
+                    "s_no": 6,
+                    "course_code": "B24EN0101",
+                    "title": "Internet of Things",
+                    "category": "HC",
+                    "credit_pattern": { "L": 1, "T": 0, "P": 1 },
+                    "total_credits": 2,
+                    "contact_hours_per_week": 3,
+                    "marks": { "CIE": 50, "SEE": 50, "total": 100 },
+                    "course_category_aicte": "ESC",
+                    "syllabus": {
+                        "course_overview": "The Internet of Things (IoT) expands access to the world-wide web to create a vast network of appliances capable of connecting to the Internet. This course focuses on IoT architecture, boards, sensors, actuators, and communication protocols[cite: 873, 874].",
+                        "practice_sessions": [
+                            "Experiment-01: Introduction to Arduino Board & LED Blinking[cite: 900].",
+                            "Experiment-02: Control brightness of LED using Potentiometer[cite: 900].",
+                            "Experiment-03: Interface LDR sensor to Arduino[cite: 900].",
+                            "Experiment-04: Interface Temperature sensor and map to LCD screen[cite: 900].",
+                            "Experiment-05: Interface Ultrasonic sensor and evaluate distance[cite: 900].",
+                            "Experiment-06: Introduction to NODE MCU and write a 2-bit counter[cite: 900].",
+                            "Experiment-07: Interface PIR Motion Sensor[cite: 900].",
+                            "Experiment-10: Connect sensor data stream to cloud dashboard service[cite: 902]."
+                        ],
+                        "challenge_experiments": [
+                            "Write a program to demonstrate how ESP8266 can be used to log sensor data into thing speak cloud[cite: 917]."
+                        ]
+                    }
+                }
+            ],
+            "summary": { "total_credits": 20, "total_cumulative_credits": 20, "total_contact_hours": 26, "total_marks": 850 }
+        },
+        "semester_2": {
+            "courses": [
+                {
+                    "s_no": 1,
+                    "course_code": "B24AS0203",
+                    "title": "Probability and Statistics",
+                    "category": "FC",
+                    "credit_pattern": { "L": 3, "T": 0, "P": 0 },
+                    "total_credits": 3,
+                    "contact_hours_per_week": 3,
+                    "marks": { "CIE": 50, "SEE": 50, "total": 100 },
+                    "course_category_aicte": "BSC",
+                    "syllabus": {
+                        "course_overview": "This course on Probability and Statistics for Computer Science introduces fundamental statistical methods and probability concepts with applications in computing[cite: 1137].",
+                        "theory_units": [
+                            { "unit_title": "Curve Fitting & Statistics", "contents": "Curve fitting by least squares ($y=ax+b$, $y=ax^2+bx+c$, $y=ae^{bx}$). Correlation-Karl Pearson's coefficient, Regression lines analysis, Rank correlation[cite: 1161, 1162]." },
+                            { "unit_title": "Probability Distributions", "contents": "Random variables, Discrete and continuous probability distributions. Binomial, Poisson, normal, and exponential distributions[cite: 1164]." },
+                            { "unit_title": "Joint Probability & Stochastic Systems", "contents": "Joint Distribution for two discrete random variables, expectation, covariance. Stochastic processes, probability vector, stochastic matrices, Markov chains, higher transition probability[cite: 1167, 1168]." },
+                            { "unit_title": "Sampling Theory", "contents": "Sampling distributions, standard error, test of hypothesis for means and proportions, student's t-distribution. Chi-square distribution as a test of goodness of fit[cite: 1170, 1171]." }
+                        ],
+                        "textbooks": [
+                            "B.S. Grewal, 'Higher Engineering Mathematics', 43nd edition Khanna Publishers, 2015[cite: 1177].",
+                            "ErwinKreyszig, 'Advanced Engineering Mathematics', 9thedition Wiley Publications, 2013[cite: 1178]."
+                        ]
+                    }
+                },
+                {
+                    "s_no": 3,
+                    "course_code": "B25CI0201",
+                    "title": "Advanced C programming with Copilot",
+                    "category": "HC",
+                    "credit_pattern": { "L": 1, "T": 1, "P": 0 },
+                    "total_credits": 2,
+                    "contact_hours_per_week": 3,
+                    "marks": { "CIE": 50, "SEE": 50, "total": 100 },
+                    "course_category_aicte": "ESC",
+                    "syllabus": {
+                        "course_overview": "This course is designed to equip students with the skills necessary to leverage AI-powered tools in modern software development while mastering memory tracking frameworks[cite: 1282, 1283].",
+                        "theory_units": [
+                            { "unit_title": "Core AI Copilot & Structures", "contents": "Review of fundamentals. AI copilot integration, Prompt Engineering Basics, iterative refinement. Structures definition and arrays of structures[cite: 1309, 1311, 1312]." },
+                            { "unit_title": "Pointers & File Operations", "contents": "Understanding pointers, Dynamic Memory Management using malloc and free, pointers and arrays/strings, singly linked lists application. File handling modes ($fopen, fread, fscanf, fwrite, fprintf, fclose$), error checking ($feof$)[cite: 1313, 1314]." }
+                        ]
+                    }
+                },
+                {
+                    "s_no": 12,
+                    "course_code": "B25CSET01",
+                    "title": "AI Foundations for Engineers",
+                    "category": "ETC",
+                    "credit_pattern": { "L": 1, "T": 0, "P": 0 },
+                    "total_credits": 1,
+                    "contact_hours_per_week": 1,
+                    "marks": { "CIE": 25, "SEE": 25, "total": 50 },
+                    "course_category_aicte": "ETC",
+                    "syllabus": {
+                        "course_overview": "This course introduces engineering students to fundamental concepts of Artificial Intelligence with emphasis on experimental learning and project-based skill development[cite: 1765].",
+                        "theory_units": [
+                            { "unit_title": "AI Introduction", "contents": "Definition, scope, and history of AI, Narrow vs General AI vs Superintelligence. Approaches across engineering branches, ethical implications, Industry 4.0, smart cities[cite: 1781]." },
+                            { "unit_title": "Problem Solving & Search", "contents": "State space representation, Uninformed search (BFS, DFS), Informed search (Greedy Best-First, A* algorithm). Optimization: Hill Climbing, Genetic Algorithms[cite: 1781, 1782]." },
+                            { "unit_title": "Knowledge & Machine Learning", "contents": "Rule-based expert systems, propositional and predicate logic. ML paradigms: Supervised (Classification, Regression), Unsupervised (k-Means clustering). Preprocessing[cite: 1782, 1783]." }
+                        ],
+                        "textbooks": [
+                            "Stuart Russell and Peter Norvig, Artificial Intelligence: A Modern Approach, 4th Edition, Pearson, 2020[cite: 1784]."
+                        ]
+                    }
+                }
+            ],
+            "summary": { "total_credits": 21, "total_cumulative_credits": 41, "total_contact_hours": 27, "total_marks": 900 }
+        }
+    }
+}

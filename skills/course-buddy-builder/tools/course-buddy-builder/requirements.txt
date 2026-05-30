@@ -1,0 +1,13 @@
+# notebooklm-py: unofficial Google NotebookLM Python API
+# Constraint: C2 (Google free tier, no paid API key required)
+# https://github.com/teng-lin/notebooklm-py
+notebooklm-py[browser]>=0.4.0
+
+# Jupyter notebook generation
+nbformat>=5.9.0
+
+# YAML parsing for course descriptors (stdlib fallback available in Python 3.10+)
+PyYAML>=6.0
+
+# Markdown processing for study guide import
+markdown>=3.5.0

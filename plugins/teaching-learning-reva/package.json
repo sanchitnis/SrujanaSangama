@@ -32,6 +32,11 @@
             "name": "assessment-check",
             "description": "Audit course assessments for Bloom's levels, enjoyability, and AI-triviality bypass.",
             "template": "workflows/assessment-check.md"
+          },
+          {
+            "name": "build-course-buddy",
+            "description": "Build a new Course Buddy (Obsidian wiki, Jupyter workbook, Socratic tutor skill) from a course descriptor. Runs the course-buddy-builder pipeline. Faculty use only — not student-facing.",
+            "template": "../../skills/course-buddy-builder/SKILL.md"
           }
         ]
       }

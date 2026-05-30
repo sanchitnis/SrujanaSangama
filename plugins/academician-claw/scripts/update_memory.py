@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 openclaw-script: true
 name: update_memory
@@ -14,7 +14,7 @@ import sys
 import datetime
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent.parent
+BASE = Path(__file__).parent.parent  # plugin root
 
 def read(rel, default=""):
     p = BASE / rel

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 openclaw-script: true
 name: context_builder
@@ -15,7 +15,7 @@ import datetime
 import re
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent.parent  # openclaw root
+BASE = Path(__file__).parent.parent  # plugin root
 
 def read(rel, default="[not found]"):
     p = BASE / rel

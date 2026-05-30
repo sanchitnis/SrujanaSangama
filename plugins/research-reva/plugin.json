@@ -1,21 +1,33 @@
 {
-  "id": "reva.research-reva",
-  "name": "REVA Research & Scholarship Agent Pack",
-  "version": "1.0.0",
-  "description": "TRACK Scholar Plugin: Drives capstone projects, academic manuscript writing, grant proposals, and publication tracking.",
+  "id": "reva.srujana-shodha",
+  "name": "SrujanaShodha — Faculty Research Advisor",
+  "version": "2.0.0",
+  "description": "A personal research advisory intelligence for REVA University faculty. Drives research career growth through competency profiling, opportunity identification, interdisciplinary collaboration, funding navigation, full research lifecycle coaching, work product review, and personal brand building. Modeled on the AcademicianClaw agent architecture. Skill architecture adapted from google-deepmind/science-skills (Apache 2.0).",
   "permissions": [
-    "filesystem:read"
+    "filesystem:read",
+    "filesystem:write"
   ],
   "entry": {
     "rules": [
+      "rules/ADVISOR_IDENTITY.md",
       "rules/RESEARCH_ETHICS.md",
-      "rules/SCHOLARLY_WRITING_STANDARD.md",
-      "rules/GRANT_PROPOSAL_STANDARD.md"
+      "rules/INDIA_RESEARCH_CONTEXT.md",
+      "rules/SDG_MAPPING_STANDARD.md",
+      "rules/PERSONAL_BRAND_STANDARD.md",
+      "rules/GRANT_PROPOSAL_STANDARD.md",
+      "rules/SCHOLARLY_WRITING_STANDARD.md"
     ],
     "workflows": [
+      "workflows/onboarding.md",
+      "workflows/opportunity-mapping.md",
+      "workflows/funding-hunt.md",
+      "workflows/research-lifecycle.md",
+      "workflows/brand-sprint.md",
+      "workflows/sdg-impact-audit.md",
       "workflows/grant-check.md",
       "workflows/manuscript-check.md",
-      "workflows/proposal-check.md"
+      "workflows/proposal-check.md",
+      "workflows/session-closer.md"
     ]
   },
   "mcpConfig": "./mcp.json"

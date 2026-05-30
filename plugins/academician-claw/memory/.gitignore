@@ -1,0 +1,28 @@
+# Personal memory — gitignored per faculty member
+# Each faculty member maintains their own local memory/ directory.
+# These files are NEVER committed to the shared repository.
+
+# Personal identity and preferences
+soul.md
+
+# Semantic memory (facts about the user's work, projects, relationships)
+semantic/
+
+# Episodic memory (session logs, narrative history)
+episodic/
+
+# Procedural memory (how-tos, workflows the user has defined)
+procedural/
+
+# Habit tracking data
+habits/
+
+# Active working context (tasks, current project, scratchpad)
+context/
+
+# Session logs
+logs/
+
+# Keep the directory tracked but not its contents
+!.gitignore
+!soul.md.example
