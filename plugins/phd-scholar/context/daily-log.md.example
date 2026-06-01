@@ -1,0 +1,63 @@
+# Daily Log — Example
+# This is an example file. Copy to context/daily-log.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+
+---
+
+## Today's Focus
+
+date: "YYYY-MM-DD"
+energy: 3
+# Scale: 1 (exhausted) to 5 (fully energised)
+
+session_goal: ""
+# The single specific task for today's PhD work session
+
+---
+
+## Active Tasks (max 5)
+
+> Updated by daily-planner.md and 12_daily-standup.md.
+
+| # | Task | Stage | Est. Hours | Status | Due |
+|---|---|---|---|---|---|
+| 1 | [specific task — not "work on thesis"] | Stage N | 2 | todo / in-progress / done / blocked | YYYY-MM-DD |
+| 2 | [specific task] | Stage N | 1.5 | todo | YYYY-MM-DD |
+| 3 | [specific task] | Stage N | 1 | todo | YYYY-MM-DD |
+| 4 | — | — | — | — | — |
+| 5 | — | — | — | — | — |
+
+---
+
+## Blockers
+
+| Blocker | Type | Status |
+|---|---|---|
+| [description] | technical / methodological / admin / interpersonal / psychological / resource | open / resolved |
+
+---
+
+## Daily Standup History (Rolling 7 Days)
+
+> Yesterday / Today / Blockers format. Appended by 12_daily-standup.md.
+
+### [YYYY-MM-DD]
+- Yesterday: [what was done or "rest day"]
+- Today: [what was planned]
+- Blockers: [list or "none"]
+- Energy: [N/5]
+
+### [YYYY-MM-DD — previous day]
+- Yesterday: ...
+- Today: ...
+- Blockers: ...
+- Energy: ...
+
+---
+
+## Mood / Energy Quick Capture
+
+> Optional. Note if something significant affected energy or focus today.
+
+[YYYY-MM-DD]: [one-line note — e.g., "Guide meeting went well, feeling clearer about methodology"]
+[YYYY-MM-DD]: [one-line note]

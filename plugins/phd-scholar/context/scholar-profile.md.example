@@ -1,0 +1,123 @@
+# Scholar Profile — Example
+# This is an example file. Copy to context/scholar-profile.md and fill in your details.
+# CONSTITUTION §8: The live file (scholar-profile.md) is gitignored. Only this .example is committed.
+
+---
+
+## Identity
+
+name: "Your Full Name"
+school: "School of Computer Science and Engineering"
+# Options: School of CSE | School of CSA | School of ECE | School of Management | other
+department_variant: "CSE"
+# Options: CSE | CSA (determines SCHOOL_ROUTING.md pathway)
+
+batch_year: 2023
+# The year you began your PhD programme
+
+provisional_registration_date: "YYYY-MM-DD"
+# Date your provisional PhD registration was formally confirmed by REVA University
+
+---
+
+## Candidate Type & Credits
+
+candidate_type: "FT-standard"
+# Options:
+#   FT-standard          — Full-time, standard entry (credit floor: 18, §9.7a)
+#   4-year-degree        — B.Tech with 70%+ aggregate (credit floor: 46, §9.7b)
+#   industrial           — Sponsored / industrial experience candidate (credit floor: 30, §9.7c)
+#   foreign-other-domain — Joining from foreign institution or different domain (credit floor: 50, §9.7d)
+
+credit_floor: 18
+# Auto-set from candidate_type by coursework-navigator.md; override if DAC has issued a waiver
+
+credits_completed: 0
+# Running total of PhD coursework credits completed
+
+compulsory_complete:
+  RM: false      # Research Methodology
+  RPE: false     # Research and Publication Ethics (UGC mandatory)
+  ARM: false     # Advanced Research Methods
+
+---
+
+## Supervision
+
+guide_name: "Dr. [Full Name]"
+guide_school: "School of CSE / CSA"
+guide_current_load: null
+# Number of scholars currently supervised by guide (cap: 8 per §7.2); leave null if unknown
+
+co_guide_name: null
+# Leave null if no co-guide
+co_guide_school: null
+
+---
+
+## Research
+
+research_topic: ""
+# Working title of the research area; may evolve before pre-registration colloquium
+
+research_domain_tags: []
+# Example: ["ML", "IoT", "Cybersecurity", "NLP"]
+
+current_stage: 0
+# Stage values:
+#   0 — Pre-registration: topic exploration, guide identification
+#   1 — Coursework: credit completion
+#   2 — Synopsis: pre-registration colloquium preparation
+#   3 — Active Research: experiments, lit review, DRPC reviews
+#   4 — Publications: paper targeting, submission, revision
+#   5 — Thesis Writing: drafting, format compliance, pre-submission colloquium
+#   6 — Patent (if applicable)
+#   7 — Grant (if applicable)
+#   8 — Book (if applicable)
+
+synopsis_status: "not-started"
+# Options: not-started | in-draft | submitted | pre-reg-colloquium-passed
+
+---
+
+## §14.1 Publication Minimum Target
+
+publication_option_target: null
+# Decide with guide which option to pursue:
+#   A — 3 Scopus/WoS/UGC journals + 1 conference
+#   B — 2 Scopus/WoS/UGC journals + 1 granted patent + 1 conference
+#   C — 2 Q1/Q2 journals + 1 conference
+
+engineering_floor_target: true
+# true = must include ≥1 Q1/Q2/Q3 publication (Engineering/Applied Sciences §14.1)
+
+---
+
+## Ikigai Fields
+
+ikigai_passion: ""
+# What areas of CS/technology genuinely absorb you?
+
+ikigai_strength: ""
+# What are you unusually good at (technically or generally)?
+
+ikigai_world_need: ""
+# Who would benefit from your research succeeding?
+
+ikigai_career_goal: ""
+# What kind of career do you want after the PhD?
+
+---
+
+## Preferences
+
+communication_style: "conversational"
+# Options: conversational | structured | brief | detailed
+
+learning_style: ""
+# Options: visual | conceptual | hands-on | reading-first | mixed
+
+working_hours_preference: ""
+# Example: "morning focused work, afternoons for reading"
+
+timezone: "Asia/Kolkata"

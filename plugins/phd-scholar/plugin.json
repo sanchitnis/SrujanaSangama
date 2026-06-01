@@ -1,0 +1,40 @@
+{
+  "id": "reva.phd-scholar",
+  "name": "PhD Scholar — REVA Doctoral Journey Companion",
+  "version": "1.0.0",
+  "description": "A stage-aware doctoral journey companion for REVA University PhD scholars (CSE/CSA). Guides scholars through all 9 stages — from topic scouting and entrance prep to coursework, research, publication, thesis writing, patent filing, grant hunting, and book writing. Includes a /guide mode for research supervisors to manage their scholar roster. School routing: CSE/CSA fully supported; other schools receive a graceful placeholder until their materials are ready.",
+  "permissions": [
+    "filesystem:read",
+    "filesystem:write"
+  ],
+  "entry": {
+    "rules": [
+      "rules/SCHOLAR_IDENTITY.md",
+      "rules/GUIDE_IDENTITY.md",
+      "rules/SCHOOL_ROUTING.md",
+      "rules/RESEARCH_ETHICS.md",
+      "rules/PUBLICATION_STANDARDS.md",
+      "rules/IKIGAI_ALIGNMENT.md",
+      "rules/WELLBEING_STANDARD.md",
+      "rules/REVA_PHD_REGULATIONS.md"
+    ],
+    "workflows": [
+      "workflows/00_onboarding.md",
+      "workflows/01_entrance-prep.md",
+      "workflows/02_coursework.md",
+      "workflows/03_synopsis.md",
+      "workflows/04_research-cycle.md",
+      "workflows/05_publication-pipeline.md",
+      "workflows/06_thesis-sprint.md",
+      "workflows/07_patent-workflow.md",
+      "workflows/08_grant-proposal.md",
+      "workflows/09_book-proposal.md",
+      "workflows/10_guide-dashboard.md",
+      "workflows/11_session-closer.md",
+      "workflows/12_daily-standup.md",
+      "workflows/13_stuck-triage.md",
+      "workflows/14_wellness-checkin.md",
+      "workflows/15_ikigai-audit.md"
+    ]
+  }
+}

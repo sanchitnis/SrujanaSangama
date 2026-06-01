@@ -1,0 +1,32 @@
+{
+  "name": "reva-phd-scholar",
+  "version": "1.0.0",
+  "publisher": "reva-university",
+  "description": "REVA PhD Scholar: Stage-aware doctoral journey companion for CSE/CSA scholars. 9-stage lifecycle coaching from topic scouting to thesis submission, patent filing, and grant hunting. Supervisor /guide mode included.",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Copilot"],
+  "contributes": {
+    "copilotAgents": [
+      {
+        "name": "phd-scholar",
+        "description": "Ask PhD Scholar for stage-wise doctoral journey guidance — coursework, research, publication, thesis, patents, and grants. Use /guide for supervisor mode.",
+        "preResolutionPrompts": [
+          "rules/SCHOLAR_IDENTITY.md",
+          "rules/REVA_PHD_REGULATIONS.md",
+          "rules/RESEARCH_ETHICS.md",
+          "rules/PUBLICATION_STANDARDS.md",
+          "rules/WELLBEING_STANDARD.md"
+        ],
+        "slashCommands": [
+          {
+            "name": "guide",
+            "description": "Activate supervisor mode — manage your scholar roster, review milestones, and access feedback templates.",
+            "template": "workflows/10_guide-dashboard.md"
+          }
+        ]
+      }
+    ]
+  }
+}

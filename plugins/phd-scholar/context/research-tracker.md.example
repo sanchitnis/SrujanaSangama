@@ -1,0 +1,103 @@
+# Research Tracker — Example
+# This is an example file. Copy to context/research-tracker.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+
+---
+
+## Milestone Log
+
+> Updated by stage-tracker.md at each biannual review and on milestone confirmation.
+> Dates computed from registration_date + candidate_type per references/phd-milestone-calculator.md.
+
+| Milestone | Target Date | Confirmed Date | Status | Days Remaining (from today) |
+|---|---|---|---|---|
+| Coursework completion (CWEE) | YYYY-MM-DD | — | pending | — |
+| Pre-registration colloquium | YYYY-MM-DD | — | pending | — |
+| Provisional registration confirmation | YYYY-MM-DD | — | pending | — |
+| Biannual Review 1 | YYYY-MM-DD | — | pending | — |
+| Biannual Review 2 | YYYY-MM-DD | — | pending | — |
+| Biannual Review 3 | YYYY-MM-DD | — | pending | — |
+| Pre-submission colloquium | YYYY-MM-DD | — | pending | — |
+| Synopsis submission | YYYY-MM-DD | — | pending | — |
+| Thesis submission (earliest) | YYYY-MM-DD | — | pending | — |
+| Maximum without extension | YYYY-MM-DD | — | — | — |
+| Absolute hard limit (§4.5) | YYYY-MM-DD | — | — | — |
+
+---
+
+## Biannual DRPC Review History
+
+| Review # | Date | Guide Present | DRPC Feedback Summary | Corrective Actions | Sign-off |
+|---|---|---|---|---|---|
+| Review 1 | — | — | — | — | pending |
+
+---
+
+## Supervisor Sign-off Log
+
+| Document / Action | Date | Guide | Co-guide | Notes |
+|---|---|---|---|---|
+| Pre-registration colloquium sign-off | — | — | — | |
+| DRPC Report 1 signature | — | — | — | |
+
+---
+
+## Thesis Chapter Progress
+
+> Updated by thesis-writer.md after each thesis sprint session.
+
+| Chapter | Status | Last Updated | Notes |
+|---|---|---|---|
+| Prelims (title, cert, ToC, abstract) | not-started | — | |
+| Ch 1 — Introduction | not-started | — | |
+| Ch 2 — Literature Review | not-started | — | |
+| Ch 3 — Methodology | not-started | — | |
+| Ch 4 — [Research Work 1] | not-started | — | |
+| Ch 5 — [Research Work 2] | not-started | — | |
+| Final Chapter — Conclusion | not-started | — | |
+| References + Appendices + Evidence | not-started | — | |
+
+thesis_chapters_complete: 0
+
+---
+
+## Experiment Log
+
+> One entry per experiment run. Updated by research-coach.md.
+
+| Experiment ID | Date | Hypothesis | Method | Baseline | Result | p-value | Conclusion |
+|---|---|---|---|---|---|---|---|
+| EXP-001 | — | — | — | — | — | — | — |
+
+---
+
+## Patent Tracker
+
+> Updated by patent-agent.md and 07_patent-workflow.md.
+
+| # | Title (short) | Filing Type | Filing Date | Status | §14.1 Option B Eligible? |
+|---|---|---|---|---|---|
+| — | — | — | — | — | — |
+
+---
+
+## Grant Tracker
+
+> Updated by grant-agent.md and 08_grant-proposal.md.
+
+| Scheme | Body | Submission Date | Status | Amount Applied | Decision Date |
+|---|---|---|---|---|---|
+| — | — | — | — | — | — |
+
+---
+
+## Book Project
+
+> Updated by book-agent.md and 09_book-proposal.md.
+
+type: null
+working_title: null
+target_publisher: null
+draft_started: null
+proposal_submitted: null
+status: null

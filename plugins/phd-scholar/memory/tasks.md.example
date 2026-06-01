@@ -1,0 +1,65 @@
+# Tasks — Example
+# This is an example file. Copy to memory/tasks.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+# Updated by daily-planner.md, 11_session-closer.md, 12_daily-standup.md.
+
+---
+
+## Active Tasks
+
+> Tasks currently in progress or queued. Updated after every session.
+> Each task must be specific (not "work on thesis") and time-boxed.
+
+| # | Task | Stage | Est. Hours | Status | Due | Blocker |
+|---|---|---|---|---|---|---|
+| 1 | [specific task] | Stage N | 2 | todo / in-progress / done / blocked | YYYY-MM-DD | — |
+| 2 | [specific task] | Stage N | 1.5 | todo | YYYY-MM-DD | — |
+| 3 | [specific task] | Stage N | 3 | blocked | YYYY-MM-DD | [blocker description] |
+
+Status options: todo | in-progress | done | blocked | deferred
+
+---
+
+## Milestone Countdown Tasks
+
+> Tasks tied to an upcoming milestone. Automatically elevated if milestone is within 14 days.
+
+| Milestone | Due Date | Prep Task | Est. Hours | Status |
+|---|---|---|---|---|
+| [milestone name] | YYYY-MM-DD | [specific prep action] | N | todo |
+
+---
+
+## Weekly Plan
+
+> Set by 12_daily-standup.md or daily-planner.md.
+
+Week of: YYYY-MM-DD
+
+| Day | Focus Area | Task | Time Block | Done? |
+|---|---|---|---|---|
+| Monday | Research / Writing / Admin | [specific task] | N hrs | □ |
+| Tuesday | ... | ... | ... | □ |
+| Wednesday | ... | ... | ... | □ |
+| Thursday | ... | ... | ... | □ |
+| Friday | Admin / Reading | [lighter task] | N hrs | □ |
+
+---
+
+## Resolved Blockers Log
+
+> Appended by 13_stuck-triage.md. Personal problem-solving record.
+
+| Date | Type | Description | Resolution | Time Lost |
+|---|---|---|---|---|
+| YYYY-MM-DD | technical | [brief description] | [what worked] | [hours] |
+
+---
+
+## Completed Tasks Archive (Rolling 30 Days)
+
+> Move done tasks here after completion. Cleared monthly.
+
+| Date | Task | Stage | Time Taken |
+|---|---|---|---|
+| YYYY-MM-DD | [task] | Stage N | N hrs |

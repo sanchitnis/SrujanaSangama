@@ -1,0 +1,22 @@
+# memory/.gitignore
+# CONSTITUTION §8: All live memory files are gitignored.
+# Only *.example files and this .gitignore are committed to version control.
+# Never commit personal data, wellbeing logs, or session-specific notes.
+
+# Block all Markdown files in this directory and subdirectories
+*.md
+
+# Allow example files (these are committed as templates)
+!*.md.example
+!**/*.md.example
+
+# Block episodic session files
+episodic/*.md
+!episodic/*.md.example
+
+# Block semantic memory live files
+semantic/*.md
+!semantic/*.md.example
+
+# Allow README if present
+!README.md

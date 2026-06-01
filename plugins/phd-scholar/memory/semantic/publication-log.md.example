@@ -1,0 +1,73 @@
+# Publication Log — Example
+# This is an example file. Copy to memory/semantic/publication-log.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+# Updated by publication-coach.md, 05_publication-pipeline.md, and 11_session-closer.md.
+
+---
+
+## Active Papers
+
+| ID | Working Title | Venue | Venue Type | Tier | Status | Submitted | Decision | DOI |
+|---|---|---|---|---|---|---|---|---|
+| P001 | [title] | [venue name] | Journal/Conf | Q1/Q2/Q3/Q4/UGC | in-prep | — | — | — |
+
+Status options: in-prep | submitted | under-review | major-revision | minor-revision | accepted | published | rejected | withdrawn
+
+---
+
+## Paper Detail Records
+
+### P001 — [Working Title]
+
+venue: ""
+venue_index: ""
+# Options: Scopus | WoS-SCIE | UGC-CARE | IEEE-Sponsored | ACM-Sponsored | Not-indexed
+
+tier: ""
+# Options: Q1 | Q2 | Q3 | Q4 | A* | A | B | UGC | Unranked
+
+submission_date: null
+decision_date: null
+revision_due: null
+
+reviewer_notes: ""
+# Summary of reviewer comments if revision was requested
+
+revision_response_drafted: false
+
+§14.1_counts_for: ""
+# Which §14.1 option slot does this paper fill?
+# Example: "Option A — Journal 1 of 3"
+
+is_active_at_submission: false
+# Will be marked true once the paper is submitted; required: at least 1 paper must be active at thesis submission
+
+doi: null
+acceptance_letter_saved: false
+# true once the acceptance letter is saved to the evidence folder for Appendix 4
+
+co_authors:
+  - guide: true
+  - co_guide: false
+  - others: []
+
+notes: ""
+
+---
+
+## Rejected Papers
+
+| ID | Title | Venue | Date | Reason | Next Venue |
+|---|---|---|---|---|---|
+| — | — | — | — | — | — |
+
+---
+
+## Conference Certificates Log
+
+> Appendix 4 evidence requirement: 2 conference certificates at thesis submission.
+
+| # | Conference | Paper Title | Date | Certificate Saved? |
+|---|---|---|---|---|
+| 1 | [conf name] | [title] | YYYY-MM-DD | yes / no |
+| 2 | [conf name] | [title] | YYYY-MM-DD | yes / no |

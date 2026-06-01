@@ -1,0 +1,51 @@
+# Publication Pipeline — Example
+# This is an example file. Copy to context/publication-pipeline.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+
+---
+
+## §14.1 Publication Minimum Dashboard
+
+> Updated by publication-coach.md and 05_publication-pipeline.md after every publication session.
+
+Batch year: YYYY
+Option target: A / B / C (choose with guide)
+
+### Option A Progress (3 Scopus/WoS/UGC + 1 conf)
+- Journal 1: [ ] not-started
+- Journal 2: [ ] not-started
+- Journal 3: [ ] not-started
+- Conference: [ ] not-started
+
+### Option B Progress (2 Scopus/WoS/UGC + 1 granted patent + 1 conf)
+- Journal 1: [ ] not-started
+- Journal 2: [ ] not-started
+- Patent: [ ] not-started (granted required — not just filed)
+- Conference: [ ] not-started
+
+### Option C Progress (2 Q1/Q2 + 1 conf)
+- Q1/Q2 Journal 1: [ ] not-started
+- Q1/Q2 Journal 2: [ ] not-started
+- Conference: [ ] not-started
+
+Engineering floor: ≥1 Q1/Q2/Q3 — [ ] not yet met
+
+**At-submission check:** At least one publication must be ACTIVE (submitted / under review / accepted / published) at thesis submission time.
+
+---
+
+## Active Papers
+
+| # | Working Title | Target Venue | Tier | Type | Status | Submission Date | Decision Date | DOI |
+|---|---|---|---|---|---|---|---|---|
+| 1 | [title] | [venue] | Q1/Q2/Q3/Q4/UGC | Journal/Conf | in-prep | — | — | — |
+
+Status options: in-prep | submitted | under-review | major-revision | minor-revision | accepted | published | rejected
+
+---
+
+## Completed / Archived Papers
+
+| # | Title | Venue | Tier | Status | Date | Notes |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |

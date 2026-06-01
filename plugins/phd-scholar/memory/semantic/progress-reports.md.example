@@ -1,0 +1,73 @@
+# Progress Reports — Example
+# This is an example file. Copy to memory/semantic/progress-reports.md and fill in your details.
+# CONSTITUTION §8: The live file is gitignored. Only this .example is committed.
+# Updated by research-coach.md and 04_research-cycle.md at each biannual DRPC review.
+
+---
+
+## Biannual Progress Report History
+
+> One section per DRPC review period. Most recent at top.
+
+---
+
+### Report Period: [YYYY-MM — YYYY-MM]
+
+**Submitted:** YYYY-MM-DD
+**Guide present:** Yes / No
+**Co-guide present:** Yes / No
+
+#### Work Completed This Period
+
+- [bullet: specific output — paper submitted, experiments run, chapters drafted]
+- [bullet: specific output]
+- [bullet: specific output]
+
+Evidence:
+- [ ] Paper submission receipt / acceptance notification
+- [ ] Experiment logs in research-tracker.md
+- [ ] Chapter draft saved
+
+#### Milestone Status
+
+| Milestone | Status | Notes |
+|---|---|---|
+| [milestone] | complete / on-track / delayed / overdue | [note] |
+
+#### Challenges and Blockers
+
+| Blocker | Type | Proposed Resolution |
+|---|---|---|
+| [description] | technical / admin / other | [resolution] |
+
+#### Plan for Next 6 Months
+
+1. [specific measurable output] — by [date]
+2. [specific measurable output] — by [date]
+3. [specific measurable output] — by [date]
+
+#### Publication Status Update (§14.1)
+
+Option [A/B/C] progress at this review: [N/required]
+Engineering floor: [met / not yet]
+
+#### DRPC Committee Feedback
+
+feedback: ""
+# Summary of committee remarks
+
+corrective_actions_required:
+  - action: ""
+    due_by: "YYYY-MM-DD"
+    completed: false
+
+corrective_actions_completed:
+  - action: ""
+    completed_date: "YYYY-MM-DD"
+
+#### Sign-off Status
+
+guide_signed: false
+co_guide_signed: false
+drpc_chair_signed: false
+report_finalised: false
