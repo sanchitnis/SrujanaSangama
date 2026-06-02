@@ -1,0 +1,47 @@
+[
+  {
+    "case_id": "SYN-PAT-001",
+    "title": "IoT-Based Precision Soil Moisture Management System",
+    "domain": "Smart Agriculture",
+    "judgement": {
+      "novelty_score": 5.0,
+      "inventive_step_score": 4.5,
+      "exclusions_score": 5.0,
+      "structure_score": 4.8,
+      "overall_rating": 4.83,
+      "expected_rating": 4.8,
+      "variance": 0.025,
+      "verdict": "PASS"
+    }
+  },
+  {
+    "case_id": "SYN-PAT-002",
+    "title": "Secure Zero-Knowledge Proof Authentication Protocol",
+    "domain": "Cybersecurity",
+    "judgement": {
+      "novelty_score": 2.0,
+      "inventive_step_score": 4.5,
+      "exclusions_score": 1.0,
+      "structure_score": 4.8,
+      "overall_rating": 3.08,
+      "expected_rating": 3.2,
+      "variance": 0.125,
+      "verdict": "REJECT/REVISE"
+    }
+  },
+  {
+    "case_id": "SYN-PAT-003",
+    "title": "Automated ML Pipeline for Predictive Cardiovascular Risk Analysis",
+    "domain": "Health Tech / AI",
+    "judgement": {
+      "novelty_score": 3.0,
+      "inventive_step_score": 4.5,
+      "exclusions_score": 2.5,
+      "structure_score": 4.8,
+      "overall_rating": 3.7,
+      "expected_rating": 4.1,
+      "variance": 0.4,
+      "verdict": "PASS"
+    }
+  }
+]

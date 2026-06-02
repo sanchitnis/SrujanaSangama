@@ -1,0 +1,39 @@
+[
+  {
+    "id": "SYN-PAT-001",
+    "title": "IoT-Based Precision Soil Moisture Management System",
+    "domain": "Smart Agriculture",
+    "description": "A system utilizing a network of HSL-calibrated underground moisture sensors communicating via LoRaWAN to an edge-gateway. The edge-gateway executes an adaptive irrigation control algorithm that adjusts water release valves dynamically based on real-time soil porosity, ambient humidity, and weather forecasting API feeds.",
+    "novelty": "Dynamic feedback loop integrating local soil porosity metrics with predictive weather model APIs for precise valve control, operating fully on edge computing without requiring continuous cloud connection.",
+    "claims": [
+      "A precision irrigation system comprising underground LoRa sensors, an edge-gateway, and mechanical valve controllers.",
+      "The system of claim 1, wherein the edge-gateway optimizes water cycles based on local forecast models."
+    ],
+    "section_3_exclusion_risk": "Low",
+    "expected_score": 4.8
+  },
+  {
+    "id": "SYN-PAT-002",
+    "title": "Secure Zero-Knowledge Proof Authentication Protocol",
+    "domain": "Cybersecurity",
+    "description": "An authentication protocol using a randomized zero-knowledge cryptographic signature for securing edge-node logins. Avoids storage of secret hashes on central directory nodes, using a multi-factor polynomial handshake verification model.",
+    "novelty": "Polynomial handshake for ZKP specifically optimized for memory-constrained edge hardware configurations.",
+    "claims": [
+      "A cryptographic authentication protocol employing multi-factor zero-knowledge handshakes on edge nodes."
+    ],
+    "section_3_exclusion_risk": "High (Section 3(k) - Mathematical method)",
+    "expected_score": 3.2
+  },
+  {
+    "id": "SYN-PAT-003",
+    "title": "Automated ML Pipeline for Predictive Cardiovascular Risk Analysis",
+    "domain": "Health Tech / AI",
+    "description": "A system that processes raw echocardiogram video feeds using a 3D Convolutional Neural Network (CNN) to detect early indicators of ventricular hypertrophic anomalies before symptoms manifest clinically.",
+    "novelty": "3D-CNN temporal spatial feature maps coupled with real-time video stream augmentation to increase anomaly detection accuracy by 18%.",
+    "claims": [
+      "A medical predictive diagnostics system analyzing video feeds using temporal spatial convolutional feature extraction."
+    ],
+    "section_3_exclusion_risk": "Medium (Section 3(i) - Diagnostic method)",
+    "expected_score": 4.1
+  }
+]
