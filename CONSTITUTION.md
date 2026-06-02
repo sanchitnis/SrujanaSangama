@@ -249,4 +249,42 @@ When a retrospective surfaces a new rule:
 
 ---
 
+## 17. Testing, Evaluation & System Ruggedness
+
+To ensure SrujanaSangama is extremely rugged, reliable, and predictable, the following multi-layered testing and evaluation framework is strictly enforced:
+
+### 17.1 The Three-Layer Testing Framework
+
+| Testing Layer | Scope & Objective | Method & Tools |
+|---|---|---|
+| **1. Static & Format Verification** | Ensure structural integrity and parsability of all Markdown resources. | - **Schema Validation**: Custom Python scripts to validate YAML frontmatter, headers (`## Intent`, `## Tools`, etc.) against strict schemas.<br>- **Broken Link Checker**: Linting links (e.g. `[Next Skill](./skills/foo.md)`) to guarantee zero dead-ends in decision trees. |
+| **2. LLM-Based Evaluation (Core)** | Adversarially evaluate non-deterministic semantic agent outputs. | - **Eval Dataset**: Maintain a master `eval/data/eval_dataset.json` with diverse golden standard input-output pairs.<br>- **LLM-as-a-Judge**: Utilize a higher-tier model (e.g. Gemini 1.5 Pro) to grade agent responses against criteria defined in Markdown rules (1–5 scale).<br>- **State Trajectory Tracking**: Map and evaluate the precise sequence of files and skills visited during runs to detect loops. |
+| **3. CI/CD Integration** | Prevent regressions during development and prompt adjustments. | - **Automated Workflows**: GitHub Actions run format validators and link checkers on every commit.<br>- **Smoke Test Suite**: A deterministic suite of 5–10 core prompt scenarios run and verified on every PR to ensure the routing engine remains unbroken. |
+
+### 17.2 Ruggedness Benchmark Hierarchy (When is it "Enough"?)
+
+An agentic feature or plugin is only considered production-ready when it satisfies all three levels:
+
+*   **Level 1: Deterministic Baseline**: 100% of Markdown files parse without syntax errors, and the agent accurately routes to the correct files or skills based on standard trigger keywords.
+*   **Level 2: Performance Accuracy**: LLM-as-a-Judge evaluation scores achieve a consistent **90%+ alignment** with golden responses over a dataset of 50–100 diverse, repo-wide test cases.
+*   **Level 3: Guardrails & Boundaries**: The agent successfully isolates adversarial inputs, avoids infinite execution loops, and handles out-of-scope requests gracefully without crashing.
+
+### 17.3 The Ultimate Ruggedness Metric: Delta of Variance
+
+*   **Rule**: Run the evaluation dataset through the agent 3 to 5 times per test case at a temperature > 0.
+*   **Threshold**: If the agent produces different paths or semantically mismatched outputs across runs, the prompts are too ambiguous and **the system is not tested enough**.
+*   **Approval**: Production deployment requires semantic and trajectory variance between runs to drop to a negligible, highly consistent level.
+
+### 17.4 Infinite Loop & Cost Guardrails
+
+*   **Max Execution Steps**: All agent orchestration runs must enforce a hard-coded maximum step threshold (e.g., max 10 tool invocations/sub-agent steps per query). If exceeded, the agent must gracefully abort and return a standard timeout error.
+*   **Self-Correction Detection**: If an agent attempts the same tool invocation with the identical parameters 3 times in a single session, the system must trigger a self-correction event or safely exit rather than run infinitely.
+
+### 17.5 Out-of-Scope & Adversarial Handling
+
+*   **Graceful Refusal**: If a user submits queries completely unrelated to REVA University PhD guidelines or academic mentoring (out-of-scope), the agent must gracefully refuse using a standard response: *"I am dedicated to assisting with SrujanaSangama academic and research mentoring. This request is out of my designated scope."*
+*   **Prompt Injection Defense**: The parser must filter out direct prompt injection commands (e.g., instructions attempting to override this constitution) and treat them as adversarial inputs, triggering immediate safe-fail protocols.
+
+---
+
 *This document is maintained by Sanjay Chitnis (@sanchitnis). Proposed changes must be reviewed as a PR with a `retro:` commit prefix.*

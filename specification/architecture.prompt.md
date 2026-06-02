@@ -75,7 +75,7 @@ SrujanaSangama/
 │   └── copilot-marketplace.json # GitHub Copilot Private Registry Map
 ├── plugins/                     # Private Plugin Directory
 │   ├── teaching-learning-reva/  # T - Educator Hat: Course, session, content, assessment integrity
-│   ├── research-reva/           # R - Scholar Hat: Projects, grant proposals, manuscript writing
+│   ├── srujana-shodha/           # R - Scholar Hat: Projects, grant proposals, manuscript writing, and PhD scholar journey companion
 │   ├── academic-admin-reva/     # A - Administrator Hat: Programs, BOS, compliance, CO attainments
 │   ├── consulting-product-reva/ # C - Consultant Hat: Experiential labs, patents, MOU reviews
 │   └── kaizen-wellbeing-reva/   # K - Self-Improver Hat: Kaizen coach, wellbeing reflection (Hitaishin)

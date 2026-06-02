@@ -35,7 +35,7 @@ Grounded in REVA University's Vision — to become a technologically advanced, s
 - **Personalised Learning Pathway**: Configures AI tutoring, fast-track honours, and remedial support; faculty advisors monitor and intervene.
 - **Session & Content Developer**: Generates active-learning session plans, Bloom's-aligned materials, and first-draft content for faculty review and contextualisation.
 
-### Research (`plugins/research-reva/`)
+### Research (`plugins/srujana-shodha/`)
 - **Publication & Citation Tracker**: Fetches publication data for NIRF/NAAC pipelines.
 - **Grant Assistant**: Scans funding bodies and drafts matching proposals.
 - **Scholar Writing Assistant**: Scaffolds manuscript structure, citation networks, and publication submission pipelines.

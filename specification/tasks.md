@@ -17,10 +17,12 @@ This file tracks the top-level milestones and development progress of the Srujan
 - [ ] Implement lesson planning active strategies assistant
 - [ ] Connect OBE mapping and CO-PO calculator tool
 
-### R — Research & Scholarship (`research-reva`, `phd-scholar`)
-- [/] PhD Scholar CSE/CSA school active sprint
-- [ ] Scholar manuscript structure helper
-- [ ] Grant DST/DBT proposal mapping integration
+### R — Research & Scholarship (`srujana-shodha`)
+- [/] Unified Research & Doctoral Journey Companion active sprint
+- [ ] Unify manifests and rules layer
+- [ ] Implement core and specialist agents
+- [ ] Connect workflows and reference materials
+
 
 ### A — Academic Administration (`academic-admin-reva`)
 - [x] Admin Pack basic structure
