@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SYN-SCH-001",
+    "name": "Dr. Ramesh Kumar",
+    "role": "Faculty Researcher",
+    "school": "School of CSE/CSA",
+    "domain": "Wireless Sensor Networks & Edge IoT",
+    "orcid": "0000-0002-1823-4567",
+    "sdg_alignment": "Goal 9: Industry, Innovation, and Infrastructure",
+    "h_index": 12,
+    "input_context": {
+      "query_type": "/grant",
+      "query": "Scoping a new proposal for DST-ANRF on edge-integrated sensor arrays for early drought warning systems in smart orchards.",
+      "expected_routing": "faculty/opportunity-scout"
+    },
+    "expected_rating": 4.9
+  },
+  {
+    "id": "SYN-SCH-002",
+    "name": "Ananya Sen",
+    "role": "PhD Scholar",
+    "school": "School of CSE/CSA",
+    "candidate_type": "Full-Time (FT) Standard",
+    "provisional_reg_date": "2024-01-15",
+    "domain": "Temporal Graph Neural Networks",
+    "credit_floor": 18,
+    "input_context": {
+      "query_type": "Stage 5 Thesis submission eligibility checking",
+      "query": "I have completed 2.5 years of my PhD. Can I submit my thesis now? I have 2 Scopus papers.",
+      "expected_routing": "scholar/thesis-writer"
+    },
+    "expected_rating": 4.7
+  },
+  {
+    "id": "SYN-SCH-003",
+    "name": "Vikram Rathore",
+    "role": "PhD Scholar",
+    "school": "School of ECE (Placeholder branch)",
+    "candidate_type": "Sponsored Direct PhD",
+    "provisional_reg_date": "2025-08-10",
+    "domain": "Optoelectronic Modulators",
+    "credit_floor": 46,
+    "input_context": {
+      "query_type": "School Routing",
+      "query": "Show me the optoelectronic modulator lab safety procedures.",
+      "expected_routing": "rules/SCHOOL_ROUTING"
+    },
+    "expected_rating": 4.5
+  }
+]

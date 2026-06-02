@@ -1,0 +1,50 @@
+[
+  {
+    "profile_id": "SYN-SCH-001",
+    "name": "Dr. Ramesh Kumar",
+    "role": "Faculty Researcher",
+    "school": "School of CSE/CSA",
+    "judgement": {
+      "routing_score": 5.0,
+      "regulations_score": 4.8,
+      "guardrails_score": 4.7,
+      "synthesis_score": 4.8,
+      "overall_rating": 4.83,
+      "expected_rating": 4.9,
+      "variance": 0.075,
+      "verdict": "PASS"
+    }
+  },
+  {
+    "profile_id": "SYN-SCH-002",
+    "name": "Ananya Sen",
+    "role": "PhD Scholar",
+    "school": "School of CSE/CSA",
+    "judgement": {
+      "routing_score": 5.0,
+      "regulations_score": 5.0,
+      "guardrails_score": 4.7,
+      "synthesis_score": 4.8,
+      "overall_rating": 4.88,
+      "expected_rating": 4.7,
+      "variance": 0.175,
+      "verdict": "PASS"
+    }
+  },
+  {
+    "profile_id": "SYN-SCH-003",
+    "name": "Vikram Rathore",
+    "role": "PhD Scholar",
+    "school": "School of ECE (Placeholder branch)",
+    "judgement": {
+      "routing_score": 5.0,
+      "regulations_score": 4.8,
+      "guardrails_score": 5.0,
+      "synthesis_score": 4.8,
+      "overall_rating": 4.9,
+      "expected_rating": 4.5,
+      "variance": 0.4,
+      "verdict": "PASS"
+    }
+  }
+]
