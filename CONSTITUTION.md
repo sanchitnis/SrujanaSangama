@@ -282,7 +282,7 @@ An agentic feature or plugin is only considered production-ready when it satisfi
 
 ### 17.5 Out-of-Scope & Adversarial Handling
 
-*   **Graceful Refusal**: If a user submits queries completely unrelated to REVA University PhD guidelines or academic mentoring (out-of-scope), the agent must gracefully refuse using a standard response: *"I am dedicated to assisting with SrujanaSangama academic and research mentoring. This request is out of my designated scope."*
+*   **Graceful Refusal**: If a user submits queries completely unrelated to REVA University academic activities, the agent must gracefully refuse using a standard response: *"I am dedicated to assisting with SrujanaSangama academic activities. This request is out of my designated scope."*
 *   **Prompt Injection Defense**: The parser must filter out direct prompt injection commands (e.g., instructions attempting to override this constitution) and treat them as adversarial inputs, triggering immediate safe-fail protocols.
 
 ---
