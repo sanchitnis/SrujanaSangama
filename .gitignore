@@ -1,0 +1,26 @@
+# SrujanaSangama Global Gitignore
+
+# 1. Block all live user memory files inside plugins
+# Allows committed example templates (*.md.example) but blocks live user profiles
+plugins/*/memory/**/*.md
+!plugins/*/memory/**/*.md.example
+plugins/*/memory/*.md
+!plugins/*/memory/*.md.example
+
+# Explicitly ignore common live memory filenames
+soul.md
+tasks.md
+wellbeing-log.md
+ikigai.md
+
+# 2. Block evaluation logs and transient test outputs
+eval/logs/*.log
+eval/scratch/
+
+# 3. Standard developer environments
+.vscode/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
