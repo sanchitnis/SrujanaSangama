@@ -80,11 +80,13 @@ SrujanaSangama/
 │   ├── consulting-product-reva/ # C - Consultant Hat: Experiential labs, patents, MOU reviews
 │   └── kaizen-wellbeing-reva/   # K - Self-Improver Hat: Kaizen coach, wellbeing reflection (Hitaishin)
 ├── specification/               # System Specifications and Abstractions
-│   ├── architecture.md          # Platform Dual-Engine Architecture (This file)
-│   ├── track_scope.md           # Scope and Platform Capabilities
+│   ├── architecture.prompt.md   # Platform Dual-Engine Architecture (This file)
+│   ├── plan.prompt.md           # Master development and sprint plan
+│   ├── spec.prompt.md           # Scope and Platform Capabilities
+│   ├── tasks.md                 # Master Backlog and Tasks List
 │   ├── ADDIE.md                 # ADDIE Instructional Design flow
-│   ├── Hitaishin/               # Personal Wellbeing Coaching Subsystem (Read-Only)
-│   └── SrujanaBuddy/            # Student Action/Productivity Buddy (Read-Only)
+│   ├── <plugin>-spec.prompt.md  # Detailed feature specification file for <plugin>
+│   └── <plugin>-tasks.md        # Atomic, testable task checklist for <plugin>
 └── docs/                        # Guidelines and Reference Documentation
     ├── AISkills and Technologies.md
     └── Guidelines/
