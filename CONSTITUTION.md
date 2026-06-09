@@ -165,7 +165,7 @@ All specifications inside `specification/` MUST:
 
 ---
 
-## 10. Cross-Plugin Reuse Rules
+## 10. Cross-Plugin Reuse & External Licensing Rules
 
 | Reuse pattern | Rule |
 |---|---|
@@ -174,8 +174,10 @@ All specifications inside `specification/` MUST:
 | `patent-generator/lib/` templates | Reference only; the `phd-scholar` `patent-agent.md` invokes, never duplicates |
 | `kaizen-wellbeing-reva/` | Reference for escalation paths only; do not replicate wellness logic |
 | `research-reva/` funding workflows | Adapt (fork + attribute); do not depend on internal implementation details |
+| External assets, code, or frameworks | Must be documented with appropriate attribution/comments in the [LICENSE](file:///d:/Github/SrujanaSangama/LICENSE) file. |
 
 **Rule:** Never silently duplicate a file that exists in another plugin. Fork with a comment or reference directly.
+**Rule:** Any third-party/external assets, libraries, frameworks, or code snippets adapted or used from outside the project must be documented with appropriate attribution and license details in the [LICENSE](file:///d:/Github/SrujanaSangama/LICENSE) file.
 
 ---
 

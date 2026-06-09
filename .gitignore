@@ -1,17 +1,30 @@
 # SrujanaSangama Global Gitignore
 
-# 1. Block all live user memory files inside plugins
+# 1. Block all live user memory and context files inside plugins
 # Allows committed example templates (*.md.example) but blocks live user profiles
 plugins/*/memory/**/*.md
 !plugins/*/memory/**/*.md.example
 plugins/*/memory/*.md
 !plugins/*/memory/*.md.example
 
-# Explicitly ignore common live memory filenames
+# Allows committed example templates (*.md.example) but blocks live user contexts
+plugins/*/context/**/*.md
+!plugins/*/context/**/*.md.example
+plugins/*/context/*.md
+!plugins/*/context/*.md.example
+
+# Explicitly ignore common live memory and context filenames
 soul.md
 tasks.md
 wellbeing-log.md
 ikigai.md
+active-project.md
+current-session.md
+scratchpad.md
+scholar-profile.md
+research-tracker.md
+publication-pipeline.md
+daily-log.md
 
 # 2. Block evaluation logs and transient test outputs
 eval/logs/*.log

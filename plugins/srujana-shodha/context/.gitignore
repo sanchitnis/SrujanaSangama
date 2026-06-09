@@ -1,0 +1,8 @@
+# SrujanaShodha Personal Context Directory
+# This directory contains personal scholar profile, research trackers, publication pipelines, and logs.
+# All actual context files (*.md) are private to the user and gitignored.
+# Only example templates (*.md.example) should be committed.
+
+*.md
+!*.md.example
+!.gitignore

@@ -19,10 +19,7 @@ Extracts invention details from a Markdown document, guides brainstorming for no
 3. **Patentability Check**: Prompt the user to:
    - Confirm novelty, inventive step, and industrial applicability
    - Identify missing or weak sections
-4. **Prior Art Brainstorm**: Guide the user to:
-   - List any known similar ideas/patents
-   - Discuss how their idea is different
-   - Suggest pivots to improve novelty
+4. **Prior Art Brainstorm**: Query the Google Patents database via agent web searches based on extracted keywords, present closest prior art matches and overlaps, and guide the user through brainstorming pivots/modifications to improve novelty.
 5. **Scoring**: Ask the user to rate (out of 10) the likelihood of patent grant and publication, based on novelty and completeness.
 6. **Draft Generation**: Generate a Markdown template for the user to fill in missing details:
    - Detailed description
@@ -34,8 +31,9 @@ Extracts invention details from a Markdown document, guides brainstorming for no
 
 ## Notes
 - All steps are interactive and agent-guided.
-- No external API or JS execution.
+- Queries to Google Patents database are performed using agent web search capabilities.
 - Designed for human-in-the-loop patent coaching and drafting.
+
 
 ---
 

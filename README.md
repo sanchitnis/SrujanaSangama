@@ -69,7 +69,18 @@ Campus developers log into their VS Code environment using their official `@reva
 
 ---
 
-## 5. Campus Project Guidelines
+## 5. Getting Started & Terms of Use
+
+By installing, deploying, or utilizing any plugins or materials from this repository, you explicitly agree to the following terms as detailed in the [LICENSE](file:///d:/Github/SrujanaSangama/LICENSE) file:
+
+*   **Copyright**: Copyright (c) 2026 REVA University. All Rights Reserved.
+*   **Authorized Access**: Use is strictly limited to authorized students and employees of REVA University.
+*   **Confidentiality**: The materials, software, and documentation are confidential and proprietary to REVA University. Distributing, sharing, or disclosing them to external parties or "outsiders" is strictly prohibited without prior official written approval.
+*   **Attribution**: Any authorized internal reuse or modification must retain the copyright notice and attribute REVA University as the creator.
+
+---
+
+## 6. Campus Project Guidelines
 
 Refer to the official guides below for detailed instructions on campus project standards:
 1. [Course Projects](docs/Guidelines/CourseProjects.md)

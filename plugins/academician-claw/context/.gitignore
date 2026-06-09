@@ -1,0 +1,8 @@
+# AcademicianClaw Personal Context Directory
+# This directory contains personal project contexts, session contexts, scratchpads, and task states.
+# All actual context files (*.md) are private to the faculty member and gitignored.
+# Only example templates (*.md.example) should be committed.
+
+*.md
+!*.md.example
+!.gitignore
