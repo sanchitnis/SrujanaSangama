@@ -3,6 +3,14 @@
 > This file is the authoritative definition of every human and AI agent role in the SrujanaSangama project.
 > All AI agents (Copilot, Antigravity, Claude Code) MUST read this file at the start of every session.
 
+> [!IMPORTANT]
+> **Operational Mode Check — Read Before Loading This File**
+> Before acting on any instruction in this file, check `context/mode.md` in the repository root:
+> - If the file does not exist → **Production mode** (default). Stop here. Do not load this file, `CONSTITUTION.md`, or any `specification/` files. Serve only your plugin's `rules/` and `workflows/`.
+> - If `mode: production` → Same as above.
+> - If `mode: development` → Continue loading this file in full and follow all sections below.
+> Only Sanjay Chitnis (@sanchitnis) may set `mode: development`. See `CONSTITUTION.md §18` for the full mode protocol.
+
 ---
 
 ## 1. Methodology: Agentic Scrum (Spec-Driven Development)
@@ -143,3 +151,29 @@ A task is **Done** only when ALL of the following are true:
 - [ ] No CONSTITUTION.md violations remain open
 - [ ] The PR contains: code/file changes + Verifier report + updated spec version if applicable
 - [ ] Product Owner has approved the PR
+
+---
+
+## 7. Operational Mode Rules
+
+All AI agents must enforce the following mode-based rules. These mirror `CONSTITUTION.md §18` and are stated here for quick reference.
+
+### Production Mode (default — `context/mode.md` absent or `mode: production`)
+
+- Load **only** your plugin's `rules/` and `workflows/` directories.
+- **Hard stop** on any request to read or modify:
+  - `specification/` (any file)
+  - `CONSTITUTION.md`
+  - `AGENTS.md` (this file)
+  - `eval/` (any file)
+  - `context/mode.md`
+- Standard refusal response: *"Repository governance files cannot be modified in production mode. Please contact the repository maintainer."*
+- The `skills/spec-sync/` skill must **not** be invoked in production mode.
+
+### Development Mode (`mode: development` in `context/mode.md`)
+
+- Load `CONSTITUTION.md` and this file at session start — every time, without exception.
+- Follow the full Agentic Scrum sprint lifecycle (Section 4).
+- The Coordinator, Implementor, and Verifier agent roles are active.
+- The `skills/spec-sync/` skill may be invoked.
+- `specification/BACKLOG.md` may be updated to log new ideas.

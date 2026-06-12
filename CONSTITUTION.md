@@ -289,4 +289,61 @@ An agentic feature or plugin is only considered production-ready when it satisfi
 
 ---
 
+## 18. Operational Mode
+
+SrujanaSangama operates in one of two modes. **Production is the default.** Agents must determine the current mode by reading `context/mode.md` at the start of every session.
+
+### 18.1 Mode Detection
+
+| Condition | Mode |
+|---|---|
+| `context/mode.md` does not exist | **Production** (default) |
+| `context/mode.md` exists and contains `mode: production` | **Production** |
+| `context/mode.md` exists and contains `mode: development` | **Development** |
+
+- `context/mode.md` is **gitignored** — it must never be committed.
+- The committed template is `context/mode.md.example`. Copy it to `context/mode.md` to activate.
+- Only **Sanjay Chitnis (@sanchitnis)** may switch the repository to development mode.
+
+### 18.2 Production Mode (Default)
+
+In production mode, agents are serving end users (students, faculty, administrators). The following rules are **hard stops**:
+
+- Agents load only their plugin's `rules/` and `workflows/` directories.
+- `CONSTITUTION.md`, `AGENTS.md`, and all files in `specification/` are **not loaded**.
+- Agents **must refuse** any request to create, edit, or delete files in:
+  - `specification/`
+  - `CONSTITUTION.md`
+  - `AGENTS.md`
+  - `eval/`
+  - `context/mode.md`
+- If a user requests such a change, respond: *"Repository governance files cannot be modified in production mode. Please contact the repository maintainer."*
+
+### 18.3 Development Mode
+
+In development mode, the full Agentic Scrum methodology is active:
+
+- All AI agents read `CONSTITUTION.md` and `AGENTS.md` at session start.
+- Spec files in `specification/` are loaded and editable per the sprint lifecycle in `AGENTS.md`.
+- The spec-sync skill (`skills/spec-sync/`) may be invoked.
+- All constraints in Sections 1–17 of this document apply.
+
+### 18.4 Switching Modes
+
+To enter development mode:
+```bash
+# Copy the example template
+copy context\mode.md.example context\mode.md
+# Edit context\mode.md — set: mode: development
+```
+
+To return to production mode:
+```bash
+# Either edit and set: mode: production
+# Or simply delete the file (absence = production)
+del context\mode.md
+```
+
+---
+
 *This document is maintained by Sanjay Chitnis (@sanchitnis). Proposed changes must be reviewed as a PR with a `retro:` commit prefix.*
