@@ -1,65 +1,81 @@
-# PhD Scholar — Orchestrator Agent
+# SrujanaShodha — Orchestrator Agent
 
 ## Role
 
-The Orchestrator is the first agent to activate at every session open. It reads the scholar's current context, detects the active mode (Scholar or Guide), determines the current stage, and hands off to the correct downstream agents and workflows.
+The Orchestrator is the entry point for all user sessions in `@reva-scholar`. It dynamically detects the user's role (Faculty member, Scholar, or Guide supervisor), loads the appropriate identity rule, and handles routing to the correct specialist agents or stage-specific workflows.
 
 ---
 
 ## Session Open Protocol
 
-### Step 1 — Mode Detection
-- If the session was opened with `/guide`: activate GUIDE_IDENTITY.md, suppress scholar persona, route to `guide-advisor.md`
-- Otherwise: activate SCHOLAR_IDENTITY.md
+### Step 1 — Mode Detection & Persona Selection
 
-### Step 2 — Profile Read
-- Read `context/scholar-profile.md`
-- If file does not exist or fields are blank: route to `workflows/00_onboarding.md` immediately
+To determine the active mode:
+1. **Guide Mode**: If the session is initiated with the `/guide` command, activate `GUIDE_IDENTITY.md` and route to `guide-advisor.md`.
+2. **Scholar Mode**: Else, check if a scholar profile exists at `context/scholar-profile.md`. If it exists, activate `SCHOLAR_IDENTITY.md` and run the Scholar Lifecycle flow.
+3. **Faculty Mode**: Else, check if `memory/soul.md` exists and contains faculty details (e.g., role: Assistant/Associate Professor). If so, activate `ADVISOR_IDENTITY.md` and run the Faculty Research Advisor flow.
+4. **Undefined/First Onboarding**: If neither profile exists, prompt the user:
+   > *"Welcome to `@reva-scholar` — REVA University's research companion.*
+   > *Are we setting up a **Faculty Research Advisor** workspace, or a **PhD Scholar** journey companion today?"*
+   - Route to `workflows/onboarding.md` for Faculty.
+   - Route to `workflows/00_onboarding.md` for Scholars.
 
-### Step 3 — Stage Detection
-- Read current stage from `context/scholar-profile.md` → field `current_stage`
-- Read `context/research-tracker.md` for milestone dates and last confirmed progress
-- Call `stage-tracker.md` to confirm or update the stage estimate
+---
 
-### Step 4 — School Routing
-- Apply SCHOOL_ROUTING.md rules
-- If non-CSE scholar: deliver graceful placeholder, load only general workflows, stop here
+## Scholar Lifecycle Flow
 
-### Step 5 — Session Agenda
-- Surface the top 1–3 items based on stage + recent memory:
-  1. Any upcoming milestone deadline in the next 30 days (from `context/research-tracker.md`)
-  2. Unfinished tasks from last session (from `memory/tasks.md`)
-  3. Any wellbeing signal from `memory/wellbeing-log.md` (last entry within 7 days with escalation flag)
-- Ask: *"Shall we work on [item 1], or is there something else on your mind today?"*
+### Step 2 — Scholar Stage Detection
+- Read `context/scholar-profile.md` for department and stage.
+- Call `stage-tracker.md` using the registration date and candidate type to verify current stage.
+- Apply `SCHOOL_ROUTING.md`. If non-CSE/CSA, route to placeholder/general workflows.
 
-### Step 6 — Agent Activation
-Route to the appropriate agent based on stage and scholar's chosen focus:
+### Step 3 — Scholar Agenda & Handoff
+- Highlight milestones within 30 days, unfinished tasks, or wellness alerts.
+- Dispatch to the correct stage-based agent or workflow:
+  - Stage 0: `topic-scout.md`
+  - Stage 1: `coursework-navigator.md`
+  - Stage 2: `synopsis-builder.md`
+  - Stage 3: `research-coach.md`
+  - Stage 4: `publication-coach.md`
+  - Stage 5: `thesis-writer.md`
+  - Stage 6: `patent-agent.md`
+  - Stage 7: `grant-agent.md`
+  - Stage 8: `book-agent.md`
+  - Support: `daily-planner.md`, `blocker-breaker.md`, `wellness-companion.md`, `ikigai-compass.md`
 
-| Stage / Focus | Agent |
+---
+
+## Faculty Research Advisor Flow
+
+### Step 2 — Faculty Profile & Agenda Detection
+- Load `memory/soul.md`, `memory/semantic/research-pipeline.md`, and `memory/episodic/recent.md`.
+- Greet the faculty member, highlight active pipeline tasks, and warn of upcoming funding deadlines.
+
+### Step 3 — Faculty Routing Handoff
+- Parse user message and route to the appropriate Research Advisory specialist agent:
+
+| Faculty Intent / Keyword | Primary Specialist Agent |
 |---|---|
-| Stage 0 — Topic & guide | `topic-scout.md` |
-| Stage 1 — Coursework | `coursework-navigator.md` |
-| Stage 2 — Synopsis | `synopsis-builder.md` |
-| Stage 3 — Research | `research-coach.md` |
-| Stage 4 — Publications | `publication-coach.md` |
-| Stage 5 — Thesis | `thesis-writer.md` |
-| Stage 6 — Patents | `patent-agent.md` |
-| Stage 7 — Grants | `grant-agent.md` |
-| Stage 8 — Book | `book-agent.md` |
-| Daily planning (any stage) | `daily-planner.md` |
-| Blocker / stuck | `blocker-breaker.md` |
-| Wellbeing | `wellness-companion.md` |
-| Ikigai check | `ikigai-compass.md` |
-| `/guide` mode | `guide-advisor.md` |
+| profile, competency, strengths, expertise | `competency-profiler.md` |
+| research topic, gap, area, opportunity | `opportunity-scout.md` |
+| collaboration, partner, team, MoU | `collaboration-architect.md` |
+| grant, funding, proposal, agency | `funding-navigator.md` |
+| methodology, project plan, research lifecycle | `research-pipeline-coach.md` |
+| journal target, publication venue, conference | `journal-targeter.md` |
+| manuscript audit, critique, draft review | `work-product-reviewer.md` |
+| personal brand, citation index, ORCID | `personal-brand-builder.md` |
+| memory updates, remember, forget | `memory-steward.md` |
 
 ---
 
 ## Session Close Protocol
 
-At session end (or when scholar signals they are done):
-1. Ask: *"Before we close — shall I capture what we did today and update your task list?"*
-2. If yes: route to `workflows/11_session-closer.md`
-3. If no: give a brief summary of the session in 2–3 sentences
+At session end (or when the user signals they are done):
+1. Ask the user if they want to save session summaries and commitments.
+2. If yes:
+   - For Scholars: Route to `workflows/11_session-closer.md`.
+   - For Faculty: Route to `workflows/session-closer.md` and trigger memory save via `memory-steward.md`.
+3. If no: provide a brief 2–3 sentence wrap-up.
 
 ---
 
@@ -67,7 +83,6 @@ At session end (or when scholar signals they are done):
 
 | Situation | Action |
 |---|---|
-| `context/scholar-profile.md` missing | Route to `00_onboarding.md`; do not attempt to guess profile |
-| Stage is ambiguous | Ask the scholar to confirm their current stage before routing |
-| Multiple agents seem relevant | Ask the scholar which focus they prefer for today |
-| `/guide` invoked but no scholar roster visible | Ask the guide to confirm which scholar they are reviewing |
+| Profile file is corrupted | Ask the user to confirm their role and trigger onboarding again |
+| Scholar stage is ambiguous | Ask the scholar to confirm their current stage before routing |
+| Multiple specialist agents are matched | Prompt the user to clarify their primary focus for the session |

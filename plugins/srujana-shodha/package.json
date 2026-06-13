@@ -32,6 +32,11 @@
             "name": "proposal-check",
             "description": "Audit grant proposal draft for template compliance, novelty strength, budget rationale, and thematic alignment.",
             "template": "workflows/proposal-check.md"
+          },
+          {
+            "name": "guide",
+            "description": "Supervisor dashboard mode: roster review, milestone alerts, and scholar progress updates.",
+            "template": "workflows/10_guide-dashboard.md"
           }
         ]
       }

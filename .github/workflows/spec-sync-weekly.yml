@@ -1,0 +1,43 @@
+name: Spec-Sync Weekly Audit
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC
+    - cron: '0 9 * * 1'
+  # Allow manual trigger from Actions tab
+  workflow_dispatch:
+
+jobs:
+  spec-sync:
+    name: Run Specification Sync Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run spec_sync audit
+        id: audit
+        run: |
+          python skills/spec-sync/scripts/spec_sync.py
+        continue-on-error: true
+
+      - name: Upload drift report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: spec-sync-report
+          path: eval/logs/spec_sync_*.md
+          retention-days: 90
+          if-no-files-found: warn
+
+      - name: Fail workflow if critical drift detected
+        if: steps.audit.outcome == 'failure'
+        run: |
+          echo "❌ Critical spec drift detected. See uploaded report artifact for details."
+          echo "Add missing entries to specification/BACKLOG.md and start a Coordinator sprint."
+          exit 1

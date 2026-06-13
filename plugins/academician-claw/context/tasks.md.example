@@ -1,17 +1,23 @@
-# Task List
-_Last updated: 2026-05-27_
+# Task List — CEE Enriched Format
+# Template. Run scripts/cee_task_migrate.py to convert existing tasks.
+_Last updated: [YYYY-MM-DD]_
 
-## 🔴 P1 — Critical / Due Soon
-[none]
+> **Priority**: 🔴 P1 | 🟡 P2 | 🟢 P3  
+> **Status**: todo | in-progress | blocked | done  
+> **Alignment**: CO-N (Core Objective) · R-N (Leadership Role) from cee-identity.md  
+> **Tags**: #deep-work | #quick-review | #dependency-block | #async-delegate
 
-## 🟡 P2 — Important
-[none]
+| Task | Category / Project | Priority | Est. Time | Scheduled Date | Status | Description | Alignment | Tags |
+|------|--------------------|----------|-----------|----------------|--------|-------------|-----------|------|
+| Draft accreditation data readiness report | Accreditation Audit [P] | 🔴 P1 | 3h | 2026-06-20 | in-progress | Map all compliance docs to NBA SAR criteria. Done = full coverage spreadsheet | CO-1 · R1 Institutional Governance | #deep-work |
+| Deploy syllabus consistency checker agent | Agent Dev Sprint [P] | 🔴 P1 | 4h | 2026-06-25 | todo | Multi-agent script flagging syllabus inconsistencies. Done = 3 courses validated | CO-1 · R2 AI Architecture | #deep-work |
+| Monthly faculty AI readiness review | Faculty Development [A] | 🟡 P2 | 1h | 2026-06-30 | todo | Review faculty AI training progress, update para-areas.md | CO-1 · R1 Institutional Governance | #quick-review |
+| Read Software 3.0 paper batch | Technical Learning [A] | 🟢 P3 | 2h | none | todo | 3 papers queued in Resources. Done = episodic entry added | Personal · R3 Personal Foundation | #deep-work |
 
-## 🟢 P3 — Nice to Have
-[none]
+---
 
-## ✅ Completed (last 7 days)
-[none]
+## ✅ Completed (last 14 days)
 
-## 🚫 Blocked
-[none]
+| Task | Category / Project | Completed Date | Alignment |
+|------|--------------------|----------------|-----------|
+| [task] | [project] | [YYYY-MM-DD] | [CO-N · R-N] |

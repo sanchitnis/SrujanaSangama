@@ -1,0 +1,45 @@
+# PARA — Projects [P]
+# Active, high-priority efforts with sharp, immediate deadlines.
+# STRICT CAP: Max 3 projects in Active status at any time.
+# LOCATION: context/ — same register as tasks.md (active, actionable working state)
+# This file is GITIGNORED — lives only on your machine.
+_Created: [YYYY-MM-DD] | Last updated: [YYYY-MM-DD]_
+
+---
+
+## 📊 Project Cap Status
+**Active count: 0 / 3** ⬜⬜⬜
+
+> ⚠️ If this count reaches 3, any new project is automatically sent to HOLDING until a slot opens.
+> Completed projects move to `memory/archive/para-archive.md`.
+
+---
+
+## Active Projects
+
+| Project | Core Objective Link | Deadline | Health | Status | Tasks (in context/tasks.md) |
+|---------|---------------------|----------|--------|--------|-----------------------------|
+| [Project name] | [CO-1 / CO-2] | [YYYY-MM-DD] | 🟢 On track / 🟡 At risk / 🔴 Stalled | Active | See tasks.md rows tagged `[Project name]` |
+
+---
+
+## Holding (Queued for next open slot)
+
+| Project | Reason for holding | Queued date | Unlock condition |
+|---------|--------------------|-------------|-----------------|
+| [name] | [reason] | [date] | [what needs to happen first] |
+
+---
+
+## Completed (moved to memory/archive/para-archive.md)
+
+| Project | Completed date | Outcome |
+|---------|----------------|---------|
+| [name] | [date] | [1-line outcome] |
+
+---
+
+## Project Health Definitions
+- 🟢 **On track**: deadline is achievable, no blockers
+- 🟡 **At risk**: deadline in jeopardy OR a key dependency is blocked
+- 🔴 **Stalled**: no progress in 7+ days; needs triage

@@ -19,12 +19,14 @@ The single entry point for all user messages — reads intent, loads context, ro
 
 ## Startup Sequence (Every Conversation Turn)
 
-### Step 1 — Load Core Context
-Always load these files before anything else:
-- `memory/soul.md` — user identity, values, preferences
-- `memory/episodic/recent.md` — last 15–20 interactions for continuity
-- `context/current-session.md` — what this session is focused on
-- `agents/registry.md` — available agents and their trigger descriptions
+### Step 1 — Check & Load Core Context
+1. Check if the user's centralized memory file `memory/soul.md` exists and is populated.
+2. If `memory/soul.md` does not exist or is empty, immediately route the user to `workflows/00_onboarding.md` (SrujanaSangama User Onboarding) to setup their profile. Do not attempt standard orchestration routing until onboarding is complete.
+3. If memory exists, load these files from the central `memory/` directory:
+   - `memory/soul.md` — user identity, values, preferences
+   - `memory/episodic/recent.md` — last 15–20 interactions for continuity
+   - `memory/context/current-session.md` — what this session is focused on
+   - `agents/registry.md` — available agents and their trigger descriptions
 
 Keep a running `context_tokens_used` counter. Stay below the budget in `config/openclaw.yaml → context_budget_tokens`.
 
@@ -111,8 +113,8 @@ Update `memory/episodic/recent.md` with a 1–2 line summary of this turn.
 
 - **Never answer directly** without dispatching to at least one specialist agent. The Orchestrator routes — it does not respond.
 - **Context budget discipline**: if loading all relevant memory would exceed the budget, prefer soul.md + most-relevant semantic file over broad coverage.
-- **Proactive session opener**: at the start of a new conversation (no `current-session.md` content), briefly surface: open tasks, recent context, and a warm acknowledgement. Keep it under 3 sentences.
-- **Session closer**: when user says goodbye or ends the session, write a 3–5 line session summary to `memory/episodic/recent.md` and update `context/current-session.md`.
+- **Proactive session opener**: at the start of a new conversation (no `memory/context/current-session.md` content), briefly surface: open tasks, recent context, and a warm acknowledgement. Keep it under 3 sentences.
+- **Session closer**: when user says goodbye or ends the session, write a 3–5 line session summary to `memory/episodic/recent.md` and update `memory/context/current-session.md`.
 
 ---
 

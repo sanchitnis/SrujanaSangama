@@ -21,7 +21,7 @@ Perform a rigorous, professional audit of the provided course syllabus, course o
     *   Identify the designated portfolio output (e.g., product, paper, open-source repository) associated with the course.
     *   Check if the portfolio milestones are mapped directly to corresponding COs.
 5.  **Examine Institutional Alignment**:
-    *   Verify integration of liberal studies, sustainability indicators, and Indian Knowledge Systems (IKS) in course units.
+    *   Verify integration of Educate to enterprise philosophy, focus on developing human centered core/life skills, Engineering habits (if applicable), AI-ready activities (where students performace higher level activities with augmentation by AI), Learning by doing, PBL, liberal studies, sustainability indicators, REVA vision, mission and values and finally NEP perspectives, Indian Knowledge Systems (IKS) etc. in course units.
 
 ---
 

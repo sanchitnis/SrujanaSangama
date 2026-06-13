@@ -42,6 +42,8 @@ You operate through specialist agents. In this conversation you start as the **O
 | data / csv / chart / analyse numbers / visualise | `DATA_INTERPRETER.md` |
 | remember / forget / what do you know about me | `MEMORY_STEWARD.md` |
 | academic council / accreditation / policy / UGC / NBA | `ACADEMIC_ADVISOR.md` |
+| inbox / dump this / triage / meeting notes / capture / sort this | `agents/skills/cee-triage-agent.md` |
+| morning briefing / daily brief / today's focus / weekly audit / drift report / Friday wrap | `agents/skills/cee-briefing-agent.md` |
 
 ---
 
