@@ -1,9 +1,15 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """prune_episodic.py — Archives old entries in memory/episodic/recent.md. Zero LLM calls."""
 import re, datetime, sys
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent  # plugin root
+# Ensure UTF-8 output on Windows
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 PRUNE_THRESHOLD = 500   # lines
 ARCHIVE_LINES   = 200   # lines to move to archive
@@ -13,22 +19,22 @@ class C:
     G="\033[92m"; Y="\033[93m"; O="\033[38;5;208m"; D="\033[2m"; B="\033[1m"; END="\033[0m"
 
 def read(rel, default=""):
-    p = BASE / rel
+    p = resolve_path(rel)
     return p.read_text(encoding="utf-8") if p.exists() else default
 
 def write(rel, content):
-    p = BASE / rel
+    p = resolve_path(rel)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content, encoding="utf-8")
 
 def append_to(rel, text):
-    p = BASE / rel
+    p = resolve_path(rel)
     p.parent.mkdir(parents=True, exist_ok=True)
     with open(p, "a", encoding="utf-8") as f:
         f.write(text)
 
 def main():
-    recent_path = BASE / "memory/episodic/recent.md"
+    recent_path = resolve_path("memory/episodic/recent.md")
     if not recent_path.exists():
         print("  No episodic/recent.md found.")
         return

@@ -1,8 +1,8 @@
 {
   "id": "reva.srujana-shodha",
-  "name": "SrujanaShodha — Faculty Research Advisor",
+  "name": "SrujanaShodha — Faculty Research Advisor & PhD Scholar Companion",
   "version": "2.0.0",
-  "description": "A personal research advisory intelligence for REVA University faculty. Drives research career growth through competency profiling, opportunity identification, interdisciplinary collaboration, funding navigation, full research lifecycle coaching, work product review, and personal brand building. Modeled on the AcademicianClaw agent architecture. Skill architecture adapted from google-deepmind/science-skills (Apache 2.0).",
+  "description": "A personal research advisory and doctoral journey companion intelligence for REVA University faculty and scholars. Drives research career growth and coordinates the 9-stage PhD lifecycle. Modeled on the AcademicianClaw agent architecture.",
   "permissions": [
     "filesystem:read",
     "filesystem:write"
@@ -10,7 +10,14 @@
   "entry": {
     "rules": [
       "rules/ADVISOR_IDENTITY.md",
+      "rules/SCHOLAR_IDENTITY.md",
+      "rules/GUIDE_IDENTITY.md",
+      "rules/REVA_PHD_REGULATIONS.md",
       "rules/RESEARCH_ETHICS.md",
+      "rules/SCHOOL_ROUTING.md",
+      "rules/PUBLICATION_STANDARDS.md",
+      "rules/WELLBEING_STANDARD.md",
+      "rules/IKIGAI_ALIGNMENT.md",
       "rules/INDIA_RESEARCH_CONTEXT.md",
       "rules/SDG_MAPPING_STANDARD.md",
       "rules/PERSONAL_BRAND_STANDARD.md",
@@ -27,7 +34,23 @@
       "workflows/grant-check.md",
       "workflows/manuscript-check.md",
       "workflows/proposal-check.md",
-      "workflows/session-closer.md"
+      "workflows/session-closer.md",
+      "workflows/00_onboarding.md",
+      "workflows/01_entrance-prep.md",
+      "workflows/02_coursework.md",
+      "workflows/03_synopsis.md",
+      "workflows/04_research-cycle.md",
+      "workflows/05_publication-pipeline.md",
+      "workflows/06_thesis-sprint.md",
+      "workflows/07_patent-workflow.md",
+      "workflows/08_grant-proposal.md",
+      "workflows/09_book-proposal.md",
+      "workflows/10_guide-dashboard.md",
+      "workflows/11_session-closer.md",
+      "workflows/12_daily-standup.md",
+      "workflows/13_stuck-triage.md",
+      "workflows/14_wellness-checkin.md",
+      "workflows/15_ikigai-audit.md"
     ]
   },
   "mcpConfig": "./mcp.json"

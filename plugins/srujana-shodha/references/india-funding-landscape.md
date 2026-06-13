@@ -69,6 +69,70 @@ attribution: Content provided by PO 2026-06-01. Referenced by agents/scholar/gra
 
 ---
 
+## Section 5 — Karnataka State Schemes (Lower competition — recommended first grant)
+
+### VGST (Vision Group on Science & Technology) — vgst.kar.nic.in
+
+| Scheme | For Whom | Amount |
+|--------|----------|--------|
+| **GRD** (Grants for R&D) | Karnataka institution faculty | 5L–20L |
+| **CISEE** | Young scientists in industry | 10L |
+| **K-FIST** | Lab infrastructure | 10L–30L (institution-level) |
+| **SMYSR** | Young scientist award + grant | 10L |
+
+### KSCST (Karnataka State S&T Council) — kscst.org.in
+
+| Scheme | For Whom | Amount |
+|--------|----------|--------|
+| **Student Project** | UG/PG student project, faculty PI | 5k–25k |
+| **Research Project** | Faculty research | 1L–5L |
+
+---
+
+## Section 6 — Industry & CSR Funding Opportunities
+
+| Funder | Focus Areas | Amount Range | How to Apply |
+|--------|-------------|-------------|--------------|
+| **Infosys Foundation** | Rural tech, education, health | 5L–50L | infosys.com/infosys-foundation |
+| **Wipro Cares** | STEM education, sustainability | 5L–30L | wipro.com/sustainability |
+| **Tata Trusts** | Health, education, livelihoods | 10L–1Cr | tatatrusts.org |
+| **NASSCOM Foundation** | EdTech, digital inclusion | 5L–25L | nasscomfoundation.org |
+| **HDFC Bank Parivartan** | Rural development, education | 5L–20L | hdfcbank.com/csr |
+| **Cognizant Foundation** | Health, education | 5L–30L | cognizantfoundation.org |
+| **Bosch India Foundation** | Voc. education, sustainability | 10L–50L | bosch.in/foundation |
+| **Azim Premji Foundation** | Education research | Grant-based | azimpremjifoundation.org |
+
+---
+
+## Section 7 — Bilateral & International Project Collaboration
+
+| Scheme | Countries | Co-PI Requirement | Amount | Portal |
+|--------|-----------|------------------|--------|--------|
+| **SPARC** (MoE) | India-US | US university co-PI | 1–2Cr | sparc.iitkgp.ac.in |
+| **Newton Fund** | India-UK | UK university co-PI | £50k–500k | britishcouncil.in |
+| **DAAD** | India-Germany | German co-PI | €10k–100k | daad.in |
+| **Fulbright-Nehru** | India-US | Stay in US component | $20k–100k | usief.org.in |
+| **Erasmus+ Jean Monnet** | India-EU | EU institution partner | €60k–250k | erasmusplus.eu |
+| **DST-IC IMPACTS** | India-Canada | Canadian co-PI | Varies | dst.gov.in |
+| **KOICA** | India-South Korea | Korean partner | Varies | koica.go.kr |
+
+---
+
+## Section 8 — Quick Match Guide for Faculty & Scholars
+
+| User Profile / Interest | Suggested Funding Schemes to Explore |
+|-------------------------|--------------------------------------|
+| Early career faculty (≤5 yr post-PhD) | SERB-SRG or VGST-GRD |
+| Early career faculty in Karnataka | VGST-GRD (first!) → SERB-SRG |
+| Female faculty & research supervisors | DST-WISE-KIRAN, DBT-BioCARe, or ANRF-POWER |
+| Social science, humanities, or management | ICSSR-MRP → UGC-MRP |
+| Engineering or technical education | AICTE-RPS |
+| Biotechnology, healthcare, or medical AI | DBT, BIRAC-BIG, BIRAC-SPARSH, or ICMR |
+| Indo-US research collaboration | SPARC (requires US university co-PI) |
+| Startup-linked / translation-focused research | BIRAC-BIG, BIRAC-SPARSH, or BIRAC-SBIRI |
+
+---
+
 ## REVA Compliance Checklist
 
 Before applying to any public sector or government-funded scheme, ensure the following REVA institutional credentials are in order:

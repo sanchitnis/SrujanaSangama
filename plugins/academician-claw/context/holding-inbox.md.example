@@ -1,0 +1,36 @@
+# CEE — Holding Inbox
+# Async GTD holding area for tasks not immediately actionable.
+# PURGE RULE: Any item older than 30 days without user request is deleted at weekly audit.
+# LOCATION: context/ — same register as tasks.md and para-projects.md (active working state)
+# This file is GITIGNORED.
+_Created: [YYYY-MM-DD] | Last updated: [YYYY-MM-DD]_
+
+---
+
+## Inbox Items
+
+| # | Captured | Item / Task Description | Source | Age (days) | Status | Action |
+|---|----------|------------------------|--------|------------|--------|--------|
+| 1 | [YYYY-MM-DD] | [task or item description] | [email / meeting / dump] | [auto-calculated] | pending / review-needed | [suggested action] |
+
+---
+
+## Processing Rules (applied by CEE Triage Agent)
+
+```
+On each item entering this inbox:
+  1. Is it actionable under a Core Objective or Role?
+     → NO  : Move to semantic/para-resources.md or memory/archive/para-archive.md
+     → YES : Can it be automated (Termite)?
+              → YES: Execute in session, log in memory/logs/termite-history.md
+              → NO : Requires user intervention?
+                     → YES: Append to Today's Top 3 (briefing alert)
+                     → NO : Stay in Holding Inbox until weekly audit
+```
+
+---
+
+## 30-Day Purge Log
+| Item | Age when purged | Reason | Purge date |
+|------|----------------|--------|------------|
+| [item] | [N days] | Not actioned / Out of scope | [date] |

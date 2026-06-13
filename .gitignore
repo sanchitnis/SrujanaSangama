@@ -37,3 +37,10 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# 4. Centralized User Memory Folder
+memory/
+
+# 5. Operational mode file — gitignored (production is default when absent)
+# The committed template is context/mode.md.example
+context/mode.md

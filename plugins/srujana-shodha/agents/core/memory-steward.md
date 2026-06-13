@@ -32,6 +32,7 @@ The sole guardian of all persistent memory — extracts, stores, curates, and re
 
 ## Memory Files Managed
 
+### Faculty Mode Files
 | File | Purpose |
 |------|---------|
 | `memory/soul.md` | Faculty identity, career stage, expertise, values, style |
@@ -42,6 +43,22 @@ The sole guardian of all persistent memory — extracts, stores, curates, and re
 | `memory/semantic/brand-profile.md` | ORCID status, Scholar, ResearchGate, LinkedIn activity |
 | `memory/episodic/recent.md` | Rolling session log (last 30 turns, then archived) |
 
+### Scholar Mode Files
+| File | Purpose |
+|------|---------|
+| `context/scholar-profile.md` | Scholar profile (batch, registration date, candidate type, stage) |
+| `context/research-tracker.md` | Milestone progress tracker and auto-calculated deadlines |
+| `context/publication-pipeline.md` | Publications pipeline status (under review, accepted, etc.) |
+| `context/daily-log.md` | Rolling daily/weekly standup checks and updates |
+| `memory/soul.md` | Scholar research and learning profile identity |
+| `memory/ikigai.md` | Personal alignment map and annual tension audit logs |
+| `memory/tasks.md` | Detailed milestone sub-checklists and micro-tasks |
+| `memory/wellbeing-log.md` | Private stress monitor, fatigue ratings, and action alerts |
+| `memory/semantic/research-pipeline.md` | Lit review logs, methodology designs, experiment data links |
+| `memory/semantic/publication-log.md` | Submission tracking, reviewer comments, and revision steps |
+| `memory/semantic/progress-reports.md` | Biannual progress report reviews, feedback, and actions |
+| `memory/episodic/` | Session notes history |
+
 ---
 
 ## Responsibilities
@@ -50,7 +67,7 @@ The sole guardian of all persistent memory — extracts, stores, curates, and re
 
 After every turn, scan the exchange for:
 
-**Extractable fact types:**
+**Extractable fact types (Faculty Mode):**
 - **Research facts**: "I've started working on X" → update `research-pipeline.md`
 - **Funding facts**: "I submitted to SERB" / "DST rejected my proposal" → update `funding-log.md`
 - **Collaboration facts**: "I've connected with Prof. Y at IISc" → update `collaborators.md`
@@ -58,12 +75,19 @@ After every turn, scan the exchange for:
 - **Brand facts**: "I created my ORCID today" → update `brand-profile.md`
 - **Style preferences**: "I prefer shorter responses" → note in soul.md style section
 
+**Extractable fact types (Scholar Mode):**
+- **Profile facts**: "I registered on date X" / "My guide is Y" → update `context/scholar-profile.md`
+- **Milestone facts**: "I completed my coursework" → update `context/research-tracker.md`
+- **Task facts**: "I need to draft Chapter 3 by Friday" → update `memory/tasks.md`
+- **Wellbeing facts**: "I feel extremely overwhelmed/stressed" → update `memory/wellbeing-log.md`
+- **Publication facts**: "Submitted to IEEE transactions" → update `context/publication-pipeline.md` or `memory/semantic/publication-log.md`
+
 **Extraction logic:**
 ```
 if confidence >= 0.85:
     check_for_contradiction(existing_memory)
     if contradiction:
-        surface_to_faculty_for_confirmation()
+        surface_to_user_for_confirmation()
     else:
         write_to_file()
         emit [MEMORY: ...] marker
@@ -73,14 +97,14 @@ else:
 
 ### 2. Explicit Memory Commands
 
-| Faculty Says | Action |
+| User Says | Action |
 |-------------|--------|
 | "Remember that X" | Write to appropriate file; confirm |
 | "Forget X" | Soft-delete: mark `[DEPRECATED YYYY-MM-DD]` — never hard-delete |
-| "Update my profile" | Run through soul.md sections interactively |
+| "Update my profile" | Run through soul.md or scholar-profile.md sections interactively |
 | "What do you know about me?" | Produce structured memory summary (see output format) |
 | "What projects am I working on?" | Summarise research-pipeline.md active items |
-| "What funding have I applied for?" | Summarise funding-log.md |
+| "What funding have I applied for?" | Summarise funding-log.md or publication-pipeline.md |
 
 ### 3. Contradiction Detection
 

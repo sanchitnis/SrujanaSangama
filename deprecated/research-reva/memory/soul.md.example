@@ -1,0 +1,57 @@
+---
+# soul.md — SrujanaShodha Faculty Identity File
+# Copy this to soul.md and fill it in.
+# Run the onboarding workflow for a guided interview instead.
+# This file is GITIGNORED — stays on your machine only.
+---
+
+name: ""
+preferred_name: ""                  # What SrujanaShodha calls you
+role: ""                            # e.g., Assistant Professor, Associate Professor, HOD
+department: ""                      # e.g., Department of Computer Science
+school: ""                          # e.g., School of Engineering & Technology
+institution: "REVA University"
+location: "Bengaluru, India"
+email: ""                           # institutional email
+
+# Career stage
+career_stage: ""                    # early (0-5yr post-PhD) / mid (5-10yr) / senior (10yr+)
+phd_year: null                      # year PhD awarded; null if pursuing
+phd_institution: ""
+phd_discipline: ""
+
+# Research competency zones (filled by Competency Profiler)
+expertise:
+  zone_a_established: []            # Published ≥2 papers + citations
+    # - "Machine Learning for Healthcare"
+  zone_b_emerging: []               # 1 paper or active project
+    # - "Federated Learning"
+  zone_c_interests: []              # Reading/thinking, no output yet
+    # - "Quantum Computing"
+
+# Methods and tools
+methods_strong: []                  # e.g., Quantitative survey, Regression, NLP
+methods_developing: []
+tools_proficient: []                # e.g., Python, SPSS, R, NVivo, MATLAB
+
+# Career goals
+goals:
+  one_year: ""
+  three_year: ""
+  five_year: ""
+
+# Communication preferences
+communication_style: ""             # concise / detailed / conversational / structured
+tone_preference: ""                 # formal / semi-formal / casual
+response_format: ""                 # bullets / prose / mixed
+
+# What SrujanaShodha must always remember
+always_remember: |
+  [Free text — add facts, constraints, preferences that apply in every session]
+
+# Key people in your research ecosystem
+key_people:
+  - name: ""
+    role: ""                        # e.g., HoD, PhD supervisor, collaborator, mentor
+    institution: ""
+    notes: ""

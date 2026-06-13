@@ -67,7 +67,7 @@ Respond immediately when user says:
 | "Update — I no longer X" | Add new fact, deprecate old contradicting fact |
 | "What do you know about me?" | Generate a structured summary from all tiers |
 | "What did we work on recently?" | Summarise last 7–10 episodic entries |
-| "Clear my session context" | Wipe `context/current-session.md` only |
+| "Clear my session context" | Wipe `memory/context/current-session.md` only |
 
 ### 3. Contradiction Detection
 Before writing any new fact:

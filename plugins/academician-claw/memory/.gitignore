@@ -1,28 +1,19 @@
-# Personal memory — gitignored per faculty member
-# Each faculty member maintains their own local memory/ directory.
-# These files are NEVER committed to the shared repository.
+# AcademicianClaw — Plugin Memory Directory
+# ─────────────────────────────────────────────────────────────────────────────
+# RULE: This directory contains EXAMPLE TEMPLATES ONLY.
+#       Real live memory files live at the workspace root: /memory/
+#       Examples are committed so new users get a starting point.
+#       Live data is never committed — it is personal to each faculty member.
+# ─────────────────────────────────────────────────────────────────────────────
 
-# Personal identity and preferences
-soul.md
+# Exclude all .md files (live runtime data)
+*.md
 
-# Semantic memory (facts about the user's work, projects, relationships)
-semantic/
+# Keep committed example templates
+!*.md.example
 
-# Episodic memory (session logs, narrative history)
-episodic/
-
-# Procedural memory (how-tos, workflows the user has defined)
-procedural/
-
-# Habit tracking data
-habits/
-
-# Active working context (tasks, current project, scratchpad)
-context/
-
-# Session logs
-logs/
-
-# Keep the directory tracked but not its contents
+# Keep this gitignore
 !.gitignore
-!soul.md.example
+
+# Subdirectory rules — same policy applies recursively
+# (Git applies parent .gitignore rules to subdirs by default)

@@ -19,6 +19,11 @@
         ],
         "slashCommands": [
           {
+            "name": "onboard",
+            "description": "Onboard a new user and initialize their SrujanaSangama profile.",
+            "template": "workflows/00_onboarding.md"
+          },
+          {
             "name": "weekly-review",
             "description": "Run a full end-of-week reflection: accomplishments, task/habit review, next-week priorities.",
             "template": "workflows/weekly-review.md"

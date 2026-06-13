@@ -11,14 +11,18 @@
     "rules": [
       "rules/ORCHESTRATOR.md",
       "rules/PERSONA_ENGINE.md",
-      "rules/PERMISSION_GUARDIAN.md"
+      "rules/PERMISSION_GUARDIAN.md",
+      "rules/CEE_ENGINE.md"
     ],
     "workflows": [
+      "workflows/00_onboarding.md",
       "workflows/weekly-review.md",
       "workflows/project-kickoff.md",
       "workflows/deep-research.md",
       "workflows/skill-generator.md",
-      "workflows/session-closer.md"
+      "workflows/session-closer.md",
+      "workflows/07_morning-briefing.md",
+      "workflows/08_weekly-alignment-audit.md"
     ]
   },
   "mcpConfig": "./mcp.json"

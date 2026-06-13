@@ -91,6 +91,22 @@ Provide a **Course Design Document** (can be a draft) containing:
 - Enterprise skills CO linked: **[YES / NO]** → **[PASS if YES / FAIL if NO]**
 
 **Output**: PASS / CONDITIONAL / FAIL with specific mapping strength recommendations
+1.  **Analyze Course Outcomes (COs)**:
+    *   List all COs.
+    *   Identify the Bloom's Cognitive Level (L1 to L6) of the primary verb in each CO.
+    *   Flag any COs using weak, non-measureable verbs (e.g., "understand", "study", "know").
+2.  **Evaluate HOTS Dominance**:
+    *   Calculate the percentage of COs that map to Levels 4 (Analyze), 5 (Evaluate), or 6 (Create).
+    *   Standard check: **Is the HOTS percentage $\ge 60\%$?**
+3.  **Assess CO-PO & PSO Mapping Rigor**:
+    *   Audit the mapping strength levels (1, 2, 3) for each CO-PO pair.
+    *   Identify any "high" mapping strengths (Level 3) that lack clear learning activity justifications.
+    *   Confirm if the enterprising human skills PO/PSO thread is linked.
+4.  **Verify Portfolio Linkage**:
+    *   Identify the designated portfolio output (e.g., product, paper, open-source repository) associated with the course.
+    *   Check if the portfolio milestones are mapped directly to corresponding COs.
+5.  **Examine Institutional Alignment**:
+    *   Verify integration of Educate to enterprise philosophy, focus on developing human centered core/life skills, Engineering habits (if applicable), AI-ready activities (where students performace higher level activities with augmentation by AI), Learning by doing, PBL, liberal studies, sustainability indicators, REVA vision, mission and values and finally NEP perspectives, Indian Knowledge Systems (IKS) etc. in course units.
 
 ---
 
