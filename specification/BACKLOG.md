@@ -226,7 +226,14 @@ Conclude the generation with a brief verification self-score to ensure cognitive
 - **Notes**: Add capability to analyze TRL levels based on the National Technology Readiness Assessment Framework (NTRAF, PSA 2025/2026), NITI Aayog's TCRM Matrix, CSIR adaptations, and the IISc IPTEL assessment model. Help researchers transition from TRL 4 to TRL 7 ("Valley of Death"), planning for commercialization, patents, and technology transfer alongside traditional publication.
 - **Status**: Idea
 
+### [2026-06-13] srujana-shodha — paper-search MCP Server Integration
+- **Source**: user-report
+- **Priority**: High
+- **Notes**: Register and integrate the `paper-search-mcp` Model Context Protocol (MCP) server (using `uv tool run paper-search-mcp`) into the `srujana-shodha` plugin (`mcp.json`). Integrate search capabilities (`search_papers`, `download_with_fallback`) into systematic literature review workflows (`research-coach.md`, `research-pipeline-coach.md`), work reviewer guidelines (`work-product-reviewer.md`), and draft audits (`manuscript-check.md`).
+- **Status**: Idea
+
 ---
+
 
 ## A — Academic Administration (`academic-admin-reva`)
 
