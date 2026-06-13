@@ -29,7 +29,7 @@ Every syllabus must show a clear dominance of Higher-Order Thinking Skills (HOTS
 
 ## 3. CO-PO & PSO Strength Mapping
 
-Each course outline must include an explicit, justified mapping of COs to the 12 NBA Program Outcomes (POs) and specific Program Specific Outcomes (PSOs).
+Each course outline must include an explicit, justified mapping of COs to the 11 NBA Program Outcomes (POs) (updated NBA framework) and specific Program Specific Outcomes (PSOs).
 
 *   **Strength Levels**:
     *   **1 (Slight/Low)**: Indirect or minor reinforcement.
