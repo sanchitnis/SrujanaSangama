@@ -2,7 +2,13 @@
 """health.py — OpenClaw system integrity check. Zero LLM calls."""
 import datetime, sys
 from pathlib import Path
-BASE = Path(__file__).parent.parent  # plugin root
+
+# Ensure UTF-8 output on Windows
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 class C:
     G="\033[92m"; R="\033[91m"; Y="\033[93m"; O="\033[38;5;208m"
@@ -89,16 +95,22 @@ def main():
 
     sec("Required Files")
     for rel in REQUIRED:
-        p = BASE / rel
-        check(p.exists(), f"{rel}  {C.D}({p.stat().st_size:,}b){C.END}", f"MISSING: {rel}", w=False)
+        p = resolve_path(rel)
+        is_optional_pre_onboard = rel.startswith("memory/") or rel.startswith("context/")
+        if not p.exists() and is_optional_pre_onboard:
+            warn(f"MISSING (Will be created during onboarding): {rel}")
+            continue
+        size_str = f"  {C.D}({p.stat().st_size:,}b){C.END}" if p.exists() else ""
+        check(p.exists(), f"{rel}{size_str}", f"MISSING: {rel}", w=False)
 
     sec("Memory Population")
-    soul = (BASE / "memory/soul.md").read_text(encoding="utf-8") if (BASE/"memory/soul.md").exists() else ""
+    soul_path = resolve_path("memory/soul.md")
+    soul = soul_path.read_text(encoding="utf-8") if soul_path.exists() else ""
     check("Name" in soul and "[to be filled]" not in soul[:150],
           "soul.md appears populated",
           "soul.md not populated — run: python3 scripts/local/init.py", w=True)
 
-    ep = BASE / "memory/episodic/recent.md"
+    ep = resolve_path("memory/episodic/recent.md")
     if ep.exists():
         lines = ep.read_text(encoding="utf-8").split("\n")
         entries = sum(1 for l in lines if l.startswith("## ["))

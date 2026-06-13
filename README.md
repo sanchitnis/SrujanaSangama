@@ -131,9 +131,30 @@ Here is the complete registry of all specialized AI agents and workflows availab
    antigravity-cli marketplace install reva.srujana-shodha
    ```
 
-### For GitHub Copilot Users
-1. Log in to your VS Code environment using your official `@reva.edu.in` Single Sign-On credentials.
-2. The Copilot Chat panel will automatically recognize the custom agents (`@reva-scholar`, `@reva-educator`, etc.) mapped to your authorized team groups in `.github/copilot-marketplace.json`.
+### Workspace Memory and Information Setup
+
+Since this repository is read-only for security and integrity, all live user memory and university reference files are configured outside of this repository.
+
+1. **Create `srujana-memory`**:
+   - Create a folder named `srujana-memory` on your local Desktop or in the parent directory of your repositories.
+   - Inside it, create two directories:
+     - `my-memory/` — for private data (e.g. `soul.md`, `context/`, `semantic/`, `episodic/`, `habits/`). Copy templates from `plugins/academician-claw/memory/` or run `python3 scripts/local/init.py` once the workspace is open.
+     - `public-memory/` — for public portfolios and resumes. It must contain a `profile.md` (resume) and directories: `publications/`, `patents/`, `projects/`, and `reports/`.
+     - Create any collaborative team directories if needed: `scholar-guide/`, `pi-copi/`, `guide-team/`, `reva-<team>/`.
+2. **Create `reva-information`**:
+   - Create a sibling folder named `reva-information` at the same level as your repository folder (i.e. `../reva-information/`).
+   - Populate this folder with markdown files containing REVA University public handbooks, regulations, syllabus, and policies.
+3. **Configure VS Code Multi-Root Workspace**:
+   - Save your workspace as a `.code-workspace` file (e.g., `srujana.code-workspace`) with the following folders:
+     ```json
+     {
+       "folders": [
+         { "path": "SrujanaSangama" },
+         { "path": "srujana-memory" },
+         { "path": "reva-information" }
+       ]
+     }
+     ```
 
 ---
 

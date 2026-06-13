@@ -78,9 +78,9 @@ plugins/<plugin-name>/
 │   └── guide/           ← (or role-specific subfolder)
 │
 ├── context/             ← Committed .example template files (never real user data)
-├── memory/              ← Gitignored live memory files (soul.md, tasks.md, etc.)
-│   └── semantic/        ← Sub-folder for project-level trackers
+├── memory/              ← [DEPRECATED] All live memory is stored in centralized srujana-memory/my-memory/
 │
+
 └── references/          ← Plugin-local reference materials
     └── schools/         ← School-specific overlays (for phd-scholar)
 ```
@@ -145,11 +145,13 @@ Every file in `workflows/` MUST:
 
 ## 8. Memory File Conventions
 
-- `memory/` directories are **gitignored** — never commit live memory files
-- Every live memory file MUST have a corresponding committed `.example` template
-- `soul.md` is the canonical identity file; it must exist in every plugin that has a `memory/` folder
-- Memory file content is Markdown only — no JSON blobs, no binary
-- The `session-closer` workflow is responsible for appending to `memory/semantic/episodic/` at the end of every session
+- **Centralized Workspace Folder**: SrujanaSangama utilizes a centralized workspace folder named `srujana-memory` located outside the git repositories. There is no local fallback.
+- **Private Data (`my-memory/`)**: Stores all private user context and preferences. `soul.md` inside `my-memory/` is the canonical identity file containing all private goals, values, and settings.
+- **Public Data (`public-memory/`)**: Stores public portfolio data. `profile.md` contains public details and links (acting as a resume).
+- **Collaborative Directories**: Collaborative spaces (e.g. `mentor-mentee`, `scholar-guide`, `pi-copi`) live under `srujana-memory/` and support multi-pair folders (e.g. `scholar-guide/scholar-vijay/`). OS-level sync is handled transparently.
+- **REVA Reference Folder**: Centralized university reference files are kept in the sibling folder `../reva-information/`.
+- Memory file content is Markdown only — no JSON blobs, no binary.
+- The `session-closer` workflow is responsible for appending to `my-memory/episodic/recent.md` at the end of every session.
 
 ---
 

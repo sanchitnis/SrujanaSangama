@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 openclaw-script: true
 name: update_memory
@@ -14,19 +14,25 @@ import sys
 import datetime
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent  # plugin root
+# Ensure UTF-8 output on Windows
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 def read(rel, default=""):
-    p = BASE / rel
+    p = resolve_path(rel)
     return p.read_text(encoding="utf-8") if p.exists() else default
 
 def write(rel, content):
-    p = BASE / rel
+    p = resolve_path(rel)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content, encoding="utf-8")
 
 def append_to(rel, content):
-    p = BASE / rel
+    p = resolve_path(rel)
     p.parent.mkdir(parents=True, exist_ok=True)
     with open(p, "a", encoding="utf-8") as f:
         f.write(content)

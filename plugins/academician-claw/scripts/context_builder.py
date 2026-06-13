@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 openclaw-script: true
 name: context_builder
@@ -15,10 +15,12 @@ import datetime
 import re
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent  # plugin root
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 def read(rel, default="[not found]"):
-    p = BASE / rel
+    p = resolve_path(rel)
     return p.read_text(encoding="utf-8").strip() if p.exists() else default
 
 def section(title, content, max_lines=None):

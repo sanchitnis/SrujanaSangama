@@ -15,7 +15,9 @@ from pathlib import Path
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8")
 
-BASE = Path(__file__).parent.parent  # plugin root
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 class C:
     ORANGE="\033[38;5;208m"; GREEN="\033[92m"; CYAN="\033[96m"
@@ -36,7 +38,7 @@ def section(title):
     print(f"  {C.DIM}{'─'*50}{C.END}\n")
 
 def write(rel, content):
-    p = BASE / rel
+    p = resolve_path(rel)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content, encoding="utf-8")
 
@@ -319,10 +321,12 @@ _Started: {today}_
 
     write("context/scratchpad.md", "# Scratchpad\n_Cleared each session_\n\n")
 
-    # ── Memory stubs ──────────────────────────────────────────────────────────
+    # ── Memory stubs (written to WORKSPACE_ROOT/memory/ — never inside the plugin) ──
     for rel, content in [
         ("memory/episodic/recent.md",
          f"# Episodic Memory — Recent\n_Managed by update_memory.py_\n\n## [{today}] — Initialisation\nSystem initialised for {name} at {org}.\n"),
+        ("memory/semantic/work.md",
+         f"# Work Context\n_Created: {today} | Last updated: {today}_\n\n---\n\n## Current Role\n- {role} at {org}\n\n## Organisation\n- Name: {org}\n- Location: {location}\n\n## Active Projects\n- [to be filled from conversations]\n\n## Key Colleagues\n- [to be populated from conversations]\n\n## Tools & Platforms\n- [to be filled]\n\n## Ongoing Challenges\n- [to be filled]\n"),
         ("memory/semantic/preferences.md",
          "# Preferences\n_Last updated: [YYYY-MM-DD]_\n\n## Tools\n-\n\n## Work Preferences\n-\n\n## Personal\n-\n"),
         ("memory/semantic/vocabulary.md",
@@ -342,11 +346,51 @@ _Started: {today}_
     write("logs/sessions.log",   f"[{today}] OpenClaw initialised for {name}\n")
     write("logs/memory-changes.log", f"[{today}] System initialised — soul.md and all templates written\n")
 
+    # ── CEE memory files ──────────────────────────────────────────────────────
+    # Copy .example files to live CEE memory files (gitignored).
+    # Destination paths mirror the cognitive memory hierarchy:
+    #   context/  — active working state (projects, holding inbox)
+    #   semantic/ — domain knowledge (areas, resources, identity)
+    #   archive/  — closed work
+    #   logs/     — execution history
+    cee_examples = [
+        # context/ — active, time-bound, actionable
+        ("context/para-projects.md",          BASE / "context/para-projects.md.example"),
+        ("context/holding-inbox.md",          BASE / "context/holding-inbox.md.example"),
+        # semantic/ — ongoing knowledge and domain accountability
+        ("memory/semantic/cee-identity.md",   BASE / "memory/semantic/cee-identity.md.example"),
+        ("memory/semantic/para-areas.md",     BASE / "memory/semantic/para-areas.md.example"),
+        ("memory/semantic/para-resources.md", BASE / "memory/semantic/para-resources.md.example"),
+        # archive/ — closed projects and records
+        ("memory/archive/para-archive.md",    BASE / "memory/archive/para-archive.md.example"),
+    ]
+    for rel, example_path in cee_examples:
+        target = resolve_path(rel)
+        if not target.exists() and example_path.exists():
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(example_path.read_text(encoding="utf-8"), encoding="utf-8")
+
+    # logs/ — mechanical execution history
+    termite_example = BASE / "memory" / "logs" / "termite-history.md.example"
+    termite_live    = resolve_path("memory/logs/termite-history.md")
+    if not termite_live.exists() and termite_example.exists():
+        termite_live.parent.mkdir(parents=True, exist_ok=True)
+        termite_live.write_text(termite_example.read_text(encoding="utf-8"), encoding="utf-8")
+
     print(f"\n  {C.GREEN}{C.BOLD}✅ OpenClaw initialised for {name}{C.END}")
     print(f"\n  {C.DIM}Next steps:{C.END}")
-    print(f"  1. Run:  {C.CYAN}python3 scripts/local/health.py{C.END}")
-    print(f"  2. Run:  {C.CYAN}python3 scripts/local/context_builder.py{C.END}")
-    print(f"  3. Paste {C.CYAN}prompts/session/ORCHESTRATOR.md{C.END} + context into Claude\n")
+    print(f"  1. Run:  {C.CYAN}python3 scripts/health.py{C.END}")
+    print(f"  2. Run:  {C.CYAN}python3 scripts/context_builder.py{C.END}")
+    print(f"  3. Paste {C.CYAN}rules/ORCHESTRATOR.md{C.END} + context into Claude\n")
+    print(f"  {C.ORANGE}{C.BOLD}📋 CEE Engine — Morning Briefing Setup:{C.END}")
+    print(f"  {C.DIM}Set up your daily 6 AM briefing via Gemini /schedule:{C.END}")
+    print(f"  1. Open Gemini")
+    print(f"  2. Type {C.CYAN}/schedule{C.END}")
+    print(f"  3. Set frequency: {C.CYAN}Daily{C.END} | Time: {C.CYAN}6:00 AM IST{C.END}")
+    print(f"  4. Paste contents of {C.CYAN}workflows/07_morning-briefing.md{C.END} as the prompt body")
+    print(f"  5. Gemini will fire your Morning Briefing every day automatically.\n")
+    print(f"  {C.DIM}To migrate your existing tasks to the enriched CEE format:{C.END}")
+    print(f"  Run: {C.CYAN}python3 scripts/cee_task_migrate.py{C.END}\n")
 
 if __name__ == "__main__":
     main()

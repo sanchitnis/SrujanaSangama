@@ -1,16 +1,22 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """task_check.py — Print overdue and due-today tasks from context/tasks.md. Zero LLM calls."""
-import re, datetime
+import re, datetime, sys
 from pathlib import Path
 
-BASE = Path(__file__).parent.parent  # plugin root
+# Ensure UTF-8 output on Windows
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+
+import path_resolver
+from path_resolver import BASE, WORKSPACE_ROOT, resolve_path
+
 
 class C:
     R="\033[91m"; Y="\033[93m"; G="\033[92m"; O="\033[38;5;208m"
     D="\033[2m"; B="\033[1m"; END="\033[0m"
 
 def main():
-    tasks_path = BASE / "context/tasks.md"
+    tasks_path = resolve_path("context/tasks.md")
     if not tasks_path.exists():
         print("  No tasks.md found. Run init.py first.")
         return
