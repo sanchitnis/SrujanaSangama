@@ -49,6 +49,17 @@
 - **Notes**: Deterministic routing test suite run on every PR to ensure orchestrators remain unbroken.
 - **Status**: Idea
 
+### [2026-06-13] Platform — File Format Conversion Skills (Marker, MarkItDown, PyMuPDF4LLM, MinerU)
+- **Source**: user-report
+- **Priority**: High
+- **Notes**: Add and refine root-level skills for document format conversion (PDF, DOCX, PPTX, XLSX, HTML, Images to Markdown or JSON) leveraging different open-source tools depending on technical needs. Incorporate:
+  1. **Marker**: High structural visual layout retention, LaTeX math, and multi-column PDF mapping.
+  2. **Microsoft's MarkItDown**: Versatile multi-format support (DOCX, XLSX, PPTX, HTML, PDF to Markdown).
+  3. **PyMuPDF4LLM**: Extremely fast parsing for digital-native/OCR'd PDFs.
+  4. **MinerU**: Scientific chart and formula extraction, with a Web GUI.
+  Compare features against the existing `docling-converter` and structure these as dedicated root-level skills (e.g. `skills/marker-converter.md`, `skills/markitdown-converter.md`, `skills/pymupdf-converter.md`).
+- **Status**: Idea
+
 ---
 
 ## T — Teaching & Learning (`teaching-learning-reva`)
