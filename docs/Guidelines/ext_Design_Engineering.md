@@ -167,18 +167,18 @@ For SC-Studio, SC-Fablab, SC-Field, SC-Digital, and Workshop-D courses, **replac
 
 ## 8. Enterprise Skills — Design Engineering Integration
 
-Design Engineering has a **structural advantage**: enterprise skills are inherent to design practice, not add-ons. Every studio course naturally embeds most of these skills — the task is to **make them explicit** in the CO and **rubric-visible** in assessment.
+Design Engineering has a **structural advantage**: enterprise skills are inherent to design practice, not add-ons. Every studio course naturally embeds most of these skills — the task is to **make them explicit** in the course overview and **rubric-visible** in assessment, mapped directly to their corresponding POs (no dedicated standalone CO required, in alignment with universal Rule 9).
 
-| Enterprise Skill | Where it naturally appears in Design Engineering | CO example |
+| Enterprise Skill | Where it naturally appears in Design Engineering | Activity/Assessment Example |
 |---|---|---|
-| **Creativity & Value Creation** | Every ideation and prototyping phase | *"Generate and evaluate design concepts that create measurable user value"* |
-| **Initiative** | Self-directed brief interpretation; unsolicited design improvements | *"Identify an unstated user need from research and incorporate it into the design"* |
-| **Collaboration** | Group studio projects; peer critique participation | *"Contribute to a shared design outcome through structured peer feedback and iteration"* |
-| **Ethical Reasoning** | Sustainable material choices; inclusive design decisions; user consent in research | *"Evaluate design decisions against sustainability criteria and user welfare considerations"* |
-| **Communication** | Jury presentations; design reports; client briefs | *"Communicate design rationale clearly to a non-specialist audience using visual and verbal means"* |
-| **Adaptability** | Constraint changes mid-project; material substitution; user feedback requiring redesign | *"Adapt the design in response to user testing feedback, documenting the iteration rationale"* |
+| **Creativity & Value Creation** | Every ideation and prototyping phase | Generate and evaluate design concepts that create measurable user value |
+| **Initiative** | Self-directed brief interpretation; unsolicited design improvements | Identify an unstated user need from research and incorporate it into the design |
+| **Collaboration** | Group studio projects; peer critique participation | Contribute to a shared design outcome through structured peer feedback and iteration |
+| **Ethical Reasoning** | Sustainable material choices; inclusive design decisions; user consent in research | Evaluate design decisions against sustainability criteria and user welfare considerations |
+| **Communication** | Jury presentations; design reports; client briefs | Communicate design rationale clearly to a non-specialist audience using visual and verbal means |
+| **Adaptability** | Constraint changes mid-project; material substitution; user feedback requiring redesign | Adapt the design in response to user testing feedback, documenting the iteration rationale |
 
-> **Mandatory CO requirement (Design Engineering):** Every studio course must include **at least one CO** explicitly naming an enterprise skill, with a rubric criterion that is observable and separately scored — not just implied by the overall design quality.
+> **Declaration & Assessment Requirement (Design Engineering):** Enterprise skills are addressed through **CO-PO mapping** (no separate CO required), but must be **named explicitly** in the course overview and **designed into** at least one assignment or activity with an observable, separately scored rubric criterion.
 
 ---
 
@@ -196,7 +196,24 @@ Design Engineering has more natural IKS and Sustainability integration opportuni
 
 ---
 
-## 10. CO-PO Mapping Guidance — Design Engineering
+## 10. AI-Augmented Assessment in Design Engineering
+
+In alignment with the universal guidelines, at least one assignment or activity per course must be designed as a mandatory **AI-assisted task**. AI is treated as a collaborative design partner, not a shortcut.
+
+### 10.1 Typical AI-Assisted Workflows in Design
+Design course designers should integrate AI tools into the studio workflow in one of the following ways:
+- **Generative Ideation (Visual)**: Using image generators (e.g., Midjourney, Vizcom, Stable Diffusion) to create mood boards, explore form variations, or define aesthetic style guides.
+- **User Persona & Research Simulation**: Using LLMs to simulate user personas for role-playing interviews, draft qualitative interview questions, or analyze qualitative research notes.
+- **Firmware & Code Co-creation**: Using AI code assistants (e.g., Copilot) to generate starting code for interactive design prototypes (Arduino, Raspberry Pi, Processing).
+- **Design Review & Evaluation**: Using LLMs to critique wireframes, check UI accessibility against guidelines, or review material compliance.
+
+### 10.2 Assessment Constraints
+- **AI Use Declaration**: Every submission for an AI-assisted task must include a mandatory declaration detailing: the tools used, the prompts submitted, the AI-generated outputs, and the student's own critical modifications.
+- **Assessment of Student Agency**: The rubric must separately score the student's *design judgment, critical evaluation, and execution*. The final grade must reflect how the student refined, challenged, or physically/digitally fabricated the AI's suggestions, ensuring AI output alone is insufficient.
+
+---
+
+## 11. CO-PO Mapping Guidance — Design Engineering
 
 *Key NBA 11 POs especially relevant to Design Engineering:*
 
@@ -205,22 +222,22 @@ Design Engineering has more natural IKS and Sustainability integration opportuni
 | PO1 Engineering Knowledge | Applied in technical feasibility, materials science, mechanics | 2 (Moderate) |
 | PO2 Problem Analysis | Central to user research and problem framing | 3 (Substantial) |
 | PO3 Design / Development of Solutions | **Core PO for all Design Engineering courses** | 3 (Substantial) |
-| PO4 Conduct Investigations | User research, usability testing, material testing | 2–3 |
-| PO5 Modern Tool Usage | CAD, simulation, digital fabrication tools | 2 |
-| PO6 Engineer and Society | Social impact of design; inclusive design | 2 |
-| PO7 Environment and Sustainability | Sustainable materials and processes | 2–3 |
-| PO8 Ethics | Research ethics, design ethics (dark patterns), IP | 2 |
-| PO9 Individual and Team Work | Studio collaboration, peer critique | 3 |
-| PO10 Communication | Jury presentations, design reports, portfolios | 3 |
-| PO11 Project Management | Capstone project planning and delivery | 2 |
+| PO4 Conduct Investigations of Complex Problems | User research, usability testing, material testing | 2–3 |
+| PO5 Engineering Tool Usage | CAD, simulation, digital fabrication, and generative design tools | 2 |
+| PO6 The Engineer and the World | Social impact of design; inclusive design; sustainable materials and processes | 2–3 |
+| PO7 Ethics | Research ethics, design/UI ethics (dark patterns), IP, responsible AI usage | 2 |
+| PO8 Individual and Collaborative Teamwork | Studio collaboration, peer critique, co-design processes | 3 |
+| PO9 Communication | Jury presentations, design reports, portfolios, visual narration | 3 |
+| PO10 Project Management and Finance | Capstone project planning, budgeting, timelines, resource allocation | 2 |
+| PO11 Life-Long Learning | Portfolio curation, self-directed skill updates, career agility | 2 |
 
-> **Mandatory mapping guidance:** Every SC-Studio, SC-Fablab, or Capstone course must map at least one CO to **PO3 at Strength 3**. Every course with a jury critique must map at least one CO to **PO10 at Strength 3**.
+> **Mandatory mapping guidance:** Every SC-Studio, SC-Fablab, or Capstone course must map at least one CO to **PO3 at Strength 3**. Every course with a jury critique must map at least one CO to **PO9 at Strength 3** (representing the Communication competency).
 
 ---
 
-## 11. Portfolio Strategy — Design Engineering
+## 12. Portfolio Strategy — Design Engineering
 
-Portfolio-first learning is not an add-on for Design Engineering — it **is** the primary learning architecture. Every course contributes to a **graduation portfolio** of design work.
+Portfolio-first learning is not an add-on for Design Engineering — it **is** the primary learning architecture. Every course contributes to a **graduation portfolio** of design work, satisfying the universal Rule 11.
 
 | Semester | Portfolio Artefact Type | Example |
 |---|---|---|
@@ -239,7 +256,7 @@ Portfolio-first learning is not an add-on for Design Engineering — it **is** t
 
 ---
 
-## 12. Design Checklist — Design Engineering Additions
+## 13. Design Checklist — Design Engineering Additions
 
 *Run in addition to the universal design checklist (§5 of universal guidelines):*
 
@@ -249,14 +266,18 @@ Portfolio-first learning is not an add-on for Design Engineering — it **is** t
 - [ ] Process documentation is **co-assessed** alongside the final artefact.
 - [ ] Rubric includes: brief alignment, process rigour, design judgment, innovation quality, professional presentation.
 - [ ] At least one CO maps to **PO3 at Strength 3**.
-- [ ] If jury is used: at least one CO maps to **PO10 at Strength 3**.
+- [ ] If jury is used: at least one CO maps to **PO9 at Strength 3** (representing Communication).
+- [ ] **Enterprise Skills declared in Course Overview**: which skills the course develops and through which activities — stated explicitly (not implied).
+- [ ] **Enterprise Skills visible in at least one assignment/activity**: brief names the skill; rubric includes an observable criterion for it.
+- [ ] **Enterprise Skills embedded via CO-PO mapping**: mapped to corresponding POs (no standalone CO required, aligned with universal Rule 9).
+- [ ] **AI-augmented assessment (mandatory — at least 1 per course)**: at least one assignment or activity is designed as an AI-assisted task (e.g. generative ideation, persona simulation, firmware co-creation) with a mandatory AI Use Declaration.
 - [ ] IKS / Sustainability thread includes at least one **design-specific** integration (craft tradition, material sustainability, inclusive design).
-- [ ] Portfolio artefact is **defined per course** and feeds the graduation portfolio.
+- [ ] **Portfolio Artefact defined**: named, CO-linked, rubric-graded, integrated into the Crit/Jury cycle (representing at least 15% of marks) and feeding the graduation portfolio.
 - [ ] Studio specialisation track (Product / UX / Sustainable / Manufacturing) is identified for SC/PEC courses.
 
 ---
 
-*Extension Version*: 1.0 | *Released*: June 2026  
+*Extension Version*: 1.1 | *Released*: June 2026  
 *Part of*: REVA University Course Design Guidelines — University Edition  
 *Maintained by*: REVA Teaching-Learning Innovation Team (Design Engineering Lead)  
 *Lead Architect*: Sanjay Chitnis  
