@@ -57,9 +57,9 @@ Suggest what to work on next session in 1–2 lines:
 
 ---
 
-### Step 4.5 — Rebuild Dashboard
+### Step 4.5 — Rebuild Dashboards
 
-Execute the builder script `python tools/build_scholar_dashboard.py` to refresh the local HTML portal dashboard with the latest profile completeness and KPIs.
+Execute the builder scripts `python tools/build_scholar_dashboard.py` and `python tools/build_faculty_dashboard.py` to refresh the local HTML portal dashboards with the latest profile completeness and KPIs.
 
 ---
 
