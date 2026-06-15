@@ -57,6 +57,12 @@ Suggest what to work on next session in 1–2 lines:
 
 ---
 
+### Step 4.5 — Rebuild Dashboard
+
+Execute the builder script `python tools/build_scholar_dashboard.py` to refresh the local HTML portal dashboard with the latest profile completeness and KPIs.
+
+---
+
 ### Step 5 — Append to Episodic Log
 
 Append to `memory/episodic/recent.md`:

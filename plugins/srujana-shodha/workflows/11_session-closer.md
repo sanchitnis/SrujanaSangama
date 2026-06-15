@@ -45,6 +45,9 @@ Based on the session content, update the relevant files:
 
 For each update: offer to write the specific entry rather than asking the scholar to do it manually.
 
+After updating memory files:
+- Rebuild the local HTML dashboard: Execute the builder script `python tools/build_scholar_dashboard.py` to refresh the profile completeness, KPIs, and collaborative status on the local HTML portal.
+
 ---
 
 ## Phase 4 — Episodic Memory Append (1 min)

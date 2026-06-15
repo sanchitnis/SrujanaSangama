@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SrujanaSangama Faculty & Scholar Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #0f766e;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+            color: #0f766e;
+        }
+        .command-list, .nudge-list {
+            list-style: none;
+            padding: 0;
+        }
+        .command-item {
+            padding: 8px 10px;
+            border-bottom: 1px solid #f1f5f9;
+            font-family: monospace;
+        }
+        .command-item code {
+            color: #0f766e;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .nudge-item {
+            color: #dc2626;
+            font-weight: bold;
+            padding: 8px;
+            border-bottom: 1px dashed #fee2e2;
+        }
+        .progress-bar-container {
+            background-color: #e2e8f0;
+            border-radius: 8px;
+            height: 24px;
+            width: 100%;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        .progress-bar {
+            background-color: #0d9488;
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            text-align: center;
+            color: white;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: Consolas, Monaco, monospace;
+        }
+        .badge {
+            background-color: #ccfbf1;
+            color: #0f766e;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>SrujanaSangama Scholar Portal</h1>
+                <p>Faculty Research Advisor & Doctoral Journey Companion</p>
+            </div>
+            <button onclick="refreshData()" style="padding: 10px 15px; background: #0d9488; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                🔄 Refresh Dashboard
+            </button>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Left Side: Profile & Nudges & Commands -->
+            <div>
+                <div class="card">
+                    <h2>Profile Completeness Audit</h2>
+                    <div class="progress-bar-container">
+                        <div id="progress" class="progress-bar">0%</div>
+                    </div>
+                    <ul id="nudge-list" class="nudge-list">
+                        <!-- Nudges go here -->
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Slash Commands & Copilot Agents</h2>
+                    <ul id="command-list" class="command-list">
+                        <!-- Commands go here -->
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Collaborative Sync Workspaces</h2>
+                    <div id="collab-container">
+                        <p>Loading collaborations...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Research Pipeline -->
+            <div>
+                <div class="card">
+                    <h2>Active Research Pipeline Objectives</h2>
+                    <pre id="research-pipeline">Loading active objectives...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function refreshData() {
+            fetch('scholar-data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Data file not found. Ensure tools/build_scholar_dashboard.py has been run.');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 1. Completeness Score & Nudges
+                    const score = data.personal.score;
+                    const progress = document.getElementById('progress');
+                    progress.style.width = score + '%';
+                    progress.textContent = score + '% Complete';
+                    
+                    const nudgeList = document.getElementById('nudge-list');
+                    nudgeList.innerHTML = '';
+                    if (data.personal.nudges.length === 0) {
+                        const li = document.createElement('li');
+                        li.className = 'nudge-item';
+                        li.style.color = '#0d9488';
+                        li.textContent = '🎉 Your profile matches all academic and regulation benchmarks! 100% Complete.';
+                        nudgeList.appendChild(li);
+                    } else {
+                        data.personal.nudges.forEach(nudge => {
+                            const li = document.createElement('li');
+                            li.className = 'nudge-item';
+                            li.textContent = '⚠️ ' + nudge;
+                            nudgeList.appendChild(li);
+                        });
+                    }
+
+                    // 2. Commands List
+                    const commandList = document.getElementById('command-list');
+                    commandList.innerHTML = '';
+                    data.generic.commands.forEach(cmd => {
+                        const li = document.createElement('li');
+                        li.className = 'command-item';
+                        li.innerHTML = `<code>${cmd.command}</code>: ${cmd.description}`;
+                        commandList.appendChild(li);
+                    });
+
+                    // 3. Collaborations
+                    const collabContainer = document.getElementById('collab-container');
+                    collabContainer.innerHTML = '';
+                    if (data.personal.collaborations.length === 0) {
+                        collabContainer.innerHTML = '<p>No active project or scholar-guide folders updates tracked.</p>';
+                    } else {
+                        data.personal.collaborations.forEach(collab => {
+                            const item = document.createElement('div');
+                            item.style.marginBottom = '10px';
+                            item.style.padding = '10px';
+                            item.style.border = '1px solid #e2e8f0';
+                            item.style.borderRadius = '4px';
+                            item.innerHTML = `
+                                <strong>Type:</strong> <span class="badge">${collab.type}</span><br>
+                                <strong>Folder:</strong> <code>${collab.folder}</code><br>
+                                <strong>Latest File:</strong> ${collab.latest_file}<br>
+                                <strong>Last Update:</strong> ${new Date(collab.last_update).toLocaleString()}
+                            `;
+                            collabContainer.appendChild(item);
+                        });
+                    }
+
+                    // 4. Research Pipeline
+                    document.getElementById('research-pipeline').textContent = data.personal.research_pipeline;
+                })
+                .catch(error => {
+                    console.error('Error loading data:', error);
+                    document.getElementById('collab-container').innerHTML = `<p style="color:red;">Failed to load data. Run <code>python tools/build_scholar_dashboard.py</code> inside the repository first.</p>`;
+                });
+        }
+
+        // Initial load
+        refreshData();
+    </script>
+</body>
+</html>
