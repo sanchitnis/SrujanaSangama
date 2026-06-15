@@ -8,7 +8,8 @@
   ],
   "entry": {
     "rules": ["rules/REGULATORY_COMPLIANCE.md"],
-    "workflows": ["workflows/attainment-check.md"]
+    "workflows": ["workflows/attainment-check.md"],
+    "skills": ["reva-mou-reviewer/SKILL.md"]
   },
   "mcpConfig": "./mcp.json"
 }

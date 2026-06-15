@@ -13,55 +13,74 @@ def locate_srujana_memory():
     if env_path and Path(env_path).exists():
         return Path(env_path).resolve()
         
-    # 2. Sibling Path
-    sibling_path = REPO_ROOT.parent / "srujana-memory"
-    if sibling_path.exists():
-        return sibling_path.resolve()
-        
-    # 3. Desktop
-    desktop = Path(os.path.expanduser("~/Desktop/srujana-memory"))
-    if desktop.exists():
-        return desktop.resolve()
-        
-    # 4. OneDrive Desktop
-    onedrive_desktop = Path(os.path.expanduser("~/OneDrive/Desktop/srujana-memory"))
-    if onedrive_desktop.exists():
-        return onedrive_desktop.resolve()
-        
+    # 2. Walk up parent directory tree from REPO_ROOT and current directory to find srujana-memory
+    search_starts = [REPO_ROOT, Path.cwd()]
+    for start in search_starts:
+        curr = start.resolve()
+        # Traverse up to the drive root
+        while curr != curr.parent:
+            # Check if it's a child here or a sibling
+            sibling = curr / "srujana-memory"
+            if sibling.exists() and sibling.is_dir():
+                return sibling.resolve()
+            sibling_sibling = curr.parent / "srujana-memory"
+            if sibling_sibling.exists() and sibling_sibling.is_dir():
+                return sibling_sibling.resolve()
+            curr = curr.parent
+            
+    # 3. Fallbacks to Desktop/OneDrive Desktop
+    fallbacks = [
+        Path(os.path.expanduser("~/Desktop/srujana-memory")),
+        Path(os.path.expanduser("~/OneDrive/Desktop/srujana-memory")),
+        Path(os.path.expanduser("~/OneDrive - REVA University/Desktop/srujana-memory"))
+    ]
+    for path in fallbacks:
+        if path.exists() and path.is_dir():
+            return path.resolve()
+            
     return None
 
-def parse_readme_commands():
+def parse_readme_plugins():
     readme_path = REPO_ROOT / "README.md"
-    commands = []
+    plugins = []
     if not readme_path.exists():
-        return commands
+        return plugins
         
     with open(readme_path, "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Find all commands lines matching - `/command` or - `cmd`
-    matches = re.findall(r"-\s*(`/[a-zA-Z0-9_-]+`)\s*:\s*(.+)", content)
-    for cmd, desc in matches:
-        commands.append({
-            "command": cmd.replace("`", ""),
-            "description": desc.strip()
-        })
+    # Split by "### "
+    blocks = content.split("### ")
+    for block in blocks[1:]:
+        lines = block.splitlines()
+        if not lines:
+            continue
+        header = lines[0]
+        # Match header like: 🎓 `@reva-scholar` — Faculty Research & PhD Companion
+        header_match = re.search(r"`?(@[a-zA-Z0-9_-]+)`?\s*—\s*(.+)", header)
+        if not header_match:
+            continue
+        plugin_name = header_match.group(1).strip()
+        plugin_desc = header_match.group(2).strip()
         
-    matches_alt = re.findall(r"-\s*(`gtd`|`gps`|`weekly-review`|`session-close`|`new-skill`|`/onboard`|`/weekly-review`|`/project-kickoff`|`/deep-research`|`/session-close`|`/new-skill`|`/audit`|`/course-check`|`/assessment-check`|`/build-course-buddy`|`/cold-start-interview`|`/socratic-drill`|`/case-brief`|`/outline-builder`|`/aibe-prep`|`/flashcards`|`/study-plan`|`/irac-practice`|`/moot-court-trainer`|`/legal-writing`|`/exam-forecast`|`/session`)\s*:\s*(.+)", content, re.IGNORECASE)
-    for cmd, desc in matches_alt:
-        commands.append({
-            "command": cmd.replace("`", ""),
-            "description": desc.strip()
-        })
+        commands = []
+        # Parse slash commands under this block
+        for line in lines[1:]:
+            cmd_match = re.search(r"-\s*`(/?[a-zA-Z0-9_-]+)`\s*:\s*(.+)", line)
+            if cmd_match:
+                commands.append({
+                    "command": cmd_match.group(1).strip(),
+                    "description": cmd_match.group(2).strip()
+                })
         
-    seen = set()
-    unique_commands = []
-    for c in commands:
-        if c["command"] not in seen:
-            seen.add(c["command"])
-            unique_commands.append(c)
+        if commands:
+            plugins.append({
+                "name": plugin_name,
+                "description": plugin_desc,
+                "commands": commands
+            })
             
-    return unique_commands
+    return plugins
 
 def check_profile_completeness(memory_dir):
     soul_path = memory_dir / "my-memory" / "soul.md"
@@ -126,6 +145,48 @@ def check_profile_completeness(memory_dir):
 
     return completeness
 
+def parse_soul_metadata(soul_path):
+    metadata = {
+        "name": "Unknown Faculty",
+        "role": "Faculty Member",
+        "school": "School of Computer Science and Engineering",
+        "orcid": "None",
+        "user_type": "faculty"
+    }
+    if not soul_path.exists():
+        return metadata
+        
+    with open(soul_path, "r", encoding="utf-8") as f:
+        content = f.read()
+        
+    name_match = re.search(r"Name:\s*(.+)", content, re.IGNORECASE)
+    if name_match:
+        metadata["name"] = name_match.group(1).strip()
+        
+    title_match = re.search(r"(Academic Title|Title|role):\s*(.+)", content, re.IGNORECASE)
+    if title_match:
+        metadata["role"] = title_match.group(2).strip()
+        
+    school_match = re.search(r"School:\s*(.+)", content, re.IGNORECASE)
+    if school_match:
+        metadata["school"] = school_match.group(1).strip()
+        
+    orcid_match = re.search(r"ORCID:\s*(.+)", content, re.IGNORECASE)
+    if orcid_match:
+        metadata["orcid"] = orcid_match.group(1).strip()
+        
+    type_match = re.search(r"(User Type|type):\s*(.+)", content, re.IGNORECASE)
+    if type_match:
+        metadata["user_type"] = type_match.group(2).strip()
+        
+    return metadata
+
+def read_markdown_file(path, fallback=""):
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    return fallback
+
 def load_extra_personal_data(memory_dir):
     data = {
         "active_project": "No active projects or KRA milestones found. Start a project kickoff to populate.",
@@ -168,48 +229,62 @@ def build_dashboard():
     print("Building SrujanaSangama Faculty Dashboard...")
     memory_dir = locate_srujana_memory()
     if not memory_dir:
-        print("[WARNING] srujana-memory directory could not be located. Writing to local web/ folder as fallback.")
-        output_data = {
-            "generic": {
-                "system": "SrujanaSangama",
-                "commands": parse_readme_commands()
-            },
-            "personal": {
-                "score": 0,
-                "nudges": ["Create the 'srujana-memory' folder on your Desktop or parent directory to initialize profile tracking."],
-                "fields": {},
-                "active_project": "Please set up srujana-memory to see your active projects.",
-                "collaborations": []
-            }
-        }
-        dest_dir = REPO_ROOT / "web"
-        dest_dir.mkdir(exist_ok=True)
-        dest_file = dest_dir / "faculty-data.json"
-    else:
-        completeness = check_profile_completeness(memory_dir)
-        personal_data = load_extra_personal_data(memory_dir)
+        print("[WARNING] srujana-memory directory could not be located. Dashboard generation halted.")
+        return
         
-        output_data = {
-            "generic": {
-                "system": "SrujanaSangama",
-                "commands": parse_readme_commands()
-            },
-            "personal": {
-                "score": completeness["score"],
-                "nudges": completeness["nudges"],
-                "fields": completeness["fields"],
-                "active_project": personal_data["active_project"],
-                "collaborations": personal_data["collaborations"]
-            }
+    completeness = check_profile_completeness(memory_dir)
+    personal_data = load_extra_personal_data(memory_dir)
+    soul_meta = parse_soul_metadata(memory_dir / "my-memory" / "soul.md")
+    
+    # Paths for other semantic logs
+    publications_path = memory_dir / "my-memory" / "semantic" / "publications.md"
+    funding_path = memory_dir / "my-memory" / "semantic" / "funding-log.md"
+    recent_path = memory_dir / "my-memory" / "episodic" / "recent.md"
+    brand_path = memory_dir / "my-memory" / "semantic" / "brand-profile.md"
+    
+    output_data = {
+        "generic": {
+            "system": "SrujanaSangama",
+            "plugins": parse_readme_plugins()
+        },
+        "personal": {
+            "name": soul_meta["name"],
+            "role": soul_meta["role"],
+            "school": soul_meta["school"],
+            "orcid": soul_meta["orcid"],
+            "score": completeness["score"],
+            "nudges": completeness["nudges"],
+            "fields": completeness["fields"],
+            "active_project": personal_data["active_project"],
+            "collaborations": personal_data["collaborations"],
+            "publications": read_markdown_file(publications_path, "No publications found."),
+            "funding": read_markdown_file(funding_path, "No active funding log found."),
+            "recent": read_markdown_file(recent_path, "No recent sessions logged."),
+            "brand": read_markdown_file(brand_path, "No brand profile found.")
         }
-        dest_dir = memory_dir / "my-memory"
-        dest_dir.mkdir(parents=True, exist_ok=True)
-        dest_file = dest_dir / "faculty-data.json"
-        
-    with open(dest_file, "w", encoding="utf-8") as f:
+    }
+    
+    # 1. Write the backup JSON
+    dest_json = memory_dir / "my-memory" / "faculty-data.json"
+    with open(dest_json, "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2)
         
-    print(f"SrujanaSangama Faculty dashboard data successfully written to {dest_file}")
+    # 2. Read HTML template from repository
+    template_file = REPO_ROOT / "web" / "faculty_index.html"
+    if template_file.exists():
+        with open(template_file, "r", encoding="utf-8") as f:
+            template_content = f.read()
+            
+        # Replace the json string placeholder in the template
+        embedded_str = json.dumps(output_data, indent=2)
+        replaced_content = template_content.replace("/*DASHBOARD_DATA_PLACEHOLDER*/", embedded_str)
+        
+        dest_html = memory_dir / "my-memory" / "faculty_index.html"
+        with open(dest_html, "w", encoding="utf-8") as f:
+            f.write(replaced_content)
+        print(f"SrujanaSangama Faculty HTML portal written to {dest_html}")
+    else:
+        print(f"[WARNING] Faculty HTML template not found at {template_file}")
 
 if __name__ == "__main__":
     build_dashboard()

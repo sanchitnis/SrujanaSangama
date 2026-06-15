@@ -16,7 +16,8 @@
     "workflows": [
       "workflows/session-check.md",
       "workflows/course-check.md",
-      "workflows/assessment-check.md"
+      "workflows/assessment-check.md",
+      "workflows/question-paper-reviewer.md"
     ],
     "skills": [
       "../../skills/course-buddy-builder/SKILL.md"

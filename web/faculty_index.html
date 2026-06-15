@@ -3,118 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SrujanaSangama Faculty Portal</title>
+    <title>REVA SrujanaSangama Faculty Portal</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #1f2024 0%, #0d0e10 100%);
+            --panel-bg: rgba(31, 32, 36, 0.85);
+            --border-color: rgba(247, 163, 91, 0.2);
+            --primary: #f7a35b;
+            --primary-hover: #df8842;
+            --accent: #f7a35b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f1f5f9;
-            color: #1e293b;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
             margin: 0;
             padding: 20px;
+            min-height: 100vh;
         }
+
         .container {
-            max-width: 1200px;
+            max-width: 1360px;
             margin: 0 auto;
         }
+
         header {
-            background-color: #0f766e;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            padding: 24px 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: var(--card-shadow);
         }
+
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #f7a35b, #df8842);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        header p {
+            margin: 4px 0 0 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(247, 163, 91, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
         .dashboard-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 20px;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 24px;
+            margin-bottom: 24px;
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 1024px) {
             .dashboard-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(247, 163, 91, 0.35);
+        }
+
         .card h2 {
             margin-top: 0;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 10px;
-            color: #0f766e;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            color: #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .command-list, .nudge-list {
-            list-style: none;
-            padding: 0;
+
+        /* Profile details card */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 15px;
         }
-        .command-item {
-            padding: 8px 10px;
-            border-bottom: 1px solid #f1f5f9;
-            font-family: monospace;
+        .profile-pic {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f7a35b 0%, #df8842 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: 700;
         }
-        .command-item code {
-            color: #0f766e;
-            font-weight: bold;
-            font-size: 14px;
+        .profile-details h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
         }
-        .nudge-item {
-            color: #dc2626;
-            font-weight: bold;
-            padding: 8px;
-            border-bottom: 1px dashed #fee2e2;
+        .profile-details p {
+            margin: 2px 0 0 0;
+            color: var(--text-muted);
+            font-size: 13px;
         }
+
         .progress-bar-container {
-            background-color: #e2e8f0;
-            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
             height: 24px;
             width: 100%;
             overflow: hidden;
-            margin: 15px 0;
+            margin: 16px 0;
+            border: 1px solid var(--border-color);
         }
+
         .progress-bar {
-            background-color: #0d9488;
+            background: linear-gradient(90deg, #f7a35b 0%, #df8842 100%);
             height: 100%;
             width: 0%;
-            transition: width 0.5s ease;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
             color: white;
             line-height: 24px;
-            font-weight: bold;
-        }
-        pre {
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            font-family: Consolas, Monaco, monospace;
-        }
-        .badge {
-            background-color: #ccfbf1;
-            color: #0f766e;
-            padding: 4px 8px;
-            border-radius: 4px;
+            font-weight: 700;
             font-size: 12px;
-            font-weight: bold;
+            letter-spacing: 0.5px;
         }
-        .file-picker-card {
-            background: #fffbeb;
-            border: 1px solid #fef3c7;
-            color: #92400e;
-            padding: 15px;
+
+        .nudge-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 180px;
+            overflow-y: auto;
+        }
+
+        .nudge-item {
+            padding: 10px 12px;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            color: #fca5a5;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nudge-item.success {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            color: #a7f3d0;
+        }
+
+        /* Two-Level Selection Layout */
+        .two-level-container {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .level-1-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border-right: 1px solid var(--border-color);
+            padding-right: 12px;
+        }
+        .plugin-tab {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 10px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .plugin-tab:hover, .plugin-tab.active {
+            background: rgba(247, 163, 91, 0.08);
+            border-color: rgba(247, 163, 91, 0.2);
+            color: #f7a35b;
+        }
+        .plugin-tab.active {
+            box-shadow: inset 3px 0 0 var(--accent);
+        }
+        .level-2-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+        .command-item {
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+        .command-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(247, 163, 91, 0.25);
+        }
+        .command-item code {
+            font-family: 'JetBrains Mono', monospace;
+            color: #f7a35b;
+            background: rgba(247, 163, 91, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 13px;
+            margin-bottom: 12px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(247, 163, 91, 0.2);
+        }
+
+        .collab-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .badge {
+            background-color: rgba(247, 163, 91, 0.15);
+            border: 1px solid rgba(247, 163, 91, 0.3);
+            color: #f7a35b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        pre {
+            background: #030712;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 12px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12.5px;
+            line-height: 1.5;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        /* Tabs and Details layout below columns */
+        .bottom-card {
+            margin-top: 24px;
+        }
+        .tab-headers {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+            overflow-x: auto;
+        }
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .tab-btn.active {
+            color: #f7a35b;
+            background: rgba(247, 163, 91, 0.12);
+            box-shadow: inset 0 -2px 0 var(--accent);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Markdown tables rendered */
+        .md-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 13px;
+        }
+        .md-table th, .md-table td {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .md-table th {
+            background-color: rgba(255, 255, 255, 0.04);
+            font-weight: 600;
+            color: #f7a35b;
+        }
+        .md-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+
+        .file-picker-card {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            color: #fde047;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            font-size: 13.5px;
             display: none;
         }
     </style>
@@ -122,28 +406,39 @@
 <body>
     <div class="container">
         <header>
-            <div>
-                <h1>SrujanaSangama Faculty Portal</h1>
-                <p>Private Faculty Research Advisor & PED Dashboard</p>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/REVA_University_Bangalore.png" alt="REVA University Logo" style="height: 48px; background: white; padding: 4px 8px; border-radius: 6px;">
+                <div>
+                    <h1>REVA SrujanaSangama Faculty Portal — <span id="header-name">Loading...</span></h1>
+                    <p>Private Faculty Research Advisor & KRA Dashboard</p>
+                </div>
             </div>
             <div>
-                <button onclick="refreshData()" style="padding: 10px 15px; background: #0d9488; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
-                    🔄 Load From Memory
+                <button onclick="refreshData()" class="btn">
+                    🔄 Reload Dashboard
                 </button>
             </div>
         </header>
 
         <div id="file-picker-warning" class="file-picker-card">
-            <strong>CORS or Path Error:</strong> Local file browsing security restrictions blocked auto-fetching the dashboard JSON. 
-            Please select your <code>faculty-data.json</code> manually from <code>srujana-memory/my-memory/</code>:
-            <input type="file" id="file-picker" style="margin-left: 10px;" accept=".json">
+            <strong>CORS Alert:</strong> Local browser restrictions prevented auto-loading.
+            Select your <code>faculty-data.json</code> file manually from <code>srujana-memory/my-memory/</code>:
+            <input type="file" id="file-picker" style="margin-left: 10px; color: white;" accept=".json">
         </div>
 
         <div class="dashboard-grid">
-            <!-- Left Side: Profile & Nudges & Commands -->
+            <!-- Left Side: Profile & Commands -->
             <div>
-                <div class="card">
-                    <h2>Profile Completeness Audit</h2>
+                <div class="card" style="margin-bottom: 24px;">
+                    <h2>Academic Competency Audit</h2>
+                    <div class="profile-container">
+                        <div class="profile-pic" id="avatar-letter">F</div>
+                        <div class="profile-details">
+                            <h3 id="profile-name">Loading Profile...</h3>
+                            <p id="profile-role">Associate Professor</p>
+                            <p id="profile-school" style="color: var(--text-muted); font-size: 12px;">School of CSE</p>
+                        </div>
+                    </div>
                     <div class="progress-bar-container">
                         <div id="progress" class="progress-bar">0%</div>
                     </div>
@@ -153,97 +448,290 @@
                 </div>
 
                 <div class="card">
-                    <h2>Available Slash Commands & Core Capabilities</h2>
-                    <ul id="command-list" class="command-list">
-                        <!-- Commands go here -->
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h2>Collaborative Sync Workspaces</h2>
-                    <div id="collab-container">
-                        <p>Loading collaborations...</p>
+                    <h2>Command & Tool Explorer</h2>
+                    <input type="text" id="command-search" class="search-input" placeholder="Search commands or descriptions...">
+                    <div class="two-level-container">
+                        <div id="level-1-tabs" class="level-1-list">
+                            <!-- Plugins list goes here -->
+                        </div>
+                        <ul id="level-2-commands" class="level-2-list">
+                            <li style="color: var(--text-muted); font-size: 13px; padding: 10px;">Select a plugin category...</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Research Pipeline -->
+            <!-- Right Side: Active Projects & Collaborations -->
             <div>
-                <div class="card">
+                <div class="card" style="margin-bottom: 24px; min-height: 250px;">
                     <h2>Active Projects & Research KRA Status</h2>
-                    <pre id="active-project">Loading active KRA/Project...</pre>
+                    <div id="active-project" style="font-size: 14px; line-height: 1.6;">Loading projects...</div>
                 </div>
+
+                <div class="card" style="min-height: 180px;">
+                    <h2>Collaborative Sync Workspaces</h2>
+                    <div id="collab-container">
+                        <p style="color: var(--text-muted); margin: 0;">Loading collaborations...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom section: Tasks, Publications, Grants, Recent Logs -->
+        <div class="card bottom-card">
+            <div class="tab-headers">
+                <button class="tab-btn active" onclick="switchTab('tab-publications')">📚 Publications History</button>
+                <button class="tab-btn" onclick="switchTab('tab-funding')">💰 Grant Proposals</button>
+                <button class="tab-btn" onclick="switchTab('tab-recent')">🕒 Recent Sessions Log</button>
+                <button class="tab-btn" onclick="switchTab('tab-brand')">🌐 Brand Visibilities</button>
+            </div>
+
+            <div id="tab-publications" class="tab-content active">
+                <div id="publications-renderer">Loading publication records...</div>
+            </div>
+
+            <div id="tab-funding" class="tab-content">
+                <div id="funding-renderer">Loading grant records...</div>
+            </div>
+
+            <div id="tab-recent" class="tab-content">
+                <div id="recent-renderer">Loading episodic logs...</div>
+            </div>
+
+            <div id="tab-brand" class="tab-content">
+                <div id="brand-renderer">Loading brand profiles...</div>
             </div>
         </div>
     </div>
 
+    <!-- Embedded JSON Data Script -->
+    <script id="embedded-data" type="application/json">
+/*DASHBOARD_DATA_PLACEHOLDER*/
+    </script>
+
     <script>
-        const fallbackPath = '../../srujana-memory/my-memory/faculty-data.json';
-        
+        const fallbackPath = 'faculty-data.json';
+        let dashboardData = null;
+        let activePlugin = "";
+
+        // Tiny Regex-based Markdown-lite parser
+        function renderMarkdown(md) {
+            if (!md) return "";
+            let html = md;
+            
+            // Clean HTML tags inside markdown
+            html = html.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            
+            // Headers
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+            
+            // Bold
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Lists
+            html = html.replace(/^\s*[-*]\s+(.*$)/gim, '<li>$1</li>');
+            
+            // Table parsing
+            let lines = html.split('\n');
+            let inTable = false;
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].trim().startsWith('|')) {
+                    if (!inTable) {
+                        lines[i] = '<table class="md-table"><tr>' + lines[i].split('|').slice(1,-1).map(c => `<th>${c.trim()}</th>`).join('') + '</tr>';
+                        inTable = true;
+                    } else if (lines[i].includes('---')) {
+                        lines[i] = ''; // skip separator
+                    } else {
+                        lines[i] = '<tr>' + lines[i].split('|').slice(1,-1).map(c => `<td>${c.trim()}</td>`).join('') + '</tr>';
+                    }
+                } else {
+                    if (inTable) {
+                        lines[i] = '</table>' + lines[i];
+                        inTable = false;
+                    }
+                }
+            }
+            html = lines.join('\n');
+            
+            // Wrap list items
+            html = html.replace(/(<li>.*?<\/li>)/gs, '<ul>$1</ul>');
+            
+            return html;
+        }
+
         function renderDashboard(data) {
+            dashboardData = data;
+            
+            // Set dynamic Name header and profile details
+            const name = data.personal.name || "Unknown Faculty";
+            document.getElementById('header-name').textContent = name;
+            document.getElementById('profile-name').textContent = name;
+            document.getElementById('profile-role').textContent = data.personal.role || "Associate Professor";
+            document.getElementById('profile-school').textContent = data.personal.school || "School of Computer Science & Engineering";
+            document.getElementById('avatar-letter').textContent = name.charAt(0);
+
             // 1. Completeness Score & Nudges
             const score = data.personal.score;
             const progress = document.getElementById('progress');
             progress.style.width = score + '%';
-            progress.textContent = score + '% Complete';
+            progress.textContent = score + '% Audit';
             
             const nudgeList = document.getElementById('nudge-list');
             nudgeList.innerHTML = '';
-            if (data.personal.nudges.length === 0) {
+            if (!data.personal.nudges || data.personal.nudges.length === 0) {
                 const li = document.createElement('li');
-                li.className = 'nudge-item';
-                li.style.color = '#0d9488';
-                li.textContent = '🎉 Your profile matches all academic and KRA benchmarks! 100% Complete.';
+                li.className = 'nudge-item success';
+                li.innerHTML = '<span>🎉</span> Your profile matches all academic and KRA benchmarks! 100% Complete.';
                 nudgeList.appendChild(li);
             } else {
                 data.personal.nudges.forEach(nudge => {
                     const li = document.createElement('li');
                     li.className = 'nudge-item';
-                    li.textContent = '⚠️ ' + nudge;
+                    li.innerHTML = '<span>⚠️</span> ' + nudge;
                     nudgeList.appendChild(li);
                 });
             }
 
-            // 2. Commands List
-            const commandList = document.getElementById('command-list');
-            commandList.innerHTML = '';
-            data.generic.commands.forEach(cmd => {
-                const li = document.createElement('li');
-                li.className = 'command-item';
-                li.innerHTML = `<code>${cmd.command}</code>: ${cmd.description}`;
-                commandList.appendChild(li);
-            });
+            // 2. Command Explorer Level 1 Setup
+            const level1Tabs = document.getElementById('level-1-tabs');
+            level1Tabs.innerHTML = '';
+            
+            const plugins = data.generic.plugins || [];
+            if (plugins.length > 0) {
+                plugins.forEach((plg, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'plugin-tab';
+                    if (idx === 0) {
+                        btn.classList.add('active');
+                        activePlugin = plg.name;
+                    }
+                    btn.textContent = plg.name;
+                    btn.title = plg.description;
+                    btn.onclick = () => {
+                        document.querySelectorAll('.plugin-tab').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        activePlugin = plg.name;
+                        displayCommands(plg.commands);
+                    };
+                    level1Tabs.appendChild(btn);
+                });
+                
+                // Show commands for default active plugin
+                displayCommands(plugins[0].commands);
+            } else {
+                level1Tabs.innerHTML = '<span style="color:var(--text-muted); font-size:12px;">No plugins found.</span>';
+            }
 
             // 3. Collaborations
             const collabContainer = document.getElementById('collab-container');
             collabContainer.innerHTML = '';
-            if (data.personal.collaborations.length === 0) {
-                collabContainer.innerHTML = '<p>No active project or scholar-guide folders updates tracked.</p>';
+            if (!data.personal.collaborations || data.personal.collaborations.length === 0) {
+                collabContainer.innerHTML = '<p style="color: var(--text-muted); margin: 0; font-size: 13px;">No active collaborative workspaces found.</p>';
             } else {
                 data.personal.collaborations.forEach(collab => {
                     const item = document.createElement('div');
-                    item.style.marginBottom = '10px';
-                    item.style.padding = '10px';
-                    item.style.border = '1px solid #e2e8f0';
-                    item.style.borderRadius = '4px';
+                    item.className = 'collab-item';
                     item.innerHTML = `
-                        <strong>Type:</strong> <span class="badge">${collab.type}</span><br>
-                        <strong>Folder:</strong> <code>${collab.folder}</code><br>
-                        <strong>Latest File:</strong> ${collab.latest_file}<br>
-                        <strong>Last Update:</strong> ${new Date(collab.last_update).toLocaleString()}
+                        <div><strong>Workspace:</strong> <code>${collab.folder}</code></div>
+                        <div style="margin-top: 4px;"><strong>Latest Update:</strong> <span style="color: #2dd4bf;">${collab.latest_file}</span></div>
+                        <span class="badge">${collab.type}</span>
+                        <span style="font-size: 11px; color: var(--text-muted); margin-left: 8px;">
+                            ${new Date(collab.last_update).toLocaleDateString()} at ${new Date(collab.last_update).toLocaleTimeString()}
+                        </span>
                     `;
                     collabContainer.appendChild(item);
                 });
             }
 
-            // 4. Active Project
-            document.getElementById('active-project').textContent = data.personal.active_project;
+            // 4. Render Active Project Markdown
+            document.getElementById('active-project').innerHTML = renderMarkdown(data.personal.active_project || "No active projects.");
+
+            // 5. Render Bottom tabs content
+            document.getElementById('publications-renderer').innerHTML = renderMarkdown(data.personal.publications);
+            document.getElementById('funding-renderer').innerHTML = renderMarkdown(data.personal.funding);
+            document.getElementById('recent-renderer').innerHTML = renderMarkdown(data.personal.recent);
+            document.getElementById('brand-renderer').innerHTML = renderMarkdown(data.personal.brand);
             
             // Hide warning if load succeeds
             document.getElementById('file-picker-warning').style.display = 'none';
         }
 
+        function displayCommands(cmds) {
+            const level2List = document.getElementById('level-2-commands');
+            level2List.innerHTML = '';
+            
+            if (cmds.length === 0) {
+                level2List.innerHTML = '<li style="color:var(--text-muted); font-size:13px; padding:10px;">No commands in this plugin.</li>';
+                return;
+            }
+
+            cmds.forEach(cmd => {
+                const li = document.createElement('li');
+                li.className = 'command-item';
+                li.innerHTML = `<code>${cmd.command}</code>: ${cmd.description}`;
+                level2List.appendChild(li);
+            });
+        }
+
+        // Live Command Search across all categories
+        document.getElementById('command-search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const level2List = document.getElementById('level-2-commands');
+            
+            if (!query) {
+                // Return to displaying active plugin commands
+                const activePlgObj = (dashboardData.generic.plugins || []).find(p => p.name === activePlugin);
+                if (activePlgObj) displayCommands(activePlgObj.commands);
+                return;
+            }
+
+            level2List.innerHTML = '';
+            let found = false;
+            
+            // Search all commands in all plugins
+            (dashboardData.generic.plugins || []).forEach(plg => {
+                plg.commands.forEach(cmd => {
+                    if (cmd.command.toLowerCase().includes(query) || cmd.description.toLowerCase().includes(query)) {
+                        const li = document.createElement('li');
+                        li.className = 'command-item';
+                        li.innerHTML = `<code>${cmd.command}</code> <span style="font-size:11px; color:#f7a35b; font-weight:600;">[${plg.name}]</span>: ${cmd.description}`;
+                        level2List.appendChild(li);
+                        found = true;
+                    }
+                });
+            });
+
+            if (!found) {
+                level2List.innerHTML = '<li style="color:var(--text-muted); font-size:13px; padding:10px;">No matching commands found.</li>';
+            }
+        });
+
+        // Tab selection switcher
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(cont => cont.classList.remove('active'));
+            
+            // Find click source
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
         function refreshData() {
+            // First check if there is embedded JSON data in the script tag
+            const embeddedTag = document.getElementById('embedded-data');
+            if (embeddedTag && embeddedTag.textContent.trim().length > 40) {
+                try {
+                    const data = JSON.parse(embeddedTag.textContent);
+                    renderDashboard(data);
+                    return;
+                } catch (e) {
+                    console.error("Failed to parse embedded JSON data", e);
+                }
+            }
+
+            // Fallback to fetching local json (for development)
             fetch(fallbackPath)
                 .then(response => {
                     if (!response.ok) throw new Error();
@@ -251,9 +739,8 @@
                 })
                 .then(data => renderDashboard(data))
                 .catch(error => {
-                    console.warn('Relative path fetch failed. Activating manual file picker fallback.');
+                    console.warn('CORS restrict. Manual loading fallback active.');
                     document.getElementById('file-picker-warning').style.display = 'block';
-                    document.getElementById('collab-container').innerHTML = '<p style="color:#b45309;">Please select faculty-data.json using the file picker above.</p>';
                 });
         }
 

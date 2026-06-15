@@ -1,5 +1,5 @@
 ---
-name: reva-university-brand
+name: reva-branding
 description: Apply REVA University brand guidelines when creating any visual content, social media posts, HTML artifacts, presentations, documents, or any creative output for REVA University. Trigger this skill whenever the user mentions REVA, REVA University, wants to create content for a university in Bengaluru, or asks for Instagram posts, social creatives, or branded materials that must follow official brand standards. This skill ensures colours, typography, logo placement, and social media specs are always correct.
 ---
 
