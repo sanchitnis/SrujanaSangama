@@ -16,7 +16,7 @@
 | Methodology | Agentic Scrum — Spec-Driven Development |
 | Primary build artifact | Markdown specification and task files (`specification/`) |
 | Deployment targets | GitHub Copilot (VS Code) + Google Antigravity (dual-engine) |
-| Phase 1 scope | `reva.phd-scholar` plugin — CSE/CSA school |
+| Phase 1 scope | Private AI Agent & Skill Plugin Marketplace (reva.srujana-shodha, teaching-learning-reva, law-student-reva, etc.) |
 
 ---
 
@@ -30,14 +30,14 @@ SrujanaSangama/
 ├── CONTRIBUTING.md              ← Contributor guide
 │
 ├── plugins/                     ← Plugin implementations (compilation output)
-│   ├── phd-scholar/             ← NEW: reva.phd-scholar (active sprint)
+│   ├── srujana-shodha/          ← R-track: SrujanaShodha (Faculty research & PhD companion)
 │   ├── academician-claw/        ← OpenClaw v2 — faculty personal agent
-│   ├── research-reva/           ← SrujanaShodha — faculty research advisor
 │   ├── patent-generator/        ← IP extraction and Indian patent drafting
 │   ├── teaching-learning-reva/  ← T-track: course, session, assessment
 │   ├── academic-admin-reva/     ← A-track: admin, compliance, NBA/NAAC
 │   ├── consulting-product-reva/ ← C-track: patents, MOU, experiential labs
-│   └── kaizen-wellbeing-reva/   ← K-track: wellbeing, Kaizen coach
+│   ├── kaizen-wellbeing-reva/   ← K-track: wellbeing, Kaizen coach
+│   └── law-student-reva/        ← Socratic study assistant for School of Legal Studies
 │
 ├── agents/                      ← Root-level agent definitions (non-plugin)
 ├── skills/                      ← Root-level skill definitions
@@ -82,7 +82,7 @@ plugins/<plugin-name>/
 │
 
 └── references/          ← Plugin-local reference materials
-    └── schools/         ← School-specific overlays (for phd-scholar)
+    └── schools/         ← School-specific overlays (for srujana-shodha)
 ```
 
 **Violations of this structure are a CONSTITUTION error.** The Verifier Agent must flag any file created outside this layout.
@@ -109,10 +109,10 @@ plugins/<plugin-name>/
 
 | Item | Convention | Example |
 |---|---|---|
-| Plugin directory | `kebab-case` | `phd-scholar` |
-| Plugin ID | `reva.<kebab-case>` | `reva.phd-scholar` |
-| Spec files | `<plugin>-spec.prompt.md` (in `specification/`) | `phd-scholar-spec.prompt.md` |
-| Task files | `<plugin>-tasks.md` (in `specification/`) | `phd-scholar-tasks.md` |
+| Plugin directory | `kebab-case` | `srujana-shodha` |
+| Plugin ID | `reva.<kebab-case>` | `reva.srujana-shodha` |
+| Spec files | `<plugin>-spec.prompt.md` (in `specification/`) | `srujana-shodha-spec.prompt.md` |
+| Task files | `<plugin>-tasks.md` (in `specification/`) | `srujana-shodha-tasks.md` |
 | Rules files | `SCREAMING_SNAKE_CASE.md` | `SCHOLAR_IDENTITY.md` |
 | Workflow files | `NN_kebab-name.md` (zero-padded number) | `00_onboarding.md` |
 | Agent files | `kebab-name.md` | `stage-tracker.md` |
@@ -173,9 +173,9 @@ All specifications inside `specification/` MUST:
 |---|---|
 | Another plugin's `workflows/` | Reference by path in the calling agent's Markdown; do not copy-paste |
 | Another plugin's `rules/` | Fork with attribution comment at top; keep in sync manually |
-| `patent-generator/lib/` templates | Reference only; the `phd-scholar` `patent-agent.md` invokes, never duplicates |
+| `patent-generator/lib/` templates | Reference only; the `srujana-shodha` `patent-agent.md` invokes, never duplicates |
 | `kaizen-wellbeing-reva/` | Reference for escalation paths only; do not replicate wellness logic |
-| `research-reva/` funding workflows | Adapt (fork + attribute); do not depend on internal implementation details |
+| `srujana-shodha/` funding workflows | Adapt (fork + attribute); do not depend on internal implementation details |
 | External assets, code, or frameworks | Must be documented with appropriate attribution/comments in the [LICENSE](file:///d:/Github/SrujanaSangama/LICENSE) file. |
 
 **Rule:** Never silently duplicate a file that exists in another plugin. Fork with a comment or reference directly.
@@ -183,7 +183,7 @@ All specifications inside `specification/` MUST:
 
 ---
 
-## 11. School Routing Convention (phd-scholar plugin)
+## 11. School Routing Convention (srujana-shodha plugin)
 
 - Default school on new installs: **CSE/CSA**
 - School detection happens in `rules/SCHOOL_ROUTING.md`
