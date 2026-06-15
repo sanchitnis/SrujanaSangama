@@ -9,6 +9,18 @@
 
 ---
 
+## 0. Pre-Design Decisions — Design Engineering Edition
+
+Before designing any course, two programme-level decisions must already be fixed centrally (mirroring Universal §0):
+
+1. **The Design Engineering awareness/advanced calibration standard.** The programme must establish — once, centrally — what rubric score maps to below the 8-CGPA band for a studio course. Unlike theory courses (where the ~70/30 mark ratio applies), studio courses use a rubric-based calibration. The calibration anchor is: *"meets brief requirements with no design judgment or innovation = floor only = below 8 CGPA."* This must be validated against REVA's grade-point conversion and documented as the programme standard.
+
+2. **A filled reference exemplar (Design Engineering).** The programme circulates one fully designed studio course (dual-level scope table + rubric + Crit/SEE weight breakdown) as the calibration standard. All other studio courses must be consistent with this exemplar. *Note: the Design Engineering ceiling (design judgment, material innovation, user validation) is fundamentally different from a CSE ceiling — a shared institution-wide exemplar is not sufficient.*
+
+If either is missing, flag it and do not proceed with assessment design.
+
+---
+
 ## 1. The Design Engineering Difference — A Framework Primer
 
 Before designing any course, understand the three core differences from a theory-heavy engineering programme:
@@ -66,12 +78,42 @@ Every awareness floor in a Design Engineering course must map to at least one of
 | Pattern | Reads as (Design Engineering) | Design implication |
 |---|---|---|
 | 3-0-0 | Theory of Design — e.g. Design History, Ergonomics, Design Research Methods | Conceptual mastery; advanced level lives in critical analysis and design judgment, not computation |
-| 2-1-0 | Theory + design tutorial | Tutorial hour is desk-crit / group feedback / precedent study — not lecture repetition |
+| 2-1-0 | Theory + design tutorial | Tutorial hour is desk-crit / group feedback / precedent study — not lecture repetition. Use it for remediation (reach the floor) and enrichment (challenge the ceiling). |
 | 1-1-1 | Integrated theory + studio | Theory informs studio practice; studio is where ceiling is demonstrated |
 | 0-0-2 / 0-0-3 | Studio / Fablab / Workshop | No formal lecture; entirely making, designing, critiquing. Rubric is the entire mechanism |
 | 0-0-4…0-0-8 | Capstone / Major Project | Deliverable-graded; distinction is concept-stage vs exhibition/production-ready |
 
 > **Design Engineering Golden Rule:** for any course with P≥2, the level distinction **must** live entirely in a rubric. A question paper cannot capture design judgment.
+
+### 4a. Differentiated Learning — Design Engineering Declaration
+
+*(Resolves universal §1 Rule 2 for this programme)*
+
+Design Engineering uses **Option C: same COs, differentiation by assessment rubric ceiling** — for all course types:
+- All students target the same Course Outcomes.
+- Awareness-level students demonstrate COs at Apply (L3) — they meet the brief.
+- Advanced students demonstrate the same COs at Evaluate/Create (L5–L6) — they show design judgment, innovation, and user validation.
+- Differentiation lives entirely in the rubric (and jury critique scoring), **not** in separate course sections, separate briefs, or separate CO sets.
+- Exception: Capstone courses may include a design leadership / venture exit CO visible only in the Studio track context.
+
+### 4b. Academic Integrity & Intake Awareness — Design Engineering
+
+*(Fulfils universal §1 Rule 8 for this programme)*
+
+- **Intake gap awareness:** Design Engineering students arrive with highly variable drawing, spatial reasoning, and making skills. Never assume prior exposure to CAD, physical prototyping, or studio practice. Include a **Week 0 / onboarding session** in all studio courses that diagnoses the gap and provides a bridge activity (e.g., a simple hand-sketching or materials handling exercise).
+- **Academic integrity:** Design assessments must be structured so that AI tools cannot produce the submission alone. The student's physical making, design iteration, and jury performance are inherently human-competency demonstrations. For any digitally submitted component, apply the mandatory AI Use Declaration (§10).
+- **Accessibility:** Ensure studio briefs do not require expensive personal tools or materials not provided by the programme. Specify material kits and tool access clearly in the Course File.
+
+### 4c. Remediation & Enrichment — Design Engineering
+
+*(Fulfils universal §1 Rule 7 for this programme)*
+
+Every Design Engineering course must name both paths:
+
+| Path | Design Engineering Mechanism |
+|---|---|
+| **Remediation (reach the floor)** | Desk-crit drop-in sessions; peer critique rounds; process portfolio checkpoints with corrective feedback before Crit 1; buddy pairing with a stronger studio partner |
+| **Enrichment (reach the ceiling)** | Advanced brief variants (e.g., additional constraint requiring material innovation); studio research reading list; industry mentor access; design competition entry as enrichment channel |
 
 ---
 
@@ -154,7 +196,36 @@ For SC-Studio, SC-Fablab, SC-Field, SC-Digital, and Workshop-D courses, **replac
 - Ceiling = synthesis produces non-obvious insights that challenge assumptions or reframe the problem.
 - Ethics of research practice must be addressed (informed consent, participant privacy) — this is the Liberal Studies / Ethical Reasoning integration point.
 
-### 7.4 Capstone / Major Project (Proj, 0-0-6 to 0-0-8) — Design Engineering Variant
+### 7.4 SC-Digital (0-0-2 / 1-0-2) — e.g. UX Design Studio, Interaction Design, App Prototyping
+
+- Screen or interactive artefact is the primary deliverable.
+- Floor = a functional prototype that meets the usability brief and is navigable by a first-time user.
+- Ceiling = prototype tested with real users; accessibility standards met; interaction flow justified by user research evidence.
+- Every SC-Digital course must include at least one round of actual user testing (not just peer testing).
+
+### 7.5 Workshop-D (0-0-2) — Design Workshop, just-in-time
+
+- Analogous to W1–W8 in universal guidelines. Studio/SIG-owned and authored just-in-time.
+- Design for **doing** — a Workshop-D with a lecture component is mis-designed.
+- Tie each offering to live design briefs, competitions, industry challenges, or material/tool trends and re-author each cycle.
+- Assessment is a design brief response, prototype, or process artefact. Floor = working deliverable; ceiling = judgment-rich, production or exhibition ready.
+
+### 7.6 Ability Enhancement (AEC) — Design Engineering Portfolio Readiness
+
+*(Defines the Design Engineering equivalent of universal §4.10)*
+
+In Design Engineering, AEC courses form the **portfolio readiness spine** rather than a placement aptitude spine.
+
+| Semester | AEC Focus | Portfolio Competency Targeted |
+|---|---|---|
+| Sem 3 | Documentation & presentation skills | Design process documentation; presentation deck structure; portfolio layout basics |
+| Sem 4 | Digital portfolio tools | Web-based portfolio platforms (Behance, Cargo, custom sites); image editing; video documentation |
+| Sem 5 | Professional communication | Client-facing presentation; design brief writing; peer critique vocabulary |
+| Sem 6 | Portfolio curation & career alignment | Selecting and narrating 3–5 projects; aligning portfolio to studio track and recruiter expectation |
+
+Track portfolio quality per student and feed weak signals to academic mentors.
+
+### 7.7 Capstone / Major Project (Proj, 0-0-6 to 0-0-8) — Design Engineering Variant
 
 - The capstone brief may be: a client-commissioned project, an open design challenge, a community design intervention, or a speculative/future design scenario.
 - Deliverables: final artefact OR working prototype OR exhibition piece, **plus** a design process portfolio (mandatory).
@@ -180,6 +251,22 @@ Design Engineering has a **structural advantage**: enterprise skills are inheren
 
 > **Declaration & Assessment Requirement (Design Engineering):** Enterprise skills are addressed through **CO-PO mapping** (no separate CO required), but must be **named explicitly** in the course overview and **designed into** at least one assignment or activity with an observable, separately scored rubric criterion.
 
+### 8.1 How to declare enterprise skills in the Course Overview (Design Engineering)
+
+Identify which POs your course develops most strongly (Strength 2 or 3 mappings from §11). In the Course Overview section of the Course File, add a brief statement, for example:
+
+> *"This course develops **Creativity & Value Creation (PO3)** and **Communication (PO9)** as enterprise skills. Creativity is assessed through the Unit 2 ideation exercise where students must generate ≥10 concepts and select one using a multi-criteria matrix. Communication is assessed at the Crit 2 jury presentation, where the rubric includes a separate row for 'non-specialist audience clarity'."*
+
+### 8.2 How to design enterprise skills into assignments (Design Engineering)
+
+The assignment or activity brief must:
+1. **Name** the enterprise skill (and its PO) being targeted.
+2. Include a **design-specific constraint or context** that forces the skill (e.g., a jury audience including a non-specialist community member forces Communication; a mid-project material change forces Adaptability).
+3. Include at least **one observable rubric criterion** that separately scores the skill — not just the overall design quality.
+
+> **Avoid**: a group studio project that says "work in teams" without assessing Collaboration explicitly.
+> **Prefer**: a studio brief that includes — *"Each student submits a 200-word reflection on one design decision they changed because of a teammate's critique, explaining why they adapted"* — with a rubric row for **Adaptability (PO11)** or **Collaboration (PO8)**.
+
 ---
 
 ## 9. IKS / Sustainability / Liberal Studies — Design Engineering Integration
@@ -192,7 +279,7 @@ Design Engineering has more natural IKS and Sustainability integration opportuni
 | **Sustainability** | Life Cycle Assessment of materials in every SC-Fablab course; circular design principles; biomimicry; design for disassembly; social sustainability through inclusive/universal design |
 | **Liberal Studies** | Design history and criticism; semiotics and visual culture; ethics of design (dark patterns, persuasive design, surveillance); interdisciplinary collaboration |
 
-**Minimum requirement per course**: at least one of the three threads is surfaced in at least one unit, documented in the lesson plan, and ideally included as a rubric criterion.
+**Minimum requirement per course**: at least one of the three threads is surfaced in at least one unit, documented in the lesson plan, and ideally included as a rubric criterion. *This is a quality nudge, not a gate — forced or tokenistic integration is worse than none. Do not fabricate an IKS connection where none exists naturally.*
 
 ---
 
@@ -256,28 +343,49 @@ Portfolio-first learning is not an add-on for Design Engineering — it **is** t
 
 ---
 
-## 13. Design Checklist — Design Engineering Additions
+## 14. Design Checklist — Design Engineering Additions
 
 *Run in addition to the universal design checklist (§5 of universal guidelines):*
 
+**Pre-design gates**
+- [ ] Design Engineering **awareness/advanced calibration standard** confirmed (what rubric score = below 8 CGPA — §0-DE).
+- [ ] **Reference exemplar** from the Design Engineering programme circulated and reviewed.
+- [ ] **Week 0 / onboarding session** planned for any course where studio skills cannot be assumed (§4b).
+
+**Course structure**
 - [ ] Course category is correctly identified (SC-Studio / SC-Fablab / SC-Field / SC-Digital / Workshop-D).
 - [ ] Assessment structure uses **Jury Critique model** (if P-heavy course); IA labels replaced with Crit 1 / Crit 2.
-- [ ] Dual-level calibration uses **design judgment** language, not generic Bloom's verbs.
+- [ ] Dual-level calibration uses **design judgment** language, not generic Bloom's verbs; consistent with programme reference exemplar.
+- [ ] Differentiation model confirmed: same COs, rubric-based ceiling (Option C — §4a).
+- [ ] **Remediation path named** (e.g., desk-crit drop-in, peer critique, portfolio checkpoint).
+- [ ] **Enrichment path named** (e.g., advanced brief variant, design competition entry, industry mentor access).
 - [ ] Process documentation is **co-assessed** alongside the final artefact.
 - [ ] Rubric includes: brief alignment, process rigour, design judgment, innovation quality, professional presentation.
+- [ ] Content currency: perishable tooling and materials in studios/workshops; review cycle noted.
+- [ ] Intake-aware: no unstated prior-exposure assumption; bridge ramp / Week 0 where gap is real.
+
+**CO-PO mapping**
 - [ ] At least one CO maps to **PO3 at Strength 3**.
 - [ ] If jury is used: at least one CO maps to **PO9 at Strength 3** (representing Communication).
-- [ ] **Enterprise Skills declared in Course Overview**: which skills the course develops and through which activities — stated explicitly (not implied).
+
+**Enterprise skills**
+- [ ] **Enterprise Skills declared in Course Overview** using design-specific vocabulary (§8.1 format).
 - [ ] **Enterprise Skills visible in at least one assignment/activity**: brief names the skill; rubric includes an observable criterion for it.
 - [ ] **Enterprise Skills embedded via CO-PO mapping**: mapped to corresponding POs (no standalone CO required, aligned with universal Rule 9).
+
+**AI & integrity**
 - [ ] **AI-augmented assessment (mandatory — at least 1 per course)**: at least one assignment or activity is designed as an AI-assisted task (e.g. generative ideation, persona simulation, firmware co-creation) with a mandatory AI Use Declaration.
-- [ ] IKS / Sustainability thread includes at least one **design-specific** integration (craft tradition, material sustainability, inclusive design).
+
+**IKS / Sustainability / Liberal Studies**
+- [ ] IKS / Sustainability / Liberal Studies thread includes at least one **design-specific** integration (craft tradition, material sustainability, inclusive design). *(Quality nudge, not a gate.)*
+
+**Portfolio**
 - [ ] **Portfolio Artefact defined**: named, CO-linked, rubric-graded, integrated into the Crit/Jury cycle (representing at least 15% of marks) and feeding the graduation portfolio.
 - [ ] Studio specialisation track (Product / UX / Sustainable / Manufacturing) is identified for SC/PEC courses.
 
 ---
 
-*Extension Version*: 1.1 | *Released*: June 2026  
+*Extension Version*: 1.2 | *Released*: June 2026  
 *Part of*: REVA University Course Design Guidelines — University Edition  
 *Maintained by*: REVA Teaching-Learning Innovation Team (Design Engineering Lead)  
 *Lead Architect*: Sanjay Chitnis  
