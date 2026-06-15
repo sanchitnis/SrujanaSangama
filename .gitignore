@@ -44,3 +44,7 @@ memory/
 # 5. Operational mode file — gitignored (production is default when absent)
 # The committed template is context/mode.md.example
 context/mode.md
+
+# 6. Local Portal Data
+web/scholar-data.json
+

@@ -3,7 +3,7 @@
 This document outlines the high-level plan and active sprint focus for the SrujanaSangama private marketplace platform.
 
 ## Active Sprint Scope
-We are currently in Phase 1: restructuring the repository layout to support a clean, unified specifications folder (`specification/`) and executing the CSE/CSA school active sprint for the `reva.phd-scholar` plugin.
+We are currently in Phase 1: restructuring the repository layout to support a clean, unified specifications folder (`specification/`) and executing the CSE/CSA school active roadmap for the `reva.srujana-shodha` plugin.
 
 ## Directory Structure Design
 To keep repository maintenance clean, all specifications (`*-spec.md`) and atomic tasks (`*-tasks.md`) are consolidated in the `specification/` directory:
