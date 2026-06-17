@@ -25,6 +25,7 @@ _How to use: Orchestrator reads this to route faculty requests. Trigger Descript
 | R06 | Journal Targeter | `agents/skills/journal-targeter.md` | where should I publish, target journal, best journal for my paper, which journal, conference to submit, journal recommendation, publication venue, submission target |
 | R07 | Work Product Reviewer | `agents/skills/work-product-reviewer.md` | review my paper, check my abstract, feedback on my proposal, audit my manuscript, critique my work, review this draft, is this good enough, improve my writing |
 | R08 | Personal Brand Builder | `agents/skills/personal-brand-builder.md` | build my brand, improve my profile, ORCID, Google Scholar, LinkedIn, ResearchGate, visibility, how do I get recognised, academic brand, researcher profile, citations |
+| R09 | arXiv Searcher | `agents/skills/arxiv-searcher.md` | arxiv, literature search, find papers on arxiv, download paper, search literature, fetch arxiv paper, get paper source |
 
 ---
 
@@ -98,7 +99,7 @@ _Populated as new skills are created_
 
 ## Registry Stats
 - Core agents: 2
-- Specialist agents: 22 (8 Faculty + 14 Scholar)
+- Specialist agents: 23 (9 Faculty + 14 Scholar)
 - Workflow prompts: 26 (10 Faculty + 16 Scholar)
 - Auto-generated: 0
 

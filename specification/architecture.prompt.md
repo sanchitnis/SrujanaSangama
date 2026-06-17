@@ -1,8 +1,13 @@
-# REVA University — Agentic Academic Platform Architecture
+# Platform Architecture for **SrujanaSangama: A Collaborative Agentic workplace for REVA Community**
 
-> A Human-AI Collaborative System for AI-Era Curriculum Development, Portfolio-First Learning,
-> Enterprising Student Formation, Srujana Pathway, Personalised Tutoring, Stakeholder Governance,
-> and Institutional Excellence — aligned to ADDIE, NBA-OBE, NEP 2020, and REVA's Vision and Mission
+> This platform serves as a centralized private hub for conducting academic and professional activities in the REVA campus ecosystem covering **Teaching Learning, Research, Academic Administration, Consulting/Product development and Kaizen (T.R.A.C.K.)** at individual/team/school/University level, by faculty, UG/PG students, research scholar and other departments of REVA University.
+
+This is a Human-AI Collaborative System for all T.R.A.C.K. activities such as (but not limited to) AI-Era Curriculum Development, Portfolio-First Learning, Enterprising Student Formation, Srujana Pathway, Personalised Tutoring, Stakeholder Governance, Institutional Excellence — aligned to ADDIE, NBA-OBE, NEP 2020, and REVA's Vision and Mission and requirements of a university as per UGC and other statutory councils such as AICTE, Council of Architecture, Bar Council of India etc.
+
+It is meant to ensure that the human development continues and AI in terms of agentic skills and agents in this platform help to improve quality and productivity of human members of REVA community.
+
+\---
+
 
 \---
 
@@ -19,6 +24,9 @@
 * Serve humanity and promote sustainability through higher education based on universal values
 
 **Platform Promise:** Every course, every semester, every student emerges with a richer portfolio, a sharper enterprising mindset, a verified skill credential, and a clear personal trajectory — while REVA advances to Top 100 NIRF, deepens global partnerships, and lives its vision of wellbeing for all.
+
+\---
+
 
 \---
 
@@ -52,48 +60,465 @@ Program Educational Objectives are **raised** in this platform. AI augmentation 
 
 \---
 
+
+\---
+
 ## Overview
 
 The SrujanaSangama platform is a **Private AI Agent & Skill Plugin Marketplace** designed for REVA University. It manages, indexes, and distributes academic and professional agents and skills across the university ecosystem using a **dual-engine architecture**. This approach allows a single, unified codebase to share core prompt logic and external tools while loading dynamically into separate AI hosts: **Google Antigravity** and **GitHub Copilot**.
 
-The marketplace enables the deployment of:
+The REVA Academic Agent Platform is a modular, multi-agent collaborative system built around the **complete professional life of a REVA faculty member**. Faculty operate simultaneously across five interconnected work domains — Teaching & Learning, Research, Academic Administration, Consulting & Product Development, and Kaizen & Wellbeing — and this platform provides dedicated agentic intelligence for every domain. Capabilities span the entire academic lifecycle: future-of-jobs intelligence gathering, programme and course design, stakeholder validation, Board of Studies governance, content delivery, portfolio-building assessments, CO attainment and accreditation, grant writing and patent drafting, industry consulting and IP commercialisation, and continuous personal and professional improvement. The platform operates across online, face-to-face, and hybrid modes and integrates NBA accreditation, NIRF ranking strategy, the Srujana entrepreneurial pathway, and internationalisation by design.
 
+**Five faculty work domains, one coherent platform:**
+
+| Domain | What Faculty Do | Primary Plugin | Agent Handle |
+|---|---|---|---|
+| **1. Teaching & Learning** | Course design, session delivery, assessment, mentoring, portfolio-first pedagogy | `reva.teaching-learning-reva` | `@reva-educator` |
+| **2. Research** | Grants, publications, patents, PhD supervision, research brand | `reva.srujana-shodha` + `patent-generator` | `@reva-scholar` |
+| **3. Academic Administration** | OBE/NBA, BOS governance, accreditation, NIRF, regulatory compliance | `reva.academic-admin-reva` | `@reva-admin` |
+| **4. Consulting & Product Development** | Industry engagement, IP, MOUs, funded projects, startup mentoring | `reva.consulting-product-reva` + `patent-generator` | `@reva-innovator` |
+| **5. Kaizen & Wellbeing** | Reflection, GPS goals, habit tracking, FDP, work-life integration | `reva.kaizen-wellbeing-reva` | `@reva-kaizen` |
+
+`reva.academician-claw` (`@claw`) is the **personal intelligence layer** spanning all five domains — carrying memory, coordinated task management, writing support, and academic leadership across the full professional life.
+
+The marketplace enables the deployment of:
 * **Specialist Agents** — Campus-specific agents loaded via marketplace manifests (e.g. `reva.academic-assistant`)
 * **Dual-Engine Skills** — Prompt boundary layers (`rules/`) and slash command workflows (`workflows/`) reusable across hosts
 * **Model Context Protocol (MCP) Tools** — Secure, cross-platform RPC integrations connecting agents to campus databases
 * **Accreditation and Quality Validators** — Automated pre-publish checks ensuring NBA, NAAC, and AI-readiness standards
 
+
 \---
 
-## Directory Structure
+## Faculty Role Architecture
+
+Faculty at REVA University are knowledge professionals who operate simultaneously across five interconnected work domains. This platform provides dedicated agentic intelligence for each domain. `reva.academician-claw` (`@claw`) serves as the **personal intelligence layer** that coordinates across all five — carrying context, memory, and cross-domain coherence for each individual faculty member.
+
+### Domain Overview
+
+| # | Domain | What Faculty Do | Primary Plugin | Agent Handle |
+|---|---|---|---|---|
+| 1 | **Teaching & Learning** | Course design and delivery, assessment, mentoring, lab supervision, portfolio-first pedagogy, FDP | `reva.teaching-learning-reva` | `@reva-educator` |
+| 2 | **Research** | Grant writing, publication, patents, PhD supervision, funding, collaboration, personal brand | `reva.srujana-shodha` + `patent-generator` | `@reva-scholar` |
+| 3 | **Academic Administration** | OBE/NBA compliance, BOS governance, accreditation, regulatory reporting, CO attainment, NIRF data | `reva.academic-admin-reva` | `@reva-admin` |
+| 4 | **Consulting & Product Development** | Industry engagement, IP commercialisation, MOUs, startup mentoring, funded projects, technology transfer | `reva.consulting-product-reva` + `patent-generator` | `@reva-innovator` |
+| 5 | **Kaizen & Wellbeing** | Reflection, GPS goal planning, habit tracking, FDP planning, professional growth, work-life integration | `reva.kaizen-wellbeing-reva` | `@reva-kaizen` |
+
+The personal intelligence layer `@claw` spans all five — managing weekly reviews, deep work, project management, writing, skill development, and academic leadership across every domain.
+
+---
+
+### Domain 1 — Teaching & Learning
+
+Faculty are the primary architects of the student learning experience. Every task in this domain is a human-AI collaboration: AI drafts, structures, and audits; faculty decide, contextualise, and deliver.
+
+#### Task Taxonomy
+
+| Task Group | Tasks |
+|---|---|
+| **Curriculum & Course Design** | Programme PEO/PO/PSO design; course CO formulation (AI-augmented); CO-PO mapping; module sequencing; syllabus writing; prerequisite mapping; elective design; minor programme design |
+| **Session Planning & Delivery** | Lesson plan preparation; session material design; active learning activity selection; Bloom's-level alignment; tutorial and practical planning; flipped classroom design |
+| **Content Development** | Lecture notes; slide decks; case studies; problem sets; video scripts; reading lists; annotation guides; OER packaging |
+| **Lab & Project Supervision** | Lab manual authoring; virtual lab design; PBL project design; capstone supervision; mini-project and final-year project guidance; industry project integration |
+| **Assessment & Evaluation** | HOTS assignment design; question bank creation; rubric design; CIA planning; end-semester exam pattern; AI-readiness audit of assessments; viva voce design; peer assessment |
+| **CO Attainment & Analytics** | Direct and indirect CO attainment computation; at-risk student identification; remediation planning; programme committee reporting |
+| **Student Mentoring & Advising** | Srujana stage counselling; personalised pathway co-design; portfolio milestone review; placement readiness tracking; honours/remedial pathway assignment |
+| **Faculty Development** | FDP participation; micro-teaching reflection; peer observation; pedagogical coaching; AI-era course redesign; learning from course review feedback |
+| **Portfolio-First Pedagogy** | CO-to-artefact linkage; portfolio milestone planning; publication scaffolding; open-source contribution design; product brief generation |
+| **EdTech & Platform** | LMS course setup; H5P/QuizBlast configuration; AI tutor calibration; accessibility compliance; digital syllabus publication |
+
+#### Plugins, Agents, Workflows & Skills
+
+| Task Group | Plugin | Key Agents | Workflows / Commands | Key Skills |
+|---|---|---|---|---|
+| Course Design | `reva.teaching-learning-reva` | `course-designer`, `curriculum-architect` | `/course-check`, `/design-course` | `co-ai-augmented-designer`, `co-po-mapping`, `blooms-aligner` |
+| Session Planning | `reva.teaching-learning-reva` | `session-planner`, `content-developer` | `/session-check`, `/develop-session` | `unit-plan-designer`, `active-learning-strategies`, `scaffolding-designer` |
+| Assessment | `reva.teaching-learning-reva` | `assessment-engineer` | `/assessment-check`, `/build-assessment` | `hots-assignment-designer`, `ai-ready-assessment-auditor`, `rubric-designer` |
+| CO Attainment | `reva.academic-admin-reva` | `evaluation-analyst` | `/attainment`, `/evaluate-co` | `co-attainment-calculator`, `at-risk-detector`, `remediation-planner` |
+| Portfolio-First | `reva.teaching-learning-reva` | `portfolio-architect` | `/portfolio-design` | `portfolio-co-linker`, `publication-scaffolder`, `portfolio-review-rubric-builder` |
+| Lab & Projects | `reva.teaching-learning-reva` | `lab-designer`, `project-architect` | `/create-lab`, `/design-project` | `lab-manual-writer`, `pbl-project-designer`, `capstone-framework` |
+| Student Mentoring | `reva.teaching-learning-reva` | `student-advisor`, `learning-pathway-designer` | `/personalize`, `/srujana-track` | `srujana-counsellor`, `personalised-pathway-engine`, `placement-readiness-tracker` |
+| Faculty Development | `reva.academician-claw` | `learning-coach`, `reflection-facilitator` | `/weekly-review`, `/new-skill` | `pedagogical-coaching`, `ai-pedagogy-coach`, `fdp-programme-designer` |
+| Personal Coordination | `reva.academician-claw` | `orchestrator`, `task-manager` | `/project-kickoff`, `/session-close` | `human-ai-handoff-protocol` |
+
+---
+
+### Domain 2 — Research
+
+Faculty researchers carry a full research lifecycle — from idea through funding, execution, dissemination, and impact. AI accelerates and structures each stage; the faculty member retains intellectual ownership and institutional accountability.
+
+#### Task Taxonomy
+
+| Task Group | Tasks |
+|---|---|
+| **Research Identity & Competency** | Research profile building; ORCID/Scopus/Google Scholar management; competency gap identification; research interest sharpening; SDG alignment mapping |
+| **Opportunity & Collaboration** | Research opportunity scanning (DST, SERB, ICSSR, UGC, Fulbright, industry); interdisciplinary collaboration mapping; co-investigator identification; international partner research |
+| **Grant & Funding** | Grant proposal writing (SERB, DST, DBT, ICMR, industry); funding agency profiling; budget and timeline drafting; proposal review and scoring; revision cycles |
+| **Research Execution** | Research methodology design; experiment or study design; data collection and analysis; research diary and log management; milestone tracking |
+| **Publication Pipeline** | Literature review; manuscript writing; journal targeting and submission; revision and rebuttal; conference paper preparation; preprint management |
+| **Patent & IP** | Invention disclosure; patentability assessment; prior art simulation; Indian patent application drafting (Form 1, 2, 3); patent prosecution support |
+| **PhD Supervision** | Scholar onboarding; topic selection guidance; coursework advising; synopsis and research plan review; milestone monitoring; thesis review; publication coaching; viva preparation |
+| **Research Leadership & Brand** | Research group formation; lab/centre establishment; personal brand building; media and science communication; mentoring junior faculty |
+| **Book & Monograph Writing** | Book proposal; chapter outline; academic writing workflow; publisher targeting; peer review management |
+
+#### Plugins, Agents, Workflows & Skills
+
+| Task Group | Plugin | Key Agents | Workflows / Commands | Key Skills |
+|---|---|---|---|---|
+| Research Identity | `reva.srujana-shodha` | `competency-profiler`, `personal-brand-builder` | `/onboarding`, `/brand-sprint` | `PERSONAL_BRAND_STANDARD.md`, `SDG_MAPPING_STANDARD.md` |
+| Opportunity Scouting | `reva.srujana-shodha` | `opportunity-scout`, `collaboration-architect` | `/opportunity-mapping` | `INDIA_RESEARCH_CONTEXT.md` |
+| Grant Writing | `reva.srujana-shodha` | `funding-navigator`, `work-product-reviewer` | `/funding-hunt`, `/grant`, `/grant-check` | `GRANT_PROPOSAL_STANDARD.md` |
+| Research Execution | `reva.srujana-shodha` | `research-pipeline-coach` | `/research-lifecycle` | `SCHOLARLY_WRITING_STANDARD.md` |
+| Publication | `reva.srujana-shodha` | `journal-targeter`, `work-product-reviewer` | `/manuscript-check`, `/proposal-check` | `SCHOLARLY_WRITING_STANDARD.md`, `RESEARCH_ETHICS.md` |
+| Patent & IP | `patent-generator` | *(workflow-driven)* | `01_input` → `08_export` | `patentWorkflow.js`, prior-art simulation |
+| PhD Supervision | `reva.srujana-shodha` | `guide-advisor`, `research-coach` | `/guide` | `REVA_PHD_REGULATIONS.md`, `PUBLICATION_STANDARDS.md` |
+| SDG Impact Audit | `reva.srujana-shodha` | `competency-profiler` | `/sdg-impact-audit` | `SDG_MAPPING_STANDARD.md` |
+| Personal Coordination | `reva.academician-claw` | `research-analyst`, `writing-partner` | `/deep-research`, `/project-kickoff` | `deep-research.md`, `skill-generator.md` |
+
+---
+
+### Domain 3 — Academic Administration
+
+Administrative work is the institutional backbone of academic quality. Faculty carry governance, compliance, reporting, and committee responsibilities that keep the institution accredited, ranked, and operationally sound.
+
+#### Task Taxonomy
+
+| Task Group | Tasks |
+|---|---|
+| **OBE & CO Attainment** | CO-PO matrix maintenance; CIA and end-sem score entry and computation; direct and indirect attainment calculation; threshold review; remediation planning; course-end reports |
+| **BOS & Curriculum Governance** | Curriculum change proposals; BOS agenda and documentation preparation; BOS minutes drafting; regulatory compliance checks (UGC, AICTE, NEP 2020); approval tracking |
+| **NBA / NAAC Accreditation** | SAR criterion-wise documentation; OBE evidence packaging; NAAC DVV preparation; peer committee review; pre-visit compliance audit |
+| **NIRF Reporting** | NIRF parameter data collection; annual data submission; parameter gap analysis; NIRF action plan contribution |
+| **Regulatory Compliance** | UGC, AICTE, NEP 2020 compliance checks; academic programme approval documentation; fee regulation compliance; autonomy and affiliation governance |
+| **Faculty Workload & Load Management** | Teaching load calculation and distribution; timetable inputs; workload reporting per REVA policy |
+| **Academic Calendar & Lesson Planning** | Lesson plan generation and submission; teaching calendar management; session log maintenance; co-coverage documentation |
+| **Examination Duties** | Question paper submission; CIA mark entry; end-semester invigilation coordination; result declaration documentation |
+| **Programme Review & Committee Work** | Annual programme review preparation; PAC (Programme Advisory Committee) inputs; programme outcomes attainment reporting; departmental committee participation |
+| **Student Records & Mentoring Records** | Mentor-mentee record maintenance; at-risk student tracking; remediation action records; attendance and performance documentation |
+
+#### Plugins, Agents, Workflows & Skills
+
+| Task Group | Plugin | Key Agents | Workflows / Commands | Key Skills |
+|---|---|---|---|---|
+| CO Attainment | `reva.academic-admin-reva` | `evaluation-analyst` | `/attainment` | `co-attainment-calculator`, `co-attainment-threshold-setter`, `attainment-heatmap-generator` |
+| BOS Governance | `reva.academic-admin-reva` | `bos-governance-officer` | `/bos-approve` | `bos-proposal-formatter`, `bos-minutes-generator`, `regulatory-compliance-checker`, `curriculum-change-tracker` |
+| NBA / NAAC | `reva.academic-admin-reva` | `accreditation-officer` | `/accredit` | `nba-sar-generator`, `naac-dvv-preparer`, `co-attainment-auditor` |
+| NIRF | `reva.academic-admin-reva` | `nirf-accelerator` | `/nirf-accelerate` | `nirf-parameter-analyzer`, `nirf-data-pipeline`, `nirf-action-plan-generator` |
+| Lesson Plan & Calendar | `reva.academic-admin-reva` | `evaluation-analyst` | `/attainment` | `academic-calendar-generator`, `programme-review-documenter` |
+| Course Review Audit | `reva.teaching-learning-reva` | `pedagogy-advisor` | `/review-course` | `ai-ready-course-auditor`, `obe-compliance-checker`, `bloom-level-verifier` |
+| Analytics & Reporting | `reva.academic-admin-reva` | `analytics-reporter` | `/analytics` | `learning-analytics-dashboard`, `co-attainment-report-generator`, `programme-review-reporter` |
+| Personal Coordination | `reva.academician-claw` | `task-manager`, `academic-leadership-advisor` | `/weekly-review`, `/session-close` | `weekly-review.md` |
+
+**Validator Support:** `obe-check.py`, `attainment-audit.py`, `accreditation-ready.py`, `nirf-data-validator.py`
+
+---
+
+### Domain 4 — Consulting & Product Development
+
+Faculty who engage industry, build products, commercialise IP, or run funded consultancies are the bridge between REVA's academic excellence and real-world impact. This domain also covers faculty mentoring students through REVA NEST and Srujana Stage 4.
+
+#### Task Taxonomy
+
+| Task Group | Tasks |
+|---|---|
+| **Industry Consulting** | Engagement scoping and brief; client need analysis; proposal and deliverable structure; billing and MOU framework; progress reporting; deliverable review and sign-off |
+| **IP & Patent Development** | Invention identification and disclosure; patentability assessment; prior art search; Indian patent application drafting; patent prosecution; commercialisation strategy |
+| **MOU & Partnership Management** | MOU drafting (academic, research, industry); scope and milestone definition; review against REVA policy; renewal and amendment cycles; partner relationship tracking |
+| **Industry-Funded Projects** | Project scoping and proposal; team assembly; milestone planning; financial tracking; progress reporting to sponsor; final deliverable and IP assignment |
+| **Technology Transfer** | Technology readiness level (TRL) assessment; licensing frameworks; spin-off feasibility; REVA NEST linkage; investor readiness brief |
+| **Startup & NEST Mentoring** | Mentoring student startups (Srujana Stage 4); business model review; pitch coaching; legal and IP setup guidance; investor introduction |
+| **Product Development** | Product requirement specification; prototype planning; user testing design; product brief generation; market validation framework |
+| **Experiential Learning Management** | Live industry problem integration into courses; industry mentor mapping; capstone industry linkage; advisory panel coordination; placement pipeline building |
+| **Revenue & Commercialisation Strategy** | Consulting revenue tracking; IP royalty framework; grant-to-product pipeline; academic entrepreneurship policy navigation |
+
+#### Plugins, Agents, Workflows & Skills
+
+| Task Group | Plugin | Key Agents | Workflows / Commands | Key Skills |
+|---|---|---|---|---|
+| IP & Patent | `reva.consulting-product-reva` + `patent-generator` | *(workflow-driven)* | `/patent`, `01_input` → `08_export` | `PRODUCT_IP_GUIDELINES.md`, `patentWorkflow.js` |
+| MOU & Partnership | `reva.consulting-product-reva` | *(workflow-driven)* | `/patent` (draft mode) | `PRODUCT_IP_GUIDELINES.md`, `industry-partner-mou-designer` |
+| Industry Consulting | `reva.consulting-product-reva` | `stakeholder-validator` | *(consulting brief workflow)* | `industry-review-facilitator`, `feedback-synthesis-engine` |
+| Experiential Learning | `reva.teaching-learning-reva` | `experiential-designer` | `/design-project` | `industry-project-integrator`, `srujana-industry-connect-builder` |
+| Startup Mentoring | `reva.teaching-learning-reva` | `srujana-pathway-designer` | `/srujana-track` | `venture-launch-designer`, `product-research-scaffolder`, `entrepreneurship-studio-designer` |
+| Research-to-Product Bridge | `reva.srujana-shodha` + `patent-generator` | `funding-navigator`, `work-product-reviewer` | `/research-lifecycle`, `/grant` | `GRANT_PROPOSAL_STANDARD.md`, `product-brief-generator` |
+| Personal Coordination | `reva.academician-claw` | `idea-incubator`, `task-manager` | `/project-kickoff`, `/deep-research` | `project-kickoff.md` |
+
+---
+
+### Domain 5 — Kaizen & Wellbeing
+
+Kaizen (改善 — continuous improvement) applied to academic professional life. Faculty are knowledge workers whose sustained effectiveness depends on intentional habits, regular reflection, purposeful goal-setting, and genuine wellbeing. This domain treats faculty development as a continuous personal improvement practice — not a one-off FDP event.
+
+#### Task Taxonomy
+
+| Task Group | Tasks |
+|---|---|
+| **GPS Goal Planning** | Annual and semester goal setting (Goals-Plans-Systems); priority identification; milestone definition; goal alignment with REVA Mission and personal Ikigai |
+| **Weekly Review & Reflection** | Weekly review cycle (what went well, what didn't, what to carry forward); teaching reflection; research reflection; professional development review |
+| **Habit Design & Tracking** | Habit identification and stacking; daily and weekly commitment tracking; habit streaks and recovery; energy management planning |
+| **FDP Planning & Participation** | FDP needs identification; FDP selection and scheduling; post-FDP reflection and practice integration; STTP and workshop coordination |
+| **Skill Development** | Identifying skill gaps (teaching, research, admin, tech); personal learning roadmap; certification planning; learning log maintenance |
+| **Work-Life Integration** | Workload calibration; boundary-setting and recovery practices; seasonal planning (exam periods, conference seasons); sabbatical and leave planning |
+| **Mental & Physical Wellbeing** | Stress signal recognition; wellbeing check-ins; physical health practices; mindfulness and focus practices; support resource navigation |
+| **Professional Identity & Brand** | Academic profile maintenance; conference participation planning; professional community engagement; mentoring and being mentored |
+| **Ikigai Alignment** | Mapping work to purpose (Ikigai — what I love, what I'm good at, what the world needs, what I can be paid for); career direction reviews; meaning-making practices |
+| **Community & Peer Support** | Faculty learning circle participation; CoP engagement; peer support and accountability partnerships; alumni and industry network cultivation |
+
+#### Plugins, Agents, Workflows & Skills
+
+| Task Group | Plugin | Key Agents | Workflows / Commands | Key Skills |
+|---|---|---|---|---|
+| GPS Goal Planning | `reva.kaizen-wellbeing-reva` | *(workflow-driven)* | `/gps` | `gps-plan.md`, `PERSONAL_REFLECTION_RULES.md` |
+| Weekly Review | `reva.academician-claw` | `reflection-facilitator`, `task-manager` | `/weekly-review` | `weekly-review.md` |
+| Habit Tracking | `reva.kaizen-wellbeing-reva` | `habit-tracker` | `/gps` | `PERSONAL_REFLECTION_RULES.md` |
+| Skill Development | `reva.academician-claw` | `learning-coach` | `/new-skill` | `skill-generator.md` |
+| FDP Planning | `reva.kaizen-wellbeing-reva` | *(workflow-driven)* | `/gps` | `fdp-programme-designer` |
+| Wellbeing | `reva.kaizen-wellbeing-reva` | *(workflow-driven)* | `/gps` | `PERSONAL_REFLECTION_RULES.md`, `wellbeing-curriculum-designer` |
+| Research Ikigai | `reva.srujana-shodha` | `competency-profiler` | `/onboarding` | `IKIGAI_ALIGNMENT.md` |
+| Session Closure | `reva.academician-claw` | `memory-steward` | `/session-close` | `session-closer.md` |
+| Personal Coordination | `reva.academician-claw` | `orchestrator`, `reflection-facilitator` | `/weekly-review`, `/session-close` | All claw workflows |
+
+---
+
+### Cross-Domain Personal Intelligence Layer
+
+`reva.academician-claw` (`@claw`) is not domain-specific — it is the faculty member's **personal agentic workspace** that carries memory, context, and coherence across all five domains.
+
+| Capability | How It Supports the 5 Domains |
+|---|---|
+| **Memory layer** (`soul.md`, `tasks.md`) | Remembers ongoing commitments across teaching, research, admin, consulting, and wellbeing — no re-briefing needed per session |
+| **Weekly review workflow** | Surfaces cross-domain wins, blocks, and forward plans in one integrated review |
+| **Writing partner agent** | Drafts and refines outputs across all five domains: teaching materials, grant proposals, admin reports, consulting briefs, reflection entries |
+| **Task manager agent** | Holds the complete cross-domain task list with priorities, deadlines, and next actions |
+| **Research analyst agent** | Supports deep dives for any domain: course design research, funding intelligence, industry trends, wellbeing literature |
+| **Academic leadership advisor** | Supports committee roles, HOD/Dean functions, and institutional leadership responsibilities |
+| **Idea incubator agent** | Captures and develops ideas from any domain: new courses, research questions, product concepts, consulting opportunities |
+| **Learning coach agent** | Identifies and plans skill development across all five domains; tracks progress |
+| **Reflection facilitator agent** | Structures reflective practice from teaching reviews, research setbacks, consulting outcomes, or personal growth |
+
+---
+
+### Plugin-to-Domain Responsibility Matrix
+
+| Plugin | Domain 1 Teaching | Domain 2 Research | Domain 3 Admin | Domain 4 Consulting | Domain 5 Kaizen |
+|---|---|---|---|---|---|
+| `reva.teaching-learning-reva` | **Primary** | — | Supporting | Supporting | — |
+| `reva.srujana-shodha` | — | **Primary** (Faculty & PhD) | — | Supporting | Supporting |
+| `patent-generator` | — | Supporting | — | **Primary** | — |
+| `reva.academic-admin-reva` | Supporting | — | **Primary** | — | — |
+| `reva.consulting-product-reva` | — | — | — | **Primary** | — |
+| `reva.kaizen-wellbeing-reva` | — | — | — | — | **Primary** |
+| `reva.academician-claw` | Supporting | Supporting | Supporting | Supporting | Supporting |
+
+\---
+
+
+
+\---
+
+## Repository Structure
+
+The SrujanaSangama repository is the private plugin marketplace for REVA University. It uses a **dual-engine architecture**: a single codebase deploys to both GitHub Copilot (via `package.json`) and Google Antigravity (via `plugin.json`). All agent intelligence lives in Markdown files; scripts handle only mechanical work.
 
 ```plaintext
 SrujanaSangama/
-├── .antigravity-marketplace/
-│   └── marketplace.json         # Google Antigravity Central Index
-├── .github/
-│   └── copilot-marketplace.json # GitHub Copilot Private Registry Map
-├── plugins/                     # Private Plugin Directory
-│   ├── teaching-learning-reva/  # T - Educator Hat: Course, session, content, assessment integrity
-│   ├── srujana-shodha/           # R - Scholar Hat: Projects, grant proposals, manuscript writing, and PhD scholar journey companion
-│   ├── academic-admin-reva/     # A - Administrator Hat: Programs, BOS, compliance, CO attainments
-│   ├── consulting-product-reva/ # C - Consultant Hat: Experiential labs, patents, MOU reviews
-│   └── kaizen-wellbeing-reva/   # K - Self-Improver Hat: Kaizen coach, wellbeing reflection (Hitaishin)
-├── specification/               # System Specifications and Abstractions
-│   ├── architecture.prompt.md   # Platform Dual-Engine Architecture (This file)
-│   ├── plan.prompt.md           # Master development and sprint plan
-│   ├── spec.prompt.md           # Scope and Platform Capabilities
-│   ├── tasks.md                 # Master Backlog and Tasks List
-│   ├── ADDIE.md                 # ADDIE Instructional Design flow
-│   ├── <plugin>-spec.prompt.md  # Detailed feature specification file for <plugin>
-│   └── <plugin>-tasks.md        # Atomic, testable task checklist for <plugin>
-└── docs/                        # Guidelines and Reference Documentation
-    ├── AISkills and Technologies.md
-    └── Guidelines/
-        ├── CourseProjects.md
-        ├── MiniProject.md
-        └── FinalYearProject.md
+├── AGENTS.md                        # AI team roles and Agentic Scrum sprint protocol
+├── CONSTITUTION.md                  # Immutable project constitution — conventions, anti-patterns, gates
+├── README.md                        # Platform overview and dual-engine architecture
+├── CONTRIBUTING.md                  # Contributor guide
+│
+├── plan/                            # Spec contracts (primary build artifact)
+│   ├── plan-*.prompt.md             # Feature spec files — approved before implementation begins
+│   └── tasks-*.md                   # Atomic task lists — generated by Coordinator Agent
+│
+├── plugins/                         # Plugin implementations (compilation output of specs)
+│   ├── academician-claw/            # reva.academician-claw — Faculty personal agentic intelligence (OpenClaw v2)
+│   ├── research-reva/               # reva.srujana-shodha — Faculty research & doctoral companion (SrujanaShodha)
+│   ├── patent-generator/            # patent-generator — Indian patent extraction and drafting tool
+│   ├── teaching-learning-reva/      # reva.teaching-learning-reva — Course design and audit agent pack
+│   ├── academic-admin-reva/         # reva.academic-admin-reva — Admin, attainment, and compliance pack
+│   ├── consulting-product-reva/     # reva.consulting-product-reva — IP, MOU, and consulting pack
+│   └── kaizen-wellbeing-reva/       # reva.kaizen-wellbeing-reva — Kaizen and wellbeing coach
+│
+├── agents/                          # Root-level agent definitions (non-plugin, cross-cutting)
+│   ├── course-buddy-builder.md      # Builds Course Buddy artefacts from course descriptors
+│   └── course-buddies/              # Generated per-course buddy instances
+│
+├── skills/                          # Root-level skills loadable by any plugin
+│   └── course-buddy-builder/        # SKILL.md + tools + references
+│
+├── specification/                   # Platform-level architecture and abstractions
+│   ├── architecture.prompt.md       # Platform dual-engine architecture (This file)
+│   ├── track_scope.md               # Scope and platform capabilities
+│   ├── ADDIE.md                     # ADDIE instructional design flow
+│   └── REVAskills/                  # Skill specifications (annual activities, NIRF, course design)
+│
+├── references/                      # Source of truth documents
+│   ├── reva-PhD-regulations.md      # REVA University PhD Regulations 2025
+│   └── The CSE Researcher's Handbook.md  # Empirical standards for CSE researchers
+│
+├── docs/                            # Guidelines and reference documentation
+│   ├── AISkills and Technologies.md # AI domain skills and tools map
+│   └── Guidelines/                  # Course, mini-project, and final-year project guidelines
+│
+├── eval/                            # Evaluation data and CO attainment improvement backlog
+├── knowledge/                       # Generated course knowledge bases (course-buddy-builder output)
+└── Templates/                       # Schema and template files
 ```
+
+### Plugin Anatomy
+
+Every plugin under `plugins/` follows this canonical layout (enforced by CONSTITUTION.md):
+
+```plaintext
+plugins/<plugin-name>/
+├── plugin.json          # Google Antigravity manifest (id, rules, workflows, mcpConfig)
+├── package.json         # GitHub Copilot manifest (agent handle, slash commands)
+├── mcp.json             # MCP server config (omit if no external tools needed)
+├── README.md            # Plugin overview
+├── rules/               # Identity, standards, and enforcement policies (Markdown)
+├── workflows/           # Multi-phase prompt protocols (Markdown)
+├── agents/
+│   ├── core/            # Orchestrator + memory steward
+│   └── <domain>/        # Specialist agents grouped by role
+├── context/             # Committed .example template files (never real user data)
+├── memory/              # Gitignored live memory (soul.md, tasks.md, etc.)
+│   └── semantic/        # Project-level trackers and episodic logs
+└── references/          # Plugin-local reference materials and school overlays
+```
+
+\---
+
+
+
+\---
+
+## Plugin Registry
+
+Current state of all plugins in the `plugins/` directory as of June 2026. Built under Agentic Scrum (see AGENTS.md and CONSTITUTION.md).
+
+### Plugin Maturity Tiers
+
+| Tier | Description | Examples |
+|---|---|---|
+| **Full Agentic System** | Orchestrator + Memory Steward + specialist agents + full memory layer. Personal intelligence for a specific role. | `academician-claw`, `research-reva` |
+| **TRACK Agent Pack** | Single slash command, minimal rules layer. Focused on one workflow or audit task. | `teaching-learning-reva`, `academic-admin-reva`, `consulting-product-reva`, `kaizen-wellbeing-reva` |
+| **Standalone Workflow Tool** | Sequential command pipeline with paired workflow+instructions files. No memory layer. | `patent-generator` |
+| **In Development** | Spec approved; implementation sprint planned. | — |
+
+---
+
+### `reva.academician-claw` — OpenClaw v2 — Faculty Personal Intelligence
+
+**Tier:** Full Agentic System | **Agent handle:** `@claw` | **Version:** 2.0.0
+
+**Purpose:** Personal agentic intelligence for REVA faculty — writing, research, task management, reflection, habits, learning coaching, and academic leadership. Prompt-native; no LLM API calls in scripts. Each faculty member maintains their own local `memory/` (gitignored).
+
+| Layer | Files |
+|---|---|
+| **Rules** | `ORCHESTRATOR.md`, `PERSONA_ENGINE.md`, `PERMISSION_GUARDIAN.md` |
+| **Workflows** | `weekly-review`, `project-kickoff`, `deep-research`, `skill-generator`, `session-closer` |
+| **Core agents** | `orchestrator.md`, `memory-steward.md`, `skill-generator.md` |
+| **Specialist agents** | `writing-partner`, `research-analyst`, `task-manager`, `learning-coach`, `reflection-facilitator`, `habit-tracker`, `idea-incubator`, `data-interpreter`, `code-architect`, `web-agent`, `computer-agent`, `academic-leadership-advisor` |
+| **Slash commands** | `/weekly-review`, `/project-kickoff`, `/deep-research`, `/session-close`, `/new-skill` |
+| **MCP** | Python server (`scripts/mcp_server.py`) |
+
+---
+
+### `reva.srujana-shodha` — SrujanaShodha — Faculty Research & Doctoral Journey Companion
+
+**Tier:** Full Agentic System | **Agent handles:** `@reva-scholar` (default / faculty), `/guide` (supervisor mode) | **Version:** 2.0.0
+
+**Purpose:** Unified personal research and doctoral companion for REVA faculty and PhD scholars — drives faculty research career growth (competency profiling, opportunity identification, interdisciplinary collaboration, funding navigation, brand building) and guides PhD scholars and supervisors through all 9 lifecycle stages (topic scouting, coursework, publication, thesis, patents, grants).
+
+| Layer | Files |
+|---|---|
+| **Rules** (14) | `ADVISOR_IDENTITY.md`, `SCHOLAR_IDENTITY.md`, `GUIDE_IDENTITY.md`, `REVA_PHD_REGULATIONS.md`, `RESEARCH_ETHICS.md`, `SCHOOL_ROUTING.md`, `PUBLICATION_STANDARDS.md`, `WELLBEING_STANDARD.md`, `IKIGAI_ALIGNMENT.md`, `INDIA_RESEARCH_CONTEXT.md`, `SDG_MAPPING_STANDARD.md`, `PERSONAL_BRAND_STANDARD.md`, `GRANT_PROPOSAL_STANDARD.md`, `SCHOLARLY_WRITING_STANDARD.md` |
+| **Workflows** (26) | Faculty: `onboarding`, `opportunity-mapping`, `funding-hunt`, `research-lifecycle`, `brand-sprint`, `sdg-impact-audit`, `grant-check`, `manuscript-check`, `proposal-check`, `session-closer` <br> Scholar: `00_onboarding` → `01_entrance-prep` → `02_coursework` → `03_synopsis` → `04_research-cycle` → `05_publication-pipeline` → `06_thesis-sprint` → `07_patent-workflow` → `08_grant-proposal` → `09_book-proposal` → `10_guide-dashboard` → `11_session-closer` → `12_daily-standup` → `13_stuck-triage` → `14_wellness-checkin` → `15_ikigai-audit` |
+| **Core agents** (3) | `orchestrator.md`, `stage-tracker.md` (milestone auto-computation), `memory-steward.md` |
+| **Specialist agents** (18) | Faculty: `competency-profiler`, `opportunity-scout`, `collaboration-architect`, `funding-navigator`, `research-pipeline-coach`, `journal-targeter`, `work-product-reviewer`, `personal-brand-builder` <br> Scholar: `topic-scout`, `coursework-navigator`, `synopsis-builder`, `research-coach`, `publication-coach`, `thesis-writer`, `patent-agent`, `grant-agent`, `book-agent` |
+| **Support agents** (4) | `daily-planner`, `blocker-breaker`, `wellness-companion`, `ikigai-compass` |
+| **Guide agent** (1) | `guide-advisor` (activated by `/guide`) |
+| **Slash commands** | `/grant`, `/manuscript-check`, `/proposal-check`, `/guide` (supervisor mode) |
+| **MCP** | Node.js server (`dist/mcp-server.js`) connecting to REVA Scholar API |
+| **Memory** | `soul.md`, `ikigai.md`, `tasks.md`, `wellbeing-log.md`; `semantic/research-pipeline.md`, `publication-log.md`, `progress-reports.md`, `episodic/` |
+
+---
+
+### `patent-generator` — Indian Patent Extraction and Drafting Tool
+
+**Tier:** Standalone Workflow Tool | **Version:** 0.1.0
+
+**Purpose:** Guides users through extracting invention details, checking patentability, simulating prior art search, scoring, and generating a draft Indian patent application (Form 1, 2, 3). Agent-driven; no external API or JS execution.
+
+| Layer | Files |
+|---|---|
+| **Workflows** | 8 paired workflow+instructions files: `01_input` → `02_extract` → `03_patentability` → `04_prior_art` → `05_scoring` → `06_draft_template` → `07_application` → `08_export` |
+| **SKILL.md** | Root-level skill entry point |
+| **lib/** | `patentWorkflow.js` (mechanical pipeline only) |
+| **No rules or agents layer** | — |
+
+---
+
+### `reva.teaching-learning-reva` — Teaching & Learning Agent Pack
+
+**Tier:** TRACK Agent Pack | **Agent handle:** `@reva-educator` | **Version:** 1.0.0
+
+**Purpose:** Course design, session planning, content generation, and integrity audits. Integrates the `course-buddy-builder` skill for generating Obsidian wikis and Jupyter workbooks from course descriptors.
+
+| Layer | Files |
+|---|---|
+| **Rules** | `ACADEMIC_INTEGRITY.md`, `COURSE_DESIGN_STANDARD.md`, `ASSESSMENT_QUALITY_STANDARD.md` |
+| **Workflows** | `session-check`, `course-check`, `assessment-check` |
+| **Slash commands** | `/audit`, `/course-check`, `/assessment-check`, `/build-course-buddy` |
+
+---
+
+### `reva.academic-admin-reva` — Academic Administration Agent Pack
+
+**Tier:** TRACK Agent Pack | **Agent handle:** `@reva-admin` | **Version:** 1.0.0
+
+**Purpose:** CO-PO attainment tracking, curriculum revision governance, accreditation metrics, and regulatory compliance audits (UGC, AICTE, NEP 2020).
+
+| Layer | Files |
+|---|---|
+| **Rules** | `REGULATORY_COMPLIANCE.md` |
+| **Workflows** | `attainment-check` |
+| **Slash commands** | `/attainment` |
+
+---
+
+### `reva.consulting-product-reva` — Consulting & Product Development Agent Pack
+
+**Tier:** TRACK Agent Pack | **Agent handle:** `@reva-innovator` | **Version:** 1.0.0
+
+**Purpose:** IP claim drafting, MOU reviews, consulting engagement briefs, and experiential learning management.
+
+| Layer | Files |
+|---|---|
+| **Rules** | `PRODUCT_IP_GUIDELINES.md` |
+| **Workflows** | `patent-draft` |
+| **Slash commands** | `/patent` |
+
+---
+
+### `reva.kaizen-wellbeing-reva` — Kaizen & Wellbeing Agent Pack
+
+**Tier:** TRACK Agent Pack | **Agent handle:** `@reva-kaizen` | **Version:** 1.0.0
+
+**Purpose:** Self-reflection coaching, habit and commitment trackers, FDP integrations, GPS goal planning, and wellbeing navigation for faculty.
+
+| Layer | Files |
+|---|---|
+| **Rules** | `PERSONAL_REFLECTION_RULES.md` |
+| **Workflows** | `gps-plan` |
+| **Slash commands** | `/gps` |
+
+---
+
+
+
+
 
 \---
 
@@ -127,7 +552,7 @@ Specialist AI collaboration partners. Each agent works alongside humans — gene
 |`ip-patent-architect`|Guides inventors from Stage 3 prototypes to IP registration and patent claim structures|product-brief-generator, product-artefact-designer, srujana-stage-designer|
 |`faculty-developer`|Generates feedback, coaching plans, and FDP recommendations for faculty reflection and action; the coaching relationship remains human|pedagogical-coaching, ai-pedagogy-coach, course-review-feedback, fdp-programme-designer|
 |`student-advisor`|Provides faculty advisors with data-driven insights on at-risk students, Srujana readiness, and placement gaps; humans act on insights|at-risk-detector, placement-readiness-tracker, srujana-counsellor, remediation-planner|
-|`wellbeing-hitaishin-coach`|Coordinates confidential wellness self-reflections, stress resilience plans, work-life balance wheels, and mindfulness coaching|self-reflection-coach, wellbeing-indicator-tracker, wellbeing-curriculum-designer|
+|`wellbeing-coach`|Coordinates confidential wellness self-reflections, stress resilience plans, work-life balance wheels, and mindfulness coaching|self-reflection-coach, wellbeing-indicator-tracker, wellbeing-curriculum-designer|
 |`analytics-reporter`|Builds dashboards and reports for programme committees, HODs, and VC office; humans interpret and decide|learning-analytics-dashboard, nirf-data-feed, co-attainment-report-generator, programme-review-reporter|
 |`technology-integrator`|Configures and integrates EdTech platforms under IT and faculty direction; ensures accessibility and pedagogical fit|lms-course-builder, quizblast-setup, ai-personalization-stack, oci-infrastructure|
 
@@ -148,6 +573,9 @@ Specialist AI collaboration partners. Each agent works alongside humans — gene
 |`accreditation-officer`|Prepares NBA SAR, NAAC DVV, and institutional documentation; peer committees and leadership review and certify|nba-sar-generator, naac-dvv-preparer, co-attainment-auditor, programme-review-documenter|
 |`interdisciplinary-connector`|Maps minor opportunities across all four models; faculty and programme committees decide which minors to activate|minor-framework-designer, intra-reva-minor-designer, nptel-swayam-minor-designer, international-minor-designer|
 |`faculty-kaizen-coach`|Provides a personal Kaizen coach for every faculty member; guides self-reflection, growth profiling, and professional development; supports daily/weekly GPS (Goal-Plan-Systems) planning aligned with institutional commitments (Sankalpa) and personal wellbeing (Hitaishin)|personal-kaizen-planner, self-reflection-coach, habit-commitment-tracker, kpa-kra-aligner|
+
+\---
+
 
 \---
 
@@ -596,6 +1024,9 @@ Modular knowledge domains loaded on demand. Each skill supports human-AI collabo
 
 \---
 
+
+\---
+
 ## Workflows
 
 Human-AI collaborative procedures for end-to-end academic operations. Invoke with `/command`. Every workflow identifies **human decision gates** explicitly — points where AI stops and humans deliberate.
@@ -653,6 +1084,9 @@ Human-AI collaborative procedures for end-to-end academic operations. Invoke wit
 
 \---
 
+
+\---
+
 ## Marketplace Plugin Resolution Protocol
 
 ```plaintext
@@ -702,6 +1136,66 @@ plugin-directory/
 │   └── mcp-server.js    # Node.js backend executing MCP tools RPCs
 └── src/                 # Tool source code
 ```
+
+\---
+
+
+\---
+
+## Skill Loading Protocol
+
+```plaintext
+User Request / Academic Trigger / Institutional Signal
+                    ↓
+         ADDIE Phase Router
+                    ↓
+     Agent Selection (role-based)
+                    ↓
+  ┌─────────────────────────────────────┐
+  │   Human-AI Handoff Check            │
+  │   What does AI draft or analyse?    │
+  │   What does the human decide?       │
+  │   Is industry validation required?  │
+  │   Is BOS governance required?       │
+  └─────────────────────────────────────┘
+                    ↓
+      Skill Description Match
+                    ↓
+          Load SKILL.md
+                    ↓
+    Read references/ (templates, rubrics,
+    frameworks, WEF/NASSCOM feeds, BOS
+    proposal formats, REVA policy docs)
+                    ↓
+    Read scripts/ (computation, validation,
+    generation, portfolio audit, NIRF data)
+                    ↓
+    Apply REVA branding to all outputs
+                    ↓
+  ┌─────────────────────────────────────┐
+  │   Governance Gate                   │
+  │   Industry validation needed?       │
+  │   → Route to /validate-industry     │
+  │   BOS approval needed?              │
+  │   → Route to /bos-approve           │
+  └─────────────────────────────────────┘
+```
+
+### Skill Structure
+
+```plaintext
+skill-name/
+├── SKILL.md           # (Required) Metadata, instructions, frameworks,
+│                      #   human decision points, governance gates
+├── scripts/           # (Optional) Python/Bash computation and generation
+├── references/        # (Optional) Templates, rubric banks, framework docs,
+│                      #   CO banks, WEF/NASSCOM data, REVA policy documents
+└── assets/            # (Optional) REVA logos, brand tokens, illustration sets
+```
+
+\---
+
+
 
 \---
 
@@ -762,33 +1256,95 @@ Quality-gate scripts enforcing OBE compliance, portfolio integrity, AI-readiness
 
 \---
 
+
+\---
+
 ## Quick Reference
 
-|Need|Agent|Workflow|Key Skills|
+### Domain 1 — Teaching & Learning (`@reva-educator`)
+
+|Need|Agent|Workflow / Command|Key Skills|
 |-|-|-|-|
 |New programme with raised PEOs|`curriculum-architect`|`/design-curriculum`|peo-ai-era-designer, programme-structure-designer, nep-credit-framework|
-|Future-of-jobs intelligence|`futures-intelligence-scout`|`/futures-scan`|wef-jobs-scanner, nasscom-skills-mapper, futures-briefing-packager|
-|Industry validation|`stakeholder-validator`|`/validate-industry`|industry-review-facilitator, feedback-synthesis-engine|
-|Board of Studies approval|`bos-governance-officer`|`/bos-approve`|bos-proposal-formatter, regulatory-compliance-checker, bos-minutes-generator|
+|Future-of-jobs intelligence for curriculum|`futures-intelligence-scout`|`/futures-scan`|wef-jobs-scanner, nasscom-skills-mapper, futures-briefing-packager|
+|Industry validation of curriculum|`stakeholder-validator`|`/validate-industry`|industry-review-facilitator, feedback-synthesis-engine|
 |AI-augmented course design|`course-designer`|`/design-course`|co-ai-augmented-designer, co-po-mapping, blooms-aligner|
 |Enterprising skills in curriculum|`enterprising-skills-designer`|`/design-course`|enterprising-co-designer, human-skills-rubric-builder, liberal-arts-integration-designer|
-|Srujana pathway|`srujana-pathway-designer`|`/srujana-track`|srujana-s1–s4-skills, srujana-portfolio-integrator, internship-framework-builder|
-|Portfolio-first course redesign|`portfolio-architect`|`/portfolio-design`|portfolio-co-linker, publication-scaffolder, portfolio-review-rubric-builder|
-|AI-ready assessment design|`assessment-engineer`|`/build-assessment`|ai-ready-assessment-auditor, hots-assignment-designer, proctored-assessment-designer|
 |Session material development|`session-planner` + `content-developer`|`/develop-session`|active-learning-strategies, slide-designer, proctored-activity-designer|
+|AI-ready assessment design|`assessment-engineer`|`/build-assessment`|ai-ready-assessment-auditor, hots-assignment-designer, proctored-assessment-designer|
+|Portfolio-first course redesign|`portfolio-architect`|`/portfolio-design`|portfolio-co-linker, publication-scaffolder, portfolio-review-rubric-builder|
+|Srujana pathway for students|`srujana-pathway-designer`|`/srujana-track`|srujana-s1–s4-skills, srujana-portfolio-integrator, internship-framework-builder|
 |Minors (all four models)|`interdisciplinary-connector`|`/design-curriculum`|intra-reva-minor-designer, nptel-swayam-minor-designer, industry-micro-credential-minor, international-minor-designer|
 |NPTEL / SWAYAM / certifications|`certification-integrator`|`/certify-map`|nptel-credit-mapper, professional-cert-aligner, mooc-portfolio-recognizer|
+|Lab or project design|`lab-designer` + `project-architect`|`/create-lab`, `/design-project`|lab-manual-writer, pbl-project-designer, capstone-framework|
 |Honours / fast learners|`learning-pathway-designer`|`/personalize`|honours-fast-track-designer, enrichment-content-designer|
 |AI tutor / slow learners|`ai-personalization-engine`|`/personalize`|ai-tutor-configurator, remedial-ai-tutor-designer|
-|CO attainment evaluation|`evaluation-analyst`|`/evaluate-co`|co-attainment-calculator, co-attainment-report-generator|
-|NBA / NAAC accreditation|`accreditation-officer`|`/accredit`|nba-sar-generator, naac-dvv-preparer, co-attainment-auditor|
-|NIRF Top 100|`nirf-accelerator`|`/nirf-accelerate`|nirf-parameter-analyzer, nirf-action-plan-generator, research-output-tracker|
+|Student Srujana counselling|`student-advisor`|`/srujana-track`|srujana-counsellor, placement-readiness-tracker, at-risk-detector|
+|Comprehensive course review|`pedagogy-advisor`|`/review-course`|ai-ready-course-auditor, obe-compliance-checker, bloom-level-verifier|
 |Twinning / dual degrees|`internationalization-agent`|`/internationalize`|twinning-programme-designer, dual-degree-framework, international-credit-aligner|
-|Admissions and placements|`nirf-accelerator`|`/analytics`|admissions-excellence-tracker, placement-intelligence-reporter, placement-portfolio-connector|
 |Learning analytics|`analytics-reporter`|`/analytics`|learning-analytics-dashboard, at-risk-detector, srujana-progress-tracker|
+
+### Domain 2 — Research (`@reva-scholar`)
+
+|Need|Agent|Workflow / Command|Key Skills|
+|-|-|-|-|
+|Research profile and onboarding|`competency-profiler`|`/onboarding`|PERSONAL_BRAND_STANDARD.md, SDG_MAPPING_STANDARD.md|
+|Research opportunity and funding scan|`opportunity-scout` + `funding-navigator`|`/opportunity-mapping`, `/funding-hunt`|INDIA_RESEARCH_CONTEXT.md, GRANT_PROPOSAL_STANDARD.md|
+|Grant proposal writing|`funding-navigator` + `work-product-reviewer`|`/grant`, `/grant-check`|GRANT_PROPOSAL_STANDARD.md|
+|Manuscript writing and journal targeting|`journal-targeter` + `work-product-reviewer`|`/manuscript-check`|SCHOLARLY_WRITING_STANDARD.md, RESEARCH_ETHICS.md|
+|Research proposal review|`work-product-reviewer`|`/proposal-check`|SCHOLARLY_WRITING_STANDARD.md|
+|Full research lifecycle coaching|`research-pipeline-coach`|`/research-lifecycle`|SCHOLARLY_WRITING_STANDARD.md|
+|Interdisciplinary collaboration mapping|`collaboration-architect`|`/opportunity-mapping`|INDIA_RESEARCH_CONTEXT.md|
+|SDG impact audit|`competency-profiler`|`/sdg-impact-audit`|SDG_MAPPING_STANDARD.md|
+|Personal research brand sprint|`personal-brand-builder`|`/brand-sprint`|PERSONAL_BRAND_STANDARD.md|
+|Indian patent application drafting|*(workflow-driven)*|`01_input` → `08_export`|patentWorkflow.js, prior-art simulation|
+|PhD scholar guidance (planned)|`guide-advisor`|`/guide`|REVA_PHD_REGULATIONS.md, PUBLICATION_STANDARDS.md|
+|Deep research on any topic|`research-analyst` (`@claw`)|`/deep-research`|deep-research.md|
+
+### Domain 3 — Academic Administration (`@reva-admin`)
+
+|Need|Agent|Workflow / Command|Key Skills|
+|-|-|-|-|
+|CO attainment computation|`evaluation-analyst`|`/attainment`, `/evaluate-co`|co-attainment-calculator, co-attainment-threshold-setter, attainment-heatmap-generator|
+|Board of Studies governance|`bos-governance-officer`|`/bos-approve`|bos-proposal-formatter, bos-minutes-generator, regulatory-compliance-checker|
+|NBA / NAAC accreditation documentation|`accreditation-officer`|`/accredit`|nba-sar-generator, naac-dvv-preparer, co-attainment-auditor|
+|NIRF ranking improvement|`nirf-accelerator`|`/nirf-accelerate`|nirf-parameter-analyzer, nirf-action-plan-generator, research-output-tracker|
+|Regulatory compliance check|`bos-governance-officer`|`/bos-approve`|regulatory-compliance-checker, curriculum-change-tracker|
+|Programme review reporting|`analytics-reporter`|`/analytics`|programme-review-reporter, co-attainment-report-generator|
+|Admissions and placements intelligence|`nirf-accelerator`|`/analytics`|admissions-excellence-tracker, placement-intelligence-reporter|
+|Faculty development planning|`faculty-developer`|`/faculty-develop`|fdp-programme-designer, pedagogical-coaching|
 |Complex multi-phase operations|`orchestrator`|`/orchestrate`|addie-phase-router, parallel-agents, human-ai-handoff-protocol|
+
+### Domain 4 — Consulting & Product Development (`@reva-innovator`)
+
+|Need|Agent|Workflow / Command|Key Skills|
+|-|-|-|-|
+|IP claim drafting and patent application|*(workflow-driven)*|`/patent`, `01_input` → `08_export`|PRODUCT_IP_GUIDELINES.md, patentWorkflow.js|
+|MOU and partnership drafting|*(workflow-driven)*|`/patent` (draft mode)|industry-partner-mou-designer, PRODUCT_IP_GUIDELINES.md|
+|Industry consulting brief|`stakeholder-validator`|*(consulting brief workflow)*|industry-review-facilitator, feedback-synthesis-engine|
+|Experiential learning with industry|`experiential-designer`|`/design-project`|industry-project-integrator, srujana-industry-connect-builder|
+|Student startup and NEST mentoring|`srujana-pathway-designer`|`/srujana-track`|venture-launch-designer, product-research-scaffolder|
+|Research-to-product pipeline|`funding-navigator` + `work-product-reviewer`|`/research-lifecycle`, `/grant`|product-brief-generator, GRANT_PROPOSAL_STANDARD.md|
+|Idea development and incubation|`idea-incubator` (`@claw`)|`/project-kickoff`|project-kickoff.md|
+
+### Domain 5 — Kaizen & Wellbeing (`@reva-kaizen`)
+
+|Need|Agent|Workflow / Command|Key Skills|
+|-|-|-|-|
+|Annual/semester GPS goal planning|*(workflow-driven)*|`/gps`|gps-plan.md, PERSONAL_REFLECTION_RULES.md|
+|Weekly cross-domain review|`reflection-facilitator` + `task-manager` (`@claw`)|`/weekly-review`|weekly-review.md|
+|Habit design and tracking|`habit-tracker` (`@claw`)|`/weekly-review`|PERSONAL_REFLECTION_RULES.md|
+|Skill gap identification and learning roadmap|`learning-coach` (`@claw`)|`/new-skill`|skill-generator.md|
+|FDP planning and post-FDP integration|*(workflow-driven)*|`/gps`|fdp-programme-designer|
+|Wellbeing check-in and support navigation|*(workflow-driven)*|`/gps`|PERSONAL_REFLECTION_RULES.md|
+|Session closure and memory update|`memory-steward` (`@claw`)|`/session-close`|session-closer.md|
+|Ikigai and career direction review|`competency-profiler` (`@reva-scholar`)|`/onboarding`|SDG_MAPPING_STANDARD.md|
 |Faculty self-driven continuous improvement|`faculty-kaizen-coach`|`/kaizen-coach`|personal-kaizen-planner, self-reflection-coach, habit-commitment-tracker|
 |Institutional Kaizen & best practices|`faculty-kaizen-coach`|`/kaizen-analytics`|kaizen-analytics-engine, best-practice-sharer, kpa-kra-aligner|
+
+\---
+
+
 
 \---
 

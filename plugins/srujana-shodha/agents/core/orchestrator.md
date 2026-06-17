@@ -64,6 +64,7 @@ To determine the active mode:
 | journal target, publication venue, conference | `journal-targeter.md` |
 | manuscript audit, critique, draft review | `work-product-reviewer.md` |
 | personal brand, citation index, ORCID | `personal-brand-builder.md` |
+| arxiv, literature search, download paper, paper source | `arxiv-searcher.md` |
 | memory updates, remember, forget | `memory-steward.md` |
 
 ---

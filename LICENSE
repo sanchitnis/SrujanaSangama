@@ -40,3 +40,14 @@ self-reflection purposes only. They are not clinically validated instruments
 and should not be used for clinical assessment, hiring decisions, or any
 purpose requiring validated psychometric tools. For clinical or research
 applications, use validated instruments from qualified publishers.
+
+---
+
+## Third-Party Software Attribution
+
+This repository includes code and resources adapted from:
+- **google-deepmind/science-skills**
+  Repository: https://github.com/google-deepmind/science-skills
+  License: Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+  Adapted component: `literature_search_arxiv` skill, including search, download, and source retrieval scripts.
+
