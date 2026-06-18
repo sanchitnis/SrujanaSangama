@@ -81,7 +81,7 @@ Program Leader Review     Validation Panel           Peer Review               I
 ### Phase 2 Process
 
 #### Step 2.1: Translate PEOs to Programme Outcomes (POs & PSOs) — *[5 days]*
-- **AI Task**: Generate draft PO set using NBA 12 + REVA mission threads + enterprise skills
+- **AI Task**: Generate draft PO set using NBA 11 (updated NBA framework) + REVA mission threads + enterprise skills
 - **Human Task**: Faculty committee deliberates, adapts, finalizes POs
   - Ensure PO-PSO set covers: technical competency, AI literacy, ethical reasoning, sustainable thinking, global perspective, enterprising mindset
   - Map each PO to job role expectations
