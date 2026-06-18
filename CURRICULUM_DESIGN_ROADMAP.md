@@ -61,7 +61,7 @@ Your strategy document must contain these four sections. Write them yourself —
 4. **Market & Futures Intelligence** — What do WEF, NASSCOM, and industry trends say about your domain? Who are your peer institutions?
 
 > [!IMPORTANT]
-> **Design Engineering Specific:** If you are designing for the B.Tech Design Engineering programme, also read [ext_Design_Engineering.md](file:///d:/SrujanaSangama/docs/Guidelines/ext_Design_Engineering.md). This document overrides certain universal rules for a studio-based programme and explains how Design Engineering assessment (Jury Critique, Process Portfolio) differs from standard engineering programmes.
+> **Design Engineering Specific:** If you are designing for the B.Tech Design Engineering programme, also read [ext_Design_Engineering.md](file:///c:/Users/Akhil_REVA/Desktop/CD/ext_Design_Engineering.md). This document overrides certain universal rules for a studio-based programme and explains how Design Engineering assessment (Jury Critique, Process Portfolio) differs from standard engineering programmes.
 
 ---
 
@@ -143,7 +143,7 @@ Before moving to Phase 2, these must be signed off:
 - How does the capstone integrate everything?
 
 > [!IMPORTANT]
-> **Design Engineering Specific:** Read Section 12 (Portfolio Strategy) of [ext_Design_Engineering.md](file:///d:/SrujanaSangama/docs/Guidelines/ext_Design_Engineering.md). The Design Engineering portfolio model (process documentation, Jury Crits, studio artefacts) differs significantly from a standard engineering programme.
+> **Design Engineering Specific:** Read Section 12 (Portfolio Strategy) of [ext_Design_Engineering.md](file:///c:/Users/Akhil_REVA/Desktop/CD/ext_Design_Engineering.md). The Design Engineering portfolio model (process documentation, Jury Crits, studio artefacts) differs significantly from a standard engineering programme.
 
 ---
 
@@ -176,7 +176,7 @@ Before moving to Phase 2, these must be signed off:
 | Supplementary | **Course Design Workflow (Quick Notes)** | A brief internal workflow note about how faculty and AI collaborate to create courses. Good for a quick context overview. | [CourseDesignWorkflow.md](file:///d:/SrujanaSangama/docs/Guidelines/CourseDesignWorkflow.md) |
 
 > [!IMPORTANT]
-> **Design Engineering Specific:** The universal guidelines tell you to apply standard engineering course rules. For Design Engineering, you MUST ALSO read [ext_Design_Engineering.md](file:///d:/SrujanaSangama/docs/Guidelines/ext_Design_Engineering.md). This document overrides assessment structure (Jury Critique replaces IA tests), course categories (SC-Studio, SC-Fablab, SC-Field, SC-Digital), and portfolio requirements for all studio courses.
+> **Design Engineering Specific:** The universal guidelines tell you to apply standard engineering course rules. For Design Engineering, you MUST ALSO read [ext_Design_Engineering.md](file:///c:/Users/Akhil_REVA/Desktop/CD/ext_Design_Engineering.md). This document overrides assessment structure (Jury Critique replaces IA tests), course categories (SC-Studio, SC-Fablab, SC-Field, SC-Digital), and portfolio requirements for all studio courses.
 
 ---
 
@@ -267,7 +267,7 @@ Once you have a draft course design, invoke:
 | ⭐ Must Read | **Assessment Quality Standard** | The rules that govern assessment design quality: HOTS dominance in assessment, AI-triviality checks, rubric standards, and formative vs summative balance. | [ASSESSMENT_QUALITY_STANDARD.md](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/rules/ASSESSMENT_QUALITY_STANDARD.md) |
 
 > [!IMPORTANT]
-> **Design Engineering Specific:** Read Sections 5 (Assessment Model), 6 (Merrill's First Principles), and 10 (AI-Augmented Assessment) of [ext_Design_Engineering.md](file:///d:/SrujanaSangama/docs/Guidelines/ext_Design_Engineering.md). The assessment model for Design Engineering uses **Jury Critiques** (Crit 1 + Crit 2) instead of standard IA-1/IA-2 tests, and assessment lives entirely in rubrics for studio courses.
+> **Design Engineering Specific:** Read Sections 5 (Assessment Model), 6 (Merrill's First Principles), and 10 (AI-Augmented Assessment) of [ext_Design_Engineering.md](file:///c:/Users/Akhil_REVA/Desktop/CD/ext_Design_Engineering.md). The assessment model for Design Engineering uses **Jury Critiques** (Crit 1 + Crit 2) instead of standard IA-1/IA-2 tests, and assessment lives entirely in rubrics for studio courses.
 
 ---
 
@@ -373,14 +373,14 @@ Every major assessment must pass ALL of these:
 | Know the academic integrity rules | ACADEMIC_INTEGRITY.md | [Link](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/rules/ACADEMIC_INTEGRITY.md) |
 | Design any course (primary practical guide) | Course_Designer_Guidelines_2026.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/Course_Designer_Guidelines_2026.md) |
 | Understand course types by L-T-P (Universal rulebook) | Course_Designer_Guidelines_Universal.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/Course_Designer_Guidelines_Universal.md) |
-| Design a Design Engineering course specifically | ext_Design_Engineering.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/ext_Design_Engineering.md) |
+| Design a Design Engineering course specifically | ext_Design_Engineering.md | [Link](file:///c:/Users/Akhil_REVA/Desktop/CD/ext_Design_Engineering.md) |
 | See a real, filled-out course design template | Course_File_Template_DualLevel.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/Course_File_Template_DualLevel.md) |
 | Run the Phase 1 strategy audit | 10_curriculum-strategy-check.md | [Link](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/workflows/10_curriculum-strategy-check.md) |
 | Run the Phase 3 course audit | course-check.md | [Link](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/workflows/course-check.md) |
 | Design AI-ready activities for a unit | 11_activity-design-ai-ready.md | [Link](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/workflows/11_activity-design-ai-ready.md) |
 | Build a concept map across the programme | 12_concept-map-network.md | [Link](file:///d:/SrujanaSangama/plugins/teaching-learning-reva/workflows/12_concept-map-network.md) |
 | Quickly understand the course design workflow | CourseDesignWorkflow.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/CourseDesignWorkflow.md) |
-| Find a sample Engineering Mathematics syllabus | engMath.md | [Link](file:///d:/SrujanaSangama/docs/Guidelines/engMath.md) |
+| Find a sample Engineering Mathematics syllabus | engMath.md | [Link](file:///c:/Users/Akhil_REVA/Desktop/CD/engMath.md) |
 
 ---
 
