@@ -12,7 +12,7 @@
 
 This document describes REVA's comprehensive, human-AI collaborative curriculum design framework. It is grounded in:
 
-1. **Outcome-Based Education (OBE)** rigor: NBA 12 POs, clear CO-PO mapping, direct + indirect attainment measurement
+1. **Outcome-Based Education (OBE)** rigor: NBA 11 POs (updated NBA framework), clear CO-PO mapping, direct + indirect attainment measurement
 2. **AI-Era Pedagogy**: Assumed AI co-working; assessment on judgment, synthesis, ethics, creativity — not AI-replicable tasks
 3. **International Best Practices**: 
    - CDIO (Singapore): Conceive-Design-Implement-Operate framework for real-world project competency
@@ -51,7 +51,7 @@ This document describes REVA's comprehensive, human-AI collaborative curriculum 
 **Outputs**: Finalized PO/PSO set, programme structure, concept network, portfolio strategy
 
 **Key Outputs**:
-1. **PO/PSO Framework**: NBA 12 POs adapted for AI era + PSOs reflecting programme identity
+1. **PO/PSO Framework**: NBA 11 POs (updated NBA framework) adapted for AI era + PSOs reflecting programme identity
 2. **Programme Structure**: Semester layout, credits, theory-lab-project balance, Srujana stage integration
 3. **Concept Prerequisite Map**: All foundational concepts; prerequisites from PUC → Year 1-4; future usage mapped
 4. **Portfolio Strategy**: Portfolio output types, assessment rubric, capstone integration
