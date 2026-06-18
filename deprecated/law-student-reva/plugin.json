@@ -1,0 +1,14 @@
+{
+  "id": "reva.law-student-reva",
+  "name": "REVA Law Student Study Companion",
+  "version": "1.0.0",
+  "description": "Socratic drilling, case briefing, IRAC grading, AIBE prep, moot court training, and exam forecasting for REVA Law School students. Learning mode only — never writes the answer for you.",
+  "permissions": [
+    "filesystem:read"
+  ],
+  "entry": {
+    "rules": ["rules/LAW_STUDENT_GUARDRAILS.md"],
+    "workflows": ["workflows/cold-start-interview.md"]
+  },
+  "mcpConfig": "./mcp.json"
+}

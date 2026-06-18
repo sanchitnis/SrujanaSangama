@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "reva-law-student-fs": {
+      "command": "node",
+      "args": ["dist/mcp-server.js"],
+      "env": {
+        "PLUGIN_DATA_PATH": "./data"
+      }
+    }
+  }
+}

@@ -1,129 +1,130 @@
-# Contributing to SrujanaSangama — Developer & Administrator Guide
+# Contributing to SrujanaSangama
 
-Thank you for contributing to the SrujanaSangama Private AI Agent & Skill Plugin Marketplace. This guide covers how to set up development environments, write specifications, synchronize plugin implementations, and manage repository governance.
-
----
-
-## 1. Operational Mode System (Production vs Development)
-
-SrujanaSangama enforces a strict **Operational Mode System** to prevent AI agents from leaking or modifying governance and system specification files when interacting with end-users.
-
-| Mode | Trigger | System Behavior |
-|---|---|---|
-| **Production** (default) | Activated if `context/mode.md` is absent or set to `mode: production`. | AI agents serve users, running only rules and workflows. All files in `specification/`, `eval/`, `CONSTITUTION.md`, and `AGENTS.md` are **read-only** and write-locked. |
-| **Development** | Enabled by creating `context/mode.md` with `mode: development`. | Agentic Scrum is active. AI agents can access, plan, modify, and synchronize files in `specification/`, `eval/`, and run `spec-sync`. |
-
-### How to Enter Development Mode (Maintainers Only)
-Only the repository architect/maintainer (**Sanjay Chitnis @sanchitnis**) may set development mode on local workstations:
-```powershell
-# 1. Copy the gitignored mode configuration template
-copy context\mode.md.example context\mode.md
-
-# 2. Open context\mode.md and edit it to set:
-mode: development
-
-# 3. Work on specifications, run tests/audits, and synchronize code.
-
-# 4. Return to production mode before finishing the session:
-del context\mode.md
-```
-
-> [!CAUTION]
-> `context/mode.md` is strictly **gitignored** and must never be committed to the remote repository.
+This guide covers the practical mechanics of proposing and making a change to SrujanaSangama. It assumes you've already read `CONSTITUTION.md` §2 (the Usage Mode / Development Mode distinction) and `AGENTS.md` (the roles and sprint lifecycle) — this file does not repeat either; it tells you what to actually do.
 
 ---
 
-## 2. Developer Workflow: Agentic Scrum
+## 1. Before You Start: You Need a Real Git Checkout
 
-SrujanaSangama utilizes **Agentic Scrum** (Spec-Driven Development) to keep specifications and implementations in lockstep.
+Contributing to the platform itself only happens in **Development Mode**, and Development Mode is only reachable inside a real `git clone` of this repository — never inside the shared OneDrive folder faculty use day to day. If you're not sure what that means, read `CONSTITUTION.md` §2 first.
 
-```
-[Write/Approve Spec in plan/ or specification/]
-                      ↓
-    [Coordinator Agent: Generate *-tasks.md]
-                      ↓
-  [Implementor Agent: Execute tasks one by one]
-                      ↓
-    [Verifier Agent: Check criteria & PASS/FAIL]
+In practice:
+
+```bash
+git clone https://github.com/sanchitnis/SrujanaSangama.git
+cd SrujanaSangama
 ```
 
-### Writing Backlog Ideas
-Unscheduled features, bugs, or suggestions should be recorded in [`specification/BACKLOG.md`](specification/BACKLOG.md) before writing full specifications:
+Open this checkout (not the OneDrive folder) in Claude Code, VS Code, or Antigravity. Every session still starts in Usage Mode — say what platform change you want to make, and the agent will confirm before switching to Development Mode for the rest of that session, per `CONSTITUTION.md` §2.1. There is nothing to manually switch back at the end; the next session starts in Usage Mode again automatically.
+
+---
+
+## 2. Propose Before You Build
+
+Every change — a new domain, a new command, an edit to `architecture.md` or `design.md` — starts as a short proposal in `specification/`, per `CONSTITUTION.md` §6. Don't skip this step even for something that feels small; the proposal is what the Coordinator and Verifier agents check the eventual change against.
+
+### Unscheduled ideas
+
+If you have an idea but aren't ready to write a full proposal, log it in `specification/BACKLOG.md`:
+
 ```markdown
-### [YYYY-MM-DD] [PluginName] — [Feature name]
+### [YYYY-MM-DD] [Domain or Area] — [Idea name]
 - **Source**: observation | retro | user-report
 - **Priority**: High | Medium | Low
-- **Notes**: One-sentence context of the requirement.
-- **Status**: Idea | Ready-to-spec | Resolved
+- **Notes**: One-sentence context.
+- **Status**: Idea | Ready-to-propose | Resolved
 ```
+
+### Full proposals
+
+When ready, write `specification/<topic>-proposal.md` containing:
+- The problem or gap, in plain terms
+- The proposed change to `architecture.md` and/or `design.md`
+- An explicit **Scope Boundaries** section (in scope / out of scope)
+- A **Verification** section with testable acceptance criteria
+
+Sanjay reviews and approves the proposal before any planning or implementation begins.
 
 ---
 
-## 3. Running the Spec-Sync Audit Tool
+## 3. The Build Cycle, in Practice
 
-Whenever rules, workflows, or agents are added/modified, you must run the synchronization script to check for schema drift, unregistered files, or spec discrepancies:
+Once a proposal is approved, the Coordinator → Implementor → Verifier cycle in `AGENTS.md` §3–4 runs. As a contributor, your part is:
+
+1. Ask the Coordinator Agent to turn the approved proposal into `specification/<topic>-tasks.md`.
+2. Work through tasks one at a time with the Implementor Agent — never batch multiple tasks into one sitting without a Verifier pass in between.
+3. Run the Verifier Agent after each task and fix anything it flags as a new task, not as a patch on top of the flagged one.
+4. Open a PR only once every task in the list has a PASS verification.
+
+---
+
+## 4. Running the Spec-Sync Audit
+
+Whenever a domain's `rules/`, `commands/`, or a skill is added or changed, run the synchronisation check to catch drift between `design.md`'s description of the system and what actually exists on disk:
 
 ```powershell
-# Run a dry run to check for drift (does not write reports)
+# Dry run — checks for drift, writes nothing
 python skills/spec-sync/scripts/spec_sync.py --dry-run
 
-# Run a full sync to write the latest audit logs to eval/logs/
+# Full run — writes the latest audit log to eval/logs/
 python skills/spec-sync/scripts/spec_sync.py
 ```
 
-Weekly runs of `spec_sync.py` are executed automatically via GitHub Actions (triggered every Monday at 09:00 UTC) to ensure the master branch remains synchronized.
+A weekly run is scheduled automatically (Mondays, 09:00 IST) so drift never goes unnoticed for long even between active contribution periods.
 
 ---
 
-## 4. Git Branching & Pull Request Process
+## 5. Git Branching and Pull Requests
 
-### Setup Your Fork
-1. Fork [github.com/sanchitnis/SrujanaSangama](https://github.com/sanchitnis/SrujanaSangama).
-2. Clone the fork locally:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/SrujanaSangama.git
-   cd SrujanaSangama
-   ```
-3. Checkout a branch with a prefix matching the plugin:
-   ```bash
-   git checkout -b law/fix-irac-prompt
-   git checkout -b teach/audit-rubric-fixes
-   git checkout -b research/add-funding-sources
-   ```
+### Branch prefixes
 
-### Branch Prefixes:
-- `law/` : Law Student companion (`law-student-reva`)
-- `teach/` : Educator companion (`teaching-learning-reva`)
-- `research/` : Scholar/Advisor companion (`srujana-shodha`)
-- `admin/` : Administration (`academic-admin-reva`)
-- `kaizen/` : Wellbeing (`kaizen-wellbeing-reva`)
-- `consult/` : Consulting (`consulting-product-reva`)
-- `docs/` : Marketplace documentation or guides
+Match the prefix to the domain your change primarily touches, using the domain folder names exactly as they appear in `design.md`:
 
-### Pull Request Checklist
-Before submitting a PR to the main repository, verify:
-- [ ] No workflow produces completed code or final decisions on behalf of the user (Human-in-the-loop).
-- [ ] Any legal or administrative data points carry references to active UGC, BCI, or NBA standards.
-- [ ] The `spec_sync.py` script returns no failures.
-- [ ] Custom prompts or workflows do not weaken the safety rails defined in `rules/`.
+| Prefix | Domain |
+|---|---|
+| `teaching/` | `teaching-learning` |
+| `research/` | `srujana-shodha` |
+| `admissions/` | `admissions-branding` |
+| `placement/` | `placement-tpc` |
+| `admin/` | `academic-admin` |
+| `innovator/` | `innovator` |
+| `kaizen/` | `kaizen-excellence` |
+| `strategy/` | `strategic-planning` |
+| `productivity/` | `personal-productivity` |
+| `docs/` | `architecture.md`, `design.md`, or any of the four governance documents |
+
+```bash
+git checkout -b teaching/fix-rubric-template
+git checkout -b research/add-funding-source
+git checkout -b docs/clarify-iqac-vertical
+```
+
+### Pull request checklist
+
+Before submitting, verify:
+- [ ] A proposal exists in `specification/` and is referenced in the PR
+- [ ] Every task in the corresponding `-tasks.md` has a PASS Verifier report
+- [ ] `spec_sync.py` returns no failures
+- [ ] Nothing in the change duplicates content that already lives in `architecture.md` or `design.md` (per `CONSTITUTION.md` §4 and §9)
+- [ ] No file from any user's `srujana-memory/` is included in the diff
+- [ ] Any command file still states what it drafts and what a human must decide, per `CONSTITUTION.md` §5
+- [ ] `specification/IMPLEMENTATION-STATUS.md` is updated to reflect anything newly implemented (see `AGENTS.md` §8)
 
 ---
 
-## 5. Hosting a Local Campus Mirror (IT Administrators)
+## 6. Hosting a Local Campus Mirror (IT Administrators Only)
 
-To minimize external internet dependency across campus lab networks, you can host a local mirror:
+To reduce dependency on OneDrive availability across campus lab networks, IT may host a local read-only mirror:
 
-1. **Clone to internal server:**
-   ```bash
-   git clone https://github.com/sanchitnis/SrujanaSangama.git /mnt/shared/SrujanaSangama
-   ```
-2. **Register mirror path on workstations:**
-   - **Windows (Mapped Drive)**: `agy marketplace add srujanasangama Z:\SrujanaSangama`
-   - **Windows (UNC)**: `agy marketplace add srujanasangama \\campus-server\shared\SrujanaSangama`
-   - **Linux/Mac**: `agy marketplace add srujanasangama /mnt/shared/SrujanaSangama`
-3. **IT Scheduled Task (Cron job):**
-   Pull the latest updates periodically:
-   ```bash
-   cd /mnt/shared/SrujanaSangama
-   git pull origin main
-   ```
+```bash
+# Clone to an internal server
+git clone https://github.com/sanchitnis/SrujanaSangama.git /mnt/shared/SrujanaSangama
+```
+
+Point lab workstations at the mirrored path the same way they would the OneDrive folder — by opening it directly in Claude Code, VS Code, or Antigravity. There is no marketplace registry step to run; the mirror is just a folder, exactly like the OneDrive copy.
+
+```bash
+# Scheduled task to keep the mirror current
+cd /mnt/shared/SrujanaSangama
+git pull origin main
+```
