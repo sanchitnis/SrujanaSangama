@@ -16,7 +16,7 @@
 | Faculty name | ‹…› |
 | REVA ID | ‹…› |
 | Email | ‹…› |
-| Programme | ‹B.Tech — CSE / ISE / IT / AIML / AIDS / IoT / Cyber Security› |
+| Programme | ‹B.Tech — ‹enter your programme name›› |
 | Course code | ‹…› |
 | Course title | ‹…› |
 | Semester & section | ‹…› |
@@ -75,8 +75,35 @@
 | CO4 | ‹…› | ‹…› | ‹…› | ‹…› |
 | CO5 | ‹…› | ‹…› | ‹…› | ‹…› |
 | CO6 | ‹…› | ‹Create› | ‹…› | ‹…› |
+| CO-ES | ‹Enterprise Skill CO — e.g., Demonstrate initiative / communication / collaborative agency / ethical reasoning in ‹context›› | ‹Evaluate / Create› | ‹PO9, PO10, PO11› | ‹…› |
 
-> 🔵 **New column — CO level.** Tag each CO as (Remember /Understand / Apply /Analyse / Evaluate / create). The design must guarantee that the floor (placement-readiness) is fully covered by Awareness, and that at least the highest COs are Advanced so the course has genuine ceiling.
+> 🔵 **New column — CO level.** Tag each CO as (Remember / Understand / Apply / Analyse / Evaluate / Create). The design must guarantee that the floor (placement-readiness) is fully covered by Awareness, and that at least the highest COs are Advanced so the course has genuine ceiling.
+>
+> 🔵 **CO-ES — Enterprise Skills CO (mandatory).** Every course must include at least one CO targeting an enterprising human skill (initiative, adaptability, collaboration, ethical reasoning, communication, creativity). Tag it as CO-ES. It must appear in at least one assessment instrument with an explicit rubric criterion.
+
+### 5.1 🔵 IKS / Sustainability declaration
+
+| Field | Entry |
+|---|---|
+| IKS integration — unit(s) and example | ‹e.g., Unit 2 — historical Indian mathematics / engineering example or philosophical principle relevant to the topic› |
+| Sustainability integration — unit(s) and example | ‹e.g., Unit 3 — resource optimisation, environmental impact analysis, or ethical consideration embedded in the problem context› |
+| Liberal Studies thread | ‹e.g., Unit 4 — design thinking / ethical analysis / communication artefact embedded as a deliverable› |
+
+---
+
+## 5.2 🔵 Portfolio Artefact Specification
+
+> Every CO must be linked to a tangible portfolio artefact — a publication, product, open-source contribution, design document, or documented solution. Declare the artefact type and the CO it evidences. This section is the traceability link between course learning and the student's cumulative 4-year portfolio.
+
+| CO# | Portfolio artefact type | Description of deliverable | Srujana stage linked |
+|---|---|---|---|
+| CO1 | ‹e.g., Documented solution / report› | ‹Brief description of what the student submits as evidence› | ‹Stage 1 — Skill Formation› |
+| CO2 | ‹…› | ‹…› | ‹…› |
+| CO3 | ‹…› | ‹…› | ‹…› |
+| CO4 | ‹…› | ‹…› | ‹…› |
+| CO5 | ‹…› | ‹…› | ‹…› |
+| CO6 | ‹…› | ‹…› | ‹Stage 2 / 3 — if capstone-linked› |
+| CO-ES | ‹e.g., Reflection essay / peer-review record / ethical analysis› | ‹How the enterprise skill is evidenced and submitted› | ‹Stage 1–2› |
 
 ---
 
@@ -158,15 +185,15 @@
 
 ## 14. 🔵 Evaluation scheme — dual-level (CORE OF THE TEMPLATE)
 
-Standard CBCS component split, **upgraded so every assessment instrument explicitly splits its marks between awareness and advanced**.
+Standard component split, **upgraded so every assessment instrument explicitly splits its marks between awareness and advanced**. Use the component names appropriate to your programme (e.g., IA-1/IA-2 for theory courses, Crit 1/Crit 2 for studio/design courses).
 
 | Sl | Component | Marks | Weight % | Awareness marks (floor) | Advanced marks (ceiling) | Date | COs |
 |---|---|---|---|---|---|---|---|
-| 1 | Test 1 (IA-1) | 20 | 20 | ‹≈14› | ‹≈6› | ‹…› | CO1–CO3 |
-| | Test 2 (IA-2) | 20 | 20 | ‹≈14› | ‹≈6› | ‹…› | CO4–CO6 |
-| | Assignment 1 | 5 | 5 | ‹3› | ‹2› | ‹…› | CO1–CO3 |
-| | Assignment 2 | 5 | 5 | ‹3› | ‹2› | ‹…› | CO4–CO6 |
-| 2 | SEE | 50 | 50 | ‹≈35› | ‹≈15› | ‹…› | CO1–CO6 |
+| 1 | ‹Internal Assessment 1 (IA-1) / Crit 1›  | ‹20› | ‹20› | ‹≈14› | ‹≈6› | ‹…› | ‹CO1–CO3› |
+| | ‹Internal Assessment 2 (IA-2) / Crit 2› | ‹20› | ‹20› | ‹≈14› | ‹≈6› | ‹…› | ‹CO4–CO6› |
+| | ‹Continuous Evaluation / Assignment 1› | ‹5› | ‹5› | ‹3› | ‹2› | ‹…› | ‹CO1–CO3, CO-ES› |
+| | ‹Continuous Evaluation / Assignment 2› | ‹5› | ‹5› | ‹3› | ‹2› | ‹…› | ‹CO4–CO6, CO-ES› |
+| 2 | ‹End-Semester Exam (SEE) / Final Jury› | ‹50› | ‹50› | ‹≈35› | ‹≈15› | ‹…› | ‹CO1–CO6, CO-ES› |
 | **Total** | | **100** | **100%** | **≈70** | **≈30** | | |
 
 ### 14.1 🔵 The calibration that enforces the CGPA rule
@@ -187,10 +214,12 @@ Standard CBCS component split, **upgraded so every assessment instrument explici
 
 ### 14.2 Question-paper blueprint 🔵
 
-| Instrument | Awareness questions (Bloom: R/U/Ap) | Advanced questions (Bloom: An/E/C) |
-|---|---|---|
-| IA-1 / IA-2 | ‹e.g. Part A + first half of Part B› | ‹e.g. final high-mark question, novel-problem item› |
-| SEE | ‹standard-case questions across all units› | ‹at least one advanced item per unit› |
+| Instrument | Awareness questions (Bloom: R/U/Ap) | Advanced questions (Bloom: An/E/C) | AI-triviality check |
+|---|---|---|---|
+| ‹IA-1 / Crit 1› | ‹e.g. Part A + first half of Part B› | ‹e.g. final high-mark question, novel-problem item› | ‹Does every advanced question include a localised constraint or meta-cognitive component that makes a generic AI output insufficient? Yes / No — if No, redesign.› |
+| ‹IA-2 / Crit 2› | ‹standard-case questions› | ‹at least one novel-problem item› | ‹AI-triviality check: Yes / No› |
+| ‹Assignments / CE› | ‹guided practice problems› | ‹real-world application with student-specific data or reflection requirement› | ‹AI-triviality check: Yes / No — include proctoring strategy (viva, live demo, peer teaching)› |
+| ‹SEE / Final Jury› | ‹standard-case questions across all units› | ‹at least one advanced item per unit / rubric dimension› | ‹AI-triviality check: Yes / No — proctored context eliminates AI-submission risk; confirm invigilated setting› |
 
 ---
 
@@ -261,13 +290,20 @@ Existing Course File bands kept, re-labelled so the middle/upper bands map to th
 
 ## 19. CO–PO/PSO mapping & overall attainment 🟢
 
-**Strength: 1 = Low, 2 = Medium, 3 = High.**
+**Strength: 1 = Slight, 2 = Moderate, 3 = Substantial.**
+> NBA 11 POs. Fill only the POs that the course actually addresses; leave cells blank where there is no meaningful contribution.
 
-| CO | PO1 | PO2 | PO3 | PO4 | PO5 | PO6 | … | PSO1 | PSO2 | PSO3 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| CO1 | | | | | | | | | | |
-| CO2 | | | | | | | | | | |
-| … | | | | | | | | | | |
+| CO | PO1 Engineering Knowledge | PO2 Problem Analysis | PO3 Design/Development | PO4 Investigation | PO5 Modern Tool Usage | PO6 Engineer & Society | PO7 Environment & Sustainability | PO8 Ethics | PO9 Individual & Team Work | PO10 Communication | PO11 Project Management & Finance | PSO1 | PSO2 | PSO3 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CO1 | | | | | | | | | | | | | | |
+| CO2 | | | | | | | | | | | | | | |
+| CO3 | | | | | | | | | | | | | | |
+| CO4 | | | | | | | | | | | | | | |
+| CO5 | | | | | | | | | | | | | | |
+| CO6 | | | | | | | | | | | | | | |
+| CO-ES | | | | | | | | | 3 | 3 | | | | |
+
+> 🔵 **Strength 3 (Substantial)** means the CO is directly, centrally assessed against this PO and must have a proctored or viva-based validation activity. Avoid marking all COs at Strength 3 across all POs — this is unrealistic and flags a mapping that has not been deliberated.
 
 **Overall attainment** (Direct 80% + Indirect/Feedback 20%):
 
