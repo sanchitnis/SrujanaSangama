@@ -174,7 +174,7 @@ Provide a **School Curriculum Strategy Document** containing:
 
 | Criterion | Assessment |
 |---|---|
-| NBA 12 POs are explicitly referenced and adapted for AI-era context | [ ] Yes [ ] No |
+| NBA 11 POs (updated NBA framework) are explicitly referenced and adapted for AI-era context | [ ] Yes [ ] No |
 | PSOs are specific to programme and differentiate from peer programmes | [ ] Yes [ ] No |
 | Mapping of POs/PSOs to job roles is visible | [ ] Yes [ ] No |
 | Enterprise skills PO/PSO thread is identified | [ ] Yes [ ] No |
