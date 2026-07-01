@@ -57,24 +57,40 @@ Once a proposal is approved, the Coordinator → Implementor → Verifier cycle 
 4. Open a PR only once every task in the list has a PASS verification.
 
 ---
+## 4. Platform Taxonomy: Commands, Skills, and Agents
 
-## 4. Running the Spec-Sync Audit
+When contributing a new capability, you must choose the correct abstraction level:
+
+1. **Commands (under `domains/<domain>/commands/`)**
+   - **What they are**: Actionable slash commands (e.g. `/lesson-plan`, `/funding-hunt`).
+   - **When to use**: When a human user wants to explicitly trigger a specific action within a department. They are coarse-grained entrypoints.
+2. **Skills (under `.agents/skills/`)**
+   - **What they are**: Reusable, modular capability packages containing instructions, rules, and optional scripts (each must have a `SKILL.md` entry point with YAML frontmatter).
+   - **When to use**: When logic is reused across multiple domains or commands (e.g., `docx` manipulation, `pdf` parsing, `reva-branding`).
+3. **Custom Agents (under `agents/`)**
+   - **What they are**: Full AI personas or pipelines (like `course-buddy-builder`) with defined input/output contracts.
+   - **When to use**: When you need a separate, long-running agent system or persona that uses multiple skills to do its job.
+
+---
+
+## 5. Running the Spec-Sync Audit
 
 Whenever a domain's `rules/`, `commands/`, or a skill is added or changed, run the synchronisation check to catch drift between `specification/design.md`'s description of the system and what actually exists on disk:
 
 ```powershell
 # Dry run — checks for drift, writes nothing
-python skills/spec-sync/scripts/spec_sync.py --dry-run
+python .agents/skills/spec-sync/scripts/spec_sync.py --dry-run
 
 # Full run — writes the latest audit log to eval/logs/
-python skills/spec-sync/scripts/spec_sync.py
+python .agents/skills/spec-sync/scripts/spec_sync.py
 ```
 
 A weekly run is scheduled automatically (Mondays, 09:00 IST) so drift never goes unnoticed for long even between active contribution periods.
 
 ---
 
-## 5. Git Branching and Pull Requests
+
+## 6. Git Branching and Pull Requests
 
 ### Branch prefixes
 
@@ -112,7 +128,7 @@ Before submitting, verify:
 
 ---
 
-## 6. Hosting a Local Campus Mirror (IT Administrators Only)
+## 7. Hosting a Local Campus Mirror (IT Administrators Only)
 
 To reduce dependency on OneDrive availability across campus lab networks, IT may host a local read-only mirror:
 
