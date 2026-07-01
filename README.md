@@ -1,5 +1,8 @@
 # SrujanaSangama - REVA University AI Agent Workspace
 
+> [!IMPORTANT]
+> **For AI Agents:** Do not read or parse this README file further. Go directly to the cross-IDE entry instruction file [AGENTS.md](SrujanaSangama/AGENTS.md) to understand routing constraints, domain categorization, and permissions.
+
 Welcome to SrujanaSangama, REVA University's shared system of Markdown-based AI agent modules, domain commands, rules, and reusable skills.
 Srujana means creation and sangama is confluence of all your ideas and work to take REVA University forward in the era of AI.
 
@@ -38,7 +41,10 @@ Parent-Folder (e.g., Documents)/
 Open VS Code (or your chosen AI IDE) and select **File > Open Workspace from File...**, then select:
 `SrujanaSangama/srujanasangama.code-workspace`
 
-This workspace configuration automatically mounts all three folders together and marks the shared reference folders as read-only.
+This workspace configuration automatically mounts all three folders together. 
+
+> [!TIP]
+> **Path Independence**: The workspace file uses relative paths (e.g. `../srujana-memory/`) so it remains completely user-independent. It works out of the box regardless of your operating system username or local path configuration. The shared folders are automatically configured as read-only.
 
 ---
 

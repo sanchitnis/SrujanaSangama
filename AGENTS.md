@@ -13,6 +13,7 @@ All sessions start in Usage Mode. If you do not detect a `.git` folder at the re
 * **Do NOT read Part B** of this file. You must stop reading `AGENTS.md` right at the end of Part A.
 * **Do NOT modify** any files within the `SrujanaSangama/` folder. All personal profiles, session logs, outputs, and memory states must be read from and written to `../srujana-memory/`.
 * **Read-Only Sibling folders**: You may read files in `../reva-information/` only when explicitly needed for a task.
+* **Always Use Relative Paths**: You must always use relative paths (e.g., `../srujana-memory/`, `../reva-information/`) rather than absolute paths in all files, commands, rules, and links to ensure user-independence across different systems.
 
 ## 2. Onboarding Check (First-Time Users)
 If the user's personal memory in `../srujana-memory/` does not exist or onboarding has not happened:
@@ -60,6 +61,7 @@ In Development Mode, follow this lifecycle in full:
 4. **Implement**: Execute only one approved task at a time. Write code strictly in the files specified. Insert `<!-- AGENT QUERY: ... -->` for unresolved ambiguities.
 5. **Verify**: Run automated validations or manual checks. Append verification notes to the task file.
 6. **Human Review**: Submit changes to the Product Owner for final check. Update `IMPLEMENTATION-STATUS.md` upon any filesystem change.
+7. **Path Guidelines**: Always specify relative paths (e.g. `../srujana-memory/`) instead of absolute paths in all configuration files, markdown links, scripts, and documentation to maintain user-independence.
 
 ## 3. Development Roles
 - **Product Owner / Architect**: Sanjay Chitnis (`@sanchitnis`).
