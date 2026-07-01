@@ -10,6 +10,7 @@ import os
 import sys
 import datetime
 import json
+import shutil
 from pathlib import Path
 
 # Ensure UTF-8 output on Windows
@@ -80,7 +81,7 @@ def main():
         sibling_dir.mkdir(parents=True, exist_ok=True)
         mem_dir = sibling_dir
 
-    section("1 / 5 — Role Definition")
+    section("1 / 6 — Role Definition")
     print("  Select your primary role:")
     print("    1. Faculty Member")
     print("    2. Research Scholar (PhD)")
@@ -101,7 +102,7 @@ def main():
             ["PhD Supervisor", "HOD", "Dean / Centre Director", "IQAC Coordinator", "TPC Coordinator", "Admissions Team", "PI / CoPI on active grants"]
         )
 
-    section("2 / 5 — Profile Details")
+    section("2 / 6 — Profile Details")
     name = ask("Your full name (with titles, e.g. Dr. Rajesh Kumar)")
     school = ask("Your School / Department (e.g. School of CSE)")
     email = ask("Your REVA email address")
@@ -120,18 +121,27 @@ def main():
         role_specific_data["program"] = ask("Degree program & year (e.g., B.Tech CSE 3rd Year)")
         role_specific_data["focus"] = ask("Active project or research focus")
 
-    section("3 / 5 — Goals & Values")
+    section("3 / 6 — Professional & Research Identifiers")
+    linkedin = ask("LinkedIn profile URL")
+    scholar = ask("Google Scholar profile URL")
+    irins = ask("IRINS profile URL")
+    vidwan = ask("VIDWAN profile URL")
+    orcid = ask("ORCID iD or URL (e.g. 0000-0000-0000-0000)")
+    wos = ask("Web of Science ID")
+    resume_path = ask("Local file path to your resume (PDF/DOCX/MD/TXT) (optional)")
+
+    section("4 / 6 — Goals & Values")
     sankalpas = ask_list("Your key Sankalpas (Resolutions/committed intents) for this academic year")
     goals = ask_list("Current goals derived from your Sankalpas")
     ikigai = ask("Ikigai alignment (what you love/are good at/REVA needs)", "Learner-centric excellence and impactful research")
 
-    section("4 / 5 — Expertise & Preferences")
+    section("5 / 6 — Expertise & Preferences")
     skills_list = ask_list("Key technical/academic skills")
     tools_list = ask_list("Regular tools & platforms (e.g., Python, MATLAB, LaTeX)")
     tone = ask("Preferred AI communication tone (e.g., professional, direct, coaching)", "professional")
     working_pref = ask("AI response formatting preference (e.g., structured, markdown-heavy, concise)", "structured")
 
-    section("5 / 5 — Initializing Memory Workspace")
+    section("6 / 6 — Initializing Memory Workspace")
     print("  Creating srujana-memory folders and templates...")
 
     today = datetime.date.today().isoformat()
@@ -186,6 +196,22 @@ def main():
     if "Admissions Team" in additional_roles:
         (mem_dir / "collaborations/reva-admissions").mkdir(parents=True, exist_ok=True)
 
+    # ── Copy Resume ──────────────────────────────────────────────────────────
+    copied_resume_rel = ""
+    if resume_path:
+        p_resume = Path(resume_path).expanduser().resolve()
+        if p_resume.exists() and p_resume.is_file():
+            suffix = p_resume.suffix
+            dest_file = mem_dir / "public-memory" / f"resume{suffix}"
+            try:
+                shutil.copy2(p_resume, dest_file)
+                print(f"  Copied resume to: {C.GREEN}public-memory/resume{suffix}{C.END}")
+                copied_resume_rel = f"public-memory/resume{suffix}"
+            except Exception as e:
+                print(f"  {C.RED}Error copying resume: {e}{C.END}")
+        else:
+            print(f"  {C.YELLOW}Warning: Resume file not found at {resume_path}{C.END}")
+
     # ── Write my-memory/soul.md ──────────────────────────────────────────────
     sankalpas_md = "\n- ".join(sankalpas) if sankalpas else "[To be filled]"
     goals_md = "\n- ".join(goals) if goals else "[To be filled]"
@@ -211,6 +237,15 @@ _Created: {today} | Last updated: {today}_
 * **Domain/Focus**: {", ".join(role_specific_data.get("research_focus", ["[To be filled]"])) if primary_role == "Faculty Member" else role_specific_data.get("topic", "[To be filled]")}
 * **Active projects**: {role_specific_data.get("focus", "[None set]") if primary_role == "Student Researcher" else "[None set]"}
 
+## Professional & Research Identifiers
+* **LinkedIn**: {linkedin if linkedin else "None"}
+* **Google Scholar**: {scholar if scholar else "None"}
+* **IRINS**: {irins if irins else "None"}
+* **VIDWAN**: {vidwan if vidwan else "None"}
+* **ORCID**: {orcid if orcid else "None"}
+* **Web of Science**: {wos if wos else "None"}
+* **Resume**: {copied_resume_rel if copied_resume_rel else "None"}
+
 ## My Sankalpa this year
 - {sankalpas_md}
 
@@ -235,6 +270,15 @@ _Last updated: {today}_
 * **Primary Role**: {primary_role}
 * **School / Department**: {school}
 * **Academic Roles**: {roles_list_str}
+
+## Identifiers & Links
+* **LinkedIn**: {linkedin if linkedin else "N/A"}
+* **Google Scholar**: {scholar if scholar else "N/A"}
+* **IRINS**: {irins if irins else "N/A"}
+* **VIDWAN**: {vidwan if vidwan else "N/A"}
+* **ORCID**: {orcid if orcid else "N/A"}
+* **Web of Science**: {wos if wos else "N/A"}
+* **Resume File**: {copied_resume_rel if copied_resume_rel else "N/A"}
 
 ## Qualifications
 * [Enter degrees, institutions, and years]
@@ -303,6 +347,15 @@ _Last updated: {today}_
 * **Role**: {primary_role}
 * **School**: {school}
 * **Affiliation**: REVA University
+
+## Identifiers & Links
+* **LinkedIn**: {linkedin if linkedin else "N/A"}
+* **Google Scholar**: {scholar if scholar else "N/A"}
+* **IRINS**: {irins if irins else "N/A"}
+* **VIDWAN**: {vidwan if vidwan else "N/A"}
+* **ORCID**: {orcid if orcid else "N/A"}
+* **Web of Science**: {wos if wos else "N/A"}
+* **Resume File**: {copied_resume_rel if copied_resume_rel else "N/A"}
 
 ## Publications (Q1/Q2/National)
 * [List top publications]

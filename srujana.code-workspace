@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "SrujanaSangama (Read-Only)",
+			"path": "."
+		},
+		{
+			"name": "srujana-memory",
+			"path": "../srujana-memory"
+		},
+		{
+			"name": "reva-information (Read-Only)",
+			"path": "../reva-information"
+		}
+	],
+	"settings": {
+		"files.readonly": {
+			"**/SrujanaSangama/**": true,
+			"**/reva-information/**": true
+		}
+	}
+}

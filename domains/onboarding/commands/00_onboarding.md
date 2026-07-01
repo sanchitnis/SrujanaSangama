@@ -44,17 +44,33 @@ Based on the selected role, collect the relevant details one question at a time:
 
 ---
 
+## Phase 2.5 — Professional & Research Identifiers
+
+For all roles (prioritizing Faculty and Research Scholars), collect links to their professional and academic profiles, and ask if they wish to upload a resume:
+
+- **LinkedIn URL**: *"Please provide your LinkedIn profile URL (e.g., https://linkedin.com/in/username)."*
+- **Google Scholar URL**: *"Please provide your Google Scholar profile URL."*
+- **IRINS URL**: *"Please provide your IRINS profile URL."*
+- **VIDWAN URL**: *"Please provide your VIDWAN profile URL."*
+- **ORCID iD**: *"Please provide your ORCID iD or URL (e.g., 0000-0000-0000-0000)."*
+- **Web of Science (WoS) ResearcherID**: *"Please provide your Web of Science ResearcherID or URL."*
+- **Resume Upload**: *"If you have a digital resume (PDF, Word, or Markdown), please provide its file path. We will copy it to your public portfolio and extract key information (publications, projects, education) to pre-populate your profile files."*
+
+---
+
 ## Phase 3 — Centralized Memory Initialization
 
-Once the profile details are collected, initialize the centralized memory files:
+Once the profile details, identifiers, and resume path are collected, initialize the centralized memory files:
 
-1. **soul.md**: Global identity, role, department, and preferences.
+1. **soul.md**: Global identity, role, department, preferences, professional/research profile links, and local resume path.
 2. **Role Profile**: Save role-specific details:
-   - For Faculty: `memory/faculty-profile.md`
-   - For Scholars: `memory/scholar-profile.md` (which maps to the expectations in `srujana-shodha`)
-   - For Student Researchers: `memory/student-profile.md`
-3. **tasks.md**: Initial empty task checklist under `memory/context/tasks.md`.
-4. **recent.md**: Log the completion of this onboarding session under `memory/episodic/recent.md`.
+   - For Faculty: `my-memory/semantic/profile.md` (and optional `teaching.md` & `research.md`)
+   - For Scholars: `my-memory/semantic/research.md` (and optional `scholar-profile.md` which maps to the expectations in `srujana-shodha`)
+   - For Student Researchers: `my-memory/semantic/profile.md`
+3. **Resume Handling**: If a resume path is provided, copy the file to `public-memory/resume.<extension>`.
+4. **Information Extraction**: The agent will parse/extract the relevant details (such as top publications, active grants, past employment, and academic qualifications) from the provided profile URLs and the copied resume. These details will be structured and used to pre-populate the corresponding markdown profiles inside `my-memory/semantic/` and `public-memory/profile.md`.
+5. **tasks.md**: Initial empty task checklist under `my-memory/context/tasks.md`.
+6. **recent.md**: Log the completion of this onboarding session under `my-memory/episodic/recent.md`.
 
 ---
 
@@ -69,8 +85,18 @@ Once the profile details are collected, initialize the centralized memory files:
 - Department/School: [School Name]
 - Key Responsibilities: [Responsibilities / Guide / Program]
 
+**Professional & Research Identifiers:**
+- LinkedIn: [URL]
+- Google Scholar: [URL]
+- IRINS: [URL]
+- VIDWAN: [URL]
+- ORCID: [iD/URL]
+- Web of Science: [ID/URL]
+- Resume File: [Copied file path inside public-memory/]
+
 **Research / Focus Area:**
 - Broad Topic: [Topic / Project Name]
+- Extracted Profile Info: [Summary of publications/experience extracted from links and resume]
 
 **Next Action Agreed:**
 - [First action based on role (e.g., Topic shortlist, coursework planning, grant search)]

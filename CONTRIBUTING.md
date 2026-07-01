@@ -21,7 +21,7 @@ Open this checkout (not the OneDrive folder) in Claude Code, VS Code, or Antigra
 
 ## 2. Propose Before You Build
 
-Every change — a new domain, a new command, an edit to `architecture.md` or `design.md` — starts as a short proposal in `specification/`, per `CONSTITUTION.md` §6. Don't skip this step even for something that feels small; the proposal is what the Coordinator and Verifier agents check the eventual change against.
+Every change — a new domain, a new command, an edit to `specification/architecture.md` or `specification/design.md` — starts as a short proposal in `specification/`, per `CONSTITUTION.md` §6. Don't skip this step even for something that feels small; the proposal is what the Coordinator and Verifier agents check the eventual change against.
 
 ### Unscheduled ideas
 
@@ -39,7 +39,7 @@ If you have an idea but aren't ready to write a full proposal, log it in `specif
 
 When ready, write `specification/<topic>-proposal.md` containing:
 - The problem or gap, in plain terms
-- The proposed change to `architecture.md` and/or `design.md`
+- The proposed change to `specification/architecture.md` and/or `specification/design.md`
 - An explicit **Scope Boundaries** section (in scope / out of scope)
 - A **Verification** section with testable acceptance criteria
 
@@ -60,7 +60,7 @@ Once a proposal is approved, the Coordinator → Implementor → Verifier cycle 
 
 ## 4. Running the Spec-Sync Audit
 
-Whenever a domain's `rules/`, `commands/`, or a skill is added or changed, run the synchronisation check to catch drift between `design.md`'s description of the system and what actually exists on disk:
+Whenever a domain's `rules/`, `commands/`, or a skill is added or changed, run the synchronisation check to catch drift between `specification/design.md`'s description of the system and what actually exists on disk:
 
 ```powershell
 # Dry run — checks for drift, writes nothing
@@ -78,7 +78,7 @@ A weekly run is scheduled automatically (Mondays, 09:00 IST) so drift never goes
 
 ### Branch prefixes
 
-Match the prefix to the domain your change primarily touches, using the domain folder names exactly as they appear in `design.md`:
+Match the prefix to the domain your change primarily touches, using the domain folder names exactly as they appear in `specification/design.md`:
 
 | Prefix | Domain |
 |---|---|
@@ -91,7 +91,7 @@ Match the prefix to the domain your change primarily touches, using the domain f
 | `kaizen/` | `kaizen-excellence` |
 | `strategy/` | `strategic-planning` |
 | `productivity/` | `personal-productivity` |
-| `docs/` | `architecture.md`, `design.md`, or any of the four governance documents |
+| `docs/` | `specification/architecture.md`, `specification/design.md`, or any of the four governance documents |
 
 ```bash
 git checkout -b teaching/fix-rubric-template
@@ -105,7 +105,7 @@ Before submitting, verify:
 - [ ] A proposal exists in `specification/` and is referenced in the PR
 - [ ] Every task in the corresponding `-tasks.md` has a PASS Verifier report
 - [ ] `spec_sync.py` returns no failures
-- [ ] Nothing in the change duplicates content that already lives in `architecture.md` or `design.md` (per `CONSTITUTION.md` §4 and §9)
+- [ ] Nothing in the change duplicates content that already lives in `specification/architecture.md` or `specification/design.md` (per `CONSTITUTION.md` §4 and §9)
 - [ ] No file from any user's `srujana-memory/` is included in the diff
 - [ ] Any command file still states what it drafts and what a human must decide, per `CONSTITUTION.md` §5
 - [ ] `specification/IMPLEMENTATION-STATUS.md` is updated to reflect anything newly implemented (see `AGENTS.md` §8)
@@ -121,7 +121,7 @@ To reduce dependency on OneDrive availability across campus lab networks, IT may
 git clone https://github.com/sanchitnis/SrujanaSangama.git /mnt/shared/SrujanaSangama
 ```
 
-Point lab workstations at the mirrored path the same way they would the OneDrive folder — by opening it directly in Claude Code, VS Code, or Antigravity. There is no marketplace registry step to run; the mirror is just a folder, exactly like the OneDrive copy.
+Point lab workstations at the mirrored path the same way they would the OneDrive folder — by opening it directly in Claude Code, VS Code, or Antigravity. There is no registry step to run; the mirror is just a folder, exactly like the OneDrive copy.
 
 ```bash
 # Scheduled task to keep the mirror current
