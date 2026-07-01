@@ -48,7 +48,7 @@ When a request is received, do not preload the entire repository. Read only what
 This section is active only if a `.git` folder exists at the repository root, indicating a developer checkout, and the contributor approves Development Mode.
 
 ## 1. Mode Escalation Trigger
-If the user's request requires creating, editing, or deleting files in `domains/`, `skills/`, `validators/`, `specification/`, `eval/`, or root governance documents, check for a `.git` folder:
+If the user's request requires creating, editing, or deleting files in `domains/`, `.agents/skills/`, `validators/`, `specification/`, `eval/`, or root governance documents, check for a `.git` folder:
 - If `.git` does not exist, refuse the request. Explain that this is a read-only distribution folder.
 - If `.git` exists, ask for confirmation: *"This would modify SrujanaSangama itself. I see a `.git` folder here. Do you want to switch to Development Mode?"*
 - Once confirmed, you remain in Development Mode for the rest of the session.

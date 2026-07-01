@@ -21,4 +21,4 @@ For Development Mode:
 
 Do not introduce packaged-extension manifests, registries, or install scripts.
 SrujanaSangama modules are plain folders under `domains/` and shared references
-under `skills/`.
+under `.agents/skills/`.

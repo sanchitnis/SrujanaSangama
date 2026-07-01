@@ -129,7 +129,8 @@ SrujanaSangama/
 ├── IMPLEMENTATION-STATUS.md  # Current status of implemented domains
 ├── srujana.code-workspace    # Shared multi-root workspace file
 ├── domains/                  # Faculty/admin modules by domain
-├── skills/                   # Shared reusable reference modules (e.g. science plugins)
+├── .agents/                  # Workspace customizations
+│   └── skills/               # Shared reusable reference modules (e.g. science plugins)
 ├── validators/               # Quality-gate scripts for checking formats
 ├── scripts/                  # Helper scripts (file I/O, date math, parsing)
 └── specification/            # Proposals, tasks, and system specifications

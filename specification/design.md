@@ -79,42 +79,43 @@ SrujanaSangama/                          ← Shared OneDrive folder (read-only f
 ├── mcp/                                  ← The one place real tool integrations live
 │   └── reva-data-server/                ← MCP server for SLCM, examination, and live data lookups
 │
-├── skills/                              ← Shared reference material loadable by any domain
-│   ├── addie/
-│   ├── obe-nba/
-│   ├── futures-intelligence/
-│   ├── stakeholder-governance/
-│   ├── curriculum-design/
-│   ├── content-development/
-│   ├── assessment-evaluation/
-│   ├── lab-project-experiential/
-│   ├── pedagogy-instructional/
-│   ├── enterprising-human-skills/
-│   ├── srujana-pathway/
-│   ├── portfolio-publication/
-│   ├── ai-personalisation/
-│   ├── certification-mooc/
-│   ├── admissions-analytics/
-│   ├── placement-intelligence/
-│   ├── examination-eval/
-│   ├── alumni-community/
-│   ├── extra-curricular/
-│   ├── student-mentoring-admin/
-│   ├── slcm-reporting/
-│   ├── iqac-quality/
-│   ├── consulting-engagement/
-│   ├── ip-patent/
-│   ├── product-development/
-│   ├── kaizen-continuous/
-│   ├── idp-strategic/
-│   ├── summit-benchmarking/
-│   ├── learning-analytics/
-│   ├── institutional-positioning/
-│   ├── faculty-development/
-│   ├── personal-knowledge-wiki/         ← LLM-wiki pattern: inbox processing, entity pages, wiki-linking
-│   ├── gtd-task-engine/                 ← Capture-clarify-organise-reflect-engage mechanics
-│   ├── gps-goal-steering/               ← Goal-Plan-Sankalpa hierarchy and traceability
-│   └── output-formats/
+├── .agents/                              ← Workspace customizations
+│   └── skills/                           ← Shared reference material loadable by any domain
+│       ├── addie/
+│       ├── obe-nba/
+│       ├── futures-intelligence/
+│       ├── stakeholder-governance/
+│       ├── curriculum-design/
+│       ├── content-development/
+│       ├── assessment-evaluation/
+│       ├── lab-project-experiential/
+│       ├── pedagogy-instructional/
+│       ├── enterprising-human-skills/
+│       ├── srujana-pathway/
+│       ├── portfolio-publication/
+│       ├── ai-personalisation/
+│       ├── certification-mooc/
+│       ├── admissions-analytics/
+│       ├── placement-intelligence/
+│       ├── examination-eval/
+│       ├── alumni-community/
+│       ├── extra-curricular/
+│       ├── student-mentoring-admin/
+│       ├── slcm-reporting/
+│       ├── iqac-quality/
+│       ├── consulting-engagement/
+│       ├── ip-patent/
+│       ├── product-development/
+│       ├── kaizen-continuous/
+│       ├── idp-strategic/
+│       ├── summit-benchmarking/
+│       ├── learning-analytics/
+│       ├── institutional-positioning/
+│       ├── faculty-development/
+│       ├── personal-knowledge-wiki/         ← LLM-wiki pattern: inbox processing, entity pages, wiki-linking
+│       ├── gtd-task-engine/                 ← Capture-clarify-organise-reflect-engage mechanics
+│       ├── gps-goal-steering/               ← Goal-Plan-Sankalpa hierarchy and traceability
+│       └── output-formats/
 │
 ├── validators/
 │   ├── obe-check.py
@@ -749,7 +750,7 @@ Specialist AI collaboration partners. Each agent works alongside humans — gene
 
 ## Skills Registry (Summary)
 
-Full skill specifications live in `skills/<skill-name>/SKILL.md`. This table maps skills to their primary domain and purpose.
+Full skill specifications live in `.agents/skills/<skill-name>/SKILL.md`. This table maps skills to their primary domain and purpose.
 
 ### Personal Productivity Skills
 `personal-knowledge-wiki` (inbox processing, entity-page generation, wiki-linking, sidecar notes), `gtd-task-engine` (capture-clarify-organise-reflect-engage), `gps-goal-steering` (Sankalpa-Goal-Plan hierarchy and traceability), `monthly-performance-reflector`, `appraisal-evidence-compiler`, `wellbeing-balance-checker`

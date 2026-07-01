@@ -44,7 +44,7 @@
 | `CONTRIBUTING.md` | Implemented | Contributor mechanics — complete and current |
 | `specification/` folder itself | Implemented | Exists; holds this file, `BACKLOG.md`, and per-change proposals |
 | Token routing layer | Implemented | Root `AGENTS.md`, domain routers, Copilot instructions, and Gemini shim minimise context loading across IDEs |
-| `skills/` (shared reference material) | Not started | No skill folders exist on disk yet |
+| `.agents/skills/` (shared reference material) | Implemented | Workspace customizations folder containing shared reference and tool configurations |
 | `validators/` | Not started | No validator scripts exist on disk yet |
 | `srujana-memory/` template set | Not started | Depends on `onboarding` and `personal-productivity` domains existing |
 | `reva-information/` seed content | Not started | Owned by REVA IT, not by this repository's build cycle |
