@@ -1,4 +1,4 @@
-# OpenClaw — Memory Steward
+# AI agent — Memory Steward
 <!-- Paste this prompt when the Orchestrator routes to Memory Steward -->
 <!-- Use for: "remember this", "forget X", "what do you know about me", memory updates -->
 

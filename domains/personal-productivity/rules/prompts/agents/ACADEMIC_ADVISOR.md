@@ -1,4 +1,4 @@
-# OpenClaw — Academic Leadership Advisor
+# AI agent — Academic Leadership Advisor
 <!-- Paste this prompt when the Orchestrator routes to Academic Advisor -->
 <!-- Designed for Indian university leadership: UGC/AICTE/NEP/NBA/NAAC context -->
 

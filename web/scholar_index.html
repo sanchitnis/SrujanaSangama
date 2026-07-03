@@ -401,6 +401,234 @@
             font-size: 13.5px;
             display: none;
         }
+
+        /* Kanban Board styles */
+        .kanban-controls {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .kanban-control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .kanban-control-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .kanban-select {
+            background: #1f2024;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            cursor: pointer;
+        }
+        .kanban-select:focus {
+            border-color: var(--accent);
+        }
+        .kanban-search-input {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            width: 180px;
+            outline: none;
+        }
+        .kanban-search-input:focus {
+            border-color: var(--accent);
+        }
+        .kanban-board {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            align-items: flex-start;
+        }
+        .kanban-column {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            width: 245px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            padding: 14px;
+            box-sizing: border-box;
+            backdrop-filter: blur(4px);
+        }
+        .kanban-column h3 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e5e7eb;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+        .kanban-column-count {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 2px 6px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .kanban-column-tasks {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .kanban-card {
+            background: rgba(31, 32, 36, 0.8);
+            border: 1px solid rgba(247, 163, 91, 0.15);
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .kanban-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(247, 163, 91, 0.4);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .kanban-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+            gap: 4px;
+        }
+        .kanban-card-id {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+        .kanban-card-project-badge {
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            color: #f7a35b;
+            background: rgba(247, 163, 91, 0.08);
+            border: 1px solid rgba(247, 163, 91, 0.15);
+            padding: 1px 6px;
+            border-radius: 4px;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .kanban-card-title {
+            font-size: 12.5px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .kanban-card-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .kanban-card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            font-size: 10.5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 8px;
+            margin-top: 4px;
+        }
+        .kanban-card-assignee {
+            color: #2dd4bf;
+            font-weight: 500;
+        }
+        .kanban-card-date {
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .priority-badge-p1 {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .priority-badge-p2 {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .priority-badge-p3 {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .kanban-card-tag {
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+        .kanban-card-cli-box {
+            display: none;
+            background: #030712;
+            border: 1px solid rgba(247, 163, 91, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            margin-top: 8px;
+            word-break: break-all;
+            position: relative;
+        }
+        .kanban-card.expanded .kanban-card-cli-box {
+            display: block;
+        }
+        .kanban-card.expanded .kanban-card-desc {
+            display: block;
+            -webkit-line-clamp: unset;
+        }
     </style>
 </head>
 <body>
@@ -483,6 +711,7 @@
                 <button class="tab-btn active" onclick="switchTab('tab-milestones')">📅 Research Milestones</button>
                 <button class="tab-btn" onclick="switchTab('tab-pipeline')">📝 Submissions Pipeline</button>
                 <button class="tab-btn" onclick="switchTab('tab-daily')">🕒 Weekly Advisory Log</button>
+                <button class="tab-btn" onclick="switchTab('tab-kanban')">📋 Kanban Task Board</button>
             </div>
 
             <div id="tab-milestones" class="tab-content active">
@@ -495,6 +724,26 @@
 
             <div id="tab-daily" class="tab-content">
                 <div id="daily-renderer">Loading advisory logs...</div>
+            </div>
+
+            <div id="tab-kanban" class="tab-content">
+                <div class="kanban-controls">
+                    <div class="kanban-control-group">
+                        <label for="project-filter">Project:</label>
+                        <select id="project-filter" class="kanban-select" onchange="filterKanban()"></select>
+                    </div>
+                    <div class="kanban-control-group">
+                        <label for="assignee-filter">Assignee:</label>
+                        <select id="assignee-filter" class="kanban-select" onchange="filterKanban()"></select>
+                    </div>
+                    <div class="kanban-control-group">
+                        <label for="kanban-search">Search:</label>
+                        <input type="text" id="kanban-search" class="kanban-search-input" oninput="filterKanban()" placeholder="Search tasks...">
+                    </div>
+                </div>
+                <div id="kanban-board-container" class="kanban-board">
+                    <!-- Columns will be rendered dynamically: Backlog, To Do, In Progress, In Review, Done -->
+                </div>
             </div>
         </div>
     </div>
@@ -648,8 +897,193 @@
             document.getElementById('pipeline-renderer').innerHTML = renderMarkdown(data.personal.pipeline);
             document.getElementById('daily-renderer').innerHTML = renderMarkdown(data.personal.daily_log);
             
+            // 6. Render Kanban Board
+            initKanban(data.personal.tasks || []);
+            
             // Hide warning if load succeeds
             document.getElementById('file-picker-warning').style.display = 'none';
+        }
+
+        let allKanbanTasks = [];
+
+        function initKanban(tasks) {
+            allKanbanTasks = tasks;
+            
+            const projSelect = document.getElementById('project-filter');
+            const assSelect = document.getElementById('assignee-filter');
+            
+            if (!projSelect || !assSelect) return;
+            
+            const projects = new Set(["all"]);
+            const assignees = new Set(["all", "unassigned"]);
+            
+            tasks.forEach(t => {
+                if (t.project) projects.add(t.project);
+                if (t.assignee) {
+                    assignees.add(t.assignee);
+                }
+            });
+            
+            projSelect.innerHTML = '';
+            projects.forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = p;
+                opt.textContent = p === "all" ? "All Projects" : p;
+                projSelect.appendChild(opt);
+            });
+            
+            assSelect.innerHTML = '';
+            assignees.forEach(a => {
+                const opt = document.createElement('option');
+                opt.value = a;
+                opt.textContent = a === "all" ? "All Assignees" : (a === "unassigned" ? "Unassigned" : a);
+                assSelect.appendChild(opt);
+            });
+            
+            renderKanbanBoard(allKanbanTasks);
+        }
+
+        function filterKanban() {
+            const projVal = document.getElementById('project-filter').value;
+            const assVal = document.getElementById('assignee-filter').value;
+            const searchVal = document.getElementById('kanban-search').value.toLowerCase();
+            
+            const filtered = allKanbanTasks.filter(t => {
+                const matchProj = (projVal === "all") || (t.project === projVal);
+                
+                let matchAss = false;
+                if (assVal === "all") {
+                    matchAss = true;
+                } else if (assVal === "unassigned") {
+                    matchAss = !t.assignee;
+                } else {
+                    matchAss = (t.assignee === assVal);
+                }
+                
+                const matchSearch = !searchVal || 
+                                    t.task.toLowerCase().includes(searchVal) || 
+                                    (t.description && t.description.toLowerCase().includes(searchVal)) ||
+                                    t.id.toLowerCase().includes(searchVal);
+                                    
+                return matchProj && matchAss && matchSearch;
+            });
+            
+            renderKanbanBoard(filtered);
+        }
+
+        function renderKanbanBoard(tasks) {
+            const container = document.getElementById('kanban-board-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            const cols = ["Backlog", "To Do", "In Progress", "In Review", "Done"];
+            const colTasks = {
+                "Backlog": [],
+                "To Do": [],
+                "In Progress": [],
+                "In Review": [],
+                "Done": []
+            };
+            
+            tasks.forEach(t => {
+                let status = t.status || "To Do";
+                // Normalise status
+                if (!colTasks[status]) {
+                    if (status.toLowerCase().includes("progress")) status = "In Progress";
+                    else if (status.toLowerCase().includes("review")) status = "In Review";
+                    else if (status.toLowerCase().includes("backlog")) status = "Backlog";
+                    else if (status.toLowerCase().includes("done")) status = "Done";
+                    else status = "To Do";
+                }
+                colTasks[status].push(t);
+            });
+            
+            cols.forEach(col => {
+                const colDiv = document.createElement('div');
+                colDiv.className = 'kanban-column';
+                
+                const list = colTasks[col];
+                colDiv.innerHTML = `
+                    <h3>
+                        <span>${col}</span>
+                        <span class="kanban-column-count">${list.length}</span>
+                    </h3>
+                    <div class="kanban-column-tasks" id="col-${col.replace(/\s+/g, '-')}"></div>
+                `;
+                
+                container.appendChild(colDiv);
+                
+                const tasksContainer = colDiv.querySelector('.kanban-column-tasks');
+                
+                if (list.length === 0) {
+                    tasksContainer.innerHTML = `<div style="color:var(--text-muted); font-size:11px; text-align:center; padding:20px 0; border: 1px dashed rgba(255,255,255,0.03); border-radius:8px;">No tasks</div>`;
+                } else {
+                    list.forEach(t => {
+                        const card = document.createElement('div');
+                        card.className = 'kanban-card';
+                        
+                        let prioClass = 'priority-badge-p2';
+                        if (t.priority && t.priority.includes("P1")) prioClass = 'priority-badge-p1';
+                        if (t.priority && t.priority.includes("P3")) prioClass = 'priority-badge-p3';
+                        
+                        const tagHtml = t.tag ? `<span class="kanban-card-tag">${t.tag}</span>` : '';
+                        const estHtml = t.est ? `<span style="color: #a1a1aa;">⏱️ ${t.est}</span>` : '';
+                        const dateHtml = t.scheduled_date ? `<span class="kanban-card-date">📅 ${t.scheduled_date}</span>` : '';
+                        const assHtml = t.assignee ? `<span class="kanban-card-assignee">👤 ${t.assignee}</span>` : '';
+                        
+                        let projSlug = "personal";
+                        if (t.source_file && t.source_file.startsWith("collaborations/")) {
+                            const parts = t.source_file.split("/");
+                            if (parts.length > 1) projSlug = parts[1];
+                        }
+                        
+                        const cliCommand = `python tools/task_manager.py update ${t.id} --status`;
+                        
+                        card.innerHTML = `
+                            <div class="kanban-card-header">
+                                <span class="kanban-card-id">${t.id}</span>
+                                <span class="kanban-card-project-badge" title="${t.project_name || t.project}">${t.project_name || t.project}</span>
+                            </div>
+                            <div class="kanban-card-title">${t.task}</div>
+                            <div class="kanban-card-desc" title="${t.description || ''}">${t.description || 'No description provided.'}</div>
+                            <div class="kanban-card-meta">
+                                <span class="${prioClass}">${t.priority || '🟡 P2'}</span>
+                                ${tagHtml}
+                                ${estHtml}
+                                ${dateHtml}
+                                ${assHtml}
+                            </div>
+                            <div class="kanban-card-cli-box" onclick="event.stopPropagation()">
+                                <div style="font-weight:700; color:#f7a35b; margin-bottom:4px; font-size:9px;">CLI COMMANDS (CLICK TO COPY):</div>
+                                <div style="margin-bottom:6px; cursor:pointer;" onclick="copyText(this, '${cliCommand} \\'In Progress\\'')">
+                                    <span style="color:#a1a1aa;">Progress:</span> <code>${cliCommand} "In Progress"</code>
+                                </div>
+                                <div style="cursor:pointer;" onclick="copyText(this, '${cliCommand} \\'Done\\'')">
+                                    <span style="color:#a1a1aa;">Done:</span> <code>${cliCommand} "Done"</code>
+                                </div>
+                            </div>
+                        `;
+                        
+                        card.onclick = () => {
+                            card.classList.toggle('expanded');
+                        };
+                        
+                        tasksContainer.appendChild(card);
+                    });
+                }
+            });
+        }
+
+        function copyText(el, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHtml = el.innerHTML;
+                el.innerHTML = `<span style="color:var(--success);">✓ Copied!</span>`;
+                setTimeout(() => {
+                    el.innerHTML = originalHtml;
+                }, 1000);
+            }).catch(err => {
+                console.error("Failed to copy text", err);
+            });
         }
 
         function displayCommands(cmds) {

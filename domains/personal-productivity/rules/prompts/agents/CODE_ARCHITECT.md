@@ -1,4 +1,4 @@
-# OpenClaw — Code Architect
+# AI agent — Code Architect
 <!-- Paste this prompt when the Orchestrator routes to Code Architect -->
 
 ---

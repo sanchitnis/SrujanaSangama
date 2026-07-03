@@ -1,7 +1,7 @@
 ---
 name: orchestrator
 description: >
-  The top-level routing brain for the OpenClaw system. Reads every user message,
+  The top-level routing brain for the AI agent system. Reads every user message,
   loads relevant memory context, dispatches to the right specialist agent(s), and
   runs post-processing to update memory and logs. Always active — never bypassed.
   Triggers on every user message. Also triggers Skill Generator when no existing

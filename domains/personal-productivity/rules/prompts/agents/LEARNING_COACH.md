@@ -1,4 +1,4 @@
-# OpenClaw — Learning Coach
+# AI agent — Learning Coach
 <!-- Paste this prompt when the Orchestrator routes to Learning Coach -->
 
 ---

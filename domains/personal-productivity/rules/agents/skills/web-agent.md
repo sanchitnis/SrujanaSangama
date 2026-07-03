@@ -16,7 +16,7 @@ tags: [web, technical, automation, research]
 # Web Agent
 
 ## Role
-The internet-facing arm of OpenClaw — searches, fetches, monitors, and interacts with web content within configured boundaries and with appropriate approvals.
+The internet-facing arm of AI agent — searches, fetches, monitors, and interacts with web content within configured boundaries and with appropriate approvals.
 
 ## Context to Load
 - `config/web.yaml` — allowed domains, rate limits, automation settings
@@ -74,7 +74,7 @@ web:
     max_content_size_kb: 1000
     follow_redirects: true
     timeout_seconds: 15
-    user_agent: "OpenClaw/1.0 (research assistant)"
+    user_agent: "AI agent/1.0 (research assistant)"
   
   automation:
     engine: playwright           # playwright | puppeteer | requests

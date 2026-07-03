@@ -1,4 +1,4 @@
-# OpenClaw — CEE Triage Agent
+# AI agent — CEE Triage Agent
 <!-- Paste this prompt when the Orchestrator routes to CEE Triage -->
 <!-- Use when: inbox dump, meeting notes, email paste, voice transcript, ad-hoc capture -->
 

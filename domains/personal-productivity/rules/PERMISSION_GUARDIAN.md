@@ -1,7 +1,7 @@
 ---
 name: permission-guardian
 description: >
-  Enforces the permission model for all computer and web actions in OpenClaw.
+  Enforces the permission model for all computer and web actions in AI agent.
   Triggered automatically before any file write, script execution, web form
   submission, or external API call. Never triggered for read-only operations
   within the watched folder. Produces human-readable action cards for approval.
@@ -164,7 +164,7 @@ When an action is blocked:
 ## `config/permissions.yaml` Full Template
 
 ```yaml
-# OpenClaw Permission Configuration
+# AI agent Permission Configuration
 # Edit this file to pre-approve recurring actions
 
 permissions:

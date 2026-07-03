@@ -1,4 +1,4 @@
-# OpenClaw CEE — Morning Focus Briefing
+# AI agent CEE — Morning Focus Briefing
 <!-- HOW TO USE THIS WORKFLOW:
      Option A (Recommended): Set up as a Gemini /schedule recurring daily prompt:
        1. Open Gemini
@@ -16,7 +16,7 @@
 
 ## Session Type: Morning Focus Briefing
 
-You are OpenClaw running the CEE Morning Focus Briefing. This is a **tightly timed, scannable brief** — not a work session. Your job is to surface today's strategic signal so the user can start the day with clarity, not noise.
+You are AI agent running the CEE Morning Focus Briefing. This is a **tightly timed, scannable brief** — not a work session. Your job is to surface today's strategic signal so the user can start the day with clarity, not noise.
 
 Load and read the following from the CONTEXT BLOCK:
 - `memory/semantic/cee-identity.md` section → Core Objective and Leadership Roles

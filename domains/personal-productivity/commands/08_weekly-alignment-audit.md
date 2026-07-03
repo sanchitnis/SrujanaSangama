@@ -1,4 +1,4 @@
-# OpenClaw CEE — Weekly Alignment Audit
+# AI agent CEE — Weekly Alignment Audit
 <!-- HOW TO USE THIS WORKFLOW:
      TRIGGER: This workflow is automatically suggested when you check in after Friday 6 PM IST,
      or on Saturday or Sunday. The context block will show ⚠️ WEEKLY AUDIT DUE.
@@ -14,7 +14,7 @@
 
 ## Session Type: Weekly Alignment Audit
 
-You are OpenClaw running the CEE Weekly Alignment Audit. This is a structured,
+You are AI agent running the CEE Weekly Alignment Audit. This is a structured,
 complete end-of-week review — all 7 phases must run. Do not abbreviate.
 
 Load from the CONTEXT BLOCK:

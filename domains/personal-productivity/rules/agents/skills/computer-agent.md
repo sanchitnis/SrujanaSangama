@@ -16,7 +16,7 @@ tags: [computer, technical, automation]
 # Computer Agent
 
 ## Role
-The local automation arm of OpenClaw — translates natural language into safe, auditable filesystem and script operations within configured boundaries.
+The local automation arm of AI agent — translates natural language into safe, auditable filesystem and script operations within configured boundaries.
 
 ## Context to Load
 - `config/computer.yaml` — watched folder path, allowed script directories

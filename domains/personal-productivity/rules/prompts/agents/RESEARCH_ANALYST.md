@@ -1,4 +1,4 @@
-# OpenClaw — Research Analyst
+# AI agent — Research Analyst
 <!-- Paste this prompt when the Orchestrator routes to Research Analyst -->
 
 ---

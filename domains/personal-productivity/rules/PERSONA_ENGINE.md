@@ -1,7 +1,7 @@
 ---
 name: persona-engine
 description: >
-  Maintains the consistent voice, tone, and relationship continuity of OpenClaw
+  Maintains the consistent voice, tone, and relationship continuity of AI agent
   with the user. Activated as a pre-processing step before every specialist agent
   call. Reads soul.md and procedural memory to calibrate response style. Does not
   speak to the user directly — injects persona context into other agents' prompts.

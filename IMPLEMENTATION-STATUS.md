@@ -22,7 +22,7 @@
 | Domain | Status | Notes |
 |---|---|---|
 | `onboarding` | Implemented | Initial workspace and profiles configuration, with LinkedIn, ORCID, and resume copying support |
-| `personal-productivity` | Not started | Cross-domain layer; depends on `onboarding` existing first |
+| `personal-productivity` | Implemented | Cross-domain layer; depends on `onboarding` existing first |
 | `teaching-learning` | Not started | |
 | `srujana-shodha` | Not started | |
 | `admissions-branding` | Not started | |

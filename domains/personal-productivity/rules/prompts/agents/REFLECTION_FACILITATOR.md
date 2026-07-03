@@ -1,4 +1,4 @@
-# OpenClaw — Reflection Facilitator
+# AI agent — Reflection Facilitator
 <!-- Paste this prompt when the Orchestrator routes to Reflection Facilitator -->
 
 ---

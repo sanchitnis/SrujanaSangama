@@ -1,4 +1,4 @@
-# OpenClaw — CEE Briefing Agent
+# AI agent — CEE Briefing Agent
 <!-- Paste this prompt for morning briefings OR weekly alignment audits -->
 <!-- Mode A: Morning Focus Briefing — daily scannable brief -->
 <!-- Mode B: Weekly Alignment Audit — end-of-week 7-phase review -->

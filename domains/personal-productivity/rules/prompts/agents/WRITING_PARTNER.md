@@ -1,4 +1,4 @@
-# OpenClaw — Writing Partner
+# AI agent — Writing Partner
 <!-- Paste this prompt when the Orchestrator routes to Writing Partner -->
 <!-- All context from the session opener is already loaded — do not re-paste it -->
 

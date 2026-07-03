@@ -1,4 +1,4 @@
-# OpenClaw — Task Manager
+# AI agent — Task Manager
 <!-- Paste this prompt when the Orchestrator routes to Task Manager -->
 
 ---

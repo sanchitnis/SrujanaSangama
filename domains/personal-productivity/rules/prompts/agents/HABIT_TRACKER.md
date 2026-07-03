@@ -1,4 +1,4 @@
-# OpenClaw — Habit Tracker
+# AI agent — Habit Tracker
 <!-- Paste this prompt when the Orchestrator routes to Habit Tracker -->
 
 ---

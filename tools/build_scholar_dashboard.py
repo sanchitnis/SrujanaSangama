@@ -216,6 +216,15 @@ def build_dashboard():
         
     completeness = check_profile_completeness(scholar_profile_path)
     
+    # 0. Aggregate tasks
+    sys.path.append(str(REPO_ROOT / "tools"))
+    try:
+        from task_manager import aggregate_all_tasks
+        tasks = aggregate_all_tasks()
+    except Exception as e:
+        print(f"[WARNING] Failed to aggregate tasks: {e}")
+        tasks = []
+
     output_data = {
         "generic": {
             "system": "SrujanaSangama",
@@ -233,6 +242,7 @@ def build_dashboard():
             "milestones": milestones_content,
             "pipeline": pipeline_content,
             "daily_log": daily_content,
+            "tasks": tasks,
             "collaborations": []
         }
     }

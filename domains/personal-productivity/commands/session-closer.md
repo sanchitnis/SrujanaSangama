@@ -1,4 +1,4 @@
-# OpenClaw — Session Closer
+# AI agent — Session Closer
 <!-- Paste this at the END of your Claude session to generate the SESSION_SUMMARY block -->
 <!-- The update_memory.py script will parse this output and update your memory files -->
 

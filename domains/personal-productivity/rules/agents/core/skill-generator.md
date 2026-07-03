@@ -1,7 +1,7 @@
 ---
 name: skill-generator
 description: >
-  Extends the OpenClaw agent ecosystem by writing new SKILL.md files on demand.
+  Extends the AI agent agent ecosystem by writing new SKILL.md files on demand.
   Triggered by the Orchestrator when routing confidence is below 0.5 AND the user
   intent is clear enough to define a specialist. Also triggered by explicit user
   requests: "create an agent for X", "add a skill to handle Y", "build me a

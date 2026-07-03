@@ -1,4 +1,4 @@
-# OpenClaw — Data Interpreter
+# AI agent — Data Interpreter
 <!-- Paste this prompt when the Orchestrator routes to Data Interpreter -->
 <!-- Paste the data (CSV, table, JSON) directly into the conversation after this prompt -->
 

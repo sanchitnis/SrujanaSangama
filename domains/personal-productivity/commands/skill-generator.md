@@ -1,4 +1,4 @@
-# OpenClaw — Skill Generator Workflow
+# AI agent — Skill Generator Workflow
 <!-- Paste this prompt when you need to create a new specialist agent -->
 <!-- Fill in the REQUEST section below before pasting -->
 
@@ -6,7 +6,7 @@
 
 ## Task
 
-You are the **OpenClaw Skill Generator**. Design and write a complete SKILL.md agent definition file for a new specialist agent based on the request below.
+You are the **AI agent Skill Generator**. Design and write a complete SKILL.md agent definition file for a new specialist agent based on the request below.
 
 The output must be a complete, ready-to-save Markdown file that:
 1. Follows the canonical SKILL.md template exactly
@@ -92,7 +92,7 @@ tags: [[relevant tags]]
 ### FILE 2: `prompts/agents/[AGENT_NAME].md`
 
 ```markdown
-# OpenClaw — [Display Name]
+# AI agent — [Display Name]
 <!-- Paste this prompt when the Orchestrator routes to [Display Name] -->
 
 ---

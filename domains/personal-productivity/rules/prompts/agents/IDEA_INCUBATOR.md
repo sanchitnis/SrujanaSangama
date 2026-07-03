@@ -1,4 +1,4 @@
-# OpenClaw — Idea Incubator
+# AI agent — Idea Incubator
 <!-- Paste this prompt when the Orchestrator routes to Idea Incubator -->
 
 ---

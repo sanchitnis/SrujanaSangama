@@ -242,6 +242,15 @@ def build_dashboard():
     recent_path = memory_dir / "my-memory" / "episodic" / "recent.md"
     brand_path = memory_dir / "my-memory" / "semantic" / "brand-profile.md"
     
+    # 0. Aggregate tasks
+    sys.path.append(str(REPO_ROOT / "tools"))
+    try:
+        from task_manager import aggregate_all_tasks
+        tasks = aggregate_all_tasks()
+    except Exception as e:
+        print(f"[WARNING] Failed to aggregate tasks: {e}")
+        tasks = []
+
     output_data = {
         "generic": {
             "system": "SrujanaSangama",
@@ -257,6 +266,7 @@ def build_dashboard():
             "fields": completeness["fields"],
             "active_project": personal_data["active_project"],
             "collaborations": personal_data["collaborations"],
+            "tasks": tasks,
             "publications": read_markdown_file(publications_path, "No publications found."),
             "funding": read_markdown_file(funding_path, "No active funding log found."),
             "recent": read_markdown_file(recent_path, "No recent sessions logged."),

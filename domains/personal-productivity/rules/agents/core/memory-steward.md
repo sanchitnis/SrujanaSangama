@@ -1,7 +1,7 @@
 ---
 name: memory-steward
 description: >
-  Reads, writes, and curates all persistent memory files for the OpenClaw user.
+  Reads, writes, and curates all persistent memory files for the AI agent user.
   Triggers when user says "remember", "forget", "note that", "I always", "you know that",
   "what do you know about me", or after every conversation turn for post-processing.
   Also triggers when Orchestrator detects new learnable facts in any interaction.
