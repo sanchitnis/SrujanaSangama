@@ -66,7 +66,7 @@ Once onboarded, start any session by asking the AI agent to assist you within a 
 
 * **onboarding**
   - `/onboard`: Sets up user profile, creates local `srujana-memory` structures, and performs a resume audit.
-* **personal-productivity**
+* **personal-productivity** (Execution Engine & Operating System)
   - `/morning-briefing`: Daily agenda and task alignment.
   - `/weekly-review` / `/weekly-alignment-audit`: End-of-week task auditing.
   - `/deep-research`: Conducts structured literature and web searches.
@@ -88,8 +88,8 @@ Once onboarded, start any session by asking the AI agent to assist you within a 
   - `/attainment-check`: Evaluates course/program outcome attainment.
 * **innovator**
   - `/patent-draft`: Full multi-step workflow for patentability analysis and patent application drafting.
-* **kaizen-excellence**
-  - `/gps-plan`: Drafts strategic improvement goals.
+* **kaizen-excellence** (Reflective Growth & Process Improvement)
+  - `/gps-plan`: Drafts strategic improvement goals for personal growth and process optimization.
 * **admissions-branding**
   - Assists with institutional branding and marketing materials.
 * **placement-tpc**
@@ -101,6 +101,39 @@ Once onboarded, start any session by asking the AI agent to assist you within a 
 Simply ask the AI agent:
 * *"Under the `teaching-learning` domain, run `/question-paper-reviewer` on my draft paper"*
 * *"Use the `srujana-shodha` domain and run `/funding-hunt` for a green energy project"*
+
+---
+
+## 4. Kanban Task Board & Backlog Processing
+
+SrujanaSangama includes an integrated, file-based Kanban task management system.
+
+### A. Markdown Tabular Tasks
+All tasks are stored in plain text Markdown tables inside your `srujana-memory` workspace:
+- **Personal Tasks**: `srujana-memory/my-memory/context/tasks.md`
+- **Project Tasks**: `srujana-memory/collaborations/<project_slug>/tasks.md`
+
+Format:
+`| Task ID | Task | Project | Assignee | Status | Priority | Scheduled Date | Est. | Tag | Description |`
+
+You can edit these files directly using Obsidian, VS Code, or Notepad to update task status or details manually.
+
+### B. Visual Kanban Dashboard
+To view your tasks visually:
+1. Open or reload your portal index file (`srujana-memory/my-memory/faculty_index.html` or `scholar_index.html`).
+2. Click the **📋 Kanban Task Board** tab at the bottom.
+3. Use the Project or Assignee filters, or search box to narrow down tasks.
+4. Click on any card to view detailed notes and copy-paste CLI commands for making updates.
+
+### C. Processing Raw Task Backlog (Emails, Meeting Minutes, Notes)
+If you have incoming raw notes, emails, or minutes from meetings:
+1. Create a text file or dump the documents inside the folder:
+   `srujana-memory/my-memory/context/backlog/`
+2. Ask your AI Agent:
+   ```text
+   Use the kanban-manager skill to process my task backlog.
+   ```
+3. The AI Agent will read the files, parse them to extract tasks, automatically add them to your `tasks.md` table, rebuild your dashboard, and move the processed raw documents to the `backlog/task-created/` subfolder.
 
 ---
 

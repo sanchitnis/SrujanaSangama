@@ -420,6 +420,50 @@ def add_task(project_slug, task_name, assignee=None, status="To Do", priority="ð
     rebuild_dashboards()
     return new_id
 
+# List backlog files
+def list_backlog_files():
+    mem_dir = locate_memory_dir()
+    backlog_dir = mem_dir / "my-memory" / "context" / "backlog"
+    if not backlog_dir.exists():
+        return []
+    
+    files = []
+    for item in backlog_dir.iterdir():
+        if item.is_file():
+            files.append(item.name)
+    return files
+
+# Archive backlog file to task-created subfolder
+def archive_backlog_file(filename):
+    mem_dir = locate_memory_dir()
+    src = mem_dir / "my-memory" / "context" / "backlog" / filename
+    dest_dir = mem_dir / "my-memory" / "context" / "backlog" / "task-created"
+    dest = dest_dir / filename
+    
+    if not src.exists():
+        print(f"[ERROR] Backlog file '{filename}' does not exist.")
+        return False
+        
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Resolve conflict if file already exists in archive
+    if dest.exists():
+        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        name_parts = filename.rsplit(".", 1)
+        if len(name_parts) == 2:
+            dest = dest_dir / f"{name_parts[0]}_{timestamp}.{name_parts[1]}"
+        else:
+            dest = dest_dir / f"{filename}_{timestamp}"
+            
+    try:
+        import shutil
+        shutil.move(str(src), str(dest))
+        print(f"[SUCCESS] Moved '{filename}' to backlog/task-created/.")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to move '{filename}': {e}")
+        return False
+
 # Command line parsing
 def main():
     import argparse
@@ -456,6 +500,13 @@ def main():
     # 4. Migrate
     migrate_p = subparsers.add_parser("migrate", help="Migrate old checklist tasks.md to tabular tasks.md")
     migrate_p.add_argument("file_path", help="Absolute path to target tasks.md file")
+    
+    # 5. List Backlog
+    subparsers.add_parser("list-backlog", help="List all pending files in the backlog folder")
+    
+    # 6. Archive Backlog
+    archive_p = subparsers.add_parser("archive-backlog", help="Move a backlog file to the task-created directory")
+    archive_p.add_argument("filename", help="Name of the file to archive")
     
     args = parser.parse_args()
     
@@ -510,6 +561,15 @@ def main():
             rebuild_dashboards()
         else:
             print(f"File {args.file_path} already contains tabular data or has no migration targets.")
+            
+    elif args.command == "list-backlog":
+        files = list_backlog_files()
+        print(json.dumps(files))
+        
+    elif args.command == "archive-backlog":
+        success = archive_backlog_file(args.filename)
+        if not success:
+            sys.exit(1)
             
     else:
         parser.print_help()

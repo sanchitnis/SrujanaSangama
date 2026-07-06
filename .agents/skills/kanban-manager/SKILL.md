@@ -44,6 +44,19 @@ If a task file is in checkbox list format, migrate it to the tabular format:
 python tools/task_manager.py migrate <absolute_path_to_tasks.md>
 ```
 
+### 5. Backlog Processing
+To discover pending raw task files (emails, meeting notes, etc.) placed by the user:
+```powershell
+python tools/task_manager.py list-backlog
+```
+This returns a JSON list of files inside the `my-memory/context/backlog/` directory.
+
+To move/archive a processed backlog file to the archive:
+```powershell
+python tools/task_manager.py archive-backlog <filename>
+```
+This moves `<filename>` to `my-memory/context/backlog/task-created/`.
+
 ## Agent Workflows
 
 ### Scenario A: User wants to add a task
@@ -55,3 +68,14 @@ python tools/task_manager.py migrate <absolute_path_to_tasks.md>
 - When the user says "Move task pers-001 to Done" or "Assign sdd-003 to Radhika":
 - Execute `tools/task_manager.py update <task_id> --status <status>` or `--assignee <assignee>`.
 - Rebuild dashboards (automatically handled by the script) and confirm the success status.
+
+### Scenario C: Processing the raw task backlog folder
+- If the user says "process backlog", "check backlog", or triggers a periodic review:
+  1. Call `python tools/task_manager.py list-backlog` to get any pending files.
+  2. If files are found:
+     - For each file, read its raw text content using the file viewing tool.
+     - Analyze the content (e.g., email text, meeting minutes) and extract individual task items.
+     - For each task, extract/infer: Task name, Project, Assignee, Status, Priority, Scheduled Date, Est., Tag, and Description.
+     - Add each task by executing `python tools/task_manager.py add --project <project> --task "<task>" ...`
+     - Once all tasks in a file are processed, call `python tools/task_manager.py archive-backlog <filename>` to archive the raw file.
+  3. Inform the user of the newly created tasks and their corresponding IDs.

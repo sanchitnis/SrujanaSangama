@@ -38,6 +38,10 @@ When a request is received, do not preload the entire repository. Read only what
 2. **Read the Domain Index**: Open `domains/<domain>/AGENTS.md` (or `domains/<domain>/README.md` if the former does not exist).
 3. **Load the Command**: If the user names or implies a slash command (e.g. `/onboard`, `/question-paper-reviewer`), read *only* the specific command file `domains/<domain>/commands/<command>.md`.
 4. **Locate Local Context**: Read memory files in `../srujana-memory/` and institutional references in `../reva-information/` as required for the concrete task.
+5. **Kanban & Backlog Task Management**:
+   - Task lists are stored in `../srujana-memory/my-memory/context/tasks.md` and `../srujana-memory/collaborations/<project_slug>/tasks.md` as Markdown tables.
+   - Always load and follow `.agents/skills/kanban-manager/SKILL.md` to parse, aggregate, add, or move tasks.
+   - Raw backlog notes placed by the user reside in `../srujana-memory/my-memory/context/backlog/`. Process them by reading and extracting tasks, running `tools/task_manager.py add` to insert them, and then moving processed files to the `../srujana-memory/my-memory/context/backlog/task-created/` folder using `tools/task_manager.py archive-backlog <filename>`.
 
 ---
 ### STOP: NO NEED TO READ FROM THIS POINT ONWARDS IF IN USAGE MODE.

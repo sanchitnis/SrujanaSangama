@@ -22,7 +22,7 @@
 | Domain | Status | Notes |
 |---|---|---|
 | `onboarding` | Implemented | Initial workspace and profiles configuration, with LinkedIn, ORCID, and resume copying support |
-| `personal-productivity` | Implemented | Cross-domain layer; depends on `onboarding` existing first |
+| `personal-productivity` | Implemented | Cross-domain layer; includes file-based Kanban task boards (tabular format), CLI task manager, automated task backlog processing, flattened rules/workflows, and 12 promoted global specialist skills |
 | `teaching-learning` | Not started | |
 | `srujana-shodha` | Not started | |
 | `admissions-branding` | Not started | |

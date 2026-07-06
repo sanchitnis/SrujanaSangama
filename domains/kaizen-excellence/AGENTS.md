@@ -21,7 +21,11 @@ Use this router only after the root `AGENTS.md` Usage Mode router selects
 
 - `PERSONAL_REFLECTION_RULES.md`
 
+## Domain Boundary vs Personal Productivity
+
+* **`kaizen-excellence`** governs **reflective growth, retrospectives, and continuous improvement** (personal habits, wellness check-ins, professional development planning, and course/school improvement retrospectives).
+* **`personal-productivity`** governs **execution mechanics** (daily task tracking in `tasks.md`, holding inboxes, and automated backlog processing). Use the task manager CLI inside `personal-productivity` for transactional tasks.
+
 ## Output Boundary
 
-Draft outputs for human reflection and decision. Write persistent task outputs
-to the user's `srujana-memory/`, not to this shared domain folder.
+Draft outputs for human reflection, development, and decisions. Save journaling, habits, and reflective logs to the user's `../srujana-memory/`, not to this shared domain folder.

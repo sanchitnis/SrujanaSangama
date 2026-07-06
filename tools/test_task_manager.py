@@ -137,5 +137,42 @@ Some other text below.
             self.assertEqual(tasks[2]["status"], "Done")
             self.assertEqual(tasks[2]["priority"], "🟡 P2")
 
+    def test_backlog_operations(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            # Mock locate_memory_dir to return this temp dir
+            original_locate = task_manager.locate_memory_dir
+            task_manager.locate_memory_dir = lambda: Path(tmpdir)
+            
+            try:
+                backlog_dir = Path(tmpdir) / "my-memory" / "context" / "backlog"
+                backlog_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Write mock files
+                (backlog_dir / "meeting-minutes.txt").write_text("Mock meeting minutes", encoding="utf-8")
+                (backlog_dir / "email.txt").write_text("Mock email task", encoding="utf-8")
+                
+                # Verify listing
+                files = task_manager.list_backlog_files()
+                self.assertEqual(len(files), 2)
+                self.assertIn("meeting-minutes.txt", files)
+                self.assertIn("email.txt", files)
+                
+                # Verify archiving
+                success = task_manager.archive_backlog_file("email.txt")
+                self.assertTrue(success)
+                
+                # Check file moved
+                self.assertFalse((backlog_dir / "email.txt").exists())
+                self.assertTrue((backlog_dir / "task-created" / "email.txt").exists())
+                
+                # Verify listing again (should only have 1 file)
+                files_after = task_manager.list_backlog_files()
+                self.assertEqual(len(files_after), 1)
+                self.assertIn("meeting-minutes.txt", files_after)
+                
+            finally:
+                # Restore original function
+                task_manager.locate_memory_dir = original_locate
+
 if __name__ == "__main__":
     unittest.main()

@@ -160,7 +160,7 @@ Suggested defence: Block 2h #deep-work slot tomorrow morning before 10 AM.
 | None of the above | No audit alert |
 
 When the audit alert is present, the CEE Briefing Agent MUST suggest at session open:
-*"It's end of week. Recommend running the Weekly Alignment Audit — paste `workflows/08_weekly-alignment-audit.md`."*
+*"It's end of week. Recommend running the Weekly Alignment Audit — paste `domains/personal-productivity/commands/weekly-alignment-audit.md`."*
 
 ---
 
@@ -168,15 +168,15 @@ When the audit alert is present, the CEE Briefing Agent MUST suggest at session 
 
 The Morning Briefing is designed to run as a **Gemini `/schedule` recurring daily prompt**.
 
-**Setup instructions (embed in `workflows/07_morning-briefing.md`):**
+**Setup instructions (embed in `domains/personal-productivity/commands/morning-briefing.md`):**
 1. In Gemini, type `/schedule`
 2. Set frequency: **Daily**
 3. Set time: **6:00 AM IST**
-4. Paste the contents of `workflows/07_morning-briefing.md` as the scheduled prompt body
+4. Paste the contents of `domains/personal-productivity/commands/morning-briefing.md` as the scheduled prompt body
 5. Gemini will fire this prompt daily, generating the Morning Briefing with the context block
 
 **Fallback:** If `/schedule` is not set up, run manually:
-`python scripts/cee_context_builder.py --cee` → paste output + `workflows/07_morning-briefing.md` into Claude.
+`python scripts/cee_context_builder.py --cee` → paste output + `domains/personal-productivity/commands/morning-briefing.md` into Claude.
 
 ---
 

@@ -14,27 +14,43 @@ Use this router only after the root `AGENTS.md` Usage Mode router selects
    archives, selected project before all projects, selected task list before all
    memory.
 
-## Local Commands
+## Core Agents
 
-- `07_morning-briefing`
-- `08_weekly-alignment-audit`
-- `deep-research`
-- `project-kickoff`
-- `session-closer`
-- `skill-generator`
-- `weekly-review`
+All core agent system prompts are consolidated under `agents/`:
+- `orchestrator.md`
+- `memory-steward.md`
+- `cee-briefing-agent.md`
+- `cee-triage-agent.md`
+
+## Local Workflows
+
+- `workflows/deep-research.md`
+- `workflows/project-kickoff.md`
+- `workflows/weekly-review.md`
 
 ## Local Rules
 
-- `CEE_ENGINE.md`
-- `ORCHESTRATOR.md`
-- `PERMISSION_GUARDIAN.md`
-- `PERSONA_ENGINE.md`
+- `rules/CEE_ENGINE.md`
+- `rules/PERMISSION_GUARDIAN.md`
+- `rules/PERSONA_ENGINE.md`
 
-The nested `rules/agents/` and `rules/prompts/` folders should be read only when
-the selected command names a specific agent or prompt.
+## Global Specialist Skills
+
+Generalist specialist agents are promoted to global workspace skills under `.agents/skills/` so they can be reused across all domains:
+- `.agents/skills/writing-partner/`
+- `.agents/skills/research-analyst/`
+- `.agents/skills/web-agent/`
+- `.agents/skills/code-architect/`
+- `.agents/skills/computer-agent/`
+- `.agents/skills/data-interpreter/`
+- `.agents/skills/learning-coach/`
+- `.agents/skills/reflection-facilitator/`
+- `.agents/skills/habit-tracker/`
+- `.agents/skills/idea-incubator/`
+- `.agents/skills/academic-leadership-advisor/`
+- `.agents/skills/skill-generator/`
 
 ## Output Boundary
 
-Write personal planning, task, wiki, and reflection outputs to the user's
-`srujana-memory/`, not to this shared domain folder.
+Write personal planning, task, wiki, and reflection outputs to the user's relative path `../srujana-memory/`, not to this shared domain folder.
+
