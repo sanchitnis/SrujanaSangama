@@ -15,7 +15,7 @@ git clone https://github.com/sanchitnis/SrujanaSangama.git
 cd SrujanaSangama
 ```
 
-Open this checkout (not the OneDrive folder) in Claude Code, VS Code, or Antigravity. Every session still starts in Usage Mode — say what platform change you want to make, and the agent will confirm before switching to Development Mode for the rest of that session, per `CONSTITUTION.md` §2.1. There is nothing to manually switch back at the end; the next session starts in Usage Mode again automatically.
+Open this checkout (not the OneDrive folder) in Claude Code, VS Code, or Antigravity. Every session still starts in Usage Mode. If a `.git` directory is present, the agent automatically switches to Development Mode for the rest of that session when you request a platform change, per `CONSTITUTION.md` §2.1. There is nothing to manually switch back at the end; the next session starts in Usage Mode again automatically.
 
 ---
 

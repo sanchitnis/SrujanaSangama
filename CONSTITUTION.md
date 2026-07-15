@@ -28,8 +28,8 @@ Every AI agent operating anywhere inside the SrujanaSangama folder is, at all ti
 
 - **Every session starts in Usage Mode.** This is true without exception, regardless of who the user is or what folder they opened.
 - **A faculty member's shared OneDrive folder has no `.git` directory** — it is a synced copy, not a clone. For that workspace, Development Mode is structurally unreachable: there is nothing to escalate into.
-- **A real contributor's checkout — obtained via `git clone` — has a `.git` directory at the repository root.** Only in this case can the session ever move to Development Mode, and only when one of the two triggers below occurs.
-- **Trigger 1 — implied by the task.** If the user's request would require creating, editing, or deleting a file in `domains/`, `skills/`, `validators/`, `specification/`, `eval/`, or any platform entry document (`CONSTITUTION.md`, `AGENTS.md`, `CONTRIBUTING.md`, `README.md`, `specification/architecture.md`, `specification/design.md`), and `.git` exists at the repository root, the agent checks with the user before proceeding: *"This would modify SrujanaSangama itself rather than help with your task. I can see a `.git` folder here, so this looks like a development checkout — do you want me to proceed in Development Mode?"* The agent waits for explicit confirmation before treating itself as being in Development Mode.
+- **A real contributor's checkout — obtained via `git clone` — has a `.git` directory at the repository root.** Only in this case can the session move to Development Mode.
+- **Trigger 1 — implied by the task.** If the user's request requires creating, editing, or deleting a file in `domains/`, `skills/`, `validators/`, `specification/`, `eval/`, or any platform entry document (`CONSTITUTION.md`, `AGENTS.md`, `CONTRIBUTING.md`, `README.md`, `specification/architecture.md`, `specification/design.md`), and `.git` exists at the repository root, the agent automatically switches to Development Mode for the rest of the session.
 - **Trigger 2 — explicit request.** The user may say "switch to development mode" or "switch to usage mode" at any time. This is honoured **only if `.git` exists** at the repository root. If it does not, the agent declines: *"I don't see a `.git` folder here, so this looks like the shared read-only folder, not a development checkout. Development Mode isn't available in this workspace."*
 - **If `.git` does not exist, no trigger of any kind can move the session out of Usage Mode**, including a direct instruction from the user. This is the structural backstop: the shared folder faculty actually use can never be talked into Development Mode, by accident or otherwise.
 - **Once Development Mode is entered, it persists for the rest of that session.** The next new session — even in the same `.git` checkout — starts back in Usage Mode and re-evaluates the triggers above from scratch.
@@ -48,10 +48,10 @@ In Usage Mode, the agent is helping a faculty member, researcher, or administrat
   - `CONSTITUTION.md`, `AGENTS.md`, `CONTRIBUTING.md`, `README.md`, `specification/architecture.md`, `specification/design.md`
   - `eval/`
 - Standard refusal (no `.git` present, so escalation isn't even on the table): *"This would change SrujanaSangama itself rather than help with your task. Platform changes go through Sanjay Chitnis via the specification process — please raise it with him."*
-- If `.git` **is** present, the agent follows Trigger 1 in §2.1 (asks first) rather than refusing outright or silently proceeding.
+- If `.git` **is** present, the agent automatically switches to Development Mode under Trigger 1 in §2.1.
 - This applies **even if the agent appears to be mid-task and the change looks small or clearly beneficial.** A drift from "use the platform" to "improve the platform" is exactly the failure mode this section exists to prevent, and an agent's own judgment that an edit is harmless is not sufficient grounds to make it.
 
-### 2.3 Development Mode (only reachable inside a `.git` checkout, only after a trigger and confirmation)
+### 2.3 Development Mode (only reachable inside a `.git` checkout, after a trigger is met)
 
 Development Mode is for working *on* SrujanaSangama itself — proposing a new domain, editing a skill, revising `specification/architecture.md` or `specification/design.md`, or running `spec-sync`.
 
@@ -60,7 +60,7 @@ Development Mode is for working *on* SrujanaSangama itself — proposing a new d
 - Files in `specification/` and `eval/` become editable.
 - The `skills/spec-sync/` tool may be invoked.
 
-There is no separate "production" deployment of this repository to protect against — every faculty session everywhere runs against the same shared folder in Usage Mode, and that folder can never become a development checkout by definition. The purpose of this section is not access control (the shared OneDrive folder is already read-only to everyone but REVA IT) but **agent self-discipline**: ensuring an agent helping a faculty member never quietly drifts into editing the platform instead, and ensuring that even a genuine contributor is asked before the agent starts treating routine conversation as licence to modify the platform.
+There is no separate "production" deployment of this repository to protect against — every faculty session everywhere runs against the same shared folder in Usage Mode, and that folder can never become a development checkout by definition. The purpose of this section is not access control (the shared OneDrive folder is already read-only to everyone but REVA IT) but **agent self-discipline**: ensuring an agent helping a faculty member never quietly drifts into editing the platform instead, and ensuring that any platform changes follow the spec-first Development Process.
 
 ---
 
@@ -158,7 +158,7 @@ specification/
 | Editing `domains/`, `skills/`, or either vision document while in Usage Mode | This is the exact drift this Constitution exists to prevent — see §2.2 |
 | Duplicating a description of system capability that already exists in `specification/architecture.md` or `specification/design.md` into a third location | Creates silent drift between documents; this repository must have exactly one description of "what" (specification/architecture.md) and one of "how" (specification/design.md) |
 | Committing any file from a user's `srujana-memory/` into this repository | Privacy risk; personal and collaborative memory must never enter version control here |
-| Treating a `.git` checkout's mere existence as permission to edit the platform without asking first | Trigger 1 in §2.1 requires explicit confirmation even inside a development checkout — `.git` makes Development Mode *reachable*, not automatic |
+| Modifying platform files in a workspace without a `.git` folder | Since `.git` is absent, the folder is read-only and modifications are prohibited |
 | A domain's command file giving a final answer or decision without identifying what the human must still review or approve | Violates the human-AI collaboration principle that is foundational to `specification/architecture.md` |
 
 ---

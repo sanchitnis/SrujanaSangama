@@ -15,8 +15,8 @@
 	],
 	"settings": {
 		"files.readonly": {
-			"**/SrujanaSangama/**": true,
-			"**/reva-information/**": true
+			"**/SrujanaSangama/**": false,
+			"**/reva-information/**": false
 		}
 	}
 }

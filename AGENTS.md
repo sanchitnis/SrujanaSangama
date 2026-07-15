@@ -54,8 +54,7 @@ This section is active only if a `.git` folder exists at the repository root, in
 ## 1. Mode Escalation Trigger
 If the user's request requires creating, editing, or deleting files in `domains/`, `.agents/skills/`, `validators/`, `specification/`, `eval/`, or root governance documents, check for a `.git` folder:
 - If `.git` does not exist, refuse the request. Explain that this is a read-only distribution folder.
-- If `.git` exists, ask for confirmation: *"This would modify SrujanaSangama itself. I see a `.git` folder here. Do you want to switch to Development Mode?"*
-- Once confirmed, you remain in Development Mode for the rest of the session.
+- If `.git` exists, automatically switch to Development Mode for the rest of the session.
 
 ## 2. Development Process (Agentic Scrum)
 In Development Mode, follow this lifecycle in full:

@@ -15,8 +15,7 @@ For Usage Mode:
 
 For Development Mode:
 
-- confirm the `.git` checkout and user approval required by `CONSTITUTION.md`
-  section 2
+- if `.git` exists, switch automatically to Development Mode
 - follow the proposal, task, implement, and verify flow in `AGENTS.md`
 
 Do not introduce packaged-extension manifests, registries, or install scripts.

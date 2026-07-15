@@ -21,6 +21,7 @@ Use this router only after the root `AGENTS.md` Usage Mode router selects
 - `12_concept-map-network`
 - `assessment-check`
 - `course-check`
+- `course-design-brainstormer`
 - `curriculum-design-lifecycle`
 - `lesson-plan`
 - `question-paper-reviewer`

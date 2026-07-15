@@ -1,10 +1,21 @@
 # SrujanaSangama - REVA University AI Agent Workspace
 
 > [!IMPORTANT]
-> **For AI Agents:** Do not read or parse this README file further. Go directly to the cross-IDE entry instruction file [AGENTS.md](SrujanaSangama/AGENTS.md) to understand routing constraints, domain categorization, and permissions.
+> **For AI Agents:** Do not read or parse this README file further. Go directly to the cross-IDE entry instruction file [AGENTS.md](AGENTS.md) to understand routing constraints, domain categorization, and permissions.
 
 Welcome to SrujanaSangama, REVA University's shared system of Markdown-based AI agent modules, domain commands, rules, and reusable skills.
 Srujana means creation and sangama is confluence of all your ideas and work to take REVA University forward in the era of AI.
+
+---
+
+## Table of Contents
+- [PART A: Usage Mode (For Regular Users - Default)](#part-a-usage-mode-for-regular-users---default)
+  - [1. Quick Setup & Workspace Installation](#1-quick-setup--workspace-installation)
+  - [2. Getting Started (First-Time Onboarding)](#2-getting-started-first-time-onboarding)
+  - [3. How to Use the System](#3-how-to-use-the-system)
+  - [4. Kanban Task Board & Backlog Processing](#4-kanban-task-board--backlog-processing)
+- [PART B: Development Mode (For Developer Collaborators)](#part-b-development-mode-for-developer-collaborators)
+- [Terms Of Use](#terms-of-use)
 
 ---
 
@@ -26,7 +37,7 @@ To set up your workspace, prepare three sibling folders on your local drive (def
    - Open the reva-information OneDrive folder: [OneDrive reva-information Link](https://revaedu-my.sharepoint.com/:f:/r/personal/srujana_reva_edu_in1/Documents/srujana/reva-information?csf=1&web=1&e=q2VpWr)
    - Click **"Add shortcut to My Files"** to create a synced link on your local drive at the same level.
 3. **srujana-memory (Read-Write)**
-   - Create a new, empty folder named `srujana-memory` at the same level as the other two folders which will save all your personal work and information that is private to you.
+   - Create a new, empty folder named `srujana-memory` at the same level as the other two folders which will save all your personal work and information that is private to you. For a detailed breakdown of this folder, see [srujana-memory README](../srujana-memory/README.md).
 
 ### The Sibling Folder Layout
 Your local workspace directory must look like this:
