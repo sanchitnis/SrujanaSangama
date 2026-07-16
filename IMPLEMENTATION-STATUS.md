@@ -23,7 +23,7 @@
 |---|---|---|
 | `onboarding` | Implemented | Initial workspace and profiles configuration, with LinkedIn, ORCID, and resume copying support |
 | `personal-productivity` | Implemented | Cross-domain layer; includes file-based Kanban task boards (tabular format), CLI task manager, automated task backlog processing, flattened rules/workflows, and 12 promoted global specialist skills |
-| `teaching-learning` | In progress | Contains commands for curriculum strategy review, active learning activity design, curriculum concept mapping, course design, and paper review, including `/curriculum-strategy-check`, `/activity-design-ai-ready`, `/concept-map-network`, `/course-design-brainstormer` |
+| `teaching-learning` | In progress | Contains commands for curriculum strategy review, active learning activity design, curriculum concept mapping, course design, and paper review, including `/curriculum-strategy-check`, `/activity-design-ai-ready`, `/concept-map-network`, `/course-design-brainstormer`, `reva-course-reviewer`, `reva-question-paper-reviewer`, and `reva-session-designer` |
 | `srujana-shodha` | Not started | |
 | `admissions-branding` | Not started | |
 | `placement-tpc` | Not started | |

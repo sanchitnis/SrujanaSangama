@@ -25,6 +25,9 @@ Use this router only after the root `AGENTS.md` Usage Mode router selects
 - `curriculum-design-lifecycle`
 - `lesson-plan`
 - `question-paper-reviewer`
+- `reva-course-reviewer`
+- `reva-question-paper-reviewer`
+- `reva-session-designer`
 - `session-check`
 
 ## Local Rules

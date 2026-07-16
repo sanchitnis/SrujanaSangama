@@ -91,6 +91,9 @@ Once onboarded, start any session by asking the AI agent to assist you within a 
   - `/lesson-plan`: Drafts modular lesson plans.
   - `/question-paper-reviewer`: Checks question papers against Blooms Taxonomy and REVA standards.
   - `/assessment-check` / `/course-check` / `/session-check`: Formative review of educational materials.
+  - `reva-course-reviewer`: Evaluates course design documents for pedagogical quality and Bloom's taxonomy alignment.
+  - `reva-question-paper-reviewer`: Audits exam question papers and evaluation schemes for clarity and fairness.
+  - `reva-session-designer`: Designs BTech CS session materials, slide decks, and companion activities.
 * **srujana-shodha**
   - `/research-lifecycle`: Guides through academic research phases from coursework to thesis defense.
   - `/manuscript-check`: Audits drafts before journal submission.
