@@ -15,6 +15,9 @@ This file lists all the available agent domains in SrujanaSangama, along with th
   - `/skill-generator`: Packages a workflow into a reusable skill.
   - `/project-kickoff`: Sets up metadata for a new project.
 * **teaching-learning**
+  - `/curriculum-strategy-check`: Audits school curriculum strategy (vision, mission, PEOs, POs, roles, market trends).
+  - `/activity-design-ai-ready`: Designs AI-resistant, HOTS-aligned authentic learning activities.
+  - `/concept-map-network`: Generates curriculum concept networks and prerequisite maps.
   - `/curriculum-design-lifecycle`: End-to-end course/curriculum design.
   - `/lesson-plan`: Drafts modular lesson plans.
   - `/question-paper-reviewer`: Checks question papers against Blooms Taxonomy and REVA standards.
