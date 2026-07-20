@@ -71,3 +71,8 @@ In Development Mode, follow this lifecycle in full:
 - **Coordinator Agent**: Reads the approved proposal and drafts tasks; does not implement.
 - **Implementor Agent**: Executes one approved task at a time; touches only files assigned.
 - **Verifier Agent**: Checks compliance with the proposal, CONSTITUTION, and design patterns; does not implement or fix directly.
+
+## 4. Mermaid Diagram Syntax Constraints
+When creating or editing Mermaid diagrams in repository documentation:
+* **Avoid Unquoted Parentheses**: Node labels or edge text containing parentheses `()` (e.g., `f(x)` or `(73% Risk)`) will cause parser errors if not wrapped in double quotes. Always wrap text containing parentheses in double quotes (e.g. `["f(x)"]` or `-->|"label(x)"|`).
+* **Escape Comparison Operators**: Operators like `<` and `>` inside nodes or labels must be escaped as `&lt;` and `&gt;` or replaced with Unicode symbols (`≤`, `≥`) to prevent the parser from confusing them with HTML tags.

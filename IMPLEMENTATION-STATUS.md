@@ -21,7 +21,7 @@
 
 | Domain | Status | Notes |
 |---|---|---|
-| `onboarding` | Implemented | Initial workspace and profiles configuration, with LinkedIn, ORCID, and resume copying support |
+| `onboarding` | Implemented | Initial workspace and profiles configuration, with enhanced profile collection (GitHub, Scopus, Shodhganga, etc.), memory updates, and Vidwan thesis import CSV template |
 | `personal-productivity` | Implemented | Cross-domain layer; includes file-based Kanban task boards (tabular format), CLI task manager, automated task backlog processing, flattened rules/workflows, and 12 promoted global specialist skills |
 | `teaching-learning` | In progress | Contains commands for curriculum strategy review, active learning activity design, curriculum concept mapping, course design, and paper review, including `/curriculum-strategy-check`, `/activity-design-ai-ready`, `/concept-map-network`, `/course-design-brainstormer`, `reva-course-reviewer`, `reva-question-paper-reviewer`, and `reva-session-designer` |
 | `srujana-shodha` | In progress | Contains commands for PhD research lifecycle guidance, publication pipeline tracking, thesis sprints, and research proposal drafting, including `/research-lifecycle`, `/manuscript-check`, `/funding-hunt`, and `/proposal-check` |
