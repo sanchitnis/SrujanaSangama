@@ -11,7 +11,7 @@
 
 | Slot | Course Code | Course Name | Stream | Sem | Status | Last Built |
 |------|-------------|-------------|--------|:---:|--------|-----------|
-| 01 | — | — | — | — | 🔲 Empty | — |
+| 01 | SB-101 | Introduction to Srujana-Bodh | FDP | Certification | 🟡 Draft | 2026-07-23 |
 | 02 | — | — | — | — | 🔲 Empty | — |
 | 03 | — | — | — | — | 🔲 Empty | — |
 | 04 | — | — | — | — | 🔲 Empty | — |
