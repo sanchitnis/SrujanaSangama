@@ -1,7 +1,7 @@
-# Teaching Learning Domain Router
+# Srujana Bodha Domain Router
 
 Use this router only after the root `AGENTS.md` Usage Mode router selects
-`teaching-learning`.
+`srujana-bodha`.
 
 ## Load Order
 

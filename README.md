@@ -83,7 +83,7 @@ Once onboarded, start any session by asking the AI agent to assist you within a 
   - `/deep-research`: Conducts structured literature and web searches.
   - `/skill-generator`: Packages a workflow into a reusable skill.
   - `/project-kickoff`: Sets up metadata for a new project.
-* **teaching-learning**
+* **srujana-bodha**
   - `/curriculum-strategy-check`: Audits school curriculum strategy (vision, mission, PEOs, POs, roles, market trends).
   - `/activity-design-ai-ready`: Designs AI-resistant, HOTS-aligned authentic learning activities.
   - `/concept-map-network`: Generates curriculum concept networks and prerequisite maps.

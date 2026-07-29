@@ -27,7 +27,7 @@ When a request is received, do not preload the entire repository. Read only what
 1. **Classify the request** into one of the 10 domains:
    - onboarding
    - personal-productivity
-   - teaching-learning
+   - srujana-bodha
    - srujana-shodha
    - admissions-branding
    - placement-tpc

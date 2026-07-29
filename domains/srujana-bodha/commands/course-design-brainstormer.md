@@ -119,8 +119,8 @@ graph TD
 ## 3. Output Storage & Documentation
 
 All transcripts, brainstorming notes, intermediate gate approvals, and the final improved course syllabus/design must be written to:
-`../srujana-memory/my-memory/teaching-learning/course-designs/`
+`../srujana-memory/my-memory/srujana-bodha/course-designs/`
 
 Files should be saved using the following naming structure:
-- Brainstorming Notes: `../srujana-memory/my-memory/teaching-learning/course-designs/<course-code>_brainstorm_notes.md`
-- Final Approved Course Design: `../srujana-memory/my-memory/teaching-learning/course-designs/<course-code>_final_design.md`
+- Brainstorming Notes: `../srujana-memory/my-memory/srujana-bodha/course-designs/<course-code>_brainstorm_notes.md`
+- Final Approved Course Design: `../srujana-memory/my-memory/srujana-bodha/course-designs/<course-code>_final_design.md`

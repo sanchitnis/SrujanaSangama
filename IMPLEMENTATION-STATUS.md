@@ -23,7 +23,7 @@
 |---|---|---|
 | `onboarding` | Implemented | Initial workspace and profiles configuration, with enhanced profile collection (GitHub, Scopus, Shodhganga, etc.), memory updates, and Vidwan thesis import CSV template |
 | `personal-productivity` | Implemented | Cross-domain layer; includes file-based Kanban task boards (tabular format), CLI task manager, automated task backlog processing, flattened rules/workflows, and 12 promoted global specialist skills |
-| `teaching-learning` | In progress | Contains commands for curriculum strategy review, active learning activity design, curriculum concept mapping, course design, and paper review, including `/curriculum-strategy-check`, `/activity-design-ai-ready`, `/concept-map-network`, `/course-design-brainstormer`, `reva-course-reviewer`, `reva-question-paper-reviewer`, and `reva-session-designer` |
+| `srujana-bodha` | In progress | Contains commands for curriculum strategy review, active learning activity design, curriculum concept mapping, course design, and paper review, including `/curriculum-strategy-check`, `/activity-design-ai-ready`, `/concept-map-network`, `/course-design-brainstormer`, `reva-course-reviewer`, `reva-question-paper-reviewer`, and `reva-session-designer` |
 | `srujana-shodha` | In progress | Contains commands for PhD research lifecycle guidance, publication pipeline tracking, thesis sprints, and research proposal drafting, including `/research-lifecycle`, `/manuscript-check`, `/funding-hunt`, and `/proposal-check` |
 | `admissions-branding` | Not started | |
 | `placement-tpc` | Not started | |
@@ -59,7 +59,7 @@ This is a recommendation, not a constraint — the Product Owner may resequence 
 
 1. **`onboarding`** — nothing else is usable until a faculty member can get a workspace set up
 2. **`personal-productivity`** — the layer every other domain assumes exists
-3. **`teaching-learning`** — highest faculty demand, per `specification/architecture.md` Domain 1
+3. **`srujana-bodha`** — highest faculty demand, per `specification/architecture.md` Domain 1
 4. **`srujana-shodha`**, **`academic-admin`** — next-highest demand
 5. The remaining six domains, in whatever order matches institutional priority at the time
 
