@@ -137,6 +137,7 @@ Before finalizing any paper release (`paper/v0.1`, `v0.2`, `vFinal`), invoke the
 - `onboarding` — PhD scholar / faculty researcher domain onboarding.
 - `opportunity-mapping` — Identifying call-for-papers and research conferences.
 - `proposal-check` — Synopsis & thesis proposal compliance verification.
+- `research-critique` — Critical evaluation of STEM research publications, theses, and reports.
 - `research-lifecycle` — End-to-end research lifecycle roadmap.
 - `sdg-impact-audit` — Mapping research outcomes to UN Sustainable Development Goals.
 - `session-closer` — Standard session wrap-up.
